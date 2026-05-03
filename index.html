@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cagayan Valley Agriculture, Poverty, Nutrition & Planning Map</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- MarkerCluster CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+  <!-- App Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Loading Overlay -->
+<div id="loading-overlay">
+  <div class="loading-spinner"></div>
+  <div class="loading-text">Loading Map Data…</div>
+</div>
+
+<!-- Main App Shell -->
+<div id="app-shell">
+
+  <!-- ================================================================
+       HEADER
+       ================================================================ -->
+  <header id="header">
+    <div class="header-logo">🌾</div>
+    <div class="header-titles">
+      <div class="header-title">Cagayan Valley Agriculture, Poverty, Nutrition &amp; Planning Map</div>
+      <div class="header-subtitle">Interactive spatial decision-support tool for agriculture intervention targeting and investment prioritization</div>
+    </div>
+    <div id="sample-notice" class="hidden">⚠️ SAMPLE DATA — Replace files in <code>data/</code></div>
+    <div class="header-actions">
+      <button class="header-btn" id="export-csv" title="Export current data as CSV">⬇ CSV</button>
+      <button class="header-btn" id="export-png" title="Export map as PNG">🗺 PNG</button>
+      <button class="header-btn" id="fit-btn" title="Fit map to region">⊕ Fit</button>
+      <button class="header-btn" id="reset-btn" title="Reset map">↺ Reset</button>
+      <button class="header-btn climate-toggle-btn" id="btn-climate-panel" title="Toggle Climate Information Panel">🌦️ Climate Info</button>
+    </div>
+  </header>
+
+  <!-- ================================================================
+       SIDEBAR
+       ================================================================ -->
+  <aside id="sidebar">
+    <button id="sidebar-toggle" title="Toggle sidebar">◀</button>
+
+    <!-- Data Notice -->
+    <div class="sidebar-section">
+      <div id="data-notice"></div>
+    </div>
+
+    <!-- Geographic View -->
+    <div class="sidebar-section">
+      <div class="section-label">Geographic View</div>
+      <div class="view-buttons">
+        <button class="view-btn active" data-view="municipality">Municipal</button>
+        <button class="view-btn" data-view="district">District</button>
+        <button class="view-btn" data-view="province">Province</button>
+      </div>
+    </div>
+
+    <!-- Indicator Selection -->
+    <div class="sidebar-section">
+      <div class="section-label">Indicator Selection</div>
+      <label for="category-select">Category</label>
+      <select id="category-select"></select>
+      <label for="indicator-select">Indicator</label>
+      <select id="indicator-select"></select>
+    </div>
+
+    <!-- Visualization Style -->
+    <div class="sidebar-section">
+      <div class="section-label">Map Style</div>
+      <label for="viz-select">Visualization</label>
+      <select id="viz-select"></select>
+
+      <!-- Bivariate / Ratio controls (shown conditionally) -->
+      <div id="bivariate-controls">
+        <label for="compare-a">Indicator A</label>
+        <select id="compare-a"></select>
+        <label for="compare-b">Indicator B</label>
+        <select id="compare-b"></select>
+      </div>
+
+      <!-- Ranked controls (shown conditionally) -->
+      <div id="ranked-controls">
+        <label>Show</label>
+        <select id="ranked-dir">
+          <option value="top">Top</option>
+          <option value="bottom">Bottom</option>
+        </select>
+        <select id="ranked-n">
+          <option value="5">5</option>
+          <option value="10" selected>10</option>
+          <option value="20">20</option>
+        </select>
+      </div>
+
+      <!-- Priority model controls (shown conditionally) -->
+      <div id="priority-controls">
+        <label for="priority-model">Priority Model</label>
+        <select id="priority-model"></select>
+      </div>
+    </div>
+
+    <!-- Search -->
+    <div class="sidebar-section">
+      <div class="section-label">Search &amp; Navigate</div>
+      <div class="search-row">
+        <input type="text" id="search-input" placeholder="Search municipality or province…" />
+        <button class="icon-btn" title="Search">🔍</button>
+      </div>
+    </div>
+
+    <!-- Layers & Facilities -->
+    <div class="sidebar-section">
+      <div class="section-label">Map Layers</div>
+      <div id="facility-layer-panel"></div>
+    </div>
+
+    <!-- Basemaps -->
+    <div class="sidebar-section">
+      <div class="section-label">Basemap</div>
+      <div id="basemap-selector" class="basemap-grid"></div>
+    </div>
+
+    <!-- Tools -->
+    <div class="sidebar-section">
+      <div class="section-label">Data Tools</div>
+      <div class="btn-row">
+        <button class="btn-secondary" id="download-mismatch" title="Download join mismatch report">⬇ Mismatch Report</button>
+        <button class="btn-secondary" id="export-csv-sidebar" title="Export data CSV">⬇ Export CSV</button>
+      </div>
+    </div>
+
+  </aside><!-- /sidebar -->
+
+  <!-- ================================================================
+       MAIN CONTENT
+       ================================================================ -->
+  <main id="main-content">
+
+    <!-- Stats Bar -->
+    <div id="stats-bar">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-mun-count">—</div>
+        <div class="stat-label">Areas</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-pop">—</div>
+        <div class="stat-label">Population</div>
+      </div>
+      <div class="stat-card stat-warn">
+        <div class="stat-value" id="stat-poverty">—</div>
+        <div class="stat-label">Avg Poverty</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-poor-rice">—</div>
+        <div class="stat-label">Poor Rice Farmers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-poor-corn">—</div>
+        <div class="stat-label">Poor Corn Farmers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-rice-prod">—</div>
+        <div class="stat-label">Rice Production</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-corn-prod">—</div>
+        <div class="stat-label">Corn Production</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-rice-yield">—</div>
+        <div class="stat-label">Rice Yield</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-corn-yield">—</div>
+        <div class="stat-label">Corn Yield</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-rice-area">—</div>
+        <div class="stat-label">Rice Area</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-corn-area">—</div>
+        <div class="stat-label">Corn Area</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-irrigated">—</div>
+        <div class="stat-label">Irrigated Area</div>
+      </div>
+      <div class="stat-card stat-warn">
+        <div class="stat-value" id="stat-pest">—</div>
+        <div class="stat-label">Pest/Disease Areas</div>
+      </div>
+      <div class="stat-card stat-danger">
+        <div class="stat-value" id="stat-asf">—</div>
+        <div class="stat-label">ASF Concern Areas</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-rpc">—</div>
+        <div class="stat-label">RPC Sites</div>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div id="map-container">
+      <div id="map"></div>
+    </div>
+
+    <!-- Bottom Panel: Charts + Rankings + Insights -->
+    <div id="bottom-panel">
+
+      <!-- Chart Section -->
+      <div class="chart-section">
+        <div class="chart-tabs">
+          <button class="chart-tab active" data-chart="bar">Rankings</button>
+          <button class="chart-tab" data-chart="poverty">Poverty Trend</button>
+          <button class="chart-tab" data-chart="production">Production</button>
+          <button class="chart-tab" data-chart="scatter">Scatter</button>
+        </div>
+        <div id="panel-bar" class="chart-panel active">
+          <canvas id="chart-bar"></canvas>
+        </div>
+        <div id="panel-poverty" class="chart-panel">
+          <canvas id="chart-line"></canvas>
+        </div>
+        <div id="panel-production" class="chart-panel">
+          <div style="display:flex;gap:8px;height:100%">
+            <canvas id="chart-line2" style="flex:2"></canvas>
+            <canvas id="chart-pie" style="flex:1"></canvas>
+          </div>
+        </div>
+        <div id="panel-scatter" class="chart-panel">
+          <canvas id="chart-scatter"></canvas>
+        </div>
+      </div>
+
+      <!-- Ranking Table -->
+      <div class="ranking-section">
+        <div class="panel-title">📊 Municipality Rankings</div>
+        <div id="ranking-table"></div>
+      </div>
+
+      <!-- Planning Insights -->
+      <div class="insights-section">
+        <div class="panel-title">💡 Planning Insights</div>
+        <div id="insights-panel">
+          <p class="no-data">Select an indicator to see insights.</p>
+        </div>
+      </div>
+
+    </div><!-- /bottom-panel -->
+
+  </main><!-- /main-content -->
+
+</div><!-- /app-shell -->
+
+<!-- ================================================================
+     LIBRARIES
+     ================================================================ -->
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Leaflet MarkerCluster -->
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+<!-- PapaParse for CSV -->
+<script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<!-- Turf.js for spatial analysis (optional) -->
+<script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
+
+<!-- App Modules (load in dependency order) -->
+<script src="js/config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/aggregation.js"></script>
+<script src="js/dataLoader.js"></script>
+<script src="js/priorityScoring.js"></script>
+<script src="js/visualizations.js"></script>
+<script src="js/mapLayers.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/weatherOverlay.js"></script>
+<script src="js/climate.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
