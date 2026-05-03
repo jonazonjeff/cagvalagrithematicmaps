@@ -1,0 +1,28 @@
+facility_id,facility_name,facility_type,province,municipality,latitude,longitude,status,capacity,service_area_ha,year_constructed,remarks
+FAC001,Tuguegarao RPC,RPC,Cagayan,Tuguegarao City,17.6132,121.7270,Operational,1500,,2010,Main facility
+FAC002,Ilagan RPC,RPC,Isabela,Ilagan City,17.1480,121.8877,Operational,2000,,2008,Regional hub
+FAC003,Cauayan RPC,RPC,Isabela,Cauayan City,16.9280,121.7657,Operational,1800,,2012,Sample data
+FAC004,Santiago RPC,RPC,Isabela,Santiago City,16.6871,121.5512,Operational,1600,,2009,Sample data
+FAC005,Bayombong RPC,RPC,Nueva Vizcaya,Bayombong,16.4814,121.1071,Operational,800,,2015,Sample data
+FAC006,Aparri Diversion Dam,DD,Cagayan,Aparri,18.3569,121.6431,Operational,,3200,1995,Cagayan River diversion
+FAC007,Gattaran DD,DD,Cagayan,Gattaran,18.0619,121.6530,Operational,,1800,2001,Sample data
+FAC008,Ilagan SWIP,SWIP,Isabela,Ilagan City,17.1200,121.8500,Operational,,450,2005,Small water impounding
+FAC009,Diffun SWIP,SWIP,Quirino,Diffun,16.5900,121.5100,Operational,,320,2007,Sample data
+FAC010,Cabagan SPIS,SPIS,Isabela,Cabagan,17.5800,121.8700,Operational,,280,2018,Solar powered system
+FAC011,Tumauini SPIS,SPIS,Isabela,Tumauini,17.4700,121.8100,Operational,,190,2019,Sample data
+FAC012,Tuguegarao STW,STW,Cagayan,Tuguegarao City,17.5900,121.7300,Operational,,120,2016,Shallow tubewell cluster
+FAC013,Ilagan STW-1,STW,Isabela,Ilagan City,17.1300,121.8600,Operational,,90,2017,Sample data
+FAC014,Santiago STW,STW,Isabela,Santiago City,16.6700,121.5400,Operational,,75,2020,Sample data
+FAC015,Tuguegarao Warehouse,Warehouse,Cagayan,Tuguegarao City,17.6050,121.7200,Operational,2000,,2011,DA regional warehouse
+FAC016,Ilagan Warehouse,Warehouse,Isabela,Ilagan City,17.1550,121.8900,Operational,1500,,2013,Sample data
+FAC017,Cabarroguis Warehouse,Warehouse,Quirino,Cabarroguis,16.5106,121.5085,Operational,500,,2014,Sample data
+FAC018,Tuguegarao Ricemill,Ricemill,Cagayan,Tuguegarao City,17.6200,121.7350,Operational,800,,2006,Commercial ricemill
+FAC019,Cauayan Ricemill,Ricemill,Isabela,Cauayan City,16.9350,121.7720,Operational,600,,2008,Sample data
+FAC020,Bayombong Ricemill,Ricemill,Nueva Vizcaya,Bayombong,16.4900,121.1200,Operational,400,,2010,Sample data
+FAC021,Ilagan Corn Mill,Cornmill,Isabela,Ilagan City,17.1400,121.8800,Operational,300,,2012,Corn processing
+FAC022,Solano Corn Mill,Cornmill,Nueva Vizcaya,Solano,16.5200,121.1800,Operational,250,,2015,Sample data
+FAC023,Aparri Dryer,Dryer,Cagayan,Aparri,18.3500,121.6400,Operational,200,,2003,Flatbed dryer
+FAC024,Cauayan Dryer,Dryer,Isabela,Cauayan City,16.9300,121.7600,Operational,300,,2007,Sample data
+FAC025,Diffun Dryer,Dryer,Quirino,Diffun,16.5850,121.5050,Operational,150,,2016,Sample data
+FAC026,Tuguegarao Processing,Processing,Cagayan,Tuguegarao City,17.6180,121.7280,Operational,,,2018,Agri-processing facility
+FAC027,Ilagan Processing,Processing,Isabela,Ilagan City,17.1520,121.8850,Operational,,,2019,Sample data
