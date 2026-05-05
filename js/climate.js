@@ -12,7 +12,11 @@ const ClimatePanel = (() => {
   // ── API endpoints ───────────────────────────────────────────
   const OM_FORECAST = "https://api.open-meteo.com/v1/forecast";
   const OM_CLIMATE  = "https://climate-api.open-meteo.com/v1/climate";
-  const PAGASA_BASE = "https://tenday.pagasa.dost.gov.ph/api/v1";
+  // NEW — calls your Worker, no token visible, no CORS error
+	const WORKER_URL = "https://cagvalagrithematicmaps.darfo2.workers.dev";
+
+	const response = await fetch(`${WORKER_URL}/?region=2`);
+	const data = await response.json();
 
   // ── PAGASA public page links ────────────────────────────────
   const LINKS = {
