@@ -17,7 +17,7 @@ const ClimatePanel = (() => {
   // The actual PAGASA token is stored as a Secret inside Cloudflare —
   // it is never visible in this file, your browser, or your GitHub repo.
   // Pass ?region=2 — the Worker forwards it to PAGASA automatically.
-  const PAGASA_WORKER_URL = "https://cagvalagrithematicmaps.darfo2.workers.dev";
+  const PAGASA_WORKER_URL = "https://pagasa-proxy.darfo2.workers.dev";
 
   // ── PAGASA public page links ────────────────────────────────
   const LINKS = {
