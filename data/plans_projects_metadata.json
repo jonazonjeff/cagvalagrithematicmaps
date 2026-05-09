@@ -2,8 +2,8 @@
   "dataset_name": "DA Region 02 Plans and Projects 2025-2027",
   "source": "Google Drive planning workbooks",
   "source_folder_url": "https://drive.google.com/drive/folders/1mOY40xTSz2KGzj4mLOAkhIEptkKnlVr9?usp=sharing",
-  "generated_at": "2026-05-09T21:51:59+08:00",
-  "latest_source_file_modified_at": "2026-05-09T21:51:48+08:00",
+  "generated_at": "2026-05-09T22:04:01+08:00",
+  "latest_source_file_modified_at": "2026-05-09T22:03:51+08:00",
   "source_file_count": 12,
   "summary_rows": 91,
   "detail_rows": 1320,
@@ -12,62 +12,62 @@
     {
       "name": "batanes.xlsx",
       "size_bytes": 213457,
-      "local_modified_at": "2026-05-09T21:51:41+08:00"
+      "local_modified_at": "2026-05-09T22:03:44+08:00"
     },
     {
       "name": "cagayan_1.xlsx",
       "size_bytes": 402373,
-      "local_modified_at": "2026-05-09T21:51:11+08:00"
+      "local_modified_at": "2026-05-09T22:03:15+08:00"
     },
     {
       "name": "cagayan_2.xlsx",
       "size_bytes": 457642,
-      "local_modified_at": "2026-05-09T21:51:15+08:00"
+      "local_modified_at": "2026-05-09T22:03:19+08:00"
     },
     {
       "name": "cagayan_3.xlsx",
       "size_bytes": 524065,
-      "local_modified_at": "2026-05-09T21:51:19+08:00"
+      "local_modified_at": "2026-05-09T22:03:22+08:00"
     },
     {
       "name": "isabela_1.xlsx",
       "size_bytes": 306012,
-      "local_modified_at": "2026-05-09T21:51:22+08:00"
+      "local_modified_at": "2026-05-09T22:03:26+08:00"
     },
     {
       "name": "isabela_2.xlsx",
       "size_bytes": 378734,
-      "local_modified_at": "2026-05-09T21:51:26+08:00"
+      "local_modified_at": "2026-05-09T22:03:29+08:00"
     },
     {
       "name": "isabela_3.xlsx",
       "size_bytes": 286144,
-      "local_modified_at": "2026-05-09T21:51:29+08:00"
+      "local_modified_at": "2026-05-09T22:03:32+08:00"
     },
     {
       "name": "isabela_4.xlsx",
       "size_bytes": 281779,
-      "local_modified_at": "2026-05-09T21:51:33+08:00"
+      "local_modified_at": "2026-05-09T22:03:35+08:00"
     },
     {
       "name": "isabela_5.xlsx",
       "size_bytes": 263681,
-      "local_modified_at": "2026-05-09T21:51:36+08:00"
+      "local_modified_at": "2026-05-09T22:03:39+08:00"
     },
     {
       "name": "isabela_6.xlsx",
       "size_bytes": 248184,
-      "local_modified_at": "2026-05-09T21:51:38+08:00"
+      "local_modified_at": "2026-05-09T22:03:42+08:00"
     },
     {
       "name": "nueva_vizcaya.xlsx",
       "size_bytes": 302051,
-      "local_modified_at": "2026-05-09T21:51:44+08:00"
+      "local_modified_at": "2026-05-09T22:03:48+08:00"
     },
     {
       "name": "quirino.xlsx",
       "size_bytes": 300729,
-      "local_modified_at": "2026-05-09T21:51:48+08:00"
+      "local_modified_at": "2026-05-09T22:03:51+08:00"
     }
   ]
 }
