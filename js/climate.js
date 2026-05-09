@@ -12,12 +12,7 @@ const ClimatePanel = (() => {
   // ── API endpoints ───────────────────────────────────────────
   const OM_FORECAST = "https://api.open-meteo.com/v1/forecast";
   const OM_CLIMATE  = "https://climate-api.open-meteo.com/v1/climate";
-  // ── Cloudflare Worker proxy URL ──────────────────────────────
-  // The Worker forwards requests to PAGASA and adds CORS headers.
-  // The actual PAGASA token is stored as a Secret inside Cloudflare —
-  // it is never visible in this file, your browser, or your GitHub repo.
-  // Pass ?region=2 — the Worker forwards it to PAGASA automatically.
-  const PAGASA_WORKER_URL = "https://pagasa-proxy.darfo2.workers.dev";
+  const PAGASA_BASE = "https://tenday.pagasa.dost.gov.ph/api/v1";
 
   // ── PAGASA public page links ────────────────────────────────
   const LINKS = {
@@ -46,7 +41,7 @@ const ClimatePanel = (() => {
 
   // ── Module state ────────────────────────────────────────────
   let lat = null, lng = null, locName = "";
-  let pagasaToken = ""; // kept for compatibility — token is stored in Cloudflare Worker, not here
+  let pagasaToken = "";
   let fChart = null, cChart = null;
   let built = false;
   let panelOpen = false;
@@ -193,15 +188,16 @@ const ClimatePanel = (() => {
 
     <!-- TAB: PAGASA Links ─────────────────────── -->
     <div class="cp-tab-pane" id="cp-pane-pagasa">
-      <div class="cp-section-head">📡 PAGASA 10-Day Forecast — Region II</div>
+      <div class="cp-section-head">🔐 PAGASA TenDay API (optional)</div>
       <p class="cp-small-text">
-        Live forecast data fetched securely via a Cloudflare Worker proxy.
-        Your API token is stored as an encrypted secret in Cloudflare — 
-        it is never visible in this page or your browser.
+        The <a href="https://tenday.pagasa.dost.gov.ph" target="_blank">PAGASA TenDay API</a> 
+        requires a personal token. Request access from PAGASA, then paste it below.
       </p>
-      <button class="cp-primary-btn" id="cp-pagasa-fetch" style="width:100%;margin-bottom:8px">
-        ▶ Fetch Live 10-Day Forecast
-      </button>
+      <div class="cp-token-row">
+        <input type="password" id="cp-api-token" placeholder="Paste PAGASA API token…" />
+        <button class="cp-primary-btn" id="cp-token-save">Save</button>
+      </div>
+      <div id="cp-token-msg" class="cp-token-msg"></div>
       <div id="cp-pagasa-result" style="display:none"></div>
 
       <div class="cp-section-head" style="margin-top:12px">📡 Official PAGASA & DA Resources</div>
@@ -260,14 +256,27 @@ const ClimatePanel = (() => {
       loadNormals();
     });
 
-    // PAGASA fetch button — calls Worker proxy, no token needed in frontend
-    $("cp-pagasa-fetch")?.addEventListener("click", () => {
-      loadPagasaForecast();
+    // PAGASA token save
+    $("cp-token-save")?.addEventListener("click", () => {
+      const val = ($("cp-api-token")?.value || "").trim();
+      const msg = $("cp-token-msg");
+      if (!val) { if(msg) msg.textContent = "⚠️ No token entered."; return; }
+      pagasaToken = val;
+      ls.set("pagasa_token", val);
+      if(msg) { msg.className = "cp-token-msg ok"; msg.textContent = "✅ Token saved."; }
+      if (lat !== null) loadPagasaForecast();
     });
   }
 
-  // Token is now stored in Cloudflare Worker secrets — nothing to restore locally.
-  function restoreToken() { /* no-op */ }
+  function restoreToken() {
+    const saved = ls.get("pagasa_token");
+    if (!saved) return;
+    pagasaToken = saved;
+    const inp = $("cp-api-token");
+    if (inp) inp.value = saved;
+    const msg = $("cp-token-msg");
+    if (msg) { msg.className = "cp-token-msg ok"; msg.textContent = "✅ Token loaded from previous session."; }
+  }
 
   // ── Show / hide states ──────────────────────────────────────
   function setNowState(state) {  // idle | loading | error | data
@@ -560,83 +569,36 @@ const ClimatePanel = (() => {
     }
   }
 
-  // ── Load: PAGASA TenDay via Cloudflare Worker ─────────────────
-  // No token needed here — it lives in Cloudflare as a Secret.
-  // The Worker adds it server-side before forwarding to PAGASA.
+  // ── Load: PAGASA TenDay API ─────────────────────────────────
   async function loadPagasaForecast() {
+    if (!pagasaToken) return;
     const result = $("cp-pagasa-result");
     if (!result) return;
     result.style.display = "block";
-
-    // Status badge — shows live feedback while fetching
-    result.innerHTML = `
-      <div class="cp-api-status cp-api-loading">
-        <span class="cp-status-dot"></span>
-        <span>Connecting to PAGASA via proxy…</span>
-      </div>`;
+    result.innerHTML = `<div class="cp-spinner">⏳ Fetching PAGASA data…</div>`;
 
     try {
-      // Call the Worker — region 2 = Cagayan Valley
-      // Change ?region= to fetch a different region if needed
-      const url = `${PAGASA_WORKER_URL}/?region=2`;
-      const res = await fetch(url);
-
-      if (!res.ok) {
-        // Worker responded but with an error (e.g. bad token in Cloudflare)
-        const errData = await res.json().catch(() => ({}));
-        throw new Error(errData.error || `HTTP ${res.status}`);
-      }
-
+      const url = `${PAGASA_BASE}/tenday/current?region=2&token=${encodeURIComponent(pagasaToken)}`;
+      const res  = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status} — check token`);
       const data = await res.json();
 
-      // Try to match the currently selected municipality
-      const items = Array.isArray(data?.data) ? data.data : (data?.data?.data || []);
-      const target = locName.split(",")[0].toLowerCase().trim();
-      const match = items.find(r =>
-        (r.municipality || r.name || "").toLowerCase().includes(target)
-      ) || items[0];
+      // Try to match municipality
+      const items  = Array.isArray(data?.data) ? data.data : (data?.data?.data || []);
+      const target = locName.split(",")[0].toLowerCase();
+      const match  = items.find(r => (r.municipality || r.name || "").toLowerCase().includes(target)) || items[0];
 
       if (!match) {
-        result.innerHTML = `
-          <div class="cp-api-status cp-api-ok">
-            <span class="cp-status-dot"></span>
-            <span>✅ API connected — no match for "${locName}"</span>
-          </div>
-          <div class="cp-small-text" style="margin-top:6px">
-            <a href="${LINKS.tenday}" target="_blank">View full 10-day forecast on PAGASA →</a>
-          </div>`;
+        result.innerHTML = `<div class="cp-small-text">No match for "${locName}".
+          <a href="${LINKS.tenday}" target="_blank">View full 10-day forecast →</a></div>`;
         return;
       }
 
-      // ✅ Success — show status badge + formatted forecast data
-      result.innerHTML = `
-        <div class="cp-api-status cp-api-ok">
-          <span class="cp-status-dot"></span>
-          <span>✅ Live data — ${match.municipality || match.name || "Region 2"}</span>
-        </div>
-        <pre class="cp-pagasa-pre">${JSON.stringify(match, null, 2)}</pre>
-        <div class="cp-small-text" style="margin-top:4px;text-align:right">
-          Source: PAGASA TenDay API via Cloudflare Worker proxy
-        </div>`;
-
+      result.innerHTML = `<div class="cp-small-text"><b>${match.municipality || match.name}</b> — PAGASA 10-Day</div>
+        <pre class="cp-pagasa-pre">${JSON.stringify(match, null, 2)}</pre>`;
     } catch(e) {
-      // ❌ Failure — show red status badge + diagnostic message
-      result.innerHTML = `
-        <div class="cp-api-status cp-api-error">
-          <span class="cp-status-dot"></span>
-          <span>❌ Failed: ${e.message}</span>
-        </div>
-        <div class="cp-err-msg" style="margin-top:6px">
-          ${e.message.includes("PAGASA_TOKEN") ?
-            "The PAGASA_TOKEN secret is not set in your Cloudflare Worker. Go to Workers → Settings → Secrets." :
-            e.message.includes("CORS") || e.message.includes("fetch") ?
-            "Could not reach the Worker. Check your Worker URL in climate.js." :
-            "Check your Cloudflare Worker logs for details."
-          }
-          <br><a href="${LINKS.tenday}" target="_blank" style="color:#dc2626">
-            View PAGASA forecast directly →
-          </a>
-        </div>`;
+      result.innerHTML = `<div class="cp-err-msg">⚠️ PAGASA API: ${e.message}<br>
+        <a href="${LINKS.tenday}" target="_blank">View forecast page →</a></div>`;
     }
   }
 

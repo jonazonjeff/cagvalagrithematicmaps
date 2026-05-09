@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
   <!-- App Styles -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=20260509-public" />
 </head>
 <body>
 
@@ -23,6 +23,33 @@
   <div class="loading-text">Loading Map Data…</div>
 </div>
 
+<!-- Announcement Splash -->
+<div id="announcement-splash" class="announcement-splash" role="dialog" aria-modal="true" aria-labelledby="announcement-title" aria-describedby="announcement-copy">
+  <div class="announcement-dialog">
+    <button class="announcement-close" id="announcement-close" type="button" aria-label="Close announcement">&times;</button>
+    <div class="announcement-brand">
+      <img src="assets/logo.png" alt="Department of Agriculture logo">
+      <div>
+        <div class="announcement-brand-name">Department of Agriculture</div>
+        <div class="announcement-brand-sub">Cagayan Valley Planning Map</div>
+      </div>
+    </div>
+    <div class="announcement-kicker">Important Reminder</div>
+    <h2 id="announcement-title">Use this map as a planning guide</h2>
+    <p id="announcement-copy">
+      This dashboard supports agriculture targeting, poverty and nutrition review, and investment prioritization across Cagayan Valley.
+      Please validate local conditions and official datasets before final decisions.
+    </p>
+    <div class="announcement-points">
+      <span>Check the selected indicator and map style before exporting.</span>
+      <span>Use Climate Info and facility layers for added field context.</span>
+    </div>
+    <div class="announcement-actions">
+      <button class="btn-primary" id="announcement-confirm" type="button">Got it</button>
+    </div>
+  </div>
+</div>
+
 <!-- Main App Shell -->
 <div id="app-shell">
 
@@ -30,13 +57,15 @@
        HEADER
        ================================================================ -->
   <header id="header">
-    <div class="header-logo">🌾</div>
+    <div class="header-logo">
+      <img src="assets/logo.png" alt="Department of Agriculture logo">
+    </div>
     <div class="header-titles">
       <div class="header-title">Cagayan Valley Agriculture, Poverty, Nutrition &amp; Planning Map</div>
       <div class="header-subtitle">Interactive spatial decision-support tool for agriculture intervention targeting and investment prioritization</div>
     </div>
-    <div id="sample-notice" class="hidden">⚠️ SAMPLE DATA — Replace files in <code>data/</code></div>
     <div class="header-actions">
+      <button class="header-btn" id="announcement-open" title="View app announcement">Notice</button>
       <button class="header-btn" id="export-csv" title="Export current data as CSV">⬇ CSV</button>
       <button class="header-btn" id="export-png" title="Export map as PNG">🗺 PNG</button>
       <button class="header-btn" id="fit-btn" title="Fit map to region">⊕ Fit</button>
@@ -283,17 +312,17 @@
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
 
 <!-- App Modules (load in dependency order) -->
-<script src="js/config.js"></script>
-<script src="js/utils.js"></script>
-<script src="js/aggregation.js"></script>
-<script src="js/dataLoader.js"></script>
-<script src="js/priorityScoring.js"></script>
-<script src="js/visualizations.js"></script>
-<script src="js/mapLayers.js"></script>
-<script src="js/charts.js"></script>
-<script src="js/weatherOverlay.js"></script>
-<script src="js/climate.js"></script>
-<script src="js/app.js"></script>
+<script src="js/config.js?v=20260509-public"></script>
+<script src="js/utils.js?v=20260509-public"></script>
+<script src="js/aggregation.js?v=20260509-public"></script>
+<script src="js/dataLoader.js?v=20260509-public"></script>
+<script src="js/priorityScoring.js?v=20260509-public"></script>
+<script src="js/visualizations.js?v=20260509-public"></script>
+<script src="js/mapLayers.js?v=20260509-public"></script>
+<script src="js/charts.js?v=20260509-public"></script>
+<script src="js/weatherOverlay.js?v=20260509-public"></script>
+<script src="js/climate.js?v=20260509-public"></script>
+<script src="js/app.js?v=20260509-public"></script>
 
 </body>
 </html>

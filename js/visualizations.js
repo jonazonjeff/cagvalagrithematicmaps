@@ -519,9 +519,8 @@ const Visualizations = (() => {
   function attachPopup(feature, layer, highlightField) {
     const p = feature.properties;
     const name = p.municipality || p.NAME || p.province || "Area";
-    const isSample = p._sample ? '<span class="sample-badge">SAMPLE DATA</span>' : "";
 
-    let html = `<div class="popup-header">${name} ${isSample}</div>`;
+    let html = `<div class="popup-header">${name}</div>`;
     if (p.province && p.municipality) html += `<div class="popup-subhead">${p.province}</div>`;
 
     const sections = [

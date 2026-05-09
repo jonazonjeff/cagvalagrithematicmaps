@@ -35,7 +35,9 @@ const App = (() => {
       appData = await DataLoader.loadAll();
     } catch (e) {
       console.error("Data load failed:", e);
-      Utils.showToast("Failed to load some data files. Using sample data.", "warning");
+      showLoadingOverlay(false);
+      showDataLoadError(e);
+      return;
     }
     showLoadingOverlay(false);
 
@@ -43,10 +45,7 @@ const App = (() => {
     renderCurrentView();
     bindEvents();
 
-    // Show sample notice if needed
-    if (appData?.municipalGeoJSON?.features?.some(f => f.properties._sample)) {
-      document.getElementById("sample-notice")?.classList.remove("hidden");
-    }
+    window.setTimeout(() => showAnnouncementSplash(true), 100);
   }
 
   // ============================================================
@@ -609,6 +608,24 @@ const App = (() => {
       }
     });
 
+    // Announcement splash
+    const announcementOpen = document.getElementById("announcement-open");
+    const announcementClose = document.getElementById("announcement-close");
+    const announcementConfirm = document.getElementById("announcement-confirm");
+    const announcementSplash = document.getElementById("announcement-splash");
+
+    if (announcementOpen) announcementOpen.addEventListener("click", () => showAnnouncementSplash(true));
+    if (announcementClose) announcementClose.addEventListener("click", () => showAnnouncementSplash(false));
+    if (announcementConfirm) announcementConfirm.addEventListener("click", () => showAnnouncementSplash(false));
+    if (announcementSplash) {
+      announcementSplash.addEventListener("click", (e) => {
+        if (e.target === announcementSplash) showAnnouncementSplash(false);
+      });
+    }
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") showAnnouncementSplash(false);
+    });
+
     // Sidebar toggle
     const sidebarToggle = document.getElementById("sidebar-toggle");
     if (sidebarToggle) sidebarToggle.addEventListener("click", () => {
@@ -640,6 +657,45 @@ const App = (() => {
   function showLoadingOverlay(show) {
     const overlay = document.getElementById("loading-overlay");
     if (overlay) overlay.style.display = show ? "flex" : "none";
+  }
+
+  function showDataLoadError(error) {
+    const message = escapeHTML(error?.message || "Required map data could not be loaded.");
+    const pageProtocol = escapeHTML(window.location.protocol);
+    const pageURL = escapeHTML(window.location.href);
+    const overlay = document.createElement("div");
+    overlay.className = "data-load-error";
+    overlay.innerHTML = `
+      <div class="data-load-error-card">
+        <h2>Map data did not load</h2>
+        <p>${message}</p>
+        <p>Current page: <code>${pageProtocol}</code> ${pageURL}</p>
+        <p>Serve the app over HTTP or HTTPS. For local testing, run <code>python -m http.server 8000</code> from the project folder and open <code>http://127.0.0.1:8000/</code>.</p>
+      </div>`;
+    document.body.appendChild(overlay);
+  }
+
+  function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, ch => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    })[ch]);
+  }
+
+  function showAnnouncementSplash(show) {
+    const splash = document.getElementById("announcement-splash");
+    if (!splash) return;
+    splash.classList.toggle("open", show);
+
+    if (show) {
+      const confirmBtn = document.getElementById("announcement-confirm");
+      if (confirmBtn) confirmBtn.focus();
+    } else if (map) {
+      window.setTimeout(() => map.invalidateSize(), 50);
+    }
   }
 
   return { init };
