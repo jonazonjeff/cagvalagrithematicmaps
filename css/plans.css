@@ -381,12 +381,31 @@ body[data-theme="dark"] .note.danger {
 .table-head {
   padding: 10px 12px;
   border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, 320px);
+  gap: 12px;
+  align-items: end;
 }
 
 .table-head p {
   margin: 3px 0 0;
   color: var(--muted);
   font-size: 12px;
+}
+
+.table-tools label {
+  display: block;
+  margin: 0 0 4px;
+  font-family: var(--font-condensed);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.table-tools input {
+  margin-top: 0;
 }
 
 .table-scroll {
@@ -408,6 +427,36 @@ th {
   color: #fff;
   text-align: left;
   font-weight: 600;
+}
+
+.sort-btn {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sort-btn::after {
+  content: "";
+  opacity: 0.55;
+  font-size: 10px;
+}
+
+.sort-btn.active[data-dir="asc"]::after {
+  content: "▲";
+}
+
+.sort-btn.active[data-dir="desc"]::after {
+  content: "▼";
 }
 
 th, td {
@@ -463,6 +512,10 @@ body[data-theme="dark"] tbody tr:hover {
   }
 
   .table-panel { min-height: 420px; }
+
+  .table-head {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px) {

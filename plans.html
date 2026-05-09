@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AgriPlan Cagayan Valley</title>
 
-  <link rel="stylesheet" href="css/plans.css?v=20260509-darkdefault">
+  <link rel="stylesheet" href="css/plans.css?v=20260509-tabletools">
 </head>
 <body data-theme="dark">
   <div id="plans-app">
@@ -141,20 +141,24 @@
               <div class="panel-title">Project / Activity Records</div>
               <p id="table-count">0 records</p>
             </div>
+            <div class="table-tools">
+              <label for="activity-search">Activity Search</label>
+              <input type="text" id="activity-search" placeholder="Search project/activity records">
+            </div>
           </div>
           <div class="table-scroll">
             <table>
               <thead>
                 <tr>
-                  <th>Province</th>
-                  <th>District</th>
-                  <th>Municipality</th>
-                  <th>Year</th>
-                  <th>Commodity / Program</th>
-                  <th>Activity</th>
-                  <th>Budget</th>
-                  <th>Length</th>
-                  <th>Source</th>
+                  <th><button class="sort-btn" data-sort="province">Province</button></th>
+                  <th><button class="sort-btn" data-sort="district">District</button></th>
+                  <th><button class="sort-btn" data-sort="municipality">Municipality</button></th>
+                  <th><button class="sort-btn" data-sort="year">Year</button></th>
+                  <th><button class="sort-btn" data-sort="program">Commodity / Program</button></th>
+                  <th><button class="sort-btn" data-sort="activity">Activity</button></th>
+                  <th><button class="sort-btn" data-sort="budget">Budget</button></th>
+                  <th><button class="sort-btn" data-sort="length">Length</button></th>
+                  <th><button class="sort-btn" data-sort="source">Source</button></th>
                 </tr>
               </thead>
               <tbody id="plans-table"></tbody>
@@ -167,6 +171,6 @@
 
   <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script src="js/plansDashboard.js?v=20260509-darkdefault"></script>
+  <script src="js/plansDashboard.js?v=20260509-tabletools"></script>
 </body>
 </html>

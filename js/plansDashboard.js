@@ -1,5 +1,5 @@
 const PlansDashboard = (() => {
-  const VERSION = "20260509-darkdefault";
+  const VERSION = "20260509-tabletools";
   const DETAIL_URL = `data/plans_projects_2025_2027_details.csv?v=${VERSION}`;
   const METADATA_URL = `data/plans_projects_metadata.json?v=${VERSION}`;
 
@@ -35,6 +35,9 @@ const PlansDashboard = (() => {
   let chartType = "horizontal-bar";
   let themeMode = "dark";
   let searchTerm = "";
+  let activitySearchTerm = "";
+  let tableSortField = "budget";
+  let tableSortDir = "desc";
   let metadata = null;
   let charts = {};
 
@@ -149,6 +152,24 @@ const PlansDashboard = (() => {
     document.getElementById("search-filter").addEventListener("input", event => {
       searchTerm = event.target.value.trim().toLowerCase();
       update();
+    });
+
+    document.getElementById("activity-search").addEventListener("input", event => {
+      activitySearchTerm = event.target.value.trim().toLowerCase();
+      updateTable(filteredRows());
+    });
+
+    document.querySelector("thead").addEventListener("click", event => {
+      const button = event.target.closest("[data-sort]");
+      if (!button) return;
+      const field = button.dataset.sort;
+      if (tableSortField === field) {
+        tableSortDir = tableSortDir === "asc" ? "desc" : "asc";
+      } else {
+        tableSortField = field;
+        tableSortDir = ["budget", "length", "year"].includes(field) ? "desc" : "asc";
+      }
+      updateTable(filteredRows());
     });
 
     document.getElementById("chart-type").addEventListener("change", event => {
@@ -479,8 +500,12 @@ const PlansDashboard = (() => {
 
   function updateTable(data) {
     const tbody = document.getElementById("plans-table");
-    const sorted = [...data].sort((a, b) => b.budgetValue - a.budgetValue || a.province.localeCompare(b.province));
-    document.getElementById("table-count").textContent = `${formatNumber(sorted.length)} records`;
+    const tableRows = filterActivityRows(data);
+    const sorted = sortTableRows(tableRows);
+    document.getElementById("table-count").textContent = activitySearchTerm
+      ? `${formatNumber(sorted.length)} matching records of ${formatNumber(data.length)}`
+      : `${formatNumber(sorted.length)} records`;
+    updateSortIndicators();
 
     tbody.innerHTML = sorted.slice(0, 500).map(row => `
       <tr>
@@ -495,6 +520,55 @@ const PlansDashboard = (() => {
         <td>${escapeHTML(row.source_file)}</td>
       </tr>
     `).join("");
+  }
+
+  function filterActivityRows(data) {
+    if (!activitySearchTerm) return data;
+    return data.filter(row => [
+      row.activity,
+      row.source_note,
+      row.unit,
+      row.program,
+      row.displayMunicipality,
+      row.displayDistrict
+    ].join(" ").toLowerCase().includes(activitySearchTerm));
+  }
+
+  function sortTableRows(data) {
+    const dir = tableSortDir === "asc" ? 1 : -1;
+    return [...data].sort((a, b) => {
+      const av = sortValue(a, tableSortField);
+      const bv = sortValue(b, tableSortField);
+
+      if (typeof av === "number" && typeof bv === "number") {
+        return (av - bv) * dir || a.province.localeCompare(b.province);
+      }
+      return String(av).localeCompare(String(bv), undefined, { numeric: true, sensitivity: "base" }) * dir;
+    });
+  }
+
+  function sortValue(row, field) {
+    const values = {
+      province: row.province,
+      district: row.displayDistrict,
+      municipality: row.displayMunicipality,
+      year: parseNumber(row.year),
+      program: row.program,
+      activity: row.activity || row.source_note || "",
+      budget: row.budgetValue,
+      length: row.lengthValue,
+      source: row.source_file
+    };
+    return values[field] ?? "";
+  }
+
+  function updateSortIndicators() {
+    document.querySelectorAll("[data-sort]").forEach(button => {
+      const active = button.dataset.sort === tableSortField;
+      button.classList.toggle("active", active);
+      button.dataset.dir = active ? tableSortDir : "";
+      button.setAttribute("aria-sort", active ? (tableSortDir === "asc" ? "ascending" : "descending") : "none");
+    });
   }
 
   function sum(data, field) {
