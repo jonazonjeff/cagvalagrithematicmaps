@@ -24,6 +24,22 @@ const Visualizations = (() => {
     }
   }
 
+  function areaKey(props) {
+    return Utils.getAreaKey(props);
+  }
+
+  function areaName(props) {
+    return Utils.getAreaName(props);
+  }
+
+  function bindAreaSelection(layer, feature, props = feature.properties) {
+    layer.on("click", () => {
+      window.dispatchEvent(new CustomEvent("area:selected", {
+        detail: { properties: props, name: areaName(props), centroid: Utils.getCentroid(feature) }
+      }));
+    });
+  }
+
   // ============================================================
   // CHOROPLETH + GRADIENT MAP
   // ============================================================
@@ -105,7 +121,7 @@ const Visualizations = (() => {
       });
       attachPopup(f, circle, field);
       circle.bindTooltip(
-        `<strong>${f.properties.municipality || f.properties.NAME || ""}</strong><br>${INDICATOR_CONFIG[field]?.label || field}: <b>${Utils.formatValue(val, field)}</b>`,
+        `<strong>${areaName(f.properties)}</strong><br>${INDICATOR_CONFIG[field]?.label || field}: <b>${Utils.formatValue(val, field)}</b>`,
         { sticky: true, className: "hover-tip" }
       );
       circles.push(circle);
@@ -144,12 +160,13 @@ const Visualizations = (() => {
       onEachFeature: (feature, layer) => {
         const vA = Utils.parseNumeric(feature.properties[fieldA]);
         const vB = Utils.parseNumeric(feature.properties[fieldB]);
-        const name = feature.properties.municipality || feature.properties.NAME || "Area";
+        const name = areaName(feature.properties);
         layer.bindPopup(`
           <div class="popup-header">${name}</div>
           <div class="popup-row"><b>${INDICATOR_CONFIG[fieldA]?.label || fieldA}:</b> ${Utils.formatValue(vA, fieldA)}</div>
           <div class="popup-row"><b>${INDICATOR_CONFIG[fieldB]?.label || fieldB}:</b> ${Utils.formatValue(vB, fieldB)}</div>
         `);
+        bindAreaSelection(layer, feature);
         layer.on("mouseover", () => layer.setStyle({ fillOpacity: 1.0 }));
         layer.on("mouseout", () => layer.setStyle({ fillOpacity: 0.8 }));
       }
@@ -179,7 +196,7 @@ const Visualizations = (() => {
       },
       onEachFeature: (feature, layer) => {
         const cls = classifyCrop(feature.properties);
-        const name = feature.properties.municipality || feature.properties.NAME || "Area";
+        const name = areaName(feature.properties);
         layer.bindPopup(`
           <div class="popup-header">${name}</div>
           <div class="popup-row"><b>Crop Classification:</b> ${cls}</div>
@@ -187,6 +204,7 @@ const Visualizations = (() => {
           <div class="popup-row"><b>Corn Area (2023):</b> ${Utils.formatValue(feature.properties.corn_area_2023, "corn_area_2023")}</div>
         `);
         layer.bindTooltip(`<b>${name}:</b> ${cls}`, { sticky: true, className: "hover-tip" });
+        bindAreaSelection(layer, feature);
       }
     }).addTo(map);
 
@@ -235,7 +253,7 @@ const Visualizations = (() => {
       const icon = L.divIcon({ html: svgIcon, className: "pie-icon", iconSize: [radius * 2, radius * 2] });
       const marker = L.marker(centroid, { icon });
 
-      const name = props.municipality || props.NAME || "";
+      const name = areaName(props);
       let tipHtml = `<div class="popup-header">${name}</div>`;
       fields.forEach((fld, i) => {
         const pct = total > 0 ? ((values[i] / total) * 100).toFixed(1) : 0;
@@ -243,6 +261,7 @@ const Visualizations = (() => {
           <b>${labels[i]}:</b> ${Utils.formatNumber(values[i])} (${pct}%)</div>`;
       });
       marker.bindPopup(tipHtml);
+      bindAreaSelection(marker, f);
       markers.push(marker);
     });
 
@@ -320,13 +339,14 @@ const Visualizations = (() => {
       const icon = L.divIcon({ html: svgIcon, className: "bar-icon", iconSize: [totalW, svgH] });
       const marker = L.marker(centroid, { icon });
 
-      const name = props.municipality || props.NAME || "";
+      const name = areaName(props);
       let tipHtml = `<div class="popup-header">${name}</div>`;
       fields.forEach((fld, i) => {
         tipHtml += `<div class="popup-row" style="border-left:4px solid ${colors[i]};padding-left:6px;">
           <b>${labels[i]}:</b> ${Utils.formatValue(values[i], fld)}</div>`;
       });
       marker.bindPopup(tipHtml);
+      bindAreaSelection(marker, f);
       markers.push(marker);
     });
 
@@ -343,13 +363,13 @@ const Visualizations = (() => {
     const rows = geojson.features.map(f => f.properties);
     const ascending = direction === "bottom";
     const ranked = Utils.rankData(rows, field, ascending);
-    const topN = new Set(ranked.slice(0, n).map(r => r.municipality || r.NAME || r.province));
+    const topN = new Set(ranked.slice(0, n).map(r => areaKey(r)));
 
     currentLayer = L.geoJSON(geojson, {
       style: (feature) => {
-        const name = feature.properties.municipality || feature.properties.NAME || feature.properties.province || "";
-        const isTop = topN.has(name);
-        const rank = ranked.find(r => (r.municipality || r.NAME || r.province) === name)?._rank;
+        const key = areaKey(feature.properties);
+        const isTop = topN.has(key);
+        const rank = ranked.find(r => areaKey(r) === key)?._rank;
         const t = isTop ? 1 - (rank - 1) / n : 0;
         const color = isTop ? Utils.interpolateColor("#ffffcc", "#d73027", t) : "#dddddd";
         return {
@@ -358,8 +378,9 @@ const Visualizations = (() => {
         };
       },
       onEachFeature: (feature, layer) => {
-        const name = feature.properties.municipality || feature.properties.NAME || "";
-        const rank = ranked.find(r => (r.municipality || r.NAME) === name);
+        const key = areaKey(feature.properties);
+        const name = areaName(feature.properties);
+        const rank = ranked.find(r => areaKey(r) === key);
         if (rank) {
           layer.bindTooltip(
             `<b>#${rank._rank} ${name}</b><br>${INDICATOR_CONFIG[field]?.label || field}: ${Utils.formatValue(rank._rankVal, field)}`,
@@ -385,8 +406,7 @@ const Visualizations = (() => {
     // Build a lookup by municipality
     const devMap = {};
     withDev.forEach(r => {
-      const key = r.municipality || r.NAME || r.province || "";
-      devMap[key] = r;
+      devMap[areaKey(r)] = r;
     });
 
     const devColors = {
@@ -400,13 +420,13 @@ const Visualizations = (() => {
 
     currentLayer = L.geoJSON(geojson, {
       style: (feature) => {
-        const name = feature.properties.municipality || feature.properties.NAME || feature.properties.province || "";
-        const dev = devMap[name] || { _devClass: "N/A" };
+        const key = areaKey(feature.properties);
+        const dev = devMap[key] || { _devClass: "N/A" };
         return { fillColor: devColors[dev._devClass] || "#cccccc", weight: 1, color: "#555", fillOpacity: 0.8 };
       },
       onEachFeature: (feature, layer) => {
-        const name = feature.properties.municipality || feature.properties.NAME || feature.properties.province || "";
-        const dev = devMap[name] || {};
+        const name = areaName(feature.properties);
+        const dev = devMap[areaKey(feature.properties)] || {};
         const label = INDICATOR_CONFIG[field]?.label || field;
         const val = Utils.parseNumeric(feature.properties[field]);
         layer.bindPopup(`
@@ -417,6 +437,7 @@ const Visualizations = (() => {
           <div class="popup-row"><b>% Diff:</b> ${dev._devPct !== undefined ? Utils.formatPct(dev._devPct) : "N/A"}</div>
           <div class="popup-row"><b>Classification:</b> <b>${dev._devClass || "N/A"}</b></div>
         `);
+        bindAreaSelection(layer, feature, dev);
         layer.bindTooltip(`<b>${name}:</b> ${dev._devClass || "N/A"}`, { sticky: true, className: "hover-tip" });
       }
     }).addTo(map);
@@ -444,19 +465,18 @@ const Visualizations = (() => {
 
     const ratioMap = {};
     withRatio.forEach(r => {
-      ratioMap[r.municipality || r.NAME || r.province || ""] = r;
+      ratioMap[areaKey(r)] = r;
     });
 
     currentLayer = L.geoJSON(geojson, {
       style: (feature) => {
-        const name = feature.properties.municipality || feature.properties.NAME || "";
-        const r = ratioMap[name] || {};
+        const r = ratioMap[areaKey(feature.properties)] || {};
         const color = r._ratio !== null ? Utils.classifyValue(r._ratio, breaks, scheme) : "#dddddd";
         return { fillColor: color, weight: 1, color: "#555", fillOpacity: 0.8 };
       },
       onEachFeature: (feature, layer) => {
-        const name = feature.properties.municipality || feature.properties.NAME || "";
-        const r = ratioMap[name] || {};
+        const name = areaName(feature.properties);
+        const r = ratioMap[areaKey(feature.properties)] || {};
         const nLabel = INDICATOR_CONFIG[numeratorField]?.label || numeratorField;
         const dLabel = INDICATOR_CONFIG[denominatorField]?.label || denominatorField;
         layer.bindPopup(`
@@ -465,6 +485,7 @@ const Visualizations = (() => {
           <div class="popup-row"><b>Value:</b> ${r._ratio !== null ? Utils.formatNumber(r._ratio, 3) : "N/A"}</div>
           ${r._ratioWarning ? `<div class="popup-row popup-warning">⚠️ ${r._ratioWarning}</div>` : ""}
         `);
+        bindAreaSelection(layer, feature, r);
       }
     }).addTo(map);
 
@@ -484,19 +505,18 @@ const Visualizations = (() => {
     // Build lookup
     const scoreMap = {};
     scored.forEach(r => {
-      scoreMap[r.municipality || r.NAME || r.province || ""] = r;
+      scoreMap[areaKey(r)] = r;
     });
 
     currentLayer = L.geoJSON(geojson, {
       style: (feature) => {
-        const name = feature.properties.municipality || feature.properties.NAME || "";
-        const r = scoreMap[name] || {};
+        const r = scoreMap[areaKey(feature.properties)] || {};
         const color = PriorityScoring.getPriorityColor(r._priorityClass) || "#cccccc";
         return { fillColor: color, weight: 1, color: "#444", fillOpacity: 0.85 };
       },
       onEachFeature: (feature, layer) => {
-        const name = feature.properties.municipality || feature.properties.NAME || "";
-        const r = scoreMap[name] || {};
+        const name = areaName(feature.properties);
+        const r = scoreMap[areaKey(feature.properties)] || {};
         layer.bindPopup(`
           <div class="popup-header">${name}</div>
           <div class="popup-row"><b>Priority Model:</b> ${r._priorityModel || "N/A"}</div>
@@ -523,7 +543,7 @@ const Visualizations = (() => {
   // ============================================================
   function attachPopup(feature, layer, highlightField) {
     const p = feature.properties;
-    const name = p.municipality || p.NAME || p.province || "Area";
+    const name = areaName(p);
 
     let html = `<div class="popup-header">${name}</div>`;
     if (p.province && p.municipality) html += `<div class="popup-subhead">${p.province}</div>`;
@@ -593,7 +613,7 @@ const Visualizations = (() => {
   }
 
   function attachHoverTooltip(feature, layer, field) {
-    const name = feature.properties.municipality || feature.properties.NAME || feature.properties.province || "";
+    const name = areaName(feature.properties);
     const val = feature.properties[field];
     const label = INDICATOR_CONFIG[field]?.label || field;
     layer.bindTooltip(

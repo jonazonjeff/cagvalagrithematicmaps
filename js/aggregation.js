@@ -17,7 +17,7 @@ const Aggregation = (() => {
     // Group rows
     const groups = {};
     rows.forEach(row => {
-      const groupVal = row[groupField] || row[groupField.toLowerCase()] || "Unknown";
+      const groupVal = getGroupValue(row, groupField);
       if (!groups[groupVal]) groups[groupVal] = [];
       groups[groupVal].push(row);
     });
@@ -27,15 +27,19 @@ const Aggregation = (() => {
     Object.entries(groups).forEach(([groupVal, groupRows]) => {
       const agg = {
         [groupField]: groupVal,
+        _areaKey: groupVal,
         _rowCount: groupRows.length
       };
 
       // Copy non-indicator fields
       if (groupField === "district") {
         agg.province = groupRows[0].province || "";
+        agg.district_label = formatDistrictLabel(groupRows[0].province, groupRows[0].district);
+        agg._areaName = agg.district_label;
       }
       if (groupField === "province") {
         agg.province = groupVal;
+        agg._areaName = groupVal;
       }
 
       // Aggregate each indicator field
@@ -53,6 +57,90 @@ const Aggregation = (() => {
     });
 
     return result;
+  }
+
+  function getGroupValue(row, groupField) {
+    if (groupField === "district") {
+      return buildDistrictKey(row.province, row.district);
+    }
+    if (groupField === "province") {
+      return row.province || row.ADM2_EN || "Unknown";
+    }
+    return row[groupField] || row[groupField.toLowerCase()] || "Unknown";
+  }
+
+  function buildDistrictKey(province, district) {
+    const provinceName = province || "Unknown";
+    const districtName = district || "";
+    const provinceKey = String(provinceName).replace(/\s+/g, "");
+    const match = String(districtName).match(/(\d+)(?:st|nd|rd|th)?\s+District/i);
+    if (match) return `${provinceKey}${match[1]}`;
+    if (Utils.normalizeName(districtName) === Utils.normalizeName(provinceName)) {
+      return `${provinceKey}LoneDistrict`;
+    }
+    return districtName ? `${provinceKey}${String(districtName).replace(/\s+/g, "")}` : "Unknown";
+  }
+
+  function formatDistrictLabel(province, district) {
+    if (!district) return province || "Unknown District";
+    if (Utils.normalizeName(district) === Utils.normalizeName(province)) return `${province} Lone District`;
+    return `${province} ${district}`;
+  }
+
+  function aggregateGeoJSONBy(municipalGeoJSON, groupField) {
+    if (!municipalGeoJSON || !municipalGeoJSON.features) return null;
+
+    const municipalRows = municipalGeoJSON.features.map(f => f.properties).filter(p => p._joined !== false);
+    const aggData = aggregateBy(municipalRows, groupField);
+    const featuresByKey = {};
+
+    municipalGeoJSON.features.forEach(feature => {
+      if (feature.properties._joined === false) return;
+      const key = getGroupValue(feature.properties, groupField);
+      if (!featuresByKey[key]) featuresByKey[key] = [];
+      const clone = Utils.deepClone(feature);
+      clone.properties = { _aggKey: key };
+      featuresByKey[key].push(clone);
+    });
+
+    const features = Object.entries(featuresByKey).map(([key, features]) => {
+      const geometry = dissolveGeometries(features, key);
+      return {
+        type: "Feature",
+        properties: { ...(aggData[key] || {}), _joined: !!aggData[key] },
+        geometry
+      };
+    });
+
+    return {
+      type: "FeatureCollection",
+      features
+    };
+  }
+
+  function dissolveGeometries(features, key) {
+    if (typeof turf !== "undefined" && turf.dissolve && features.length > 0) {
+      try {
+        const dissolved = turf.dissolve({
+          type: "FeatureCollection",
+          features
+        }, { propertyName: "_aggKey" });
+        if (dissolved?.type === "Feature" && dissolved.geometry) return dissolved.geometry;
+        const match = dissolved?.features?.find(f => f.properties?._aggKey === key) || dissolved?.features?.[0];
+        if (match?.geometry) return match.geometry;
+      } catch (e) {
+        console.warn(`Could not dissolve ${key}; using grouped multipolygon fallback.`, e);
+      }
+    }
+
+    const polygons = [];
+    features.forEach(feature => {
+      const geom = feature.geometry;
+      if (!geom) return;
+      if (geom.type === "Polygon") polygons.push(geom.coordinates);
+      if (geom.type === "MultiPolygon") polygons.push(...geom.coordinates);
+    });
+    return { type: "MultiPolygon", coordinates: polygons };
   }
 
   /**
@@ -126,18 +214,28 @@ const Aggregation = (() => {
   function joinAggToGeoJSON(geojson, aggData, groupField) {
     if (!geojson) return null;
     geojson.features.forEach(f => {
-      const groupVal = f.properties[groupField] ||
-        f.properties[groupField.toUpperCase()] ||
-        f.properties.NAME || "";
+      const groupVal = getBoundaryGroupValue(f.properties, groupField);
       const match = aggData[groupVal] || Object.values(aggData).find(a =>
         Utils.normalizeName(a[groupField]) === Utils.normalizeName(groupVal)
       );
       if (match) {
         Object.assign(f.properties, match);
         f.properties._joined = true;
+      } else {
+        f.properties._joined = false;
       }
     });
     return geojson;
+  }
+
+  function getBoundaryGroupValue(props, groupField) {
+    if (groupField === "province") {
+      return props.province || props.ADM2_EN || props.PROVINCE || props.NAME || "";
+    }
+    if (groupField === "district") {
+      return props.district || buildDistrictKey(props.ADM2_EN || props.province || "", props.layer || "");
+    }
+    return props[groupField] || props[groupField.toUpperCase()] || props.NAME || "";
   }
 
   /**
@@ -205,6 +303,7 @@ const Aggregation = (() => {
 
   return {
     aggregateBy,
+    aggregateGeoJSONBy,
     joinAggToGeoJSON,
     computeRatioField,
     computeRegionalAverages,

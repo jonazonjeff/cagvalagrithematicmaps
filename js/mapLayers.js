@@ -237,7 +237,7 @@ const MapLayers = (() => {
       const props = f.properties;
       if (props._joined === false) return; // skip unmatched shapes
 
-      const name = props[viewType] || props.province || props.NAME || props.municipality || "";
+      const name = Utils.getAreaName(props);
       const val  = props[indicatorKey];
       const formatted = (val !== undefined && val !== null && val !== "")
         ? Utils.formatValue(val, indicatorKey)
@@ -315,8 +315,7 @@ const MapLayers = (() => {
     if (!geojson) return false;
     const norm = Utils.normalizeName(name);
     const match = geojson.features.find(f => {
-      const mun = f.properties.municipality || f.properties.NAME || f.properties.province || "";
-      return Utils.normalizeName(mun).includes(norm);
+      return Utils.normalizeName(Utils.getAreaName(f.properties)).includes(norm);
     });
     if (match) { zoomToFeature(match); return match; }
     return false;

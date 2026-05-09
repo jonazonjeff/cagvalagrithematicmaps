@@ -14,6 +14,7 @@ const App = (() => {
   let sidebarCollapsed = false;
   let currentScenario = "rice";
   let selectedArea = null;
+  let didInitialMapFit = false;
 
   // Compare/bivariate state
   let compareFieldA = "poverty_2023";
@@ -144,15 +145,19 @@ const App = (() => {
     if (currentView === "municipality") {
       currentGeoJSON = appData.municipalGeoJSON;
       currentRows = DataLoader.getMunicipalRows();
-    } else if (currentView === "district" && appData.districtGeoJSON) {
+    } else if (currentView === "district") {
       const agg = Aggregation.aggregateBy(DataLoader.getMunicipalRows(), "district");
-      currentGeoJSON = Aggregation.joinAggToGeoJSON(appData.districtGeoJSON, agg, "district");
       currentRows = Object.values(agg);
-    } else if (currentView === "province" && appData.provinceGeoJSON) {
+      currentGeoJSON = appData.districtGeoJSON
+        ? Aggregation.joinAggToGeoJSON(Utils.deepClone(appData.districtGeoJSON), agg, "district")
+        : Aggregation.aggregateGeoJSONBy(appData.municipalGeoJSON, "district");
+    } else if (currentView === "province") {
       const agg = Aggregation.aggregateBy(DataLoader.getMunicipalRows(), "province");
-      currentGeoJSON = Aggregation.joinAggToGeoJSON(appData.provinceGeoJSON, agg, "province");
       currentRows = Object.values(agg);
-    } else if (currentView === "district" || currentView === "province") {
+      currentGeoJSON = appData.provinceGeoJSON
+        ? Aggregation.joinAggToGeoJSON(Utils.deepClone(appData.provinceGeoJSON), agg, "province")
+        : Aggregation.aggregateGeoJSONBy(appData.municipalGeoJSON, "province");
+    } else if (false) {
       // Fallback: no separate GeoJSON file — aggregate municipal polygons visually
       const groupField = currentView === "district" ? "district" : "province";
       const agg = Aggregation.aggregateBy(DataLoader.getMunicipalRows(), groupField);
@@ -169,9 +174,12 @@ const App = (() => {
     Charts.updateAll(currentRows, currentIndicator, { n: rankedN, direction: rankedDir });
     updatePlanningInsights();
 
-    // Aggregate labels for district / province views
-    if (currentView !== "municipality") {
-      MapLayers.renderAggregateLabels(currentGeoJSON, currentIndicator, currentView);
+    if (!didInitialMapFit && currentView === "municipality" && currentGeoJSON) {
+      didInitialMapFit = true;
+      window.setTimeout(() => {
+        if (map) map.invalidateSize();
+        MapLayers.fitToGeoJSON(currentGeoJSON);
+      }, 80);
     }
 
     // Load facility point data once on first render
@@ -374,17 +382,15 @@ const App = (() => {
 
   function findSelectedRow(rows) {
     if (!selectedArea) return null;
-    const selectedName = Utils.normalizeName(selectedArea.municipality || selectedArea.NAME || selectedArea.province || "");
-    const selectedProvince = Utils.normalizeName(selectedArea.province || "");
+    const selectedKey = Utils.getAreaKey(selectedArea);
+    const selectedName = Utils.normalizeName(Utils.getAreaName(selectedArea));
     return rows.find(r => {
-      const rowName = Utils.normalizeName(r.municipality || r.NAME || r.province || "");
-      const rowProvince = Utils.normalizeName(r.province || "");
-      return rowName === selectedName && (!selectedProvince || !rowProvince || rowProvince === selectedProvince);
+      return Utils.getAreaKey(r) === selectedKey || Utils.normalizeName(Utils.getAreaName(r)) === selectedName;
     }) || null;
   }
 
   function renderSelectedDecision(row, scenario) {
-    const name = escapeHTML(row.municipality || row.NAME || row.province || "Selected area");
+    const name = escapeHTML(Utils.getAreaName(row));
     const triggered = PLANNING_INSIGHTS.filter(rule => {
       try { return rule.condition(row); } catch(e) { return false; }
     }).slice(0, 3);
@@ -409,7 +415,7 @@ const App = (() => {
   }
 
   function renderPriorityArea(row, rank) {
-    const name = escapeHTML(row.municipality || row.NAME || row.province || "Area");
+    const name = escapeHTML(Utils.getAreaName(row));
     return `<div class="decision-rank-row">
       <span class="decision-rank">${rank}</span>
       <span class="decision-rank-name">${name}</span>
@@ -621,10 +627,6 @@ const App = (() => {
     if (indSel) indSel.addEventListener("change", () => {
       currentIndicator = indSel.value;
       renderCurrentView();
-      // Refresh aggregate labels when indicator changes
-      if (currentView !== "municipality") {
-        MapLayers.renderAggregateLabels(currentGeoJSON, currentIndicator, currentView);
-      }
     });
 
     // Decision scenario

@@ -4,15 +4,15 @@
 // ============================================================
 
 const APP_CONFIG = {
-  title: "Cagayan Valley Agriculture, Poverty, Nutrition & Planning Map",
-  subtitle: "Interactive spatial decision-support tool for agriculture intervention targeting and investment prioritization",
+  title: "AgriSight Cagayan Valley",
+  subtitle: "Agriculture, climate risk, and seasonal rice decision map",
   defaultView: "municipality",
   defaultIndicator: "population",
   defaultStyle: "choropleth",
   mapCenter: [17.6132, 121.7270],
   mapZoom: 8,
   dataPath: "data/",
-  assetVersion: "20260509-public",
+  assetVersion: "20260509-labeltitle",
 };
 
 // ============================================================

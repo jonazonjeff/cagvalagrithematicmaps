@@ -26,6 +26,29 @@ const Utils = (() => {
     return normalizeName(province) + "||" + normalizeName(municipality);
   }
 
+  function getAreaKey(props) {
+    if (!props) return "";
+    return props._areaKey ||
+      props.municipality ||
+      props.district ||
+      props.province ||
+      props.ADM2_EN ||
+      props.NAME ||
+      "";
+  }
+
+  function getAreaName(props) {
+    if (!props) return "Area";
+    return props._areaName ||
+      props.municipality ||
+      props.district_label ||
+      props.district ||
+      props.province ||
+      props.ADM2_EN ||
+      props.NAME ||
+      "Area";
+  }
+
   // Format a number with commas and optional decimals
   function formatNumber(val, decimals = 0) {
     if (val === null || val === undefined || val === "" || isNaN(val)) return "N/A";
@@ -264,6 +287,8 @@ const Utils = (() => {
   return {
     normalizeName,
     buildJoinKey,
+    getAreaKey,
+    getAreaName,
     formatNumber,
     formatPct,
     formatValue,

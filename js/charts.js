@@ -44,7 +44,7 @@ const Charts = (() => {
     barChart = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: top.map(r => r.municipality || r.NAME || r.province || "?"),
+        labels: top.map(r => Utils.getAreaName(r)),
         datasets: [{
           label: label,
           data: top.map(r => r._rankVal),
@@ -82,7 +82,7 @@ const Charts = (() => {
       .sort((a, b) => Utils.parseNumeric(b.poverty_2023) - Utils.parseNumeric(a.poverty_2023))
       .slice(0, topN);
 
-    const labels = sorted.map(r => r.municipality || r.NAME || "?");
+    const labels = sorted.map(r => Utils.getAreaName(r));
     const years = ["2018", "2021", "2023"];
     const fields = ["poverty_2018", "poverty_2021", "poverty_2023"];
     const colors = ["#4472C4", "#ED7D31", "#A9D18E"];
@@ -130,7 +130,7 @@ const Charts = (() => {
       .sort((a, b) => Utils.parseNumeric(b[f2023]) - Utils.parseNumeric(a[f2023]))
       .slice(0, topN);
 
-    const labels = sorted.map(r => r.municipality || r.NAME || "?");
+    const labels = sorted.map(r => Utils.getAreaName(r));
     const color2023 = crop === "rice" ? "#4CAF50" : "#FF9800";
     const color2025 = crop === "rice" ? "#1B5E20" : "#E65100";
 
@@ -173,7 +173,7 @@ const Charts = (() => {
       .map(r => ({
         x: Utils.parseNumeric(r[xField]),
         y: Utils.parseNumeric(r[yField]),
-        label: r.municipality || r.NAME || ""
+        label: Utils.getAreaName(r)
       }));
 
     scatterChart = new Chart(ctx, {
@@ -270,7 +270,7 @@ const Charts = (() => {
     top.forEach(r => {
       html += `<tr class="rank-row rank-${r._rank <= 3 ? "top3" : ""}">
         <td><span class="rank-badge">${r._rank}</span></td>
-        <td>${r.municipality || r.NAME || "?"}</td>
+        <td>${Utils.getAreaName(r)}</td>
         <td>${r.province || ""}</td>
         <td>${Utils.formatValue(r._rankVal, field)}</td>
       </tr>`;
