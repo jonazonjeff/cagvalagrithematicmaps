@@ -1,0 +1,73 @@
+{
+  "dataset_name": "DA Region 02 Plans and Projects 2025-2027",
+  "source": "Google Drive planning workbooks",
+  "source_folder_url": "https://drive.google.com/drive/folders/1mOY40xTSz2KGzj4mLOAkhIEptkKnlVr9?usp=sharing",
+  "generated_at": "2026-05-09T19:18:37+08:00",
+  "latest_source_file_modified_at": "2026-05-09T14:06:31+08:00",
+  "source_file_count": 12,
+  "summary_rows": 91,
+  "detail_rows": 1319,
+  "source_directory": "data\\plans_raw",
+  "source_files": [
+    {
+      "name": "batanes.xlsx",
+      "size_bytes": 213457,
+      "local_modified_at": "2026-05-09T14:06:24+08:00"
+    },
+    {
+      "name": "cagayan_1.xlsx",
+      "size_bytes": 402273,
+      "local_modified_at": "2026-05-09T14:05:24+08:00"
+    },
+    {
+      "name": "cagayan_2.xlsx",
+      "size_bytes": 457665,
+      "local_modified_at": "2026-05-09T14:05:54+08:00"
+    },
+    {
+      "name": "cagayan_3.xlsx",
+      "size_bytes": 523797,
+      "local_modified_at": "2026-05-09T14:05:59+08:00"
+    },
+    {
+      "name": "isabela_1.xlsx",
+      "size_bytes": 305986,
+      "local_modified_at": "2026-05-09T14:06:03+08:00"
+    },
+    {
+      "name": "isabela_2.xlsx",
+      "size_bytes": 378751,
+      "local_modified_at": "2026-05-09T14:06:07+08:00"
+    },
+    {
+      "name": "isabela_3.xlsx",
+      "size_bytes": 286056,
+      "local_modified_at": "2026-05-09T14:06:11+08:00"
+    },
+    {
+      "name": "isabela_4.xlsx",
+      "size_bytes": 281667,
+      "local_modified_at": "2026-05-09T14:06:14+08:00"
+    },
+    {
+      "name": "isabela_5.xlsx",
+      "size_bytes": 263623,
+      "local_modified_at": "2026-05-09T14:06:18+08:00"
+    },
+    {
+      "name": "isabela_6.xlsx",
+      "size_bytes": 248121,
+      "local_modified_at": "2026-05-09T14:06:21+08:00"
+    },
+    {
+      "name": "nueva_vizcaya.xlsx",
+      "size_bytes": 302051,
+      "local_modified_at": "2026-05-09T14:06:27+08:00"
+    },
+    {
+      "name": "quirino.xlsx",
+      "size_bytes": 300729,
+      "local_modified_at": "2026-05-09T14:06:31+08:00"
+    }
+  ]
+}

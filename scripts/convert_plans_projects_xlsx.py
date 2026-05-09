@@ -1,10 +1,12 @@
 import csv
+import json
 import re
 import sys
 import unicodedata
 import zipfile
 import xml.etree.ElementTree as ET
 from collections import defaultdict
+from datetime import datetime
 from pathlib import Path
 
 
@@ -521,11 +523,43 @@ def write_csv(path, rows, fields):
         writer.writerows(rows)
 
 
+def write_metadata(path, source_dir, source_files, summary_count, detail_count):
+    generated_at = datetime.now().astimezone().isoformat(timespec="seconds")
+    files = []
+    latest_mtime = None
+    for source in source_files:
+        stat = source.stat()
+        modified = datetime.fromtimestamp(stat.st_mtime).astimezone()
+        latest_mtime = max(latest_mtime, modified) if latest_mtime else modified
+        files.append({
+            "name": source.name,
+            "size_bytes": stat.st_size,
+            "local_modified_at": modified.isoformat(timespec="seconds"),
+        })
+
+    metadata = {
+        "dataset_name": "DA Region 02 Plans and Projects 2025-2027",
+        "source": "Google Drive planning workbooks",
+        "source_folder_url": "https://drive.google.com/drive/folders/1mOY40xTSz2KGzj4mLOAkhIEptkKnlVr9?usp=sharing",
+        "generated_at": generated_at,
+        "latest_source_file_modified_at": latest_mtime.isoformat(timespec="seconds") if latest_mtime else generated_at,
+        "source_file_count": len(source_files),
+        "summary_rows": summary_count,
+        "detail_rows": detail_count,
+        "source_directory": str(source_dir),
+        "source_files": files,
+    }
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(metadata, indent=2), encoding="utf-8")
+
+
 def main():
     source_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("data/plans_raw")
     output = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("data/plans_projects_2025_2027.csv")
     detail_output = Path(sys.argv[3]) if len(sys.argv) > 3 else Path("data/plans_projects_2025_2027_details.csv")
     municipal_csv = Path(sys.argv[4]) if len(sys.argv) > 4 else Path("data/municipal_data.csv")
+    metadata_output = Path("data/plans_projects_metadata.json")
 
     files = sorted(source_dir.glob("*.xlsx"))
     if not files:
@@ -536,11 +570,13 @@ def main():
     summary = aggregate(details)
     write_csv(output, summary, SUMMARY_FIELDS)
     write_csv(detail_output, details, DETAIL_FIELDS)
+    write_metadata(metadata_output, source_dir, files, len(summary), len(details))
     if unmatched:
         write_csv(Path("data/plans_projects_unmatched_terms.csv"), unmatched, ["source_file", "sheet", "province", "text"])
 
     print(f"Wrote {len(summary)} municipal planning rows to {output}")
     print(f"Wrote {len(details)} extracted planning detail rows to {detail_output}")
+    print(f"Wrote planning metadata to {metadata_output}")
     if unmatched:
         print(f"Wrote {len(unmatched)} unmatched terms to data/plans_projects_unmatched_terms.csv")
     return 0

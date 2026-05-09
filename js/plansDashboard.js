@@ -1,16 +1,23 @@
 const PlansDashboard = (() => {
-  const VERSION = "20260509-plans";
+  const VERSION = "20260509-darkdefault";
   const DETAIL_URL = `data/plans_projects_2025_2027_details.csv?v=${VERSION}`;
+  const METADATA_URL = `data/plans_projects_metadata.json?v=${VERSION}`;
 
   const COMMODITIES = [
     { key: "all", label: "All" },
     { key: "rice", label: "Rice", programs: ["Rice Program"] },
     { key: "corn", label: "Corn", programs: ["Corn Program"] },
-    { key: "hvc", label: "High Value Crops", programs: ["High Value Crops", "NUPAP"] },
-    { key: "fmr", label: "FMR", programs: ["Farm-to-Market Roads", "PRDP"] },
+    { key: "hvc", label: "High Value Crops", programs: ["High Value Crops"] },
+    { key: "nupap", label: "NUPAP", programs: ["NUPAP"] },
+    { key: "livestock", label: "Livestock", programs: ["LIVESTOCK"] },
+    { key: "fmr", label: "FMR", programs: ["Farm-to-Market Roads"] },
+    { key: "prdp", label: "PRDP", programs: ["PRDP"] },
     { key: "4ks", label: "4Ks", programs: ["4Ks"] },
     { key: "saad", label: "SAAD", programs: ["SAAD"] },
-    { key: "other", label: "Other", programs: ["OAP", "National Soil Health", "MCRA", "LIVESTOCK", "HALAL", "COLD STORAGE", "2024-2026"] }
+    { key: "mcra", label: "MCRA", programs: ["MCRA"] },
+    { key: "nshp", label: "NSHP", programs: ["National Soil Health"] },
+    { key: "halal", label: "HALAL", programs: ["HALAL"] },
+    { key: "other", label: "Other", programs: ["OAP", "COLD STORAGE", "2024-2026"] }
   ];
 
   const YEAR_LABELS = {
@@ -20,19 +27,24 @@ const PlansDashboard = (() => {
   };
 
   let rows = [];
-  let activeYear = "2026";
+  let activeYear = "2027";
   let activeCommodity = "all";
   let provinceFilter = "all";
   let districtFilter = "all";
   let municipalityFilter = "all";
+  let chartType = "horizontal-bar";
+  let themeMode = "dark";
   let searchTerm = "";
+  let metadata = null;
   let charts = {};
 
   const currency = new Intl.NumberFormat("en-PH", { maximumFractionDigits: 0 });
   const decimal = new Intl.NumberFormat("en-PH", { maximumFractionDigits: 2 });
 
   function init() {
+    document.body.dataset.theme = themeMode;
     bindEvents();
+    loadMetadata();
     Papa.parse(DETAIL_URL, {
       download: true,
       header: true,
@@ -51,12 +63,44 @@ const PlansDashboard = (() => {
     });
   }
 
+  async function loadMetadata() {
+    try {
+      const res = await fetch(METADATA_URL, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      metadata = await res.json();
+      renderMetadata();
+    } catch (err) {
+      document.getElementById("source-summary").innerHTML =
+        `<div class="source-line source-warn">Source metadata unavailable.</div>`;
+    }
+  }
+
+  function renderMetadata() {
+    if (!metadata) return;
+    const generated = formatTimestamp(metadata.generated_at);
+    const latest = formatTimestamp(metadata.latest_source_file_modified_at);
+    const link = metadata.source_folder_url
+      ? `<a href="${escapeHTML(metadata.source_folder_url)}" target="_blank" rel="noopener">Google Drive folder</a>`
+      : "Google Drive folder";
+
+    document.getElementById("source-summary").innerHTML = `
+      <div class="source-line"><strong>${escapeHTML(metadata.source || "Planning workbooks")}</strong></div>
+      <div class="source-line">Dashboard data refreshed: ${escapeHTML(generated)}</div>
+      <div class="source-line">Latest downloaded workbook timestamp: ${escapeHTML(latest)}</div>
+      <div class="source-line">${formatNumber(metadata.source_file_count || 0)} workbooks, ${formatNumber(metadata.detail_rows || 0)} records</div>
+      <div class="source-line">${link}</div>
+    `;
+  }
+
   function normalizeRow(row) {
+    const districtInfo = normalizeDistrict(row.province, row.district);
     const displayMunicipality = row.municipality ||
-      (row.district ? `${row.province} ${row.district} districtwide` : `${row.province} provincewide`);
+      (districtInfo.key ? `${districtInfo.label} districtwide` : `${row.province} provincewide`);
     return {
       ...row,
       year: String(row.year || "").trim(),
+      districtKey: districtInfo.key,
+      displayDistrict: districtInfo.label,
       displayMunicipality,
       budgetValue: parseNumber(row.budget),
       lengthValue: parseNumber(row.length_km),
@@ -107,6 +151,30 @@ const PlansDashboard = (() => {
       update();
     });
 
+    document.getElementById("chart-type").addEventListener("change", event => {
+      chartType = event.target.value;
+      update();
+    });
+
+    document.querySelectorAll("[data-theme-mode]").forEach(button => {
+      button.addEventListener("click", event => {
+        themeMode = event.currentTarget.dataset.themeMode || "dark";
+        document.querySelectorAll("[data-theme-mode]").forEach(btn => {
+          btn.classList.toggle("active", btn === event.currentTarget);
+        });
+        document.body.dataset.theme = themeMode;
+        update();
+      });
+    });
+
+    const activeThemeButton = document.querySelector(`[data-theme-mode="${themeMode}"]`);
+    if (activeThemeButton) {
+      document.querySelectorAll("[data-theme-mode]").forEach(btn => {
+        btn.classList.toggle("active", btn === activeThemeButton);
+      });
+      document.body.dataset.theme = themeMode;
+    }
+
     document.getElementById("export-plans").addEventListener("click", () => {
       const csv = toCSV(filteredRows());
       downloadCSV(csv, `agriplan_${activeCommodity}_${activeYear}.csv`);
@@ -127,16 +195,21 @@ const PlansDashboard = (() => {
 
   function updateDistrictFilter() {
     const select = document.getElementById("district-filter");
-    const districts = [...new Set(rows
+    const districtMap = new Map();
+    rows
       .filter(row => provinceFilter === "all" || row.province === provinceFilter)
-      .map(row => row.district)
-      .filter(Boolean))]
-      .sort(compareDistricts);
+      .forEach(row => {
+        if (!row.districtKey) return;
+        districtMap.set(row.districtKey, row.displayDistrict);
+      });
+    const districts = [...districtMap.entries()]
+      .map(([key, label]) => ({ key, label }))
+      .sort((a, b) => compareDistricts(a.key, b.key));
 
-    if (districtFilter !== "all" && !districts.includes(districtFilter)) districtFilter = "all";
+    if (districtFilter !== "all" && !districtMap.has(districtFilter)) districtFilter = "all";
     select.innerHTML = `<option value="all">All Districts</option>` +
       districts.map(district =>
-        `<option value="${escapeHTML(district)}" ${district === districtFilter ? "selected" : ""}>${escapeHTML(formatDistrict(district))}</option>`
+        `<option value="${escapeHTML(district.key)}" ${district.key === districtFilter ? "selected" : ""}>${escapeHTML(district.label)}</option>`
       ).join("");
     select.value = districtFilter;
   }
@@ -145,7 +218,7 @@ const PlansDashboard = (() => {
     const select = document.getElementById("municipality-filter");
     const municipalities = [...new Set(rows
       .filter(row => provinceFilter === "all" || row.province === provinceFilter)
-      .filter(row => districtFilter === "all" || row.district === districtFilter)
+      .filter(row => districtFilter === "all" || row.districtKey === districtFilter)
       .filter(row => row.municipality)
       .map(row => row.municipality))]
       .sort((a, b) => a.localeCompare(b));
@@ -159,9 +232,31 @@ const PlansDashboard = (() => {
   }
 
   function compareDistricts(a, b) {
-    const av = districtOrder(a);
-    const bv = districtOrder(b);
+    const av = districtOrder(a.split("|").pop());
+    const bv = districtOrder(b.split("|").pop());
     return av === bv ? a.localeCompare(b) : av - bv;
+  }
+
+  function normalizeDistrict(province, district) {
+    const raw = String(district || "").trim();
+    if (!raw) return { key: "", label: "" };
+
+    const normalizedRaw = raw.toUpperCase().replace(/DISTRICT/g, "").trim();
+    let code = "";
+    if (normalizedRaw.includes("LONE")) {
+      code = "LONE";
+    } else {
+      const roman = normalizedRaw.match(/\b(I|II|III|IV|V|VI)\b/);
+      const number = normalizedRaw.match(/\d+/);
+      if (number) code = number[0];
+      if (roman) code = { I: "1", II: "2", III: "3", IV: "4", V: "5", VI: "6" }[roman[1]];
+    }
+    if (!code) code = normalizedRaw.replace(/\s+/g, "");
+
+    const provinceName = province || "Unspecified";
+    const key = `${provinceName}|${code}`;
+    const label = code === "LONE" ? `${provinceName} - Lone District` : `${provinceName} - District ${code}`;
+    return { key, label };
   }
 
   function districtOrder(value) {
@@ -179,6 +274,10 @@ const PlansDashboard = (() => {
     if (/^lone$/i.test(text) || /^lone district$/i.test(text)) return "Lone District";
     if (/district/i.test(text)) return text;
     return `District ${text}`;
+  }
+
+  function districtLabel(row) {
+    return row.displayDistrict || `${row.province || "Unspecified"} - Unspecified District`;
   }
 
   function buildCommodityTabs() {
@@ -209,7 +308,7 @@ const PlansDashboard = (() => {
     return rows.filter(row => {
       if (year !== "all" && row.year !== year) return false;
       if (provinceFilter !== "all" && row.province !== provinceFilter) return false;
-      if (districtFilter !== "all" && row.district !== districtFilter) return false;
+      if (districtFilter !== "all" && row.districtKey !== districtFilter) return false;
       if (municipalityFilter !== "all" && row.municipality !== municipalityFilter) return false;
       if (programs && !programs.includes(row.program)) return false;
       if (searchTerm && !row.searchText.includes(searchTerm)) return false;
@@ -238,7 +337,7 @@ const PlansDashboard = (() => {
     const commodity = COMMODITIES.find(item => item.key === activeCommodity)?.label || "All";
     const budget = sum(data, "budgetValue");
     const provinceText = provinceFilter === "all" ? "all provinces" : provinceFilter;
-    const districtText = districtFilter === "all" ? "all districts" : formatDistrict(districtFilter);
+    const districtText = districtFilter === "all" ? "all districts" : (rows.find(row => row.districtKey === districtFilter)?.displayDistrict || districtFilter);
     const municipalityText = municipalityFilter === "all" ? "all municipalities" : municipalityFilter;
     document.getElementById("lens-summary").innerHTML = `
       <div><strong>${escapeHTML(commodity)}</strong>${escapeHTML(YEAR_LABELS[activeYear] || activeYear)}</div>
@@ -248,8 +347,9 @@ const PlansDashboard = (() => {
   }
 
   function updateCharts(data) {
-    renderBarChart("province-chart", groupBudget(data, "province").slice(0, 8), "Budget", "#1a6b3c", true);
-    renderBarChart("municipality-chart", groupBudget(data, "municipality").slice(0, 10), "Budget", "#2e7d9a", true);
+    renderCategoryChart("province-chart", groupBudget(data, "province").slice(0, 8), "Budget", "#1a6b3c");
+    renderCategoryChart("district-chart", groupBudget(data, "district").slice(0, 12), "Budget", "#b45309");
+    renderCategoryChart("municipality-chart", groupBudget(data, "municipality").slice(0, 10), "Budget", "#2e7d9a");
     renderYearChart();
   }
 
@@ -258,7 +358,9 @@ const PlansDashboard = (() => {
     data.forEach(row => {
       const key = field === "municipality"
         ? row.displayMunicipality
-        : (row[field] || "Unspecified");
+        : field === "district"
+          ? districtLabel(row)
+          : (row[field] || "Unspecified");
       map.set(key, (map.get(key) || 0) + row.budgetValue);
     });
     return [...map.entries()]
@@ -266,27 +368,37 @@ const PlansDashboard = (() => {
       .sort((a, b) => b.value - a.value);
   }
 
-  function renderBarChart(id, data, label, color, horizontal = false) {
+  function renderCategoryChart(id, data, label, color) {
     const ctx = document.getElementById(id);
     if (charts[id]) charts[id].destroy();
+    const theme = chartTheme();
+    const isDoughnut = chartType === "doughnut";
+    const isLine = chartType === "line";
+    const horizontal = chartType === "horizontal-bar";
+    const chartColors = data.map((_, index) => palette(index, color));
+
     charts[id] = new Chart(ctx, {
-      type: "bar",
+      type: isDoughnut ? "doughnut" : isLine ? "line" : "bar",
       data: {
         labels: data.map(item => item.label),
-        datasets: [{ label, data: data.map(item => item.value), backgroundColor: color }]
+        datasets: [{
+          label,
+          data: data.map(item => item.value),
+          backgroundColor: isDoughnut ? chartColors : color,
+          borderColor: isDoughnut ? theme.surface : color,
+          fill: isLine,
+          tension: 0.25
+        }]
       },
       options: {
-        indexAxis: horizontal ? "y" : "x",
+        indexAxis: !isDoughnut && !isLine && horizontal ? "y" : "x",
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
-          legend: { display: false },
+          legend: { display: isDoughnut, labels: { color: theme.text } },
           tooltip: { callbacks: { label: item => `${label}: ${formatNumber(item.raw)} PHP '000` } }
         },
-        scales: {
-          x: { ticks: { callback: v => horizontal ? formatCompact(v) : this?.getLabelForValue?.(v) } },
-          y: { ticks: { autoSkip: false } }
-        }
+        scales: isDoughnut ? {} : categoryScales(horizontal, theme)
       }
     });
   }
@@ -305,6 +417,8 @@ const PlansDashboard = (() => {
     const id = "year-chart";
     const ctx = document.getElementById(id);
     if (charts[id]) charts[id].destroy();
+    const theme = chartTheme();
+
     charts[id] = new Chart(ctx, {
       type: "line",
       data: {
@@ -313,8 +427,8 @@ const PlansDashboard = (() => {
           {
             label: "Budget PHP '000",
             data: yearData.map(item => item.budget),
-            borderColor: "#1a6b3c",
-            backgroundColor: "rgba(26,107,60,0.12)",
+            borderColor: "#4ade80",
+            backgroundColor: "rgba(74,222,128,0.12)",
             fill: true,
             tension: 0.25,
             yAxisID: "y"
@@ -322,8 +436,8 @@ const PlansDashboard = (() => {
           {
             label: "Items",
             data: yearData.map(item => item.count),
-            borderColor: "#b45309",
-            backgroundColor: "#b45309",
+            borderColor: "#fbbf24",
+            backgroundColor: "#fbbf24",
             tension: 0.25,
             yAxisID: "y1"
           }
@@ -333,11 +447,8 @@ const PlansDashboard = (() => {
         responsive: true,
         maintainAspectRatio: false,
         interaction: { mode: "index", intersect: false },
-        plugins: { legend: { position: "bottom" } },
-        scales: {
-          y: { beginAtZero: true, ticks: { callback: value => formatCompact(value) } },
-          y1: { beginAtZero: true, position: "right", grid: { drawOnChartArea: false } }
-        }
+        plugins: { legend: { position: "bottom", labels: { color: theme.text } } },
+        scales: timelineScales(theme)
       }
     });
   }
@@ -354,6 +465,8 @@ const PlansDashboard = (() => {
     } else {
       notes.push(["", `${formatNumber(data.length)} records are tagged to ${municipalities.size} municipality/province combinations for this lens.`]);
       if (topProgram) notes.push(["", `${topProgram.label} carries the largest tagged budget at ${formatNumber(topProgram.value)} PHP '000.`]);
+      const topDistrict = groupBudget(data, "district")[0];
+      if (topDistrict) notes.push(["", `${topDistrict.label} is the top district grouping for this lens at ${formatNumber(topDistrict.value)} PHP '000.`]);
       if (activeYear === "2027") notes.push(["warn", "Use this view to compare proposed allocations with the need-gap layer in the decision map before realignment."]);
       if (zeroBudget > 0) notes.push(["warn", `${zeroBudget} records have no extracted budget value; verify the source workbook before treating them as unfunded.`]);
       if (budget <= 0) notes.push(["danger", "The current filter has no extracted budget. This may be a real gap or a workbook encoding issue."]);
@@ -372,6 +485,7 @@ const PlansDashboard = (() => {
     tbody.innerHTML = sorted.slice(0, 500).map(row => `
       <tr>
         <td>${escapeHTML(row.province)}</td>
+        <td>${escapeHTML(row.displayDistrict || formatDistrict(row.district))}</td>
         <td>${escapeHTML(row.displayMunicipality)}</td>
         <td>${escapeHTML(row.year)}</td>
         <td>${escapeHTML(row.program)}</td>
@@ -404,6 +518,75 @@ const PlansDashboard = (() => {
     return Intl.NumberFormat("en-PH", { notation: "compact", maximumFractionDigits: 1 }).format(value || 0);
   }
 
+  function chartTheme() {
+    return themeMode === "dark"
+      ? { text: "#d8e4dc", grid: "rgba(216,228,220,0.14)", surface: "#18251d" }
+      : { text: "#1e2a1f", grid: "rgba(30,42,31,0.12)", surface: "#ffffff" };
+  }
+
+  function categoryScales(horizontal, theme) {
+    if (horizontal) {
+      return {
+        x: {
+          beginAtZero: true,
+          grid: { color: theme.grid },
+          ticks: { color: theme.text, callback: value => formatCompact(value) }
+        },
+        y: {
+          grid: { color: "transparent" },
+          ticks: { color: theme.text, autoSkip: false }
+        }
+      };
+    }
+    return {
+      x: {
+        grid: { color: "transparent" },
+        ticks: { color: theme.text }
+      },
+      y: {
+        beginAtZero: true,
+        grid: { color: theme.grid },
+        ticks: { color: theme.text, callback: value => formatCompact(value) }
+      }
+    };
+  }
+
+  function timelineScales(theme) {
+    return {
+      x: { grid: { color: theme.grid }, ticks: { color: theme.text } },
+      y: {
+        beginAtZero: true,
+        grid: { color: theme.grid },
+        ticks: { color: theme.text, callback: value => formatCompact(value) }
+      },
+      y1: {
+        beginAtZero: true,
+        position: "right",
+        grid: { drawOnChartArea: false },
+        ticks: { color: theme.text }
+      }
+    };
+  }
+
+  function palette(index, fallback) {
+    const colors = ["#1a6b3c", "#2e7d9a", "#b45309", "#7c3aed", "#b91c1c", "#047857", "#2563eb", "#9333ea", "#c2410c", "#0f766e"];
+    return colors[index % colors.length] || fallback;
+  }
+
+  function formatTimestamp(value) {
+    if (!value) return "Not available";
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return value;
+    return date.toLocaleString("en-PH", {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    });
+  }
+
   function escapeHTML(value) {
     return String(value ?? "").replace(/[&<>"']/g, ch => ({
       "&": "&amp;",
@@ -416,7 +599,7 @@ const PlansDashboard = (() => {
 
   function toCSV(data) {
     if (!data.length) return "";
-    const fields = ["province", "municipality", "year", "program", "activity", "unit", "physical_target", "budget", "length_km", "source_file", "sheet", "allocation_method"];
+    const fields = ["province", "district", "municipality", "year", "program", "activity", "unit", "physical_target", "budget", "length_km", "source_file", "sheet", "allocation_method"];
     const quote = value => `"${String(value ?? "").replace(/"/g, '""')}"`;
     return [fields.join(",")]
       .concat(data.map(row => fields.map(field => quote(row[field])).join(",")))

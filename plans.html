@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AgriPlan Cagayan Valley</title>
 
-  <link rel="stylesheet" href="css/plans.css?v=20260509-plans">
+  <link rel="stylesheet" href="css/plans.css?v=20260509-darkdefault">
 </head>
-<body>
+<body data-theme="dark">
   <div id="plans-app">
     <header class="plans-header">
       <div class="brand-mark">
@@ -19,6 +19,10 @@
       </div>
       <nav class="header-actions" aria-label="Page links">
         <a class="header-link" href="index.html">Decision Map</a>
+        <div class="theme-actions" aria-label="Background mode">
+          <button class="header-link theme-btn" data-theme-mode="light" title="Use light background">Light</button>
+          <button class="header-link theme-btn active" data-theme-mode="dark" title="Use dark background">Dark</button>
+        </div>
         <button class="header-link" id="export-plans">Export CSV</button>
       </nav>
     </header>
@@ -29,8 +33,8 @@
           <div class="section-label">Planning Year</div>
           <div class="segmented" id="year-tabs">
             <button data-year="2025">2025 Accomplishment</button>
-            <button data-year="2026" class="active">2026 Ongoing</button>
-            <button data-year="2027">2027 Proposal</button>
+            <button data-year="2026">2026 Ongoing</button>
+            <button data-year="2027" class="active">2027 Proposal</button>
           </div>
         </section>
 
@@ -61,8 +65,26 @@
         </section>
 
         <section class="filter-section">
+          <div class="section-label">Display</div>
+          <label for="chart-type">Chart Type</label>
+          <select id="chart-type">
+            <option value="horizontal-bar">Horizontal Bar</option>
+            <option value="vertical-bar">Vertical Bar</option>
+            <option value="line">Line</option>
+            <option value="doughnut">Doughnut</option>
+          </select>
+        </section>
+
+        <section class="filter-section">
           <div class="section-label">Current Lens</div>
           <div id="lens-summary" class="lens-summary"></div>
+        </section>
+
+        <section class="filter-section">
+          <div class="section-label">Data Source</div>
+          <div id="source-summary" class="source-summary">
+            <div class="source-line">Loading source status...</div>
+          </div>
         </section>
       </aside>
 
@@ -96,6 +118,10 @@
             <canvas id="province-chart"></canvas>
           </article>
           <article class="analysis-panel">
+            <div class="panel-title">Budget by District</div>
+            <canvas id="district-chart"></canvas>
+          </article>
+          <article class="analysis-panel">
             <div class="panel-title">Top Municipalities</div>
             <canvas id="municipality-chart"></canvas>
           </article>
@@ -121,6 +147,7 @@
               <thead>
                 <tr>
                   <th>Province</th>
+                  <th>District</th>
                   <th>Municipality</th>
                   <th>Year</th>
                   <th>Commodity / Program</th>
@@ -140,6 +167,6 @@
 
   <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script src="js/plansDashboard.js?v=20260509-plans"></script>
+  <script src="js/plansDashboard.js?v=20260509-darkdefault"></script>
 </body>
 </html>
