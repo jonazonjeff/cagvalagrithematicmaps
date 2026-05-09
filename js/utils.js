@@ -72,7 +72,8 @@ const Utils = (() => {
     if (cfg.type === "categorical" || cfg.type === "binary") return val;
     if (isNaN(val)) return "N/A";
     if (cfg.type === "percentage") return formatPct(val);
-    const formatted = formatNumber(val, cfg.unit === "MT/ha" ? 2 : 0);
+    const decimals = cfg.unit === "MT/ha" || cfg.unit === "PHP '000/farm" || cfg.unit === "km" ? 2 : 0;
+    const formatted = formatNumber(val, decimals);
     return cfg.unit ? `${formatted} ${cfg.unit}` : formatted;
   }
 

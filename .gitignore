@@ -15,3 +15,6 @@ yarn-error.log*
 node_modules/
 dist/
 build/
+
+# Downloaded planning workbooks; derived CSV outputs are committed/served instead
+data/plans_raw/

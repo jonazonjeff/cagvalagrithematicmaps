@@ -52,6 +52,10 @@ const Aggregation = (() => {
       agg.rice_yield_2025 = computeRatio(agg.rice_production_2025, agg.rice_area_2025);
       agg.corn_yield_2023 = computeRatio(agg.corn_production_2023, agg.corn_area_2023);
       agg.corn_yield_2025 = computeRatio(agg.corn_production_2025, agg.corn_area_2025);
+      agg.plans_2027_budget_per_small_farm = computeRatio(
+        agg.plans_projects_2027_budget,
+        (Utils.parseNumeric(agg.poor_rice_farmers) || 0) + (Utils.parseNumeric(agg.poor_corn_farmers) || 0)
+      );
 
       result[groupVal] = agg;
     });

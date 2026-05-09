@@ -98,6 +98,18 @@ const App = (() => {
         "Prioritize irrigation scheduling, water-source checks, and crop water-stress monitoring where standing rice exposure is high.",
         "Coordinate farmer advisories, crop insurance checks, and LGU/DA response where poverty and poor rice farmer exposure are also high."
       ]
+    },
+    projects: {
+      label: "Check 2027 plan coverage",
+      question: "Where do 2027 plans and projects appear thin relative to poverty, small-farm concentration, and climate exposure?",
+      category: "Plans & Projects",
+      indicator: "plans_2027_need_gap_score",
+      evidence: ["plans_2027_need_gap_score", "plans_projects_2027_count", "plans_projects_2027_budget", "plans_2027_budget_per_small_farm", "plans_fmr_2027_count", "plans_irrigation_2027_count", "poverty_2023", "poor_rice_farmers", "poor_corn_farmers", "elnino_rice_risk_score"],
+      actions: [
+        "Validate whether missing or low 2027 allocations are true gaps or only workbook encoding gaps.",
+        "Compare proposed FMR, irrigation, seed, and mechanization support against rice/corn exposure and farms below 0.5 ha.",
+        "Use the plans detail CSV as the audit trail before recommending realignment, augmentation, or project bundling."
+      ]
     }
   };
 
@@ -301,8 +313,8 @@ const App = (() => {
   // ============================================================
   // DASHBOARD SUMMARY CARDS
   // ============================================================
-  function updateDashboard() {
-    const rows = currentRows.filter(r => r._joined !== false);
+  function updateDashboard(sourceRows = null) {
+    const rows = (sourceRows || currentRows).filter(r => r && r._joined !== false);
     const set = (id, val) => {
       const el = document.getElementById(id);
       if (el) el.textContent = val;
@@ -318,6 +330,8 @@ const App = (() => {
     const totalCornArea = rows.reduce((s, r) => s + (Utils.parseNumeric(r.corn_area_2023) || 0), 0);
     const totalPrismArea = rows.reduce((s, r) => s + (Utils.parseNumeric(r.prism_rice_area_2026s1) || 0), 0);
     const totalPrismStanding = rows.reduce((s, r) => s + (Utils.parseNumeric(r.prism_standing_crop_area) || 0), 0);
+    const totalPlanItems2027 = rows.reduce((s, r) => s + (Utils.parseNumeric(r.plans_projects_2027_count) || 0), 0);
+    const totalPlanBudget2027 = rows.reduce((s, r) => s + (Utils.parseNumeric(r.plans_projects_2027_budget) || 0), 0);
     const riceYield = totalRiceArea > 0 ? totalRiceProd / totalRiceArea : null;
     const cornYield = totalCornArea > 0 ? totalCornProd / totalCornArea : null;
     const totalIrr = rows.reduce((s, r) => s + (Utils.parseNumeric(r.irrigated_area) || 0), 0);
@@ -334,6 +348,8 @@ const App = (() => {
     set("stat-rice-area", Utils.formatNumber(totalRiceArea) + " ha");
     set("stat-prism-area", totalPrismArea > 0 ? Utils.formatNumber(totalPrismArea) + " ha" : "N/A");
     set("stat-prism-standing", totalPrismStanding > 0 ? Utils.formatNumber(totalPrismStanding) + " ha" : "N/A");
+    set("stat-plans-count", Utils.formatNumber(totalPlanItems2027));
+    set("stat-plans-budget", totalPlanBudget2027 > 0 ? Utils.formatNumber(totalPlanBudget2027) + " PHP '000" : "N/A");
     set("stat-corn-area", Utils.formatNumber(totalCornArea) + " ha");
     set("stat-rice-yield", riceYield !== null ? Utils.formatNumber(riceYield, 2) + " MT/ha" : "N/A");
     set("stat-corn-yield", cornYield !== null ? Utils.formatNumber(cornYield, 2) + " MT/ha" : "N/A");
@@ -341,7 +357,7 @@ const App = (() => {
     set("stat-pest", pestCount);
     set("stat-asf", asfCount);
     set("stat-rpc", rpcCount);
-    set("stat-mun-count", rows.length);
+    set("stat-mun-count", sourceRows ? Utils.getAreaName(rows[0] || selectedArea || {}) : rows.length);
   }
 
   function weightedAvg(rows, field, weightField) {
@@ -610,6 +626,7 @@ const App = (() => {
   // ============================================================
   function setView(viewType) {
     currentView = viewType;
+    selectedArea = null;
     document.querySelectorAll(".view-btn").forEach(btn => {
       btn.classList.toggle("active", btn.dataset.view === viewType);
     });
@@ -795,6 +812,7 @@ const App = (() => {
 
     window.addEventListener("area:selected", (e) => {
       selectedArea = e.detail?.properties || null;
+      if (selectedArea) updateDashboard([selectedArea]);
       updatePlanningInsights();
     });
 

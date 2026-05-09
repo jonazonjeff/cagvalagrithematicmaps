@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgriPlan Cagayan Valley</title>
+
+  <link rel="stylesheet" href="css/plans.css?v=20260509-plans">
+</head>
+<body>
+  <div id="plans-app">
+    <header class="plans-header">
+      <div class="brand-mark">
+        <img src="assets/logo.png" alt="DA Region 02 logo">
+      </div>
+      <div class="brand-text">
+        <h1>AgriPlan Cagayan Valley</h1>
+        <p>2025 accomplishments, 2026 ongoing plans, and 2027 proposals by commodity</p>
+      </div>
+      <nav class="header-actions" aria-label="Page links">
+        <a class="header-link" href="index.html">Decision Map</a>
+        <button class="header-link" id="export-plans">Export CSV</button>
+      </nav>
+    </header>
+
+    <main class="plans-layout">
+      <aside class="filters-panel">
+        <section class="filter-section">
+          <div class="section-label">Planning Year</div>
+          <div class="segmented" id="year-tabs">
+            <button data-year="2025">2025 Accomplishment</button>
+            <button data-year="2026" class="active">2026 Ongoing</button>
+            <button data-year="2027">2027 Proposal</button>
+          </div>
+        </section>
+
+        <section class="filter-section">
+          <div class="section-label">Province</div>
+          <select id="province-filter">
+            <option value="all">All Provinces</option>
+          </select>
+        </section>
+
+        <section class="filter-section">
+          <div class="section-label">District</div>
+          <select id="district-filter">
+            <option value="all">All Districts</option>
+          </select>
+        </section>
+
+        <section class="filter-section">
+          <div class="section-label">Municipality</div>
+          <select id="municipality-filter">
+            <option value="all">All Municipalities</option>
+          </select>
+        </section>
+
+        <section class="filter-section">
+          <div class="section-label">Search</div>
+          <input type="text" id="search-filter" placeholder="Municipality, activity, barangay">
+        </section>
+
+        <section class="filter-section">
+          <div class="section-label">Current Lens</div>
+          <div id="lens-summary" class="lens-summary"></div>
+        </section>
+      </aside>
+
+      <section class="content-panel">
+        <div class="commodity-tabs" id="commodity-tabs"></div>
+
+        <section class="kpi-grid">
+          <article class="kpi-card">
+            <span>Items</span>
+            <strong id="kpi-items">0</strong>
+          </article>
+          <article class="kpi-card">
+            <span>Budget</span>
+            <strong id="kpi-budget">0</strong>
+            <small>PHP '000</small>
+          </article>
+          <article class="kpi-card">
+            <span>Municipalities</span>
+            <strong id="kpi-municipalities">0</strong>
+          </article>
+          <article class="kpi-card">
+            <span>FMR Length</span>
+            <strong id="kpi-length">0</strong>
+            <small>km</small>
+          </article>
+        </section>
+
+        <section class="analysis-grid">
+          <article class="analysis-panel">
+            <div class="panel-title">Budget by Province</div>
+            <canvas id="province-chart"></canvas>
+          </article>
+          <article class="analysis-panel">
+            <div class="panel-title">Top Municipalities</div>
+            <canvas id="municipality-chart"></canvas>
+          </article>
+          <article class="analysis-panel">
+            <div class="panel-title">Commodity Timeline</div>
+            <canvas id="year-chart"></canvas>
+          </article>
+          <article class="analysis-panel insight-panel">
+            <div class="panel-title">Planning Notes</div>
+            <div id="planning-notes"></div>
+          </article>
+        </section>
+
+        <section class="table-panel">
+          <div class="table-head">
+            <div>
+              <div class="panel-title">Project / Activity Records</div>
+              <p id="table-count">0 records</p>
+            </div>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Province</th>
+                  <th>Municipality</th>
+                  <th>Year</th>
+                  <th>Commodity / Program</th>
+                  <th>Activity</th>
+                  <th>Budget</th>
+                  <th>Length</th>
+                  <th>Source</th>
+                </tr>
+              </thead>
+              <tbody id="plans-table"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="js/plansDashboard.js?v=20260509-plans"></script>
+</body>
+</html>

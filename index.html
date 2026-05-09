@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
   <!-- App Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20260509-halfha" />
+  <link rel="stylesheet" href="css/styles.css?v=20260509-plans" />
 </head>
 <body>
 
@@ -30,8 +30,8 @@
     <div class="announcement-brand">
       <img src="assets/logo.png" alt="Department of Agriculture logo">
       <div>
-        <div class="announcement-brand-name">Department of Agriculture</div>
-        <div class="announcement-brand-sub">Cagayan Valley Planning Map</div>
+        <div class="announcement-brand-name">AgriSight Cagayan Valley</div>
+        <div class="announcement-brand-sub">Agriculture, climate risk, and seasonal rice decision map</div>
       </div>
     </div>
     <div class="announcement-kicker">Decision Guide</div>
@@ -66,6 +66,7 @@
     </div>
     <div class="header-actions">
       <button class="header-btn" id="announcement-open" title="View app announcement">Notice</button>
+      <a class="header-btn" href="plans.html" title="Open plans and projects dashboard">Plans</a>
       <button class="header-btn" id="export-csv" title="Export current data as CSV">⬇ CSV</button>
       <button class="header-btn" id="export-png" title="Export map as PNG">🗺 PNG</button>
       <button class="header-btn" id="fit-btn" title="Fit map to region">⊕ Fit</button>
@@ -190,7 +191,7 @@
     <div id="stats-bar">
       <div class="stat-card">
         <div class="stat-value" id="stat-mun-count">—</div>
-        <div class="stat-label">Areas</div>
+        <div class="stat-label">Area / Selection</div>
       </div>
       <div class="stat-card">
         <div class="stat-value" id="stat-pop">—</div>
@@ -235,6 +236,14 @@
       <div class="stat-card stat-warn">
         <div class="stat-value" id="stat-prism-standing">—</div>
         <div class="stat-label">PRiSM Standing Crop</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-plans-count">—</div>
+        <div class="stat-label">2027 Plan Items</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-plans-budget">—</div>
+        <div class="stat-label">2027 Plan Budget</div>
       </div>
       <div class="stat-card">
         <div class="stat-value" id="stat-corn-area">—</div>
@@ -330,17 +339,17 @@
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
 
 <!-- App Modules (load in dependency order) -->
-<script src="js/config.js?v=20260509-halfha"></script>
-<script src="js/utils.js?v=20260509-halfha"></script>
-<script src="js/aggregation.js?v=20260509-halfha"></script>
-<script src="js/dataLoader.js?v=20260509-halfha"></script>
-<script src="js/priorityScoring.js?v=20260509-halfha"></script>
-<script src="js/visualizations.js?v=20260509-halfha"></script>
-<script src="js/mapLayers.js?v=20260509-halfha"></script>
-<script src="js/charts.js?v=20260509-halfha"></script>
-<script src="js/weatherOverlay.js?v=20260509-halfha"></script>
-<script src="js/climate.js?v=20260509-halfha"></script>
-<script src="js/app.js?v=20260509-halfha"></script>
+<script src="js/config.js?v=20260509-plans"></script>
+<script src="js/utils.js?v=20260509-plans"></script>
+<script src="js/aggregation.js?v=20260509-plans"></script>
+<script src="js/dataLoader.js?v=20260509-plans"></script>
+<script src="js/priorityScoring.js?v=20260509-plans"></script>
+<script src="js/visualizations.js?v=20260509-plans"></script>
+<script src="js/mapLayers.js?v=20260509-plans"></script>
+<script src="js/charts.js?v=20260509-plans"></script>
+<script src="js/weatherOverlay.js?v=20260509-plans"></script>
+<script src="js/climate.js?v=20260509-plans"></script>
+<script src="js/app.js?v=20260509-plans"></script>
 
 </body>
 </html>

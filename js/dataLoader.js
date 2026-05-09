@@ -11,6 +11,7 @@ const DataLoader = (() => {
   let barangayFarmData = [];
   let prismData = [];
   let droughtOutlookData = [];
+  let plansProjectsData = [];
   let facilitiesData = [];
   let joinMismatches = [];
 
@@ -142,6 +143,16 @@ const DataLoader = (() => {
     }
 
     try {
+      plansProjectsData = await fetchCSV(dataPath + "plans_projects_2025_2027.csv");
+      mergePlansProjectsData(plansProjectsData);
+      console.info(`Loaded plans_projects_2025_2027.csv: ${plansProjectsData.length} records`);
+    } catch (e) {
+      console.warn("plans_projects_2025_2027.csv not found. Plans and projects overlays will be unavailable.", e);
+      plansProjectsData = [];
+      addPlansProjectDefaults();
+    }
+
+    try {
       facilitiesData = await fetchCSV(dataPath + "facilities.csv");
       console.info(`Loaded facilities.csv: ${facilitiesData.length} records`);
     } catch (e) {
@@ -161,6 +172,7 @@ const DataLoader = (() => {
       barangayFarmData,
       prismData,
       droughtOutlookData,
+      plansProjectsData,
       facilitiesData,
       joinMismatches
     };
@@ -342,6 +354,81 @@ const DataLoader = (() => {
     });
   }
 
+  function mergePlansProjectsData(rows) {
+    rows.forEach(planRow => {
+      const row = findMunicipalDataRow(planRow.province, planRow.municipality);
+      if (!row) {
+        joinMismatches.push({
+          type: "plans_no_csv",
+          name: `${planRow.municipality}, ${planRow.province}`,
+          message: "Plans/projects row has no matching municipal_data.csv row"
+        });
+        return;
+      }
+
+      Object.assign(row, planRow);
+    });
+
+    addPlansProjectDefaults();
+  }
+
+  function addPlansProjectDefaults() {
+    Object.values(municipalData).forEach(row => addPlansDerivedFields(row));
+  }
+
+  function addPlansDerivedFields(row) {
+    const numericFields = [
+      "plans_projects_2025_count",
+      "plans_projects_2025_budget",
+      "plans_projects_2026_count",
+      "plans_projects_2026_budget",
+      "plans_projects_2027_count",
+      "plans_projects_2027_budget",
+      "plans_projects_total_count",
+      "plans_projects_total_budget",
+      "plans_projects_2027_physical_target",
+      "plans_rice_2027_budget",
+      "plans_corn_2027_budget",
+      "plans_hvc_2027_budget",
+      "plans_fmr_2027_count",
+      "plans_fmr_2027_budget",
+      "plans_fmr_2027_length_km",
+      "plans_irrigation_2027_count",
+      "plans_irrigation_2027_budget"
+    ];
+
+    numericFields.forEach(field => {
+      if (row[field] === undefined || row[field] === null || row[field] === "") row[field] = "0";
+    });
+
+    const budget2027 = Utils.parseNumeric(row.plans_projects_2027_budget) || 0;
+    const smallFarms = (Utils.parseNumeric(row.poor_rice_farmers) || 0) + (Utils.parseNumeric(row.poor_corn_farmers) || 0);
+    const poverty = Utils.parseNumeric(row.poverty_2023) || 0;
+    const elninoRisk = Utils.parseNumeric(row.elnino_rice_risk_score) || 0;
+    const crvaRice = Utils.parseNumeric(row.crva_index_rice) || 0;
+    const crvaCorn = Utils.parseNumeric(row.crva_index_corn) || 0;
+    const budgetPerSmallFarm = smallFarms > 0 ? budget2027 / smallFarms : 0;
+
+    const needScore =
+      Math.min(1, poverty / 45) * 0.35 +
+      Math.min(1, smallFarms / 2500) * 0.25 +
+      Math.min(1, elninoRisk / 100) * 0.20 +
+      Math.min(1, Math.max(crvaRice, crvaCorn)) * 0.20;
+    const coverageGap = 1 - Math.min(1, budgetPerSmallFarm / 20);
+    const needGapScore = Math.min(100, (needScore * 70) + (coverageGap * 30));
+
+    row.plans_2027_budget_per_small_farm = budgetPerSmallFarm.toFixed(2);
+    row.plans_2027_need_gap_score = needGapScore.toFixed(1);
+    row.plans_2027_coverage_level = classifyPlanCoverage(budget2027, budgetPerSmallFarm, needGapScore);
+  }
+
+  function classifyPlanCoverage(budget, budgetPerSmallFarm, needGapScore) {
+    if (budget <= 0) return "No Extracted 2027 Plan";
+    if (needGapScore >= 65) return "Under-covered";
+    if (budgetPerSmallFarm >= 20) return "Strong Allocation";
+    return "Covered";
+  }
+
   function addElNinoRiskDerivedFields(row) {
     const score = Utils.parseNumeric(row.pagasa_drought_score) || 0;
     const standing = Utils.parseNumeric(row.prism_standing_crop_area) || 0;
@@ -472,6 +559,7 @@ const DataLoader = (() => {
     get barangayFarmData() { return barangayFarmData; },
     get prismData() { return prismData; },
     get droughtOutlookData() { return droughtOutlookData; },
+    get plansProjectsData() { return plansProjectsData; },
     get facilitiesData() { return facilitiesData; }
   };
 })();

@@ -12,7 +12,7 @@ const APP_CONFIG = {
   mapCenter: [17.6132, 121.7270],
   mapZoom: 8,
   dataPath: "data/",
-  assetVersion: "20260509-halfha",
+  assetVersion: "20260509-plans",
 };
 
 // ============================================================
@@ -461,6 +461,99 @@ const INDICATOR_CONFIG = {
     description: "Composite risk score combining PAGASA drought class, PRiSM standing rice, irrigation gap, poverty, and poor rice farmer exposure."
   },
 
+  // --- DA Plans and Projects 2025-2027 ---
+  plans_projects_2027_count: {
+    label: "2027 Plan Items",
+    category: "Plans & Projects",
+    type: "numeric",
+    unit: "items",
+    aggregation: "sum",
+    colorScheme: "Blues",
+    description: "Number of extracted FY 2027 plan/project items assigned to the municipality from DA planning workbooks."
+  },
+  plans_projects_2027_budget: {
+    label: "2027 Plan Budget",
+    category: "Plans & Projects",
+    type: "numeric",
+    unit: "PHP '000",
+    aggregation: "sum",
+    colorScheme: "Greens",
+    description: "Extracted FY 2027 plan/project budget allocation in thousand pesos."
+  },
+  plans_projects_total_count: {
+    label: "2025-2027 Plan Items",
+    category: "Plans & Projects",
+    type: "numeric",
+    unit: "items",
+    aggregation: "sum",
+    colorScheme: "Blues",
+    description: "Total extracted plan/project items from 2025, 2026, and 2027."
+  },
+  plans_projects_total_budget: {
+    label: "2025-2027 Plan Budget",
+    category: "Plans & Projects",
+    type: "numeric",
+    unit: "PHP '000",
+    aggregation: "sum",
+    colorScheme: "Greens",
+    description: "Total extracted plan/project budget from 2025, 2026, and 2027 in thousand pesos."
+  },
+  plans_fmr_2027_count: {
+    label: "2027 FMR Project Items",
+    category: "Plans & Projects",
+    type: "numeric",
+    unit: "items",
+    aggregation: "sum",
+    colorScheme: "YlOrBr",
+    description: "FY 2027 farm-to-market road or PRDP road project items."
+  },
+  plans_fmr_2027_budget: {
+    label: "2027 FMR Budget",
+    category: "Plans & Projects",
+    type: "numeric",
+    unit: "PHP '000",
+    aggregation: "sum",
+    colorScheme: "YlOrBr",
+    description: "FY 2027 farm-to-market road or PRDP road budget in thousand pesos."
+  },
+  plans_fmr_2027_length_km: {
+    label: "2027 FMR Length",
+    category: "Plans & Projects",
+    type: "numeric",
+    unit: "km",
+    aggregation: "sum",
+    colorScheme: "YlOrBr",
+    description: "Estimated length of FY 2027 FMR/PRDP road projects."
+  },
+  plans_irrigation_2027_count: {
+    label: "2027 Irrigation Project Items",
+    category: "Plans & Projects",
+    type: "numeric",
+    unit: "items",
+    aggregation: "sum",
+    colorScheme: "Blues",
+    description: "FY 2027 plan items related to irrigation, pumps, canals, or water systems."
+  },
+  plans_2027_budget_per_small_farm: {
+    label: "2027 Budget per Small Farm",
+    category: "Plans & Projects",
+    type: "numeric",
+    unit: "PHP '000/farm",
+    aggregation: "ratio",
+    colorScheme: "Greens",
+    description: "FY 2027 plan budget divided by rice and corn farms below 0.5 hectare."
+  },
+  plans_2027_need_gap_score: {
+    label: "2027 Plan Need Gap Score",
+    category: "Plans & Projects",
+    type: "numeric",
+    unit: "/100",
+    aggregation: "weighted_average",
+    weightField: "population",
+    colorScheme: "Reds",
+    description: "Higher score means high poverty/small-farm/climate need with relatively thinner 2027 plan allocation."
+  },
+
   // ============================================================
   // CLIMATE RISK VULNERABILITY ASSESSMENT (CRVA)
   // Based on DA-CRAO / AMIA CRVA Framework (IPCC AR4)
@@ -748,6 +841,7 @@ const CATEGORIES = [
   "Infrastructure",
   "PRiSM Rice Monitoring",
   "El Nino Rice Risk",
+  "Plans & Projects",
   "Climate Risk Vulnerability",
   "Planning Priority"
 ];
@@ -916,6 +1010,18 @@ const PRIORITY_MODELS = {
       poverty_2023: 0.075,
       poor_rice_farmers: 0.075
     }
+  },
+  projects: {
+    label: "2027 Plan Need Gap Priority",
+    weights: {
+      plans_2027_need_gap_score: 0.35,
+      poverty_2023: 0.15,
+      poor_rice_farmers: 0.15,
+      poor_corn_farmers: 0.15,
+      elnino_rice_risk_score: 0.10,
+      crva_index_rice: 0.05,
+      irrigation_gap: 0.05
+    }
   }
 };
 
@@ -1035,6 +1141,16 @@ const PLANNING_INSIGHTS = [
     condition: (d) => parseFloat(d.elnino_prism_standing_exposed_area) > 1000,
     insight: "Large PRiSM standing rice area overlaps with PAGASA dry-spell or drought concern. Prioritize monitoring for crop water stress.",
     icon: "El Nino", level: "moderate"
+  },
+  {
+    condition: (d) => parseFloat(d.plans_2027_need_gap_score) >= 65,
+    insight: "High planning need gap. This area has strong poverty, small-farm, or climate need relative to the extracted 2027 plan allocation.",
+    icon: "Plans", level: "high"
+  },
+  {
+    condition: (d) => parseFloat(d.plans_projects_2027_budget) <= 0 && (parseFloat(d.poverty_2023) > 20 || parseFloat(d.elnino_rice_risk_score) > 40),
+    insight: "No extracted 2027 plan allocation was found despite notable poverty or climate exposure. Check if projects are missing, unfunded, or encoded under another municipality.",
+    icon: "Plans", level: "moderate"
   }
 ];
 
