@@ -554,6 +554,7 @@ const Visualizations = (() => {
       { label: "Malnutrition", fields: ["stunting", "underweight", "obese", "wasting"] },
       { label: "Rice", fields: ["rice_production_2023", "rice_area_2023", "rice_yield_2023", "poor_rice_farmers", "rice_mechanization_level"] },
       { label: "PRiSM Rice Monitoring", fields: ["prism_rice_area_2026s1", "prism_standing_crop_area", "prism_harvest_progress_pct", "prism_upcoming_harvest_area", "prism_area_gap_vs_app_ha"] },
+      { label: "El Nino Rice Risk", fields: ["pagasa_drought_outlook", "elnino_rice_risk_score", "elnino_prism_standing_exposed_area", "elnino_irrigation_gap_pct"] },
       { label: "Corn", fields: ["corn_production_2023", "corn_area_2023", "corn_yield_2023", "poor_corn_farmers", "corn_mechanization_level"] },
       { label: "Risk & Resources", fields: ["pest_disease_occurrence", "asf_status", "soil_fertility", "irrigated_area", "rpc_site"] }
     ];

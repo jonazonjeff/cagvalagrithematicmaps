@@ -4,10 +4,13 @@
 
 const DataLoader = (() => {
   let municipalGeoJSON = null;
+  let barangayGeoJSON = null;
   let districtGeoJSON = null;
   let provinceGeoJSON = null;
   let municipalData = {};
+  let barangayFarmData = [];
   let prismData = [];
+  let droughtOutlookData = [];
   let facilitiesData = [];
   let joinMismatches = [];
 
@@ -82,6 +85,12 @@ const DataLoader = (() => {
       "Municipality"
     );
 
+    barangayGeoJSON = await loadOptionalGeoJSON(
+      dataPath + "barangay_boundaries.geojson",
+      dataPath + "barangay_boundaries.geojson",
+      "Barangay"
+    );
+
     districtGeoJSON = await loadOptionalGeoJSON(
       dataPath + "districts_simplified.geojson",
       dataPath + "districts.geojson",
@@ -104,12 +113,32 @@ const DataLoader = (() => {
     }
 
     try {
+      const riceFarms = await fetchCSV(dataPath + "rice_farms.csv");
+      const cornFarms = await fetchCSV(dataPath + "corn_farms.csv");
+      barangayFarmData = mergeBarangayFarmData(riceFarms, cornFarms);
+      mergeBarangayFarmCounts(barangayFarmData);
+      console.info(`Loaded barangay farm counts: ${barangayFarmData.length} barangays`);
+    } catch (e) {
+      console.warn("Barangay rice/corn farm count files not found. Barangay farm overlays will be unavailable.", e);
+      barangayFarmData = [];
+    }
+
+    try {
       prismData = await fetchCSV(dataPath + "prism_rice_2026s1.csv");
       mergePrismData(prismData);
       console.info(`Loaded prism_rice_2026s1.csv: ${prismData.length} records`);
     } catch (e) {
       console.warn("prism_rice_2026s1.csv not found. PRiSM overlays will be unavailable.", e);
       prismData = [];
+    }
+
+    try {
+      droughtOutlookData = await fetchCSV(dataPath + "pagasa_drought_outlook_region2.csv");
+      mergeDroughtOutlookData(droughtOutlookData);
+      console.info(`Loaded pagasa_drought_outlook_region2.csv: ${droughtOutlookData.length} records`);
+    } catch (e) {
+      console.warn("pagasa_drought_outlook_region2.csv not found. El Nino rice risk overlays will be unavailable.", e);
+      droughtOutlookData = [];
     }
 
     try {
@@ -125,10 +154,13 @@ const DataLoader = (() => {
 
     return {
       municipalGeoJSON,
+      barangayGeoJSON,
       districtGeoJSON,
       provinceGeoJSON,
       municipalData,
+      barangayFarmData,
       prismData,
+      droughtOutlookData,
       facilitiesData,
       joinMismatches
     };
@@ -147,6 +179,107 @@ const DataLoader = (() => {
       }
 
       municipalData[key] = row;
+    });
+  }
+
+  function mergeBarangayFarmData(riceRows, cornRows) {
+    const byCode = {};
+
+    riceRows.forEach(row => {
+      const code = String(row.ADM4_PCODE || "").trim();
+      if (!code) return;
+      byCode[code] = {
+        barangay: row.brgy_name || row.ADM4_EN || "",
+        municipality: row.mun_name || row.ADM3_EN || "",
+        province: row.prov_name || row.ADM2_EN || "",
+        ADM4_PCODE: code,
+        ADM3_PCODE: row.ADM3_PCODE || "",
+        ADM2_PCODE: row.ADM2_PCODE || "",
+        rice_farms: row.rice_farmers || ""
+      };
+    });
+
+    cornRows.forEach(row => {
+      const code = String(row.ADM4_PCODE || "").trim();
+      if (!code) return;
+      if (!byCode[code]) {
+        byCode[code] = {
+          barangay: row.brgy_name || row.ADM4_EN || "",
+          municipality: row.mun_name || row.ADM3_EN || "",
+          province: row.prov_name || row.ADM2_EN || "",
+          ADM4_PCODE: code,
+          ADM3_PCODE: row.ADM3_PCODE || "",
+          ADM2_PCODE: row.ADM2_PCODE || "",
+          rice_farms: ""
+        };
+      }
+      byCode[code].corn_farms = row.corn_farmers || "";
+    });
+
+    const rows = Object.values(byCode);
+    joinBarangayFarmCounts(rows);
+    return rows;
+  }
+
+  function joinBarangayFarmCounts(rows) {
+    if (!barangayGeoJSON) return;
+    const byCode = {};
+    rows.forEach(row => { byCode[row.ADM4_PCODE] = row; });
+
+    let matched = 0;
+    barangayGeoJSON.features.forEach(feature => {
+      const props = feature.properties;
+      const code = String(props.ADM4_PCODE || "").trim();
+      const row = byCode[code];
+      props.barangay = props.ADM4_EN || props.barangay || props.brgy_name || "";
+      props.municipality = props.ADM3_EN || props.municipality || props.mun_name || "";
+      props.province = props.ADM2_EN || props.province || props.prov_name || "";
+      props._areaKey = code || Utils.buildJoinKey(props.municipality, props.barangay);
+      props._areaName = `${props.barangay}, ${props.municipality}`;
+
+      if (row) {
+        Object.assign(props, row);
+        props.rice_farms = row.rice_farms || "0";
+        props.corn_farms = row.corn_farms || "0";
+        props.poor_rice_farmers = props.rice_farms;
+        props.poor_corn_farmers = props.corn_farms;
+        props._joined = true;
+        matched++;
+      } else {
+        props.rice_farms = "0";
+        props.corn_farms = "0";
+        props.poor_rice_farmers = "0";
+        props.poor_corn_farmers = "0";
+        props._joined = false;
+      }
+    });
+
+    console.info(`Barangay farm-count join complete: ${matched} matched features`);
+  }
+
+  function mergeBarangayFarmCounts(rows) {
+    const totalsByMunicipality = {};
+    rows.forEach(row => {
+      const key = Utils.buildJoinKey(row.province, row.municipality);
+      if (!totalsByMunicipality[key]) {
+        totalsByMunicipality[key] = {
+          province: row.province,
+          municipality: row.municipality,
+          rice_farms: 0,
+          corn_farms: 0
+        };
+      }
+      totalsByMunicipality[key].rice_farms += Utils.parseNumeric(row.rice_farms) || 0;
+      totalsByMunicipality[key].corn_farms += Utils.parseNumeric(row.corn_farms) || 0;
+    });
+
+    Object.values(totalsByMunicipality).forEach(total => {
+      const row = findMunicipalDataRow(total.province, total.municipality);
+      if (!row) return;
+      row.rice_farms = total.rice_farms.toFixed(0);
+      row.corn_farms = total.corn_farms.toFixed(0);
+      row.poor_rice_farmers = row.rice_farms;
+      row.poor_corn_farmers = row.corn_farms;
     });
   }
 
@@ -193,6 +326,47 @@ const DataLoader = (() => {
     row.prism_standing_crop_pct = prismArea > 0 && standing !== null
       ? ((standing / prismArea) * 100).toFixed(1)
       : "";
+  }
+
+  function mergeDroughtOutlookData(rows) {
+    const outlookByProvince = {};
+    rows.forEach(row => {
+      outlookByProvince[Utils.normalizeName(row.province)] = row;
+    });
+
+    Object.values(municipalData).forEach(row => {
+      const outlook = outlookByProvince[Utils.normalizeName(row.province)];
+      if (!outlook) return;
+      Object.assign(row, outlook);
+      addElNinoRiskDerivedFields(row);
+    });
+  }
+
+  function addElNinoRiskDerivedFields(row) {
+    const score = Utils.parseNumeric(row.pagasa_drought_score) || 0;
+    const standing = Utils.parseNumeric(row.prism_standing_crop_area) || 0;
+    const riceArea = Utils.parseNumeric(row.prism_rice_area_2026s1) || Utils.parseNumeric(row.rice_area_2025) || 0;
+    const poverty = Utils.parseNumeric(row.poverty_2023) || 0;
+    const poorRice = Utils.parseNumeric(row.poor_rice_farmers) || 0;
+    const irrigation = Utils.parseNumeric(row.irrigated_area) || 0;
+    const irrigationGap = riceArea > 0 ? Math.max(0, 1 - (irrigation / riceArea)) : 0;
+
+    const exposureArea = standing * (score / 3);
+    const socialFactor = Math.min(1, (poverty / 50) * 0.55 + (poorRice / 2000) * 0.45);
+    const riskScore = Math.min(100, ((score / 3) * 45) + (standing / 5000 * 25) + (irrigationGap * 20) + (socialFactor * 10));
+
+    row.elnino_prism_standing_exposed_area = exposureArea.toFixed(2);
+    row.elnino_irrigation_gap_pct = (irrigationGap * 100).toFixed(1);
+    row.elnino_rice_risk_score = riskScore.toFixed(1);
+    row.elnino_rice_risk_class = classifyElNinoRisk(riskScore);
+  }
+
+  function classifyElNinoRisk(score) {
+    if (score >= 70) return "Very High";
+    if (score >= 50) return "High";
+    if (score >= 30) return "Moderate";
+    if (score > 0) return "Low";
+    return "Not Affected";
   }
 
   function performJoin() {
@@ -271,11 +445,17 @@ const DataLoader = (() => {
     return municipalGeoJSON.features.map(f => f.properties);
   }
 
+  function getBarangayRows() {
+    if (!barangayGeoJSON) return [];
+    return barangayGeoJSON.features.map(f => f.properties);
+  }
+
   function getMismatchReport() {
     return Utils.arrayToCSV(joinMismatches);
   }
 
   function getGeoJSON(viewType) {
+    if (viewType === "barangay" && barangayGeoJSON) return barangayGeoJSON;
     if (viewType === "district" && districtGeoJSON) return districtGeoJSON;
     if (viewType === "province" && provinceGeoJSON) return provinceGeoJSON;
     return municipalGeoJSON;
@@ -284,10 +464,14 @@ const DataLoader = (() => {
   return {
     loadAll,
     getMunicipalRows,
+    getBarangayRows,
     getMismatchReport,
     getGeoJSON,
+    get barangayGeoJSON() { return barangayGeoJSON; },
     get municipalGeoJSON() { return municipalGeoJSON; },
+    get barangayFarmData() { return barangayFarmData; },
     get prismData() { return prismData; },
+    get droughtOutlookData() { return droughtOutlookData; },
     get facilitiesData() { return facilitiesData; }
   };
 })();

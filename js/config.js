@@ -12,7 +12,7 @@ const APP_CONFIG = {
   mapCenter: [17.6132, 121.7270],
   mapZoom: 8,
   dataPath: "data/",
-  assetVersion: "20260509-labeltitle",
+  assetVersion: "20260509-halfha",
 };
 
 // ============================================================
@@ -165,13 +165,13 @@ const INDICATOR_CONFIG = {
     description: "Rice yield in MT per hectare (2025)"
   },
   poor_rice_farmers: {
-    label: "Poor Rice Farmers",
+    label: "Rice Farms Below 0.5 ha",
     category: "Rice",
     type: "numeric",
-    unit: "farmers",
+    unit: "farms",
     aggregation: "sum",
     colorScheme: "Reds",
-    description: "Number of rice farmers classified as poor"
+    description: "Number of rice farms below 0.5 hectare from barangay-level farm count data"
   },
   rice_mechanization_level: {
     label: "Rice Mechanization Level",
@@ -244,13 +244,13 @@ const INDICATOR_CONFIG = {
     description: "Corn yield in MT per hectare (2025)"
   },
   poor_corn_farmers: {
-    label: "Poor Corn Farmers",
+    label: "Corn Farms Below 0.5 ha",
     category: "Corn",
     type: "numeric",
-    unit: "farmers",
+    unit: "farms",
     aggregation: "sum",
     colorScheme: "Reds",
-    description: "Number of corn farmers classified as poor"
+    description: "Number of corn farms below 0.5 hectare from barangay-level farm count data"
   },
   corn_mechanization_level: {
     label: "Corn Mechanization Level",
@@ -408,6 +408,57 @@ const INDICATOR_CONFIG = {
     weightField: "rice_area_2025",
     colorScheme: "RdBu_r",
     description: "Percent difference between PRiSM detected 2026 S1 rice area and the app's current rice area reference."
+  },
+
+  // --- El Nino / Drought Rice Exposure ---
+  pagasa_drought_outlook: {
+    label: "PAGASA Drought Outlook",
+    category: "El Nino Rice Risk",
+    type: "categorical",
+    unit: "",
+    aggregation: "dominant",
+    colorScheme: "YlOrRd",
+    categories: { "Drought": 3, "Dry Spell": 2, "Dry Condition": 1, "Not Affected": 0 },
+    description: "PAGASA dry condition, dry spell, and drought outlook by province."
+  },
+  pagasa_drought_score: {
+    label: "PAGASA Drought Severity Score",
+    category: "El Nino Rice Risk",
+    type: "numeric",
+    unit: "(0-3)",
+    aggregation: "weighted_average",
+    weightField: "prism_standing_crop_area",
+    colorScheme: "YlOrRd",
+    description: "Numeric drought class: 0=not affected, 1=dry condition, 2=dry spell, 3=drought."
+  },
+  elnino_prism_standing_exposed_area: {
+    label: "El Nino Exposed Standing Rice",
+    category: "El Nino Rice Risk",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Reds",
+    description: "PRiSM standing rice area weighted by PAGASA drought outlook severity."
+  },
+  elnino_irrigation_gap_pct: {
+    label: "El Nino Irrigation Gap",
+    category: "El Nino Rice Risk",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "prism_rice_area_2026s1",
+    colorScheme: "Oranges",
+    description: "Estimated rice area not covered by recorded irrigated area."
+  },
+  elnino_rice_risk_score: {
+    label: "El Nino Rice Risk Score",
+    category: "El Nino Rice Risk",
+    type: "numeric",
+    unit: "/100",
+    aggregation: "weighted_average",
+    weightField: "prism_standing_crop_area",
+    colorScheme: "Reds",
+    description: "Composite risk score combining PAGASA drought class, PRiSM standing rice, irrigation gap, poverty, and poor rice farmer exposure."
   },
 
   // ============================================================
@@ -696,6 +747,7 @@ const CATEGORIES = [
   "Irrigation",
   "Infrastructure",
   "PRiSM Rice Monitoring",
+  "El Nino Rice Risk",
   "Climate Risk Vulnerability",
   "Planning Priority"
 ];
@@ -853,6 +905,17 @@ const PRIORITY_MODELS = {
       poor_rice_farmers: 0.10,
       pest_disease_score: 0.10
     }
+  },
+  elnino: {
+    label: "El Nino Rice Exposure Priority",
+    weights: {
+      elnino_rice_risk_score: 0.35,
+      elnino_prism_standing_exposed_area: 0.25,
+      pagasa_drought_score: 0.15,
+      elnino_irrigation_gap_pct: 0.10,
+      poverty_2023: 0.075,
+      poor_rice_farmers: 0.075
+    }
   }
 };
 
@@ -863,12 +926,12 @@ const PRIORITY_MODELS = {
 const PLANNING_INSIGHTS = [
   {
     condition: (d) => parseFloat(d.poverty_2023) > 30 && parseInt(d.poor_rice_farmers) > 500,
-    insight: "This municipality may be prioritized for poverty-sensitive rice agriculture support.",
+    insight: "This area has a high concentration of rice farms below 0.5 ha and may be prioritized for farm clustering or targeted rice support.",
     icon: "⚠️", level: "high"
   },
   {
     condition: (d) => parseFloat(d.poverty_2023) > 30 && parseInt(d.poor_corn_farmers) > 500,
-    insight: "This municipality may be prioritized for poverty-sensitive corn agriculture support.",
+    insight: "This area has a high concentration of corn farms below 0.5 ha and may be prioritized for farm clustering or targeted corn support.",
     icon: "⚠️", level: "high"
   },
   {
@@ -962,6 +1025,16 @@ const PLANNING_INSIGHTS = [
     condition: (d) => Math.abs(parseFloat(d.prism_area_gap_vs_app_pct)) > 20,
     insight: "PRiSM detected rice area differs substantially from the app reference area. Validate municipal rice area records before final targeting.",
     icon: "PRiSM", level: "moderate"
+  },
+  {
+    condition: (d) => parseFloat(d.elnino_rice_risk_score) >= 50,
+    insight: "High El Nino rice exposure. Coordinate irrigation scheduling, field validation, and advisory support for standing rice areas.",
+    icon: "El Nino", level: "high"
+  },
+  {
+    condition: (d) => parseFloat(d.elnino_prism_standing_exposed_area) > 1000,
+    insight: "Large PRiSM standing rice area overlaps with PAGASA dry-spell or drought concern. Prioritize monitoring for crop water stress.",
+    icon: "El Nino", level: "moderate"
   }
 ];
 

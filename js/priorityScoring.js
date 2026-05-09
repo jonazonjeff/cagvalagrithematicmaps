@@ -152,8 +152,8 @@ const PriorityScoring = (() => {
     if (!row._priorityBreakdown || !model) return "";
 
     const labelMap = {
-      poor_rice_farmers: "Poor Rice Farmers",
-      poor_corn_farmers: "Poor Corn Farmers",
+      poor_rice_farmers: "Rice Farms Below 0.5 ha",
+      poor_corn_farmers: "Corn Farms Below 0.5 ha",
       poverty_2023: "Poverty Incidence 2023",
       rice_yield_gap: "Rice Yield Gap",
       corn_yield_gap: "Corn Yield Gap",

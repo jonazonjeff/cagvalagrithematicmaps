@@ -68,9 +68,10 @@ const Utils = (() => {
   function formatValue(val, indicatorKey) {
     const cfg = INDICATOR_CONFIG[indicatorKey];
     if (!cfg) return formatNumber(val);
-    if (val === null || val === undefined || val === "" || isNaN(val)) return "N/A";
-    if (cfg.type === "percentage") return formatPct(val);
+    if (val === null || val === undefined || val === "") return "N/A";
     if (cfg.type === "categorical" || cfg.type === "binary") return val;
+    if (isNaN(val)) return "N/A";
+    if (cfg.type === "percentage") return formatPct(val);
     const formatted = formatNumber(val, cfg.unit === "MT/ha" ? 2 : 0);
     return cfg.unit ? `${formatted} ${cfg.unit}` : formatted;
   }

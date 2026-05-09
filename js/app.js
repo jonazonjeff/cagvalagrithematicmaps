@@ -5,7 +5,7 @@
 const App = (() => {
   let map = null;
   let appData = null;
-  let currentView = "municipality"; // municipality | district | province
+  let currentView = "municipality"; // barangay | municipality | district | province
   let currentIndicator = "population";
   let currentVizStyle = "choropleth";
   let currentGeoJSON = null;
@@ -29,24 +29,24 @@ const App = (() => {
   const DECISION_SCENARIOS = {
     rice: {
       label: "Prioritize rice interventions",
-      question: "Where should poverty-sensitive rice support go first?",
+      question: "Where are rice farms below 0.5 ha concentrated for targeted support?",
       category: "Rice",
       indicator: "poor_rice_farmers",
       evidence: ["poor_rice_farmers", "poverty_2023", "rice_yield_2023", "rice_mechanization_level", "irrigated_area", "pest_disease_occurrence"],
       actions: [
-        "Validate poor rice farmer counts and barangay-level production constraints.",
+        "Validate rice farms below 0.5 ha and barangay-level production constraints.",
         "Check irrigation, mechanization, seed, and pest-management needs before programming.",
         "Use facility layers to see whether postharvest or processing access is a bottleneck."
       ]
     },
     corn: {
       label: "Prioritize corn interventions",
-      question: "Where should corn livelihood and productivity support be focused?",
+      question: "Where are corn farms below 0.5 ha concentrated for livelihood and productivity support?",
       category: "Corn",
       indicator: "poor_corn_farmers",
       evidence: ["poor_corn_farmers", "poverty_2023", "corn_yield_2023", "corn_mechanization_level", "irrigated_area", "pest_disease_occurrence"],
       actions: [
-        "Validate corn farmer poverty counts and production season constraints.",
+        "Validate corn farms below 0.5 ha and production season constraints.",
         "Review mechanization, drying, storage, and pest-management gaps.",
         "Compare facility access against high-poverty corn-producing areas."
       ]
@@ -85,6 +85,18 @@ const App = (() => {
         "Validate standing crop and ripening areas with local field reports before response planning.",
         "Coordinate pest surveillance, irrigation monitoring, and climate advisories where standing crop area is high.",
         "Use May-June harvest area with facility layers to prepare drying, hauling, storage, and buying support."
+      ]
+    },
+    elnino: {
+      label: "Prioritize El Nino rice exposure",
+      question: "Where are current PRiSM standing rice areas exposed to dry spell or drought conditions?",
+      category: "El Nino Rice Risk",
+      indicator: "elnino_rice_risk_score",
+      evidence: ["pagasa_drought_outlook", "elnino_rice_risk_score", "elnino_prism_standing_exposed_area", "prism_standing_crop_area", "prism_growth_reproductive_ha", "prism_growth_ripening_ha", "elnino_irrigation_gap_pct", "poverty_2023", "poor_rice_farmers"],
+      actions: [
+        "Validate dry-spell or drought status with the latest PAGASA advisory before field deployment.",
+        "Prioritize irrigation scheduling, water-source checks, and crop water-stress monitoring where standing rice exposure is high.",
+        "Coordinate farmer advisories, crop insurance checks, and LGU/DA response where poverty and poor rice farmer exposure are also high."
       ]
     }
   };
@@ -142,7 +154,10 @@ const App = (() => {
     MapLayers.clearAggregateLabels();
 
     // Get correct GeoJSON + rows
-    if (currentView === "municipality") {
+    if (currentView === "barangay" && appData.barangayGeoJSON) {
+      currentGeoJSON = appData.barangayGeoJSON;
+      currentRows = DataLoader.getBarangayRows();
+    } else if (currentView === "municipality") {
       currentGeoJSON = appData.municipalGeoJSON;
       currentRows = DataLoader.getMunicipalRows();
     } else if (currentView === "district") {
@@ -237,7 +252,7 @@ const App = (() => {
           Visualizations.renderPieSymbols(
             currentGeoJSON,
             ["poor_rice_farmers", "poor_corn_farmers"],
-            ["Poor Rice Farmers", "Poor Corn Farmers"],
+            ["Rice Farms Below 0.5 ha", "Corn Farms Below 0.5 ha"],
             ["#4CAF50", "#FF9800"]
           );
         }

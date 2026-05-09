@@ -261,7 +261,7 @@ const Charts = (() => {
     let html = `<table class="rank-table">
       <thead><tr>
         <th>Rank</th>
-        <th>Municipality</th>
+        <th>Area</th>
         <th>Province</th>
         <th>${label}</th>
       </tr></thead>
