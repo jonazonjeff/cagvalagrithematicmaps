@@ -43,6 +43,19 @@ const PriorityScoring = (() => {
     return vals.map(v => v !== null ? (max - v) / (max || 1) : 0.5);
   }
 
+  function normalizeAbsField(rows, field) {
+    const vals = rows.map(r => {
+      const v = Utils.parseNumeric(r[field]);
+      return v !== null ? Math.abs(v) : null;
+    });
+    const numericVals = vals.filter(v => v !== null);
+    if (numericVals.length === 0) return rows.map(() => 0);
+
+    const min = Math.min(...numericVals);
+    const max = Math.max(...numericVals);
+    return vals.map(v => v !== null ? Utils.normalize(v, min, max) : 0);
+  }
+
   /**
    * Score all rows using a given priority model.
    * @param {Array} rows - array of data rows
@@ -70,6 +83,7 @@ const PriorityScoring = (() => {
         pest_disease_score: "pest_disease_occurrence",
         asf_score: "asf_status",
         soil_fertility_gap: "soil_fertility",
+        prism_area_gap_abs: "prism_area_gap_vs_app_ha",
       };
 
       if (compKey === "rice_yield_gap") {
@@ -86,6 +100,8 @@ const PriorityScoring = (() => {
         // inverted: Low fertility = high gap score
         const base = normalizeField(rows, "soil_fertility");
         components[compKey] = base.map(v => 1 - v);
+      } else if (compKey === "prism_area_gap_abs") {
+        components[compKey] = normalizeAbsField(rows, "prism_area_gap_vs_app_ha");
       } else {
         const actualField = fieldMap[compKey] || compKey;
         components[compKey] = normalizeField(rows, actualField);
@@ -147,6 +163,9 @@ const PriorityScoring = (() => {
       pest_disease_score: "Pest & Disease Risk",
       asf_score: "ASF Risk",
       soil_fertility_gap: "Soil Fertility Constraint",
+      prism_standing_crop_area: "Standing Crop Area",
+      prism_upcoming_harvest_area: "May-Jun Harvest Area",
+      prism_area_gap_abs: "PRiSM Area Gap",
       stunting: "Stunting Rate",
       underweight: "Underweight Rate",
       wasting: "Wasting Rate",

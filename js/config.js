@@ -315,6 +315,101 @@ const INDICATOR_CONFIG = {
     description: "Presence of Rice Processing Complex site"
   },
 
+  // --- PhilRice PRiSM Rice Season Monitoring ---
+  prism_rice_area_2026s1: {
+    label: "PRiSM Rice Area 2026 S1",
+    category: "PRiSM Rice Monitoring",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "YlGn",
+    description: "PhilRice PRiSM satellite-detected rice area for 2026 Semester 1, planted September 16, 2025 to March 15, 2026."
+  },
+  prism_standing_crop_area: {
+    label: "PRiSM Standing Crop Area",
+    category: "PRiSM Rice Monitoring",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "YlOrRd",
+    description: "PRiSM reproductive plus ripening rice area as of April 28, 2026."
+  },
+  prism_standing_crop_pct: {
+    label: "PRiSM Standing Crop Share",
+    category: "PRiSM Rice Monitoring",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "prism_rice_area_2026s1",
+    colorScheme: "YlOrRd",
+    description: "Share of PRiSM detected rice area that remains in reproductive or ripening stage."
+  },
+  prism_growth_reproductive_ha: {
+    label: "PRiSM Reproductive Stage",
+    category: "PRiSM Rice Monitoring",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Oranges",
+    description: "Rice area in reproductive stage as of April 28, 2026."
+  },
+  prism_growth_ripening_ha: {
+    label: "PRiSM Ripening Stage",
+    category: "PRiSM Rice Monitoring",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "YlOrBr",
+    description: "Rice area in ripening stage as of April 28, 2026."
+  },
+  prism_growth_harvested_ha: {
+    label: "PRiSM Harvested Area",
+    category: "PRiSM Rice Monitoring",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Greens",
+    description: "Rice area already harvested as of April 28, 2026."
+  },
+  prism_harvest_progress_pct: {
+    label: "PRiSM Harvest Progress",
+    category: "PRiSM Rice Monitoring",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "prism_rice_area_2026s1",
+    colorScheme: "Greens",
+    description: "Share of PRiSM detected rice area already harvested as of April 28, 2026."
+  },
+  prism_upcoming_harvest_area: {
+    label: "PRiSM May-Jun Harvest Area",
+    category: "PRiSM Rice Monitoring",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "YlOrBr",
+    description: "Estimated rice area scheduled for harvest in May and June 2026."
+  },
+  prism_area_gap_vs_app_ha: {
+    label: "PRiSM Area Gap vs App Rice Area",
+    category: "PRiSM Rice Monitoring",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "RdBu_r",
+    description: "Difference between PRiSM detected 2026 S1 rice area and the app's current rice area reference."
+  },
+  prism_area_gap_vs_app_pct: {
+    label: "PRiSM Area Gap vs App Rice Area %",
+    category: "PRiSM Rice Monitoring",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "rice_area_2025",
+    colorScheme: "RdBu_r",
+    description: "Percent difference between PRiSM detected 2026 S1 rice area and the app's current rice area reference."
+  },
+
   // ============================================================
   // CLIMATE RISK VULNERABILITY ASSESSMENT (CRVA)
   // Based on DA-CRAO / AMIA CRVA Framework (IPCC AR4)
@@ -600,6 +695,7 @@ const CATEGORIES = [
   "Soil Fertility",
   "Irrigation",
   "Infrastructure",
+  "PRiSM Rice Monitoring",
   "Climate Risk Vulnerability",
   "Planning Priority"
 ];
@@ -746,6 +842,17 @@ const PRIORITY_MODELS = {
       poor_rice_farmers: 0.05,
       poor_corn_farmers: 0.05
     }
+  },
+  prism: {
+    label: "PRiSM Rice Season Monitoring",
+    weights: {
+      prism_standing_crop_area: 0.30,
+      prism_upcoming_harvest_area: 0.25,
+      prism_area_gap_abs: 0.15,
+      poverty_2023: 0.10,
+      poor_rice_farmers: 0.10,
+      pest_disease_score: 0.10
+    }
   }
 };
 
@@ -839,6 +946,22 @@ const PLANNING_INSIGHTS = [
     condition: (d) => parseFloat(d.ac_anticipatory) < 0.20,
     insight: "Very low anticipatory capital. Farmer early warning system access, DRRM training, and mobile-based advisory services should be strengthened.",
     icon: "📡", level: "moderate"
+  }
+  ,
+  {
+    condition: (d) => parseFloat(d.prism_standing_crop_area) > 1500,
+    insight: "Large PRiSM standing rice area remains in the field. Prioritize field monitoring, irrigation checks, and weather advisory coordination.",
+    icon: "PRiSM", level: "high"
+  },
+  {
+    condition: (d) => parseFloat(d.prism_upcoming_harvest_area) > 1500,
+    insight: "High May-June harvest area is expected. Review dryer, warehouse, hauling, and buying station readiness.",
+    icon: "PRiSM", level: "moderate"
+  },
+  {
+    condition: (d) => Math.abs(parseFloat(d.prism_area_gap_vs_app_pct)) > 20,
+    insight: "PRiSM detected rice area differs substantially from the app reference area. Validate municipal rice area records before final targeting.",
+    icon: "PRiSM", level: "moderate"
   }
 ];
 

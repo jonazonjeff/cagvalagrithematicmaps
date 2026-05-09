@@ -73,6 +73,18 @@ const App = (() => {
         "Check adaptive capacity gaps before selecting climate-resilient agriculture packages.",
         "Coordinate crop, livestock, DRRM, and extension support where risks overlap."
       ]
+    },
+    prism: {
+      label: "Monitor PRiSM rice season",
+      question: "Where do current-season rice areas still need field monitoring or harvest logistics?",
+      category: "PRiSM Rice Monitoring",
+      indicator: "prism_standing_crop_area",
+      evidence: ["prism_rice_area_2026s1", "prism_standing_crop_area", "prism_growth_reproductive_ha", "prism_growth_ripening_ha", "prism_harvest_progress_pct", "prism_upcoming_harvest_area", "prism_area_gap_vs_app_ha"],
+      actions: [
+        "Validate standing crop and ripening areas with local field reports before response planning.",
+        "Coordinate pest surveillance, irrigation monitoring, and climate advisories where standing crop area is high.",
+        "Use May-June harvest area with facility layers to prepare drying, hauling, storage, and buying support."
+      ]
     }
   };
 
@@ -281,6 +293,8 @@ const App = (() => {
     const totalCornProd = rows.reduce((s, r) => s + (Utils.parseNumeric(r.corn_production_2023) || 0), 0);
     const totalRiceArea = rows.reduce((s, r) => s + (Utils.parseNumeric(r.rice_area_2023) || 0), 0);
     const totalCornArea = rows.reduce((s, r) => s + (Utils.parseNumeric(r.corn_area_2023) || 0), 0);
+    const totalPrismArea = rows.reduce((s, r) => s + (Utils.parseNumeric(r.prism_rice_area_2026s1) || 0), 0);
+    const totalPrismStanding = rows.reduce((s, r) => s + (Utils.parseNumeric(r.prism_standing_crop_area) || 0), 0);
     const riceYield = totalRiceArea > 0 ? totalRiceProd / totalRiceArea : null;
     const cornYield = totalCornArea > 0 ? totalCornProd / totalCornArea : null;
     const totalIrr = rows.reduce((s, r) => s + (Utils.parseNumeric(r.irrigated_area) || 0), 0);
@@ -295,6 +309,8 @@ const App = (() => {
     set("stat-rice-prod", Utils.formatNumber(totalRiceProd) + " MT");
     set("stat-corn-prod", Utils.formatNumber(totalCornProd) + " MT");
     set("stat-rice-area", Utils.formatNumber(totalRiceArea) + " ha");
+    set("stat-prism-area", totalPrismArea > 0 ? Utils.formatNumber(totalPrismArea) + " ha" : "N/A");
+    set("stat-prism-standing", totalPrismStanding > 0 ? Utils.formatNumber(totalPrismStanding) + " ha" : "N/A");
     set("stat-corn-area", Utils.formatNumber(totalCornArea) + " ha");
     set("stat-rice-yield", riceYield !== null ? Utils.formatNumber(riceYield, 2) + " MT/ha" : "N/A");
     set("stat-corn-yield", cornYield !== null ? Utils.formatNumber(cornYield, 2) + " MT/ha" : "N/A");

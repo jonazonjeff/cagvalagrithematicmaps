@@ -7,6 +7,7 @@ const DataLoader = (() => {
   let districtGeoJSON = null;
   let provinceGeoJSON = null;
   let municipalData = {};
+  let prismData = [];
   let facilitiesData = [];
   let joinMismatches = [];
 
@@ -103,6 +104,15 @@ const DataLoader = (() => {
     }
 
     try {
+      prismData = await fetchCSV(dataPath + "prism_rice_2026s1.csv");
+      mergePrismData(prismData);
+      console.info(`Loaded prism_rice_2026s1.csv: ${prismData.length} records`);
+    } catch (e) {
+      console.warn("prism_rice_2026s1.csv not found. PRiSM overlays will be unavailable.", e);
+      prismData = [];
+    }
+
+    try {
       facilitiesData = await fetchCSV(dataPath + "facilities.csv");
       console.info(`Loaded facilities.csv: ${facilitiesData.length} records`);
     } catch (e) {
@@ -118,6 +128,7 @@ const DataLoader = (() => {
       districtGeoJSON,
       provinceGeoJSON,
       municipalData,
+      prismData,
       facilitiesData,
       joinMismatches
     };
@@ -137,6 +148,51 @@ const DataLoader = (() => {
 
       municipalData[key] = row;
     });
+  }
+
+  function mergePrismData(rows) {
+    rows.forEach(prismRow => {
+      const row = findMunicipalDataRow(prismRow.province, prismRow.municipality);
+      if (!row) {
+        joinMismatches.push({
+          type: "prism_no_csv",
+          name: `${prismRow.municipality}, ${prismRow.province}`,
+          message: "PRiSM row has no matching municipal_data.csv row"
+        });
+        return;
+      }
+
+      Object.assign(row, prismRow);
+      addPrismDerivedFields(row);
+    });
+  }
+
+  function findMunicipalDataRow(province, municipality) {
+    const key = Utils.buildJoinKey(province, municipality);
+    if (municipalData[key]) return municipalData[key];
+
+    const provinceNorm = Utils.normalizeName(province);
+    const municipalityNorm = Utils.normalizeName(municipality);
+    return Object.values(municipalData).find(row =>
+      Utils.normalizeName(row.province) === provinceNorm &&
+      Utils.normalizeName(row.municipality) === municipalityNorm
+    ) || null;
+  }
+
+  function addPrismDerivedFields(row) {
+    const prismArea = Utils.parseNumeric(row.prism_rice_area_2026s1);
+    const appArea = Utils.parseNumeric(row.rice_area_2025) || Utils.parseNumeric(row.rice_area_2023);
+    const standing = Utils.parseNumeric(row.prism_standing_crop_area);
+
+    if (prismArea !== null && appArea !== null) {
+      const gap = prismArea - appArea;
+      row.prism_area_gap_vs_app_ha = gap.toFixed(2);
+      row.prism_area_gap_vs_app_pct = appArea > 0 ? ((gap / appArea) * 100).toFixed(1) : "";
+    }
+
+    row.prism_standing_crop_pct = prismArea > 0 && standing !== null
+      ? ((standing / prismArea) * 100).toFixed(1)
+      : "";
   }
 
   function performJoin() {
@@ -231,6 +287,7 @@ const DataLoader = (() => {
     getMismatchReport,
     getGeoJSON,
     get municipalGeoJSON() { return municipalGeoJSON; },
+    get prismData() { return prismData; },
     get facilitiesData() { return facilitiesData; }
   };
 })();

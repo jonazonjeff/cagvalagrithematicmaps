@@ -11,6 +11,8 @@ const Utils = (() => {
       .toString()
       .toLowerCase()
       .trim()
+      .replace(/\s*\(capital\)\s*/g, " ")
+      .replace(/-/g, " ")
       .replace(/[^a-z0-9\s]/g, "")
       .replace(/\s+/g, " ")
       .replace(/^city of\s+/i, "")
