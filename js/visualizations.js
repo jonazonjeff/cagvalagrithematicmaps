@@ -505,6 +505,11 @@ const Visualizations = (() => {
           <hr>
           ${r._priorityBreakdown ? PriorityScoring.formatBreakdown(r, modelKey) : ""}
         `);
+        layer.on("click", () => {
+          window.dispatchEvent(new CustomEvent("area:selected", {
+            detail: { properties: r, name, centroid: Utils.getCentroid(feature) }
+          }));
+        });
         layer.bindTooltip(`<b>${name}</b><br>${r._priorityClass || "N/A"} (${r._priorityScore ?? "N/A"}/100)`, { sticky: true, className: "hover-tip" });
       }
     }).addTo(map);
@@ -558,6 +563,9 @@ const Visualizations = (() => {
     // On any click: notify ClimatePanel of the location (updates panel if open)
     layer.on("click", () => {
       const centroid = Utils.getCentroid(feature);
+      window.dispatchEvent(new CustomEvent("area:selected", {
+        detail: { properties: p, name, centroid }
+      }));
       if (typeof ClimatePanel !== "undefined") {
         ClimatePanel.notifyMapClick(centroid[0], centroid[1], name);
       }

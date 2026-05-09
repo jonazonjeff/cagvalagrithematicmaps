@@ -12,6 +12,8 @@ const App = (() => {
   let currentRows = [];
   let currentCategory = "Demographics";
   let sidebarCollapsed = false;
+  let currentScenario = "rice";
+  let selectedArea = null;
 
   // Compare/bivariate state
   let compareFieldA = "poverty_2023";
@@ -22,6 +24,57 @@ const App = (() => {
   let rankedDir = "top";
   let priorityModel = "rice";
   let facilitiesLoaded = false;
+
+  const DECISION_SCENARIOS = {
+    rice: {
+      label: "Prioritize rice interventions",
+      question: "Where should poverty-sensitive rice support go first?",
+      category: "Rice",
+      indicator: "poor_rice_farmers",
+      evidence: ["poor_rice_farmers", "poverty_2023", "rice_yield_2023", "rice_mechanization_level", "irrigated_area", "pest_disease_occurrence"],
+      actions: [
+        "Validate poor rice farmer counts and barangay-level production constraints.",
+        "Check irrigation, mechanization, seed, and pest-management needs before programming.",
+        "Use facility layers to see whether postharvest or processing access is a bottleneck."
+      ]
+    },
+    corn: {
+      label: "Prioritize corn interventions",
+      question: "Where should corn livelihood and productivity support be focused?",
+      category: "Corn",
+      indicator: "poor_corn_farmers",
+      evidence: ["poor_corn_farmers", "poverty_2023", "corn_yield_2023", "corn_mechanization_level", "irrigated_area", "pest_disease_occurrence"],
+      actions: [
+        "Validate corn farmer poverty counts and production season constraints.",
+        "Review mechanization, drying, storage, and pest-management gaps.",
+        "Compare facility access against high-poverty corn-producing areas."
+      ]
+    },
+    nutrition: {
+      label: "Target nutrition-sensitive agriculture",
+      question: "Where do poverty, malnutrition, and farm livelihoods overlap?",
+      category: "Malnutrition",
+      indicator: "stunting",
+      evidence: ["poverty_2023", "stunting", "underweight", "wasting", "population", "poor_rice_farmers", "poor_corn_farmers"],
+      actions: [
+        "Coordinate with health and nutrition offices before selecting beneficiaries.",
+        "Prioritize household food access, diversified production, and market-linkage options.",
+        "Use poverty and crop livelihood data to identify agriculture entry points."
+      ]
+    },
+    climate: {
+      label: "Screen climate and biosecurity risk",
+      question: "Where should climate-resilient and risk-reduction support be checked first?",
+      category: "Climate Risk Vulnerability",
+      indicator: "crva_index_rice",
+      evidence: ["crva_index_rice", "hazard_index", "hazard_flood", "hazard_drought", "ac_index", "pest_disease_occurrence", "asf_status"],
+      actions: [
+        "Open the Climate Info panel and validate hazard exposure with local observations.",
+        "Check adaptive capacity gaps before selecting climate-resilient agriculture packages.",
+        "Coordinate crop, livestock, DRRM, and extension support where risks overlap."
+      ]
+    }
+  };
 
   // ============================================================
   // INIT
@@ -272,31 +325,91 @@ const App = (() => {
     const panel = document.getElementById("insights-panel");
     if (!panel) return;
 
-    const highPriority = currentRows.filter(r => {
-      return PLANNING_INSIGHTS.some(rule => {
-        try { return rule.condition(r); } catch(e) { return false; }
-      });
-    });
+    const scenario = DECISION_SCENARIOS[currentScenario] || DECISION_SCENARIOS.rice;
+    const rows = currentRows.filter(r => r._joined !== false);
+    const scoredRows = PriorityScoring.scoreAll(rows, currentScenario);
+    const selectedRow = findSelectedRow(scoredRows);
+    const topRows = scoredRows
+      .filter(r => Utils.parseNumeric(r._priorityScore) !== null)
+      .sort((a, b) => Utils.parseNumeric(b._priorityScore) - Utils.parseNumeric(a._priorityScore))
+      .slice(0, 5);
 
-    if (highPriority.length === 0) {
-      panel.innerHTML = `<p class="no-data">Select a municipality on the map for planning insights.</p>`;
-      return;
+    let html = `<div class="decision-summary">
+      <div class="decision-kicker">Current question</div>
+      <div class="decision-question">${escapeHTML(scenario.question)}</div>
+      <div class="decision-meta">Priority model: ${escapeHTML(PRIORITY_MODELS[currentScenario]?.label || scenario.label)}</div>
+    </div>`;
+
+    if (selectedRow) {
+      html += renderSelectedDecision(selectedRow, scenario);
+    } else {
+      html += `<div class="decision-empty">Click a municipality for a focused recommendation. Until then, these are the highest-scoring areas for this scenario.</div>`;
     }
 
-    let html = "";
-    highPriority.slice(0, 5).forEach(r => {
-      const name = r.municipality || r.NAME || r.province || "Area";
-      const triggered = PLANNING_INSIGHTS.filter(rule => {
-        try { return rule.condition(r); } catch(e) { return false; }
-      });
-
-      html += `<div class="insight-card insight-${triggered[0]?.level || 'info'}">
-        <div class="insight-area">${name}</div>
-        ${triggered.map(t => `<div class="insight-item">${t.icon} ${t.insight}</div>`).join("")}
+    if (topRows.length) {
+      html += `<div class="decision-block">
+        <div class="decision-block-title">Top Priority Areas</div>
+        ${topRows.map((r, i) => renderPriorityArea(r, i + 1)).join("")}
       </div>`;
-    });
+    }
 
     panel.innerHTML = html;
+  }
+
+  function findSelectedRow(rows) {
+    if (!selectedArea) return null;
+    const selectedName = Utils.normalizeName(selectedArea.municipality || selectedArea.NAME || selectedArea.province || "");
+    const selectedProvince = Utils.normalizeName(selectedArea.province || "");
+    return rows.find(r => {
+      const rowName = Utils.normalizeName(r.municipality || r.NAME || r.province || "");
+      const rowProvince = Utils.normalizeName(r.province || "");
+      return rowName === selectedName && (!selectedProvince || !rowProvince || rowProvince === selectedProvince);
+    }) || null;
+  }
+
+  function renderSelectedDecision(row, scenario) {
+    const name = escapeHTML(row.municipality || row.NAME || row.province || "Selected area");
+    const triggered = PLANNING_INSIGHTS.filter(rule => {
+      try { return rule.condition(row); } catch(e) { return false; }
+    }).slice(0, 3);
+    const triggerHtml = triggered.length
+      ? triggered.map(t => `<div class="decision-note decision-${t.level || "info"}">${escapeHTML(t.insight)}</div>`).join("")
+      : `<div class="decision-note decision-info">No high-risk rule was triggered. Use the evidence below to confirm whether support is still warranted.</div>`;
+
+    return `<div class="decision-profile">
+      <div class="decision-profile-head">
+        <div>
+          <div class="decision-area">${name}</div>
+          <div class="decision-class">${escapeHTML(row._priorityClass || "Not scored")}</div>
+        </div>
+        <div class="decision-score">${row._priorityScore ?? "N/A"}<span>/100</span></div>
+      </div>
+      ${triggerHtml}
+      <div class="decision-block-title">Evidence to Check</div>
+      <div class="decision-evidence">${scenario.evidence.map(field => renderEvidence(row, field)).join("")}</div>
+      <div class="decision-block-title">Recommended Next Actions</div>
+      <ol class="decision-actions">${scenario.actions.map(action => `<li>${escapeHTML(action)}</li>`).join("")}</ol>
+    </div>`;
+  }
+
+  function renderPriorityArea(row, rank) {
+    const name = escapeHTML(row.municipality || row.NAME || row.province || "Area");
+    return `<div class="decision-rank-row">
+      <span class="decision-rank">${rank}</span>
+      <span class="decision-rank-name">${name}</span>
+      <span class="decision-rank-score">${row._priorityScore ?? "N/A"}</span>
+    </div>`;
+  }
+
+  function renderEvidence(row, field) {
+    const cfg = INDICATOR_CONFIG[field];
+    const label = escapeHTML(cfg?.label || field);
+    const raw = row[field];
+    const formatted = (cfg?.type === "categorical" || cfg?.type === "binary")
+      ? (raw === undefined || raw === null || raw === "" ? "N/A" : String(raw))
+      : Utils.formatValue(raw, field);
+    const value = escapeHTML(formatted);
+    return `<div class="evidence-row"><span>${label}</span><b>${value}</b></div>`;
   }
 
   // ============================================================
@@ -306,6 +419,7 @@ const App = (() => {
     buildCategorySelector();
     buildIndicatorSelector();
     buildVizStyleSelector();
+    buildScenarioSelector();
     buildBasemapSelector();
     buildBivariateControls();
     buildRankedControls();
@@ -338,6 +452,14 @@ const App = (() => {
     if (!sel) return;
     sel.innerHTML = VIZ_STYLES.map(s =>
       `<option value="${s.id}" ${s.id === currentVizStyle ? "selected" : ""}>${s.label}</option>`
+    ).join("");
+  }
+
+  function buildScenarioSelector() {
+    const sel = document.getElementById("scenario-select");
+    if (!sel) return;
+    sel.innerHTML = Object.entries(DECISION_SCENARIOS).map(([key, scenario]) =>
+      `<option value="${key}" ${key === currentScenario ? "selected" : ""}>${scenario.label}</option>`
     ).join("");
   }
 
@@ -489,6 +611,18 @@ const App = (() => {
       }
     });
 
+    // Decision scenario
+    const scenarioSel = document.getElementById("scenario-select");
+    if (scenarioSel) scenarioSel.addEventListener("change", () => {
+      currentScenario = scenarioSel.value;
+      updatePlanningInsights();
+    });
+
+    const applyScenarioBtn = document.getElementById("apply-scenario");
+    if (applyScenarioBtn) applyScenarioBtn.addEventListener("click", () => {
+      applyScenarioMap();
+    });
+
     // Viz style select
     const vizSel = document.getElementById("viz-select");
     if (vizSel) vizSel.addEventListener("change", () => {
@@ -626,6 +760,11 @@ const App = (() => {
       if (e.key === "Escape") showAnnouncementSplash(false);
     });
 
+    window.addEventListener("area:selected", (e) => {
+      selectedArea = e.detail?.properties || null;
+      updatePlanningInsights();
+    });
+
     // Sidebar toggle
     const sidebarToggle = document.getElementById("sidebar-toggle");
     if (sidebarToggle) sidebarToggle.addEventListener("click", () => {
@@ -634,6 +773,29 @@ const App = (() => {
       sidebar?.classList.toggle("collapsed", sidebarCollapsed);
       sidebarToggle.textContent = sidebarCollapsed ? "▶" : "◀";
     });
+  }
+
+  function applyScenarioMap() {
+    const scenario = DECISION_SCENARIOS[currentScenario] || DECISION_SCENARIOS.rice;
+    currentCategory = scenario.category;
+    currentIndicator = scenario.indicator;
+    currentVizStyle = "priority";
+    priorityModel = currentScenario;
+
+    buildIndicatorSelector();
+    const catSel = document.getElementById("category-select");
+    const indSel = document.getElementById("indicator-select");
+    const vizSel = document.getElementById("viz-select");
+    const modelSel = document.getElementById("priority-model");
+    if (catSel) catSel.value = currentCategory;
+    if (indSel) indSel.value = currentIndicator;
+    if (vizSel) vizSel.value = currentVizStyle;
+    if (modelSel) modelSel.value = priorityModel;
+    updateBivariateControls(false);
+    updateRankedControls(false);
+    updatePriorityControls(true);
+    renderCurrentView();
+    Utils.showToast(`${scenario.label} map applied.`, "success");
   }
 
   // Sync category checkbox to reflect mixed/all/none state of its type children

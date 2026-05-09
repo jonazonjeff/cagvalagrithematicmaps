@@ -34,15 +34,15 @@
         <div class="announcement-brand-sub">Cagayan Valley Planning Map</div>
       </div>
     </div>
-    <div class="announcement-kicker">Important Reminder</div>
-    <h2 id="announcement-title">Use this map as a planning guide</h2>
+    <div class="announcement-kicker">Decision Guide</div>
+    <h2 id="announcement-title">Start with the planning question</h2>
     <p id="announcement-copy">
-      This dashboard supports agriculture targeting, poverty and nutrition review, and investment prioritization across Cagayan Valley.
-      Please validate local conditions and official datasets before final decisions.
+      Choose a planning scenario, inspect the priority areas, then validate the recommended interventions with local field data before final decisions.
     </p>
     <div class="announcement-points">
-      <span>Check the selected indicator and map style before exporting.</span>
-      <span>Use Climate Info and facility layers for added field context.</span>
+      <span>Use the Decision Scenario control to focus the map on rice, corn, nutrition, or climate-sensitive planning.</span>
+      <span>Click a municipality to review its planning profile, evidence, and recommended next actions.</span>
+      <span>Use facility and climate layers as validation context before exporting results.</span>
     </div>
     <div class="announcement-actions">
       <button class="btn-primary" id="announcement-confirm" type="button">Got it</button>
@@ -102,6 +102,15 @@
       <select id="category-select"></select>
       <label for="indicator-select">Indicator</label>
       <select id="indicator-select"></select>
+    </div>
+
+    <!-- Decision Scenario -->
+    <div class="sidebar-section">
+      <div class="section-label">Decision Scenario</div>
+      <label for="scenario-select">Planning Question</label>
+      <select id="scenario-select"></select>
+      <button class="btn-secondary scenario-apply" id="apply-scenario" type="button">Apply Scenario Map</button>
+      <div class="scenario-help">Updates the priority model, recommendation panel, and suggested evidence to review.</div>
     </div>
 
     <!-- Visualization Style -->
@@ -279,11 +288,11 @@
         <div id="ranking-table"></div>
       </div>
 
-      <!-- Planning Insights -->
+      <!-- Planning Decision Guide -->
       <div class="insights-section">
-        <div class="panel-title">💡 Planning Insights</div>
+        <div class="panel-title">Planning Decision Guide</div>
         <div id="insights-panel">
-          <p class="no-data">Select an indicator to see insights.</p>
+          <p class="no-data">Choose a scenario or click a municipality to see guidance.</p>
         </div>
       </div>
 
