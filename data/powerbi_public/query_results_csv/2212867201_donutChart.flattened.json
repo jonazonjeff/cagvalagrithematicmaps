@@ -1,0 +1,14 @@
+[
+  {
+    "dbSoilAnaliysis.ZincLevelS/D": "ND",
+    "Sum(dbSoilAnaliysis.Area)": "117096.90999999999"
+  },
+  {
+    "dbSoilAnaliysis.ZincLevelS/D": "DEFICIENT",
+    "Sum(dbSoilAnaliysis.Area)": "19284.320000000007"
+  },
+  {
+    "dbSoilAnaliysis.ZincLevelS/D": "SUFFICIENT",
+    "Sum(dbSoilAnaliysis.Area)": 264.49
+  }
+]

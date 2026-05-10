@@ -1,0 +1,14 @@
+[
+  {
+    "dbSoilAnaliysis.SOIL ANALYSIS FERTILITY RATING": "Low",
+    "Sum(dbSoilAnaliysis.Area)": "64054.750000000029"
+  },
+  {
+    "dbSoilAnaliysis.SOIL ANALYSIS FERTILITY RATING": "Medium",
+    "Sum(dbSoilAnaliysis.Area)": "51623.48000000004"
+  },
+  {
+    "dbSoilAnaliysis.SOIL ANALYSIS FERTILITY RATING": "High",
+    "Sum(dbSoilAnaliysis.Area)": "20967.489999999951"
+  }
+]

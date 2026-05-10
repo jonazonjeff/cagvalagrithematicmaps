@@ -1,0 +1,252 @@
+[
+  {
+    "Sum(dbSoilAnaliysis.Area)": "136645.72000000018"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Cagayan"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Cagayan",
+    "Sum(dbSoilAnaliysis.Area)": "88340.440000000177"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Cagayan",
+    "dbSoilAnaliysis.DISTRICT": "D1"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Cagayan",
+    "dbSoilAnaliysis.DISTRICT": "D1",
+    "Sum(dbSoilAnaliysis.Area)": "34597.729999999981"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Cagayan",
+    "dbSoilAnaliysis.DISTRICT": "D2"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Cagayan",
+    "dbSoilAnaliysis.DISTRICT": "D2",
+    "Sum(dbSoilAnaliysis.Area)": "17783.159999999996"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Cagayan",
+    "dbSoilAnaliysis.DISTRICT": "D3"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Cagayan",
+    "dbSoilAnaliysis.DISTRICT": "D3",
+    "Sum(dbSoilAnaliysis.Area)": "35959.550000000017"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "Sum(dbSoilAnaliysis.Area)": "23340.379999999997"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D1"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D1",
+    "Sum(dbSoilAnaliysis.Area)": "7538.9699999999975"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D2"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D2",
+    "Sum(dbSoilAnaliysis.Area)": "3133.5999999999995"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D3"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D3",
+    "Sum(dbSoilAnaliysis.Area)": "1603.3599999999992"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D4"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D4",
+    "Sum(dbSoilAnaliysis.Area)": "3287.8799999999983"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D5"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D5",
+    "Sum(dbSoilAnaliysis.Area)": "2814.2699999999995"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D6"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Isabela",
+    "dbSoilAnaliysis.DISTRICT": "D6",
+    "Sum(dbSoilAnaliysis.Area)": "4962.3000000000011"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "Sum(dbSoilAnaliysis.Area)": "7637.7999999999856"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "Sum(dbSoilAnaliysis.Area)": "7637.7999999999856"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Ambaguio",
+    "Sum(dbSoilAnaliysis.Area)": 2
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Aritao",
+    "Sum(dbSoilAnaliysis.Area)": 334
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Bagabag",
+    "Sum(dbSoilAnaliysis.Area)": 1295
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Bambang",
+    "Sum(dbSoilAnaliysis.Area)": "651.76000000000045"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Bayombong",
+    "Sum(dbSoilAnaliysis.Area)": 654.79
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Diadi",
+    "Sum(dbSoilAnaliysis.Area)": "1607.8400000000001"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Dupax del Norte",
+    "Sum(dbSoilAnaliysis.Area)": "112.42000000000002"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Dupax Del Sur",
+    "Sum(dbSoilAnaliysis.Area)": "152.95000000000002"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Kasibu",
+    "Sum(dbSoilAnaliysis.Area)": 112
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Kayapa",
+    "Sum(dbSoilAnaliysis.Area)": 21.23
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Quezon",
+    "Sum(dbSoilAnaliysis.Area)": 836
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Solano",
+    "Sum(dbSoilAnaliysis.Area)": "968.30999999999983"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Sta. Fe",
+    "Sum(dbSoilAnaliysis.Area)": 14
+  },
+  {
+    "dbSoilAnaliysis.Province": "Nueva Vizcaya",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Villaverde",
+    "Sum(dbSoilAnaliysis.Area)": "875.49999999999989"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Quirino"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Quirino",
+    "Sum(dbSoilAnaliysis.Area)": "17327.100000000006"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Quirino",
+    "dbSoilAnaliysis.DISTRICT": "Lone District"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Quirino",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "Sum(dbSoilAnaliysis.Area)": "17327.100000000006"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Quirino",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Aglipay",
+    "Sum(dbSoilAnaliysis.Area)": "3785.5600000000009"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Quirino",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Cabarroguis",
+    "Sum(dbSoilAnaliysis.Area)": "1076.2700000000002"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Quirino",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Diffun",
+    "Sum(dbSoilAnaliysis.Area)": "2124.5200000000004"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Quirino",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Maddela",
+    "Sum(dbSoilAnaliysis.Area)": "4942.1600000000026"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Quirino",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Nagtipunan",
+    "Sum(dbSoilAnaliysis.Area)": "5159.4200000000028"
+  },
+  {
+    "dbSoilAnaliysis.Province": "Quirino",
+    "dbSoilAnaliysis.DISTRICT": "Lone District",
+    "dbSoilAnaliysis.Municipality": "Saguday",
+    "Sum(dbSoilAnaliysis.Area)": "239.17000000000007"
+  }
+]

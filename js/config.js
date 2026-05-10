@@ -12,7 +12,7 @@ const APP_CONFIG = {
   mapCenter: [17.6132, 121.7270],
   mapZoom: 8,
   dataPath: "data/",
-  assetVersion: "20260509-plans",
+  assetVersion: "20260510-soil-fertility",
 };
 
 // ============================================================
@@ -293,6 +293,265 @@ const INDICATOR_CONFIG = {
     colorScheme: "Greens",
     categories: { "High": 3, "Moderate": 2, "Low": 1 },
     description: "Soil fertility classification"
+  },
+  soil_lab_area_ha: {
+    label: "Soil-Tested Area",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Greens",
+    description: "Area covered by public soil fertility analysis records from the Region 02 Power BI report."
+  },
+  soil_fertility_stress_score: {
+    label: "Soil Fertility Stress Score",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "/100",
+    aggregation: "weighted_average",
+    weightField: "soil_lab_area_ha",
+    colorScheme: "YlOrRd",
+    description: "Composite score combining low fertility, acidic pH, multiple low NPK ratings, zinc deficiency, tested area, and crop-specific soil constraints."
+  },
+  soil_low_fertility_area_ha: {
+    label: "Low Fertility Area",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "YlOrRd",
+    description: "Soil-tested area rated low for overall fertility."
+  },
+  soil_low_fertility_pct: {
+    label: "Low Fertility Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_lab_area_ha",
+    colorScheme: "YlOrRd",
+    description: "Share of soil-tested area rated low for overall fertility."
+  },
+  soil_acidic_area_ha: {
+    label: "Acidic Soil Area",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Oranges",
+    description: "Soil-tested area classified as acidic."
+  },
+  soil_acidic_pct: {
+    label: "Acidic Soil Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_lab_area_ha",
+    colorScheme: "Oranges",
+    description: "Share of soil-tested area classified as acidic."
+  },
+  soil_npk_multiple_low_area_ha: {
+    label: "Multiple Low NPK Area",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Reds",
+    description: "Area where at least two of nitrogen, phosphorus, and potassium are rated low."
+  },
+  soil_npk_multiple_low_pct: {
+    label: "Multiple Low NPK Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_lab_area_ha",
+    colorScheme: "Reds",
+    description: "Share of soil-tested area where at least two of nitrogen, phosphorus, and potassium are rated low."
+  },
+  soil_n_low_pct: {
+    label: "Low Nitrogen Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_lab_area_ha",
+    colorScheme: "YlOrRd",
+    description: "Share of soil-tested area rated low in nitrogen."
+  },
+  soil_p_low_pct: {
+    label: "Low Phosphorus Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_lab_area_ha",
+    colorScheme: "YlOrRd",
+    description: "Share of soil-tested area rated low in phosphorus."
+  },
+  soil_k_low_pct: {
+    label: "Low Potassium Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_lab_area_ha",
+    colorScheme: "YlOrRd",
+    description: "Share of soil-tested area rated low in potassium."
+  },
+  soil_zinc_deficient_area_ha: {
+    label: "Zinc-Deficient Area",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Purples",
+    description: "Soil-tested area classified as zinc deficient."
+  },
+  soil_zinc_deficient_pct: {
+    label: "Zinc-Deficient Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_lab_area_ha",
+    colorScheme: "Purples",
+    description: "Share of soil-tested area classified as zinc deficient."
+  },
+  soil_acidic_low_fertility_area_ha: {
+    label: "Acidic + Low Fertility Area",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Reds",
+    description: "Area where acidic pH and low fertility overlap."
+  },
+  soil_low_fertility_zinc_def_area_ha: {
+    label: "Low Fertility + Zinc Deficient Area",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Reds",
+    description: "Area where low fertility and zinc deficiency overlap."
+  },
+  soil_rice_low_fertility_area_ha: {
+    label: "Rice Low Fertility Area",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "YlOrRd",
+    description: "Rice soil-tested area rated low for overall fertility."
+  },
+  soil_rice_tested_area_ha: {
+    label: "Rice Soil-Tested Area",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Greens",
+    description: "Rice area represented in the soil analysis records."
+  },
+  soil_rice_low_fertility_pct: {
+    label: "Rice Low Fertility Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_rice_tested_area_ha",
+    colorScheme: "YlOrRd",
+    description: "Share of rice soil-tested area rated low for fertility."
+  },
+  soil_rice_acidic_pct: {
+    label: "Rice Acidic Soil Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_rice_tested_area_ha",
+    colorScheme: "Oranges",
+    description: "Share of rice soil-tested area classified as acidic."
+  },
+  soil_rice_npk_multiple_low_pct: {
+    label: "Rice Multiple Low NPK Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_rice_tested_area_ha",
+    colorScheme: "Reds",
+    description: "Share of rice soil-tested area where at least two of N, P, and K are low."
+  },
+  soil_rice_zinc_deficient_pct: {
+    label: "Rice Zinc-Deficient Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_rice_tested_area_ha",
+    colorScheme: "Purples",
+    description: "Share of rice soil-tested area classified as zinc deficient."
+  },
+  soil_corn_low_fertility_area_ha: {
+    label: "Corn Low Fertility Area",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "YlOrRd",
+    description: "Corn soil-tested area rated low for overall fertility."
+  },
+  soil_corn_tested_area_ha: {
+    label: "Corn Soil-Tested Area",
+    category: "Soil Fertility",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Greens",
+    description: "Corn area represented in the soil analysis records."
+  },
+  soil_corn_low_fertility_pct: {
+    label: "Corn Low Fertility Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_corn_tested_area_ha",
+    colorScheme: "YlOrRd",
+    description: "Share of corn soil-tested area rated low for fertility."
+  },
+  soil_corn_acidic_pct: {
+    label: "Corn Acidic Soil Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_corn_tested_area_ha",
+    colorScheme: "Oranges",
+    description: "Share of corn soil-tested area classified as acidic."
+  },
+  soil_corn_npk_multiple_low_pct: {
+    label: "Corn Multiple Low NPK Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_corn_tested_area_ha",
+    colorScheme: "Reds",
+    description: "Share of corn soil-tested area where at least two of N, P, and K are low."
+  },
+  soil_corn_zinc_deficient_pct: {
+    label: "Corn Zinc-Deficient Share",
+    category: "Soil Fertility",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "soil_corn_tested_area_ha",
+    colorScheme: "Purples",
+    description: "Share of corn soil-tested area classified as zinc deficient."
   },
   irrigated_area: {
     label: "Irrigated Area",
@@ -989,6 +1248,72 @@ const PRIORITY_MODELS = {
       poor_corn_farmers: 0.05
     }
   },
+  soil_rehab: {
+    label: "Soil Fertility Rehabilitation Priority",
+    weights: {
+      soil_fertility_stress_score: 0.30,
+      soil_low_fertility_area_ha: 0.20,
+      soil_acidic_low_fertility_area_ha: 0.15,
+      soil_npk_multiple_low_area_ha: 0.15,
+      poverty_2023: 0.10,
+      plans_2027_need_gap_score: 0.10
+    }
+  },
+  soil_acidity: {
+    label: "Acidity and Liming Priority",
+    weights: {
+      soil_acidic_area_ha: 0.35,
+      soil_acidic_pct: 0.20,
+      soil_acidic_low_fertility_area_ha: 0.20,
+      rice_area_2025: 0.10,
+      corn_area_2025: 0.10,
+      poverty_2023: 0.05
+    }
+  },
+  soil_npk: {
+    label: "NPK Balancing Priority",
+    weights: {
+      soil_npk_multiple_low_area_ha: 0.30,
+      soil_npk_multiple_low_pct: 0.20,
+      soil_n_low_pct: 0.15,
+      soil_p_low_pct: 0.15,
+      soil_k_low_pct: 0.10,
+      soil_lab_area_ha: 0.10
+    }
+  },
+  soil_zinc: {
+    label: "Zinc Deficiency Correction Priority",
+    weights: {
+      soil_zinc_deficient_area_ha: 0.35,
+      soil_zinc_deficient_pct: 0.20,
+      soil_low_fertility_zinc_def_area_ha: 0.20,
+      soil_rice_zinc_deficient_pct: 0.10,
+      soil_corn_zinc_deficient_pct: 0.10,
+      poverty_2023: 0.05
+    }
+  },
+  soil_rice: {
+    label: "Rice Soil Constraint Priority",
+    weights: {
+      soil_rice_low_fertility_area_ha: 0.25,
+      soil_rice_low_fertility_pct: 0.15,
+      soil_rice_acidic_pct: 0.15,
+      soil_rice_npk_multiple_low_pct: 0.15,
+      poor_rice_farmers: 0.15,
+      rice_yield_gap: 0.15
+    }
+  },
+  soil_corn: {
+    label: "Corn Soil Constraint Priority",
+    weights: {
+      soil_corn_low_fertility_area_ha: 0.25,
+      soil_corn_low_fertility_pct: 0.15,
+      soil_corn_acidic_pct: 0.15,
+      soil_corn_npk_multiple_low_pct: 0.15,
+      poor_corn_farmers: 0.15,
+      corn_yield_gap: 0.15
+    }
+  },
   prism: {
     label: "PRiSM Rice Season Monitoring",
     weights: {
@@ -1064,6 +1389,41 @@ const PLANNING_INSIGHTS = [
     condition: (d) => parseInt(d.irrigated_area) < 500 && parseInt(d.rice_area_2023) > 1000,
     insight: "This area may require irrigation or drought mitigation support.",
     icon: "💧", level: "moderate"
+  },
+  {
+    condition: (d) => parseFloat(d.soil_fertility_stress_score) >= 55,
+    insight: "High soil fertility stress. Prioritize field validation for low fertility, pH, NPK, and zinc constraints before selecting intervention packages.",
+    icon: "Soil", level: "high"
+  },
+  {
+    condition: (d) => parseFloat(d.soil_low_fertility_pct) >= 50 && parseFloat(d.soil_lab_area_ha) > 500,
+    insight: "At least half of the soil-tested area is rated low fertility. Consider soil rehabilitation, nutrient management advisories, and organic matter support.",
+    icon: "Soil", level: "high"
+  },
+  {
+    condition: (d) => parseFloat(d.soil_acidic_pct) >= 50 && parseFloat(d.soil_acidic_area_ha) > 300,
+    insight: "Acidic soil is a major constraint in the tested area. Check lime suitability, soil texture, and timing before fertilizer response programs.",
+    icon: "Soil", level: "moderate"
+  },
+  {
+    condition: (d) => parseFloat(d.soil_npk_multiple_low_pct) >= 25,
+    insight: "Multiple NPK ratings are low in a substantial share of tested area. Balanced fertilizer recommendations may be more appropriate than single-nutrient support.",
+    icon: "Soil", level: "moderate"
+  },
+  {
+    condition: (d) => parseFloat(d.soil_zinc_deficient_pct) >= 25,
+    insight: "Zinc deficiency appears in a substantial share of tested area. Validate micronutrient needs before rice or corn intensification support.",
+    icon: "Soil", level: "moderate"
+  },
+  {
+    condition: (d) => parseFloat(d.soil_rice_low_fertility_pct) >= 40 && parseFloat(d.poor_rice_farmers) > 300,
+    insight: "Rice soil fertility constraints overlap with many small rice farms. This is a candidate for targeted rice nutrient management support.",
+    icon: "Soil", level: "high"
+  },
+  {
+    condition: (d) => parseFloat(d.soil_corn_low_fertility_pct) >= 40 && parseFloat(d.poor_corn_farmers) > 300,
+    insight: "Corn soil fertility constraints overlap with many small corn farms. This is a candidate for targeted corn nutrient management support.",
+    icon: "Soil", level: "high"
   },
   {
     condition: (d) => d.pest_disease_occurrence === "High",

@@ -97,9 +97,8 @@ const PriorityScoring = (() => {
       } else if (compKey === "irrigation_gap") {
         components[compKey] = computeGap(rows, "irrigated_area");
       } else if (compKey === "soil_fertility_gap") {
-        // inverted: Low fertility = high gap score
-        const base = normalizeField(rows, "soil_fertility");
-        components[compKey] = base.map(v => 1 - v);
+        // Low fertility is mapped to the highest risk score in normalizeField.
+        components[compKey] = normalizeField(rows, "soil_fertility");
       } else if (compKey === "prism_area_gap_abs") {
         components[compKey] = normalizeAbsField(rows, "prism_area_gap_vs_app_ha");
       } else {
@@ -163,6 +162,30 @@ const PriorityScoring = (() => {
       pest_disease_score: "Pest & Disease Risk",
       asf_score: "ASF Risk",
       soil_fertility_gap: "Soil Fertility Constraint",
+      soil_fertility_stress_score: "Soil Fertility Stress",
+      soil_lab_area_ha: "Soil-Tested Area",
+      soil_low_fertility_area_ha: "Low Fertility Area",
+      soil_acidic_area_ha: "Acidic Soil Area",
+      soil_acidic_pct: "Acidic Soil Share",
+      soil_acidic_low_fertility_area_ha: "Acidic + Low Fertility Area",
+      soil_npk_multiple_low_area_ha: "Multiple Low NPK Area",
+      soil_npk_multiple_low_pct: "Multiple Low NPK Share",
+      soil_n_low_pct: "Low Nitrogen Share",
+      soil_p_low_pct: "Low Phosphorus Share",
+      soil_k_low_pct: "Low Potassium Share",
+      soil_zinc_deficient_area_ha: "Zinc-Deficient Area",
+      soil_zinc_deficient_pct: "Zinc-Deficient Share",
+      soil_low_fertility_zinc_def_area_ha: "Low Fertility + Zinc Deficiency",
+      soil_rice_low_fertility_area_ha: "Rice Low Fertility Area",
+      soil_rice_low_fertility_pct: "Rice Low Fertility Share",
+      soil_rice_acidic_pct: "Rice Acidic Soil Share",
+      soil_rice_npk_multiple_low_pct: "Rice Multiple Low NPK Share",
+      soil_rice_zinc_deficient_pct: "Rice Zinc-Deficient Share",
+      soil_corn_low_fertility_area_ha: "Corn Low Fertility Area",
+      soil_corn_low_fertility_pct: "Corn Low Fertility Share",
+      soil_corn_acidic_pct: "Corn Acidic Soil Share",
+      soil_corn_npk_multiple_low_pct: "Corn Multiple Low NPK Share",
+      soil_corn_zinc_deficient_pct: "Corn Zinc-Deficient Share",
       prism_standing_crop_area: "Standing Crop Area",
       prism_upcoming_harvest_area: "May-Jun Harvest Area",
       prism_area_gap_abs: "PRiSM Area Gap",

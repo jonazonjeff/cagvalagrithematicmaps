@@ -1,0 +1,14 @@
+[
+  {
+    "dbSoilAnaliysis.PH(AC- AcidicN- NuetralAL- Alkaline)": "Acidic",
+    "Sum(dbSoilAnaliysis.Area)": "66655.350000000122"
+  },
+  {
+    "dbSoilAnaliysis.PH(AC- AcidicN- NuetralAL- Alkaline)": "Neutral",
+    "Sum(dbSoilAnaliysis.Area)": "63998.850000000028"
+  },
+  {
+    "dbSoilAnaliysis.PH(AC- AcidicN- NuetralAL- Alkaline)": "Alkaline",
+    "Sum(dbSoilAnaliysis.Area)": "5991.5199999999986"
+  }
+]

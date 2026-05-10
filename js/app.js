@@ -75,6 +75,78 @@ const App = (() => {
         "Coordinate crop, livestock, DRRM, and extension support where risks overlap."
       ]
     },
+    soil_rehab: {
+      label: "Target soil fertility rehabilitation",
+      question: "Where do low fertility, acidic pH, multiple NPK constraints, and planning gaps overlap?",
+      category: "Soil Fertility",
+      indicator: "soil_fertility_stress_score",
+      evidence: ["soil_fertility_stress_score", "soil_lab_area_ha", "soil_low_fertility_area_ha", "soil_low_fertility_pct", "soil_acidic_low_fertility_area_ha", "soil_npk_multiple_low_area_ha", "soil_zinc_deficient_area_ha", "plans_2027_need_gap_score"],
+      actions: [
+        "Validate soil-test coverage and the barangays driving the stress score before selecting farms.",
+        "Bundle soil testing, site-specific nutrient management, organic matter improvement, and fertilizer advisory support.",
+        "Compare with 2027 plan coverage to decide whether rehabilitation can be programmed through existing National Soil Health or crop projects."
+      ]
+    },
+    soil_acidity: {
+      label: "Plan acidity and liming support",
+      question: "Where is acidic soil most likely to limit rice or corn response to fertilizer?",
+      category: "Soil Fertility",
+      indicator: "soil_acidic_area_ha",
+      evidence: ["soil_acidic_area_ha", "soil_acidic_pct", "soil_acidic_low_fertility_area_ha", "soil_rice_acidic_pct", "soil_corn_acidic_pct", "rice_area_2025", "corn_area_2025"],
+      actions: [
+        "Confirm pH results and soil texture before recommending lime or pH-corrective materials.",
+        "Prioritize acidic and low-fertility overlaps where crop area is large enough for clustered procurement or demos.",
+        "Coordinate lime source, transport, timing, and farmer advisory work with fertilizer recommendations."
+      ]
+    },
+    soil_npk: {
+      label: "Balance NPK nutrient constraints",
+      question: "Where do nitrogen, phosphorus, and potassium constraints overlap strongly enough for balanced fertilizer targeting?",
+      category: "Soil Fertility",
+      indicator: "soil_npk_multiple_low_area_ha",
+      evidence: ["soil_npk_multiple_low_area_ha", "soil_npk_multiple_low_pct", "soil_n_low_pct", "soil_p_low_pct", "soil_k_low_pct", "soil_low_fertility_pct", "soil_lab_area_ha"],
+      actions: [
+        "Use the low N, P, and K pattern to avoid single-nutrient recommendations where balanced correction is needed.",
+        "Target demonstrations or advisories where multiple low NPK ratings cover substantial tested area.",
+        "Check commodity, yield, and irrigation context before finalizing fertilizer formulation priorities."
+      ]
+    },
+    soil_zinc: {
+      label: "Target zinc deficiency correction",
+      question: "Where does zinc deficiency overlap with low fertility and major rice or corn exposure?",
+      category: "Soil Fertility",
+      indicator: "soil_zinc_deficient_area_ha",
+      evidence: ["soil_zinc_deficient_area_ha", "soil_zinc_deficient_pct", "soil_low_fertility_zinc_def_area_ha", "soil_rice_zinc_deficient_pct", "soil_corn_zinc_deficient_pct", "poverty_2023"],
+      actions: [
+        "Validate zinc-deficient test results and avoid blanket correction where deficiency is not confirmed.",
+        "Prioritize zinc demonstrations or micronutrient advisories where deficiency overlaps low fertility.",
+        "Coordinate with rice and corn program staff so micronutrient support is paired with full nutrient management."
+      ]
+    },
+    soil_rice: {
+      label: "Screen rice soil constraints",
+      question: "Where should rice support account for low fertility, acidity, NPK imbalance, or zinc deficiency?",
+      category: "Soil Fertility",
+      indicator: "soil_rice_low_fertility_area_ha",
+      evidence: ["soil_rice_tested_area_ha", "soil_rice_low_fertility_area_ha", "soil_rice_low_fertility_pct", "soil_rice_acidic_pct", "soil_rice_npk_multiple_low_pct", "soil_rice_zinc_deficient_pct", "poor_rice_farmers", "rice_yield_2025"],
+      actions: [
+        "Use rice-specific soil constraints when selecting seed, fertilizer, liming, and extension packages.",
+        "Prioritize poor rice farmer clusters where soil constraints may suppress yield response.",
+        "Compare rice soil constraints with irrigation and current-season PRiSM evidence before deployment."
+      ]
+    },
+    soil_corn: {
+      label: "Screen corn soil constraints",
+      question: "Where should corn support account for low fertility, acidity, NPK imbalance, or zinc deficiency?",
+      category: "Soil Fertility",
+      indicator: "soil_corn_low_fertility_area_ha",
+      evidence: ["soil_corn_tested_area_ha", "soil_corn_low_fertility_area_ha", "soil_corn_low_fertility_pct", "soil_corn_acidic_pct", "soil_corn_npk_multiple_low_pct", "soil_corn_zinc_deficient_pct", "poor_corn_farmers", "corn_yield_2025"],
+      actions: [
+        "Use corn-specific soil constraints when selecting fertilizer blends, liming support, and demo sites.",
+        "Prioritize poor corn farmer clusters where nutrient constraints and low yield coincide.",
+        "Review drying, storage, and market support alongside soil interventions where corn area is large."
+      ]
+    },
     prism: {
       label: "Monitor PRiSM rice season",
       question: "Where do current-season rice areas still need field monitoring or harvest logistics?",

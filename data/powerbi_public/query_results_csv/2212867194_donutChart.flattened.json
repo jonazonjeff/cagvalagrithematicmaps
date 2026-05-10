@@ -1,0 +1,14 @@
+[
+  {
+    "dbSoilAnaliysis.N(L/M/H)": "Low",
+    "Sum(dbSoilAnaliysis.Area)": "73659.190000000119"
+  },
+  {
+    "dbSoilAnaliysis.N(L/M/H)": "Medium",
+    "Sum(dbSoilAnaliysis.Area)": "52018.94999999999"
+  },
+  {
+    "dbSoilAnaliysis.N(L/M/H)": "High",
+    "Sum(dbSoilAnaliysis.Area)": "10967.580000000029"
+  }
+]

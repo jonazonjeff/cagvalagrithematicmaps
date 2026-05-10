@@ -12,6 +12,7 @@ const DataLoader = (() => {
   let prismData = [];
   let droughtOutlookData = [];
   let plansProjectsData = [];
+  let soilFertilityData = [];
   let facilitiesData = [];
   let joinMismatches = [];
 
@@ -153,6 +154,16 @@ const DataLoader = (() => {
     }
 
     try {
+      soilFertilityData = await fetchCSV(dataPath + "soil_fertility_municipal_summary.csv");
+      mergeSoilFertilityData(soilFertilityData);
+      console.info(`Loaded soil_fertility_municipal_summary.csv: ${soilFertilityData.length} records`);
+    } catch (e) {
+      console.warn("soil_fertility_municipal_summary.csv not found. Soil fertility decision scenarios will use baseline municipal fields only.", e);
+      soilFertilityData = [];
+      addSoilFertilityDefaults();
+    }
+
+    try {
       facilitiesData = await fetchCSV(dataPath + "facilities.csv");
       console.info(`Loaded facilities.csv: ${facilitiesData.length} records`);
     } catch (e) {
@@ -173,6 +184,7 @@ const DataLoader = (() => {
       prismData,
       droughtOutlookData,
       plansProjectsData,
+      soilFertilityData,
       facilitiesData,
       joinMismatches
     };
@@ -321,7 +333,34 @@ const DataLoader = (() => {
     return Object.values(municipalData).find(row =>
       Utils.normalizeName(row.province) === provinceNorm &&
       Utils.normalizeName(row.municipality) === municipalityNorm
-    ) || null;
+    ) || Object.values(municipalData).find(row => {
+      const rowProvince = Utils.normalizeName(row.province);
+      const rowMunicipality = Utils.normalizeName(row.municipality);
+      if (rowProvince !== provinceNorm) return false;
+      const rowCompact = rowMunicipality.replace(/\s+/g, "");
+      const targetCompact = municipalityNorm.replace(/\s+/g, "");
+      const rowExpanded = rowMunicipality.replace(/^sta\s+/, "santa ");
+      const targetExpanded = municipalityNorm.replace(/^sta\s+/, "santa ");
+      return rowMunicipality.includes(municipalityNorm) ||
+        municipalityNorm.includes(rowMunicipality) ||
+        rowCompact === targetCompact ||
+        rowExpanded === targetExpanded ||
+        levenshteinDistance(rowCompact, targetCompact) <= 1;
+    }) || null;
+  }
+
+  function levenshteinDistance(a, b) {
+    if (!a || !b) return Math.max(String(a || "").length, String(b || "").length);
+    const dp = Array.from({ length: a.length + 1 }, () => Array(b.length + 1).fill(0));
+    for (let i = 0; i <= a.length; i++) dp[i][0] = i;
+    for (let j = 0; j <= b.length; j++) dp[0][j] = j;
+    for (let i = 1; i <= a.length; i++) {
+      for (let j = 1; j <= b.length; j++) {
+        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + cost);
+      }
+    }
+    return dp[a.length][b.length];
   }
 
   function addPrismDerivedFields(row) {
@@ -372,8 +411,65 @@ const DataLoader = (() => {
     addPlansProjectDefaults();
   }
 
+  function mergeSoilFertilityData(rows) {
+    rows.forEach(soilRow => {
+      const row = findMunicipalDataRow(soilRow.province, soilRow.municipality);
+      if (!row) {
+        joinMismatches.push({
+          type: "soil_fertility_no_csv",
+          name: `${soilRow.municipality}, ${soilRow.province}`,
+          message: "Soil fertility row has no matching municipal_data.csv row"
+        });
+        return;
+      }
+
+      Object.assign(row, soilRow);
+    });
+
+    addSoilFertilityDefaults();
+  }
+
   function addPlansProjectDefaults() {
     Object.values(municipalData).forEach(row => addPlansDerivedFields(row));
+  }
+
+  function addSoilFertilityDefaults() {
+    const numericFields = [
+      "soil_lab_area_ha",
+      "soil_fertility_stress_score",
+      "soil_low_fertility_area_ha",
+      "soil_low_fertility_pct",
+      "soil_acidic_area_ha",
+      "soil_acidic_pct",
+      "soil_alkaline_pct",
+      "soil_n_low_pct",
+      "soil_p_low_pct",
+      "soil_k_low_pct",
+      "soil_npk_multiple_low_area_ha",
+      "soil_npk_multiple_low_pct",
+      "soil_zinc_deficient_area_ha",
+      "soil_zinc_deficient_pct",
+      "soil_acidic_low_fertility_area_ha",
+      "soil_low_fertility_zinc_def_area_ha",
+      "soil_rice_tested_area_ha",
+      "soil_rice_low_fertility_area_ha",
+      "soil_rice_low_fertility_pct",
+      "soil_rice_acidic_pct",
+      "soil_rice_npk_multiple_low_pct",
+      "soil_rice_zinc_deficient_pct",
+      "soil_corn_tested_area_ha",
+      "soil_corn_low_fertility_area_ha",
+      "soil_corn_low_fertility_pct",
+      "soil_corn_acidic_pct",
+      "soil_corn_npk_multiple_low_pct",
+      "soil_corn_zinc_deficient_pct"
+    ];
+
+    Object.values(municipalData).forEach(row => {
+      numericFields.forEach(field => {
+        if (row[field] === undefined || row[field] === null || row[field] === "") row[field] = "0";
+      });
+    });
   }
 
   function addPlansDerivedFields(row) {
@@ -560,6 +656,7 @@ const DataLoader = (() => {
     get prismData() { return prismData; },
     get droughtOutlookData() { return droughtOutlookData; },
     get plansProjectsData() { return plansProjectsData; },
+    get soilFertilityData() { return soilFertilityData; },
     get facilitiesData() { return facilitiesData; }
   };
 })();

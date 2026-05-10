@@ -1,0 +1,146 @@
+[
+  {
+    "id": 2212867185,
+    "name": "0faf6fba8bd6a7e38444",
+    "type": "slicer",
+    "title": null,
+    "x": 287.46,
+    "y": 677.38,
+    "queryLen": 462
+  },
+  {
+    "id": 2212867186,
+    "name": "26b8b9c1d3361e430b39",
+    "type": "slicer",
+    "title": null,
+    "x": 627.51,
+    "y": 677.38,
+    "queryLen": 463
+  },
+  {
+    "id": 2212867187,
+    "name": "43ee4f8ad723bd0eb0e6",
+    "type": "slicer",
+    "title": null,
+    "x": 954.86,
+    "y": 677.38,
+    "queryLen": 463
+  },
+  {
+    "id": 2212867190,
+    "name": "3b98b67057f72ad56390",
+    "type": "slicer",
+    "title": null,
+    "x": 11.79,
+    "y": 51.69,
+    "queryLen": 464
+  },
+  {
+    "id": 2212867191,
+    "name": "76fd8d4424ee57917355",
+    "type": "azureMap",
+    "title": null,
+    "x": 287.46,
+    "y": 122.42,
+    "queryLen": 801
+  },
+  {
+    "id": 2212867192,
+    "name": "48bc66338d4a0f448dbd",
+    "type": "pieChart",
+    "title": null,
+    "x": 915.87,
+    "y": 244.84,
+    "queryLen": 838
+  },
+  {
+    "id": 2212867193,
+    "name": "57c53f7fea6d205c8016",
+    "type": "slicer",
+    "title": null,
+    "x": 767.15,
+    "y": 244.84,
+    "queryLen": 526
+  },
+  {
+    "id": 2212867194,
+    "name": "41a81621cc594930ce7e",
+    "type": "donutChart",
+    "title": null,
+    "x": 287.46,
+    "y": 548.61,
+    "queryLen": 788
+  },
+  {
+    "id": 2212867195,
+    "name": "87c56223f5a49cc07ab0",
+    "type": "donutChart",
+    "title": null,
+    "x": 627.51,
+    "y": 548.61,
+    "queryLen": 790
+  },
+  {
+    "id": 2212867196,
+    "name": "76fc659079081b7d01c2",
+    "type": "donutChart",
+    "title": null,
+    "x": 954.86,
+    "y": 548.61,
+    "queryLen": 789
+  },
+  {
+    "id": 2212867197,
+    "name": "347884445d35812ebe57",
+    "type": "cardVisual",
+    "title": null,
+    "x": 1025.96,
+    "y": 7.34,
+    "queryLen": 428
+  },
+  {
+    "id": 2212867198,
+    "name": "03cc8a33eb750e986fe1",
+    "type": "pieChart",
+    "title": null,
+    "x": 767.15,
+    "y": 122.42,
+    "queryLen": 839
+  },
+  {
+    "id": 2212867199,
+    "name": "ee10602d77b789708749",
+    "type": "pivotTable",
+    "title": null,
+    "x": 11.79,
+    "y": 211.28,
+    "queryLen": 1890
+  },
+  {
+    "id": 2212867201,
+    "name": "fd4809092b9548e28af7",
+    "type": "donutChart",
+    "title": null,
+    "x": 948.51,
+    "y": 377.23,
+    "queryLen": 792
+  },
+  {
+    "id": 2212867202,
+    "name": "d8e978aef03cd98cc976",
+    "type": "slicer",
+    "title": null,
+    "x": 767.15,
+    "y": 377.23,
+    "queryLen": 480
+  },
+  {
+    "id": 2212867203,
+    "name": "d90c85650593cb9e750d",
+    "type": "slicer",
+    "title": null,
+    "x": 11.79,
+    "y": 148.72,
+    "queryLen": 465
+  }
+]

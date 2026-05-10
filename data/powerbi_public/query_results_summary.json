@@ -1,0 +1,126 @@
+[
+  {
+    "file": "2212867185_slicer.json",
+    "rows": 3,
+    "columns": [
+      "dbSoilAnaliysis.N(L/M/H)"
+    ]
+  },
+  {
+    "file": "2212867186_slicer.json",
+    "rows": 3,
+    "columns": [
+      "dbSoilAnaliysis.P(L/M/H)"
+    ]
+  },
+  {
+    "file": "2212867187_slicer.json",
+    "rows": 3,
+    "columns": [
+      "dbSoilAnaliysis.K(L/M/H)"
+    ]
+  },
+  {
+    "file": "2212867190_slicer.json",
+    "rows": 2,
+    "columns": [
+      "dbSoilAnaliysis.Crop"
+    ]
+  },
+  {
+    "file": "2212867191_azureMap.json",
+    "rows": 5217,
+    "columns": [
+      "dbSoilAnaliysis.Province",
+      "Ø",
+      "dbSoilAnaliysis.Latitude",
+      "dbSoilAnaliysis.Longtitude"
+    ]
+  },
+  {
+    "file": "2212867192_pieChart.json",
+    "rows": 3,
+    "columns": [
+      "dbSoilAnaliysis.PH(AC- AcidicN- NuetralAL- Alkaline)",
+      "Sum(dbSoilAnaliysis.Area)"
+    ]
+  },
+  {
+    "file": "2212867193_slicer.json",
+    "rows": 3,
+    "columns": [
+      "dbSoilAnaliysis.PH(AC- AcidicN- NuetralAL- Alkaline)"
+    ]
+  },
+  {
+    "file": "2212867194_donutChart.json",
+    "rows": 3,
+    "columns": [
+      "dbSoilAnaliysis.N(L/M/H)",
+      "Sum(dbSoilAnaliysis.Area)"
+    ]
+  },
+  {
+    "file": "2212867195_donutChart.json",
+    "rows": 3,
+    "columns": [
+      "dbSoilAnaliysis.P(L/M/H)",
+      "Sum(dbSoilAnaliysis.Area)"
+    ]
+  },
+  {
+    "file": "2212867196_donutChart.json",
+    "rows": 3,
+    "columns": [
+      "dbSoilAnaliysis.K(L/M/H)",
+      "Sum(dbSoilAnaliysis.Area)"
+    ]
+  },
+  {
+    "file": "2212867197_cardVisual.json",
+    "rows": 1,
+    "columns": [
+      "Sum(dbSoilAnaliysis.Area)"
+    ]
+  },
+  {
+    "file": "2212867198_pieChart.json",
+    "rows": 3,
+    "columns": [
+      "dbSoilAnaliysis.SOIL ANALYSIS FERTILITY RATING",
+      "Sum(dbSoilAnaliysis.Area)"
+    ]
+  },
+  {
+    "file": "2212867199_pivotTable.json",
+    "rows": 51,
+    "columns": [
+      "Sum(dbSoilAnaliysis.Area)",
+      "dbSoilAnaliysis.Province",
+      "dbSoilAnaliysis.DISTRICT",
+      "dbSoilAnaliysis.Municipality"
+    ]
+  },
+  {
+    "file": "2212867201_donutChart.json",
+    "rows": 3,
+    "columns": [
+      "dbSoilAnaliysis.ZincLevelS/D",
+      "Sum(dbSoilAnaliysis.Area)"
+    ]
+  },
+  {
+    "file": "2212867202_slicer.json",
+    "rows": 3,
+    "columns": [
+      "dbSoilAnaliysis.ZincLevelS/D"
+    ]
+  },
+  {
+    "file": "2212867203_slicer.json",
+    "rows": 12,
+    "columns": [
+      "dbSoilAnaliysis.YearNow"
+    ]
+  }
+]
