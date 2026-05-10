@@ -206,6 +206,54 @@ const App = (() => {
         "Compare cluster membership with small rice and corn farm concentrations to identify where consolidation support can reach more producers.",
         "Use commodity and proposed enterprise details to match support packages with market linkage, processing, credit, or enterprise operation gaps."
       ]
+    },
+    rsba_registry_targeting: {
+      label: "Target RSBA farmer registry support",
+      question: "Where does the RSBA registry show the largest farmer base, crop area, sector participation, and IMC coverage gap?",
+      category: "RSBA Registry",
+      indicator: "rsba_registry_count",
+      evidence: ["rsba_registry_count", "rsba_crop_area_ha", "rsba_farmer_count", "rsba_farmworker_count", "rsba_fisherfolk_count", "rsba_with_imc_count", "rsba_imc_gap_pct", "poverty_2023"],
+      actions: [
+        "Use the RSBA municipal totals as the baseline pool for program targeting and beneficiary validation.",
+        "Prioritize registry cleanup where the farmer base is large but IMC coverage is low.",
+        "Cross-check sector tags before deciding whether support should be crop, farmworker, fisherfolk, or mixed-livelihood oriented."
+      ]
+    },
+    rsba_rice_corn: {
+      label: "Compare RSBA rice and corn registry demand",
+      question: "Where do RSBA rice/palay and corn records show the strongest commodity-specific demand for intervention?",
+      category: "RSBA Registry",
+      indicator: "rsba_rice_count",
+      evidence: ["rsba_rice_count", "rsba_rice_area_ha", "rsba_corn_count", "rsba_corn_area_ha", "rsba_rice_share_pct", "rsba_corn_share_pct", "poor_rice_farmers", "poor_corn_farmers", "poverty_2023"],
+      actions: [
+        "Compare RSBA rice/corn counts with the existing barangay-derived rice and corn farm layers.",
+        "Use crop area and registry count together to separate many small producers from fewer large-area producers.",
+        "Prioritize validation where RSBA commodity records and poverty or small-farm indicators both point to need."
+      ]
+    },
+    rsba_inclusion: {
+      label: "Target inclusive RSBA support",
+      question: "Where do RSBA records show concentrations of women, youth, 4Ps, IP, PWD, or other inclusion-sensitive groups?",
+      category: "RSBA Registry",
+      indicator: "rsba_4ps_count",
+      evidence: ["rsba_4ps_count", "rsba_ip_count", "rsba_pwd_count", "rsba_female_count", "rsba_female_pct", "rsba_youth_count", "rsba_youth_pct", "rsba_agriyouth_count", "poverty_2023"],
+      actions: [
+        "Use inclusion indicators to design beneficiary safeguards and delivery channels.",
+        "Coordinate with municipal focal persons before final beneficiary selection for IP, PWD, 4Ps, and youth support.",
+        "Pair inclusion targeting with commodity and livelihood indicators so support is practical, not just demographic."
+      ]
+    },
+    rsba_fca_organizing: {
+      label: "Find RSBA FCA organizing gaps",
+      question: "Where is the registry base large but FCA membership or cluster linkage appears weak?",
+      category: "RSBA Registry",
+      indicator: "rsba_fca_gap_pct",
+      evidence: ["rsba_registry_count", "rsba_fca_count", "rsba_fca_pct", "rsba_fca_gap_pct", "f2c2_cluster_count", "f2c2_farmer_members", "rsba_with_imc_count", "rsba_imc_gap_pct"],
+      actions: [
+        "Use this scenario to find municipalities where many registered producers may still be outside FCA structures.",
+        "Compare RSBA FCA share with F2C2 cluster presence before recommending organizing or consolidation activities.",
+        "Validate whether low FCA tagging reflects actual organizing gaps or incomplete RSBA encoding."
+      ]
     }
   };
 

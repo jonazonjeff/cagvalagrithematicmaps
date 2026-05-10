@@ -17,6 +17,7 @@ const DataLoader = (() => {
   let fmrSummaryData = [];
   let f2c2ClustersData = [];
   let f2c2SummaryData = [];
+  let rsbaSummaryData = [];
   let facilitiesData = [];
   let joinMismatches = [];
 
@@ -188,6 +189,16 @@ const DataLoader = (() => {
     }
 
     try {
+      rsbaSummaryData = await fetchCSV(dataPath + "rsba_municipal_summary.csv");
+      mergeRsbaSummaryData(rsbaSummaryData);
+      console.info(`Loaded rsba_municipal_summary.csv: ${rsbaSummaryData.length} records`);
+    } catch (e) {
+      console.warn("rsba_municipal_summary.csv not found. RSBA registry indicators will be unavailable.", e);
+      rsbaSummaryData = [];
+      addRsbaDefaults();
+    }
+
+    try {
       facilitiesData = await fetchCSV(dataPath + "facilities.csv");
       console.info(`Loaded facilities.csv: ${facilitiesData.length} records`);
     } catch (e) {
@@ -231,6 +242,7 @@ const DataLoader = (() => {
       fmrSummaryData,
       f2c2ClustersData,
       f2c2SummaryData,
+      rsbaSummaryData,
       facilitiesData,
       joinMismatches
     };
@@ -517,6 +529,24 @@ const DataLoader = (() => {
     addF2c2Defaults();
   }
 
+  function mergeRsbaSummaryData(rows) {
+    rows.forEach(rsbaRow => {
+      const row = findMunicipalDataRow(rsbaRow.province, rsbaRow.municipality);
+      if (!row) {
+        joinMismatches.push({
+          type: "rsba_no_csv",
+          name: `${rsbaRow.municipality}, ${rsbaRow.province}`,
+          message: "RSBA summary row has no matching municipal_data.csv row"
+        });
+        return;
+      }
+
+      Object.assign(row, rsbaRow);
+    });
+
+    addRsbaDefaults();
+  }
+
   function addPlansProjectDefaults() {
     Object.values(municipalData).forEach(row => addPlansDerivedFields(row));
   }
@@ -598,6 +628,54 @@ const DataLoader = (() => {
       ["f2c2_commodities", "f2c2_banner_programs", "f2c2_enterprise_statuses"].forEach(field => {
         if (row[field] === undefined || row[field] === null) row[field] = "";
       });
+    });
+  }
+
+  function addRsbaDefaults() {
+    const numericFields = [
+      "rsba_registry_count",
+      "rsba_crop_area_ha",
+      "rsba_avg_age",
+      "rsba_latitude",
+      "rsba_longitude",
+      "rsba_rice_count",
+      "rsba_rice_area_ha",
+      "rsba_corn_count",
+      "rsba_corn_area_ha",
+      "rsba_hvc_count",
+      "rsba_hvc_area_ha",
+      "rsba_top_crop_count",
+      "rsba_male_count",
+      "rsba_female_count",
+      "rsba_female_pct",
+      "rsba_youth_count",
+      "rsba_youth_pct",
+      "rsba_millennial_count",
+      "rsba_senior_count",
+      "rsba_farmer_count",
+      "rsba_farmworker_count",
+      "rsba_fisherfolk_count",
+      "rsba_ip_count",
+      "rsba_pwd_count",
+      "rsba_4ps_count",
+      "rsba_fca_count",
+      "rsba_fca_pct",
+      "rsba_fca_gap_pct",
+      "rsba_agriyouth_count",
+      "rsba_arb_count",
+      "rsba_organic_count",
+      "rsba_with_imc_count",
+      "rsba_imc_pct",
+      "rsba_imc_gap_pct",
+      "rsba_rice_share_pct",
+      "rsba_corn_share_pct"
+    ];
+
+    Object.values(municipalData).forEach(row => {
+      numericFields.forEach(field => {
+        if (row[field] === undefined || row[field] === null || row[field] === "") row[field] = "0";
+      });
+      if (row.rsba_top_crop === undefined || row.rsba_top_crop === null) row.rsba_top_crop = "";
     });
   }
 
@@ -830,6 +908,7 @@ const DataLoader = (() => {
     get fmrSummaryData() { return fmrSummaryData; },
     get f2c2ClustersData() { return f2c2ClustersData; },
     get f2c2SummaryData() { return f2c2SummaryData; },
+    get rsbaSummaryData() { return rsbaSummaryData; },
     get facilitiesData() { return facilitiesData; }
   };
 })();

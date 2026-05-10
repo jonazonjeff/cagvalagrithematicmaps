@@ -1,0 +1,197 @@
+{
+  "version": "1.0.0",
+  "queries": [
+    {
+      "Query": {
+        "Commands": [
+          {
+            "SemanticQueryDataShapeCommand": {
+              "Query": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "q",
+                    "Entity": "Query1",
+                    "Type": 0
+                  }
+                ],
+                "Select": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "farmer_address_prv"
+                    },
+                    "Name": "Query1.farmer_address_prv",
+                    "NativeReferenceName": "province"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "farmer_address_mun"
+                    },
+                    "Name": "Query1.farmer_address_mun",
+                    "NativeReferenceName": "municipality"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "IP"
+                    },
+                    "Name": "Query1.IP",
+                    "NativeReferenceName": "ip"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "PWD"
+                    },
+                    "Name": "Query1.PWD",
+                    "NativeReferenceName": "pwd"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "4Ps"
+                    },
+                    "Name": "Query1.4Ps",
+                    "NativeReferenceName": "four_ps"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "FCA"
+                    },
+                    "Name": "Query1.FCA",
+                    "NativeReferenceName": "fca"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "AGRIYOUTH"
+                    },
+                    "Name": "Query1.AGRIYOUTH",
+                    "NativeReferenceName": "agriyouth"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "ARB"
+                    },
+                    "Name": "Query1.ARB",
+                    "NativeReferenceName": "arb"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "ORGANIC"
+                    },
+                    "Name": "Query1.ORGANIC",
+                    "NativeReferenceName": "organic"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "WITH IMC"
+                    },
+                    "Name": "Query1.WITH IMC",
+                    "NativeReferenceName": "with_imc"
+                  },
+                  {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "q"
+                            }
+                          },
+                          "Property": "rsbsa_no"
+                        }
+                      },
+                      "Function": 2
+                    },
+                    "Name": "Count(Query1.rsbsa_no)",
+                    "NativeReferenceName": "rsba_social_record_count"
+                  }
+                ]
+              },
+              "Binding": {
+                "Primary": {
+                  "Groupings": [
+                    {
+                      "Projections": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10
+                      ]
+                    }
+                  ]
+                },
+                "DataReduction": {
+                  "DataVolume": 4,
+                  "Primary": {
+                    "Top": {
+                      "Count": 30000
+                    }
+                  }
+                },
+                "Version": 1
+              },
+              "ExecutionMetricsKind": 1
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "cancelQueries": [],
+  "modelId": 2299875
+}

@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "queries": [
+    {
+      "Query": {
+        "Commands": [
+          {
+            "SemanticQueryDataShapeCommand": {
+              "Query": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "q",
+                    "Entity": "Query1",
+                    "Type": 0
+                  }
+                ],
+                "Select": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "farmer_address_prv"
+                    },
+                    "Name": "Query1.farmer_address_prv",
+                    "NativeReferenceName": "province"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "farmer_address_mun"
+                    },
+                    "Name": "Query1.farmer_address_mun",
+                    "NativeReferenceName": "municipality"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "farmer"
+                    },
+                    "Name": "Query1.farmer",
+                    "NativeReferenceName": "farmer"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "farmworker"
+                    },
+                    "Name": "Query1.farmworker",
+                    "NativeReferenceName": "farmworker"
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "q"
+                        }
+                      },
+                      "Property": "fisherfolk"
+                    },
+                    "Name": "Query1.fisherfolk",
+                    "NativeReferenceName": "fisherfolk"
+                  },
+                  {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "q"
+                            }
+                          },
+                          "Property": "rsbsa_no"
+                        }
+                      },
+                      "Function": 2
+                    },
+                    "Name": "Count(Query1.rsbsa_no)",
+                    "NativeReferenceName": "rsba_sector_record_count"
+                  }
+                ]
+              },
+              "Binding": {
+                "Primary": {
+                  "Groupings": [
+                    {
+                      "Projections": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                      ]
+                    }
+                  ]
+                },
+                "DataReduction": {
+                  "DataVolume": 4,
+                  "Primary": {
+                    "Top": {
+                      "Count": 30000
+                    }
+                  }
+                },
+                "Version": 1
+              },
+              "ExecutionMetricsKind": 1
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "cancelQueries": [],
+  "modelId": 2299875
+}

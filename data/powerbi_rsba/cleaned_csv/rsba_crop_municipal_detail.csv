@@ -1,0 +1,4406 @@
+province,municipality,cropname,rsba_crop_record_count,rsba_crop_area_ha
+BATANES,BASCO Capital,Ampalaya,33,0.31
+BATANES,BASCO Capital,Banana,24,0.99
+BATANES,BASCO Capital,Beans - dry,6,0.13
+BATANES,BASCO Capital,Bellpepper (Green/Red),41,0.37
+BATANES,BASCO Capital,Broccoli,4,0.07
+BATANES,BASCO Capital,Buffaloes (Carabaos),84,0
+BATANES,BASCO Capital,Bush Sitao,3,0.02
+BATANES,BASCO Capital,Cabbage (repolyo),24,0.35
+BATANES,BASCO Capital,Camote,169,10.92
+BATANES,BASCO Capital,Camote tops (talbos ng kamote),5,0.18
+BATANES,BASCO Capital,Cantaloupes- honey dew and other melon varieties,1,0
+BATANES,BASCO Capital,Carrot,21,0.17
+BATANES,BASCO Capital,Cassava (kamoteng kahoy),33,5.06
+BATANES,BASCO Capital,Cattle,201,0
+BATANES,BASCO Capital,Chayote,1,0
+BATANES,BASCO Capital,Chickens,140,0
+BATANES,BASCO Capital,Chili (labuyo),8,0.05
+BATANES,BASCO Capital,Coconut,3,0.02
+BATANES,BASCO Capital,Common beans (habitchuelas),1,0
+BATANES,BASCO Capital,Common gourd (upo),12,0.13
+BATANES,BASCO Capital,Corn,82,18.21
+BATANES,BASCO Capital,crops for seed and seedling,1,0.08
+BATANES,BASCO Capital,Cucumber (pipino),3,0.15
+BATANES,BASCO Capital,Ducks,6,0
+BATANES,BASCO Capital,Eggplant (talong),97,1.59
+BATANES,BASCO Capital,Foxtail Millet,1,0.04
+BATANES,BASCO Capital,Gabi tubers,39,2.04
+BATANES,BASCO Capital,Garlic (bawang),17,1.83
+BATANES,BASCO Capital,Ginger (luya),17,0.19
+BATANES,BASCO Capital,Goats,24,0
+BATANES,BASCO Capital,Green Beans (Baguio Beans),3,0.02
+BATANES,BASCO Capital,Kalamansi,2,0.01
+BATANES,BASCO Capital,Kangkong,14,0.15
+BATANES,BASCO Capital,Lemon,1,0.01
+BATANES,BASCO Capital,Lettuce,1,0
+BATANES,BASCO Capital,Lime (Calamansi),7,0.18
+BATANES,BASCO Capital,Lime (dayap),1,0.01
+BATANES,BASCO Capital,Long Chili,1,0
+BATANES,BASCO Capital,Mango,2,0.01
+BATANES,BASCO Capital,Mongo (Mung Bean),12,0.29
+BATANES,BASCO Capital,Mustard,2,0.01
+BATANES,BASCO Capital,Okra,50,0.57
+BATANES,BASCO Capital,Onion bulbs (sibuyas),27,0.81
+BATANES,BASCO Capital,Onion shoot,2,0.04
+BATANES,BASCO Capital,Other Cereals,1,0.01
+BATANES,BASCO Capital,Other crops for fiber production,14,2.16
+BATANES,BASCO Capital,Other fruit-bearing trees and vines,1,0.04
+BATANES,BASCO Capital,Other fruit-bearing vegetables,194,53.33
+BATANES,BASCO Capital,Other leafy vegetables,144,26.9
+BATANES,BASCO Capital,Other poultry,5,0
+BATANES,BASCO Capital,Other tubers - roots and bulbs,48,2.61
+BATANES,BASCO Capital,Papaya,2,0.01
+BATANES,BASCO Capital,Patola,15,0.1
+BATANES,BASCO Capital,Peanuts,5,0.04
+BATANES,BASCO Capital,Pechay,45,0.58
+BATANES,BASCO Capital,Pepper - small green,3,0.1
+BATANES,BASCO Capital,Pepper - sweet,18,0.17
+BATANES,BASCO Capital,Pigs or swine,276,0
+BATANES,BASCO Capital,Pineapple,12,0.3
+BATANES,BASCO Capital,Pomelo (suha),1,0
+BATANES,BASCO Capital,Potato (patatas),15,1.58
+BATANES,BASCO Capital,Rice/Palay,18,2.14
+BATANES,BASCO Capital,Squash (kalabasa),46,0.83
+BATANES,BASCO Capital,String beans - harvested green (sitao),46,0.48
+BATANES,BASCO Capital,Sweet peas - harvested green (sitsaro),1,0
+BATANES,BASCO Capital,Taro,22,1.16
+BATANES,BASCO Capital,Tomato (kamatis),25,0.24
+BATANES,BASCO Capital,Tugi,16,0.3
+BATANES,BASCO Capital,Turnip (sinkamas),1,0.06
+BATANES,BASCO Capital,Ube,56,1.54
+BATANES,BASCO Capital,Water melon,24,1.75
+BATANES,BASCO Capital,Winged Bean (pallang),3,0.01
+BATANES,BASCO Capital,Yam,7,0.18
+BATANES,ITBAYAT,Ampalaya,1,0.03
+BATANES,ITBAYAT,Arrowroot,1,0.2
+BATANES,ITBAYAT,Banana,29,2.28
+BATANES,ITBAYAT,Beans - dry,1,0.07
+BATANES,ITBAYAT,Bellpepper (Green/Red),2,0.2
+BATANES,ITBAYAT,Buffaloes (Carabaos),165,0
+BATANES,ITBAYAT,Bush Sitao,1,0.01
+BATANES,ITBAYAT,Cabbage (repolyo),2,0.28
+BATANES,ITBAYAT,Camote,161,31.55
+BATANES,ITBAYAT,Camote tops (talbos ng kamote),4,0.64
+BATANES,ITBAYAT,Cantaloupes- honey dew and other melon varieties,2,0.07
+BATANES,ITBAYAT,Cassava (kamoteng kahoy),35,3.22
+BATANES,ITBAYAT,Cattle,237,0
+BATANES,ITBAYAT,Chickens,142,0
+BATANES,ITBAYAT,Coconut,17,3.59
+BATANES,ITBAYAT,Corn,392,90.8
+BATANES,ITBAYAT,Ducks,12,0
+BATANES,ITBAYAT,Eggplant (talong),12,0.42
+BATANES,ITBAYAT,"Forage grass (sacate, alfalfa, green corn stalk)",2,1.37
+BATANES,ITBAYAT,Gabi tubers,17,0.95
+BATANES,ITBAYAT,Garlic (bawang),186,63.91
+BATANES,ITBAYAT,"Garlic shoot, harvested green",4,0.35
+BATANES,ITBAYAT,Ginger (luya),7,0.41
+BATANES,ITBAYAT,Goats,107,0
+BATANES,ITBAYAT,Green corn,1,0.18
+BATANES,ITBAYAT,Horses,29,0
+BATANES,ITBAYAT,Kangkong,1,0.01
+BATANES,ITBAYAT,Lime (Calamansi),4,0.37
+BATANES,ITBAYAT,Mango,1,0.01
+BATANES,ITBAYAT,Mongo (Mung Bean),6,0.78
+BATANES,ITBAYAT,Okra,2,0.01
+BATANES,ITBAYAT,Onion bulbs (sibuyas),131,19.66
+BATANES,ITBAYAT,Onion shoot,1,0.01
+BATANES,ITBAYAT,Orange (dalandan),1,0.13
+BATANES,ITBAYAT,Other Cereals,7,1.16
+BATANES,ITBAYAT,Other crops for fiber production,2,1.46
+BATANES,ITBAYAT,Other fruit-bearing trees and vines,3,0.14
+BATANES,ITBAYAT,Other fruit-bearing vegetables,211,39.16
+BATANES,ITBAYAT,Other leafy vegetables,68,13.55
+BATANES,ITBAYAT,Other leguminous plants,40,4.06
+BATANES,ITBAYAT,Other poultry,1,0
+BATANES,ITBAYAT,Other tubers - roots and bulbs,124,12.88
+BATANES,ITBAYAT,Papaya,1,0.03
+BATANES,ITBAYAT,Patola,3,0.03
+BATANES,ITBAYAT,Peanuts,35,5.8
+BATANES,ITBAYAT,Pechay,4,0.02
+BATANES,ITBAYAT,Pepper - small green,2,0.03
+BATANES,ITBAYAT,Pepper - sweet,3,0.22
+BATANES,ITBAYAT,Pigs or swine,303,0
+BATANES,ITBAYAT,Pineapple,62,5.35
+BATANES,ITBAYAT,Potato (patatas),65,6.02
+BATANES,ITBAYAT,Rice/Palay,294,79.43
+BATANES,ITBAYAT,Sheep,8,0
+BATANES,ITBAYAT,Spinach,1,0
+BATANES,ITBAYAT,Squash (kalabasa),3,0.09
+BATANES,ITBAYAT,String beans - harvested green (sitao),2,0.03
+BATANES,ITBAYAT,Sugarcane,4,0.46
+BATANES,ITBAYAT,Tiger Grass,1,0.1
+BATANES,ITBAYAT,Tomato (kamatis),2,0.03
+BATANES,ITBAYAT,Tugi,30,8.15
+BATANES,ITBAYAT,Ube,35,4.59
+BATANES,ITBAYAT,Water melon,13,0.63
+BATANES,ITBAYAT,Yam,4,0.14
+BATANES,IVANA,Ampalaya,7,0.71
+BATANES,IVANA,Avocado,4,0.02
+BATANES,IVANA,Banana,44,5.86
+BATANES,IVANA,Beans - dry,3,3.08
+BATANES,IVANA,Bellpepper (Green/Red),4,1.13
+BATANES,IVANA,Buffaloes (Carabaos),55,0
+BATANES,IVANA,Cabbage (repolyo),13,7.75
+BATANES,IVANA,Camote,73,13.74
+BATANES,IVANA,Carrot,9,11.79
+BATANES,IVANA,Cassava (kamoteng kahoy),1,0
+BATANES,IVANA,Cattle,112,0
+BATANES,IVANA,Chickens,67,0
+BATANES,IVANA,Chili (labuyo),1,0
+BATANES,IVANA,Coconut,16,3.34
+BATANES,IVANA,Coffee - other varieties,1,0
+BATANES,IVANA,Corn,16,3.01
+BATANES,IVANA,Ducks,4,0
+BATANES,IVANA,Eggplant (talong),29,13.08
+BATANES,IVANA,Fern,1,0.01
+BATANES,IVANA,Gabi tubers,8,2.11
+BATANES,IVANA,Garlic (bawang),38,7.3
+BATANES,IVANA,Ginger (luya),12,5.07
+BATANES,IVANA,Goats,44,0
+BATANES,IVANA,Green Beans (Baguio Beans),1,3
+BATANES,IVANA,Guyabano,1,0.01
+BATANES,IVANA,Jackfruit,1,0.01
+BATANES,IVANA,Kalamansi,6,0.38
+BATANES,IVANA,Kangkong,1,4
+BATANES,IVANA,Lemon,4,0.07
+BATANES,IVANA,Lime (Calamansi),11,5.12
+BATANES,IVANA,Mango,5,0.18
+BATANES,IVANA,Mongo (Mung Bean),1,0.09
+BATANES,IVANA,Okra,5,1.12
+BATANES,IVANA,Onion bulbs (sibuyas),16,3.89
+BATANES,IVANA,Orange (dalandan),1,0.01
+BATANES,IVANA,Other Fish,1,0.01
+BATANES,IVANA,Other fruit-bearing trees and vines,11,0.16
+BATANES,IVANA,Other fruit-bearing vegetables,154,4.9
+BATANES,IVANA,Other leafy vegetables,86,7.8
+BATANES,IVANA,Other leguminous plants,1,0
+BATANES,IVANA,Other poultry,1,0
+BATANES,IVANA,Other tubers - roots and bulbs,79,6.04
+BATANES,IVANA,Peanuts,2,0.01
+BATANES,IVANA,Pechay,31,20.29
+BATANES,IVANA,Pigs or swine,196,0
+BATANES,IVANA,Pineapple,10,1.52
+BATANES,IVANA,Pomelo (suha),4,0.07
+BATANES,IVANA,Potato (patatas),17,0.43
+BATANES,IVANA,Radish (labanos),1,3
+BATANES,IVANA,Rice/Palay,1,1
+BATANES,IVANA,Spinach,1,0.01
+BATANES,IVANA,Squash (kalabasa),11,12.78
+BATANES,IVANA,String beans - harvested green (sitao),4,1.2
+BATANES,IVANA,Sweet peas - harvested green (sitsaro),3,0.05
+BATANES,IVANA,Tomato (kamatis),12,2.67
+BATANES,IVANA,Tugi,13,10.52
+BATANES,IVANA,Turkeys,1,0
+BATANES,IVANA,Ube,24,3.04
+BATANES,IVANA,Water melon,1,0.05
+BATANES,IVANA,Yam,10,0.24
+BATANES,MAHATAO,Ampalaya,1,0.6
+BATANES,MAHATAO,Beans - dry,1,0.01
+BATANES,MAHATAO,Buffaloes (Carabaos),77,0
+BATANES,MAHATAO,Cabbage (repolyo),3,0.03
+BATANES,MAHATAO,Camote,23,23.83
+BATANES,MAHATAO,Carrot,1,0.02
+BATANES,MAHATAO,Cassava (kamoteng kahoy),1,0.02
+BATANES,MAHATAO,Cattle,122,0
+BATANES,MAHATAO,Chickens,32,0
+BATANES,MAHATAO,Corn,6,0.25
+BATANES,MAHATAO,Eggplant (talong),1,0.01
+BATANES,MAHATAO,Gabi tubers,4,1.8
+BATANES,MAHATAO,Garlic (bawang),6,0.24
+BATANES,MAHATAO,Ginger (luya),1,0.02
+BATANES,MAHATAO,Goats,18,0
+BATANES,MAHATAO,Mongo (Mung Bean),5,0.27
+BATANES,MAHATAO,Onion bulbs (sibuyas),7,0.26
+BATANES,MAHATAO,Other crops for fiber production,29,18.36
+BATANES,MAHATAO,Other fruit-bearing vegetables,130,21.6
+BATANES,MAHATAO,Other industrial crops,1,0.05
+BATANES,MAHATAO,Other leafy vegetables,89,7.21
+BATANES,MAHATAO,Other tubers - roots and bulbs,120,8.59
+BATANES,MAHATAO,Pechay,2,0.01
+BATANES,MAHATAO,Pigs or swine,126,0
+BATANES,MAHATAO,Pineapple,1,0.02
+BATANES,MAHATAO,Potato (patatas),23,0.84
+BATANES,MAHATAO,Rice/Palay,2,0.11
+BATANES,MAHATAO,Squash (kalabasa),1,0.02
+BATANES,MAHATAO,String beans - harvested green (sitao),1,0.04
+BATANES,MAHATAO,Tilapia,1,0.13
+BATANES,MAHATAO,Tomato (kamatis),1,0.01
+BATANES,MAHATAO,Tugi,7,2.89
+BATANES,MAHATAO,Ube,21,22.74
+BATANES,MAHATAO,Water melon,4,0.13
+BATANES,SABTANG,Ampalaya,4,0.1
+BATANES,SABTANG,Arrowroot,1,0.05
+BATANES,SABTANG,Banana,21,9.64
+BATANES,SABTANG,Beans - dry,2,0.23
+BATANES,SABTANG,Buffaloes (Carabaos),20,0
+BATANES,SABTANG,Bush Sitao,6,0.16
+BATANES,SABTANG,Cabbage (repolyo),4,0.25
+BATANES,SABTANG,Camote,63,3.43
+BATANES,SABTANG,Carrot,2,0.08
+BATANES,SABTANG,Cassava (kamoteng kahoy),3,0.1
+BATANES,SABTANG,Cattle,102,0
+BATANES,SABTANG,Chickens,41,0
+BATANES,SABTANG,Chili (labuyo),7,0.25
+BATANES,SABTANG,Coconut,4,0.65
+BATANES,SABTANG,Common gourd (upo),2,0.01
+BATANES,SABTANG,Corn,70,8.66
+BATANES,SABTANG,crops for seed and seedling,7,1.18
+BATANES,SABTANG,Dragon Fruit,2,0.42
+BATANES,SABTANG,Ducks,2,0
+BATANES,SABTANG,Eggplant (talong),17,0.7
+BATANES,SABTANG,Gabi tubers,8,0.94
+BATANES,SABTANG,Garlic (bawang),28,2.61
+BATANES,SABTANG,Ginger (luya),4,0.58
+BATANES,SABTANG,Goats,48,0
+BATANES,SABTANG,Green corn,1,0.03
+BATANES,SABTANG,Kangkong,1,0.13
+BATANES,SABTANG,Lime (Calamansi),3,0.15
+BATANES,SABTANG,Mango,2,0.05
+BATANES,SABTANG,Mongo (Mung Bean),2,0.05
+BATANES,SABTANG,Okra,5,0.2
+BATANES,SABTANG,Onion bulbs (sibuyas),7,0.24
+BATANES,SABTANG,Orange (dalandan),1,0.05
+BATANES,SABTANG,Other crops for fiber production,2,0.42
+BATANES,SABTANG,Other fruit-bearing trees and vines,4,0.86
+BATANES,SABTANG,Other fruit-bearing vegetables,227,41.78
+BATANES,SABTANG,Other industrial crops,1,1
+BATANES,SABTANG,Other leafy vegetables,93,6.72
+BATANES,SABTANG,Other tubers - roots and bulbs,74,8.48
+BATANES,SABTANG,Peanuts,2,0.04
+BATANES,SABTANG,Pechay,7,0.39
+BATANES,SABTANG,Pigs or swine,72,0
+BATANES,SABTANG,Pineapple,7,0.35
+BATANES,SABTANG,Pomelo (suha),2,0.06
+BATANES,SABTANG,Potato (patatas),37,2.81
+BATANES,SABTANG,Squash (kalabasa),8,0.17
+BATANES,SABTANG,String beans - harvested green (sitao),1,0.01
+BATANES,SABTANG,Taro,1,0.03
+BATANES,SABTANG,Tomato (kamatis),6,0.27
+BATANES,SABTANG,Tugi,21,1.19
+BATANES,SABTANG,Ube,45,1.89
+BATANES,SABTANG,Water melon,5,0.25
+BATANES,SABTANG,Wax gourd (kondol),1,0.02
+BATANES,SABTANG,Yam,14,0.44
+BATANES,UYUGAN,Avocado,1,0.05
+BATANES,UYUGAN,Banana,12,0.46
+BATANES,UYUGAN,Bellpepper (Green/Red),1,0.06
+BATANES,UYUGAN,Buffaloes (Carabaos),44,0
+BATANES,UYUGAN,Cabbage (repolyo),1,0.06
+BATANES,UYUGAN,Camote,66,7.37
+BATANES,UYUGAN,Camote tops (talbos ng kamote),1,0.04
+BATANES,UYUGAN,Cassava (kamoteng kahoy),8,0.14
+BATANES,UYUGAN,Cattle,92,0
+BATANES,UYUGAN,Chickens,53,0
+BATANES,UYUGAN,Coconut,4,0.2
+BATANES,UYUGAN,Corn,17,3.5
+BATANES,UYUGAN,Ducks,2,0
+BATANES,UYUGAN,Eggplant (talong),5,0.13
+BATANES,UYUGAN,Gabi tubers,8,0.1
+BATANES,UYUGAN,Garlic (bawang),47,3.69
+BATANES,UYUGAN,Ginger (luya),7,0.11
+BATANES,UYUGAN,Goats,45,0
+BATANES,UYUGAN,Mongo (Mung Bean),1,0.02
+BATANES,UYUGAN,Okra,1,0.09
+BATANES,UYUGAN,Onion bulbs (sibuyas),15,0.69
+BATANES,UYUGAN,Other animals (e.g.,1,0
+BATANES,UYUGAN,Other fruit-bearing trees and vines,1,0.04
+BATANES,UYUGAN,Other fruit-bearing vegetables,190,19.01
+BATANES,UYUGAN,Other industrial crops,2,0.1
+BATANES,UYUGAN,Other leafy vegetables,153,16.76
+BATANES,UYUGAN,Other tubers - roots and bulbs,76,6.29
+BATANES,UYUGAN,Pechay,1,0
+BATANES,UYUGAN,Pigs or swine,115,0
+BATANES,UYUGAN,Pineapple,4,0.2
+BATANES,UYUGAN,Potato (patatas),4,0.14
+BATANES,UYUGAN,Rice/Palay,1,0.05
+BATANES,UYUGAN,Sheep,2,0
+BATANES,UYUGAN,Squash (kalabasa),1,0.01
+BATANES,UYUGAN,Sugarcane,3,1.9
+BATANES,UYUGAN,Tomato (kamatis),2,0.01
+BATANES,UYUGAN,Tugi,9,1.04
+BATANES,UYUGAN,Ube,34,6.69
+BATANES,UYUGAN,Water melon,3,0.1
+BATANES,UYUGAN,Yam,2,0.02
+CAGAYAN,ABULUG,Ampalaya,2,2.16
+CAGAYAN,ABULUG,Avocado,3,1.18
+CAGAYAN,ABULUG,Banana,29,17.94
+CAGAYAN,ABULUG,Beans - dry,2,0.5
+CAGAYAN,ABULUG,Betel Nut (Nga-nga),1,0.13
+CAGAYAN,ABULUG,Black pepper,1,0.25
+CAGAYAN,ABULUG,Buffaloes (Carabaos),223,0
+CAGAYAN,ABULUG,Bush Sitao,1,0.25
+CAGAYAN,ABULUG,Cacao,5,8.26
+CAGAYAN,ABULUG,Cassava (kamoteng kahoy),1,0.25
+CAGAYAN,ABULUG,Cattle,341,0
+CAGAYAN,ABULUG,Chickens,726,0
+CAGAYAN,ABULUG,Coconut,217,229.17
+CAGAYAN,ABULUG,Coffee - other varieties,1,1.02
+CAGAYAN,ABULUG,Common gourd (upo),1,0.25
+CAGAYAN,ABULUG,Corn,1212,1875.17
+CAGAYAN,ABULUG,crops for seed and seedling,3,1.3
+CAGAYAN,ABULUG,Dogs and cats,4,0
+CAGAYAN,ABULUG,Dragon Fruit,2,1.22
+CAGAYAN,ABULUG,Ducks,326,0
+CAGAYAN,ABULUG,Eggplant (talong),5,1.68
+CAGAYAN,ABULUG,Geese,11,0
+CAGAYAN,ABULUG,Gmelina Arborea,2,0.95
+CAGAYAN,ABULUG,Goats,77,0
+CAGAYAN,ABULUG,Guyabano,1,0.25
+CAGAYAN,ABULUG,Hito/Catfish,4,1.16
+CAGAYAN,ABULUG,Kalamansi,9,7.55
+CAGAYAN,ABULUG,Lime (Calamansi),4,0.97
+CAGAYAN,ABULUG,Mandarin (dalanghita),16,15.8
+CAGAYAN,ABULUG,Mango,1,0.25
+CAGAYAN,ABULUG,Mushroom,1,0.03
+CAGAYAN,ABULUG,Okra,1,0.16
+CAGAYAN,ABULUG,Orange (dalandan),1,0.69
+CAGAYAN,ABULUG,Other Fish,6,0.97
+CAGAYAN,ABULUG,Other fruit-bearing trees and vines,16,20.49
+CAGAYAN,ABULUG,Other fruit-bearing vegetables,50,29.39
+CAGAYAN,ABULUG,Other leafy vegetables,27,12.04
+CAGAYAN,ABULUG,Other poultry,2,0
+CAGAYAN,ABULUG,Pigeons,2,0
+CAGAYAN,ABULUG,Pigs or swine,481,0
+CAGAYAN,ABULUG,Pineapple,3,2.5
+CAGAYAN,ABULUG,Pomelo (suha),1,0.4
+CAGAYAN,ABULUG,Potato (patatas),1,0.1
+CAGAYAN,ABULUG,Rambutan,5,2.84
+CAGAYAN,ABULUG,Rice/Palay,4336,7343.84
+CAGAYAN,ABULUG,Sheep,12,0
+CAGAYAN,ABULUG,Squash (kalabasa),5,2.32
+CAGAYAN,ABULUG,Tilapia,5,2.4
+CAGAYAN,ABULUG,Turkeys,27,0
+CAGAYAN,ALCALA,Ampalaya,1,0.17
+CAGAYAN,ALCALA,Banana,2,1.35
+CAGAYAN,ALCALA,Beans - dry,1,0.12
+CAGAYAN,ALCALA,Bellpepper (Green/Red),1,0.25
+CAGAYAN,ALCALA,Buffaloes (Carabaos),115,0
+CAGAYAN,ALCALA,Cassava (kamoteng kahoy),1,0.5
+CAGAYAN,ALCALA,Cattle,13,0
+CAGAYAN,ALCALA,Chickens,96,0
+CAGAYAN,ALCALA,Coconut,1,0.53
+CAGAYAN,ALCALA,Corn,4274,5516.44
+CAGAYAN,ALCALA,Ducks,53,0
+CAGAYAN,ALCALA,Eggplant (talong),13,4.38
+CAGAYAN,ALCALA,"Forage grass (sacate, alfalfa, green corn stalk)",1,0.5
+CAGAYAN,ALCALA,Geese,7,0
+CAGAYAN,ALCALA,Goats,47,0
+CAGAYAN,ALCALA,Mahogany,1,0
+CAGAYAN,ALCALA,Mango,4,2.62
+CAGAYAN,ALCALA,Other crops for fiber production,1,0.1
+CAGAYAN,ALCALA,Other Fish,27,2.36
+CAGAYAN,ALCALA,Other fruit-bearing trees and vines,2,1.25
+CAGAYAN,ALCALA,Other fruit-bearing vegetables,30,11.96
+CAGAYAN,ALCALA,Other industrial crops,4,3.5
+CAGAYAN,ALCALA,Other leafy vegetables,14,3.63
+CAGAYAN,ALCALA,Other leguminous plants,2,0.75
+CAGAYAN,ALCALA,Other temporary crops not reported elsewhere,1,5.05
+CAGAYAN,ALCALA,Peanuts,3,2.25
+CAGAYAN,ALCALA,Pigs or swine,76,0
+CAGAYAN,ALCALA,Rice/Palay,4900,4772.11
+CAGAYAN,ALCALA,Rubber,1,2
+CAGAYAN,ALCALA,Sheep,5,0
+CAGAYAN,ALCALA,Tilapia,29,8.11
+CAGAYAN,ALCALA,Tobacco (native),4,2.05
+CAGAYAN,ALCALA,Turkeys,9,0
+CAGAYAN,ALCALA,Water melon,2,1
+CAGAYAN,ALLACAPAN,Ampalaya,3,0.6
+CAGAYAN,ALLACAPAN,Avocado,3,1.65
+CAGAYAN,ALLACAPAN,Banana,911,990.38
+CAGAYAN,ALLACAPAN,Beans - dry,1,0.5
+CAGAYAN,ALLACAPAN,Buffaloes (Carabaos),1108,0
+CAGAYAN,ALLACAPAN,Bush Sitao,3,0.16
+CAGAYAN,ALLACAPAN,Cacao,18,7.84
+CAGAYAN,ALLACAPAN,Camansi,1,1.5
+CAGAYAN,ALLACAPAN,Camote tops (talbos ng kamote),1,0.25
+CAGAYAN,ALLACAPAN,Cassava (kamoteng kahoy),8,3.09
+CAGAYAN,ALLACAPAN,Cattle,51,0
+CAGAYAN,ALLACAPAN,Chickens,1429,0
+CAGAYAN,ALLACAPAN,Chili (labuyo),2,0.14
+CAGAYAN,ALLACAPAN,Coconut,374,245.39
+CAGAYAN,ALLACAPAN,Coffee - other varieties,3,1.8
+CAGAYAN,ALLACAPAN,Common gourd (upo),1,0.01
+CAGAYAN,ALLACAPAN,Corn,1128,1573.69
+CAGAYAN,ALLACAPAN,Dogs and cats,2,0
+CAGAYAN,ALLACAPAN,Dragon Fruit,5,1.48
+CAGAYAN,ALLACAPAN,Ducks,757,0
+CAGAYAN,ALLACAPAN,Eggplant (talong),11,3.59
+CAGAYAN,ALLACAPAN,"Forage grass (sacate, alfalfa, green corn stalk)",1,2.8
+CAGAYAN,ALLACAPAN,Gabi tubers,7,1.24
+CAGAYAN,ALLACAPAN,Geese,63,0
+CAGAYAN,ALLACAPAN,Ginger (luya),2,0.5
+CAGAYAN,ALLACAPAN,Gmelina Arborea,4,1.95
+CAGAYAN,ALLACAPAN,Goats,122,0
+CAGAYAN,ALLACAPAN,Grapes (ubas),2,0.88
+CAGAYAN,ALLACAPAN,Guinea Fowls,1,0
+CAGAYAN,ALLACAPAN,Guyabano,2,0.75
+CAGAYAN,ALLACAPAN,Hito/Catfish,51,18
+CAGAYAN,ALLACAPAN,Horses,3,0
+CAGAYAN,ALLACAPAN,Kalamansi,6,1.6
+CAGAYAN,ALLACAPAN,Kidney Bean (Patani),1,0.04
+CAGAYAN,ALLACAPAN,Lanzones,2,2
+CAGAYAN,ALLACAPAN,Lemon,1,0.13
+CAGAYAN,ALLACAPAN,Lime (Calamansi),14,7.62
+CAGAYAN,ALLACAPAN,Lime (dayap),1,0.5
+CAGAYAN,ALLACAPAN,Mahogany,1,1.5
+CAGAYAN,ALLACAPAN,Mandarin (dalanghita),46,27.68
+CAGAYAN,ALLACAPAN,Mango,12,5.61
+CAGAYAN,ALLACAPAN,Mongo (Mung Bean),6,0.77
+CAGAYAN,ALLACAPAN,Narra,1,1.5
+CAGAYAN,ALLACAPAN,Okra,6,2.28
+CAGAYAN,ALLACAPAN,Orange (dalandan),1,0.25
+CAGAYAN,ALLACAPAN,Other Fish,129,17.24
+CAGAYAN,ALLACAPAN,Other fruit-bearing trees and vines,38,61.5
+CAGAYAN,ALLACAPAN,Other fruit-bearing vegetables,37,24.69
+CAGAYAN,ALLACAPAN,Other industrial crops,1,0.25
+CAGAYAN,ALLACAPAN,Other leafy vegetables,28,11.03
+CAGAYAN,ALLACAPAN,Other tubers - roots and bulbs,7,1.23
+CAGAYAN,ALLACAPAN,Patola,2,0.05
+CAGAYAN,ALLACAPAN,Pechay,2,0.23
+CAGAYAN,ALLACAPAN,Pigeons,2,0
+CAGAYAN,ALLACAPAN,Pigs or swine,624,0
+CAGAYAN,ALLACAPAN,Pineapple,92,74.28
+CAGAYAN,ALLACAPAN,Pomelo (suha),1,0
+CAGAYAN,ALLACAPAN,Potato (patatas),1,0.5
+CAGAYAN,ALLACAPAN,Quail,2,0
+CAGAYAN,ALLACAPAN,Rabbits and hares,2,0
+CAGAYAN,ALLACAPAN,Rambutan,9,3.93
+CAGAYAN,ALLACAPAN,Rice/Palay,4570,8908.35
+CAGAYAN,ALLACAPAN,Rubber,1,0.25
+CAGAYAN,ALLACAPAN,Santol,1,0.5
+CAGAYAN,ALLACAPAN,Sheep,3,0
+CAGAYAN,ALLACAPAN,Squash (kalabasa),8,0.77
+CAGAYAN,ALLACAPAN,Starapple (caimito),1,0.25
+CAGAYAN,ALLACAPAN,String beans - harvested green (sitao),15,1.05
+CAGAYAN,ALLACAPAN,Sugarcane,2,0.45
+CAGAYAN,ALLACAPAN,Taro,6,1.15
+CAGAYAN,ALLACAPAN,Tilapia,64,12.28
+CAGAYAN,ALLACAPAN,Tomato (kamatis),2,0.15
+CAGAYAN,ALLACAPAN,Turkeys,54,0
+CAGAYAN,ALLACAPAN,Ube,1,0.17
+CAGAYAN,ALLACAPAN,Water melon,1,0.1
+CAGAYAN,ALLACAPAN,Winged Bean (pallang),1,0.17
+CAGAYAN,AMULUNG,Ampalaya,1,0.5
+CAGAYAN,AMULUNG,Buffaloes (Carabaos),110,0
+CAGAYAN,AMULUNG,Cattle,8,0
+CAGAYAN,AMULUNG,Chickens,81,0
+CAGAYAN,AMULUNG,Corn,5451,9226.55
+CAGAYAN,AMULUNG,Ducks,24,0
+CAGAYAN,AMULUNG,"Forage grass (sacate, alfalfa, green corn stalk)",2,2.4
+CAGAYAN,AMULUNG,Geese,1,0
+CAGAYAN,AMULUNG,Goats,22,0
+CAGAYAN,AMULUNG,Green corn,1,1
+CAGAYAN,AMULUNG,Hito/Catfish,1,0.05
+CAGAYAN,AMULUNG,Other animals (e.g.,14,0
+CAGAYAN,AMULUNG,Other Fish,7,3.17
+CAGAYAN,AMULUNG,Other fruit-bearing trees and vines,2,1.07
+CAGAYAN,AMULUNG,Other fruit-bearing vegetables,6,2.72
+CAGAYAN,AMULUNG,Other industrial crops,1,0.5
+CAGAYAN,AMULUNG,Other leafy vegetables,5,4.05
+CAGAYAN,AMULUNG,Other poultry,13,0
+CAGAYAN,AMULUNG,Other varieties of tobacco,2,1
+CAGAYAN,AMULUNG,Pigs or swine,54,0
+CAGAYAN,AMULUNG,Rice/Palay,5164,8054.01
+CAGAYAN,AMULUNG,Sheep,2,0
+CAGAYAN,AMULUNG,Sugarcane,1,2
+CAGAYAN,AMULUNG,Tilapia,5,2.01
+CAGAYAN,AMULUNG,Tobacco (native),14,13.33
+CAGAYAN,AMULUNG,Turkeys,1,0
+CAGAYAN,APARRI,Banana,20,12.45
+CAGAYAN,APARRI,Beans - dry,1,1
+CAGAYAN,APARRI,Buffaloes (Carabaos),408,0
+CAGAYAN,APARRI,Camote,1,0.25
+CAGAYAN,APARRI,Cassava (kamoteng kahoy),15,11.6
+CAGAYAN,APARRI,Cattle,90,0
+CAGAYAN,APARRI,Chickens,802,0
+CAGAYAN,APARRI,Citronella,8,4.05
+CAGAYAN,APARRI,Coconut,23,28.75
+CAGAYAN,APARRI,Coffee - other varieties,1,0.75
+CAGAYAN,APARRI,Corn,228,266.41
+CAGAYAN,APARRI,Dogs and cats,3,0
+CAGAYAN,APARRI,Ducks,384,0
+CAGAYAN,APARRI,Geese,24,0
+CAGAYAN,APARRI,Goats,115,0
+CAGAYAN,APARRI,Kalamansi,6,5.55
+CAGAYAN,APARRI,Lemon,3,1.5
+CAGAYAN,APARRI,Lime (Calamansi),8,7.35
+CAGAYAN,APARRI,Mandarin (dalanghita),5,3.9
+CAGAYAN,APARRI,Mango,1,2
+CAGAYAN,APARRI,Mongo (Mung Bean),14,7.25
+CAGAYAN,APARRI,Other animals (e.g.,16,0
+CAGAYAN,APARRI,Other Fish,12,3.53
+CAGAYAN,APARRI,Other fruit-bearing trees and vines,4,1.5
+CAGAYAN,APARRI,Other fruit-bearing vegetables,16,6.3
+CAGAYAN,APARRI,Other leafy vegetables,20,6.05
+CAGAYAN,APARRI,Other poultry,2,0
+CAGAYAN,APARRI,Pigeons,2,0
+CAGAYAN,APARRI,Pigs or swine,307,0
+CAGAYAN,APARRI,Pineapple,27,28.7
+CAGAYAN,APARRI,Rabbits and hares,3,0
+CAGAYAN,APARRI,Rice/Palay,5607,9357.9
+CAGAYAN,APARRI,Sheep,7,0
+CAGAYAN,APARRI,Swan,3,0
+CAGAYAN,APARRI,Tilapia,5,0.26
+CAGAYAN,APARRI,Tugi,1,0.25
+CAGAYAN,APARRI,Turkeys,25,0
+CAGAYAN,BAGGAO,Ampalaya,3,1.1
+CAGAYAN,BAGGAO,Banana,131,116.98
+CAGAYAN,BAGGAO,Beans - dry,4,0.43
+CAGAYAN,BAGGAO,Buffaloes (Carabaos),3354,0
+CAGAYAN,BAGGAO,Bush Sitao,1,0
+CAGAYAN,BAGGAO,Cacao,7,4.66
+CAGAYAN,BAGGAO,Cassava (kamoteng kahoy),2,0.16
+CAGAYAN,BAGGAO,Cattle,32,0
+CAGAYAN,BAGGAO,Chickens,4410,0
+CAGAYAN,BAGGAO,Coconut,13,10.41
+CAGAYAN,BAGGAO,Coffee arabica,1,0.25
+CAGAYAN,BAGGAO,Corn,10960,20264.93
+CAGAYAN,BAGGAO,crops for seed and seedling,1,0.5
+CAGAYAN,BAGGAO,Dogs and cats,177,0
+CAGAYAN,BAGGAO,Ducks,2114,0
+CAGAYAN,BAGGAO,Eggplant (talong),3,0.05
+CAGAYAN,BAGGAO,"Forage grass (sacate, alfalfa, green corn stalk)",3,6.3
+CAGAYAN,BAGGAO,Geese,58,0
+CAGAYAN,BAGGAO,Goats,190,0
+CAGAYAN,BAGGAO,Green corn,2,2
+CAGAYAN,BAGGAO,Guyabano,1,0.5
+CAGAYAN,BAGGAO,Hito/Catfish,6,2.7
+CAGAYAN,BAGGAO,Horses,12,0
+CAGAYAN,BAGGAO,Kapigid,1,1
+CAGAYAN,BAGGAO,Lime (Calamansi),2,0.5
+CAGAYAN,BAGGAO,Mandarin (dalanghita),1,0
+CAGAYAN,BAGGAO,Mango,4,1.12
+CAGAYAN,BAGGAO,Mongo (Mung Bean),4,1.5
+CAGAYAN,BAGGAO,Other animals (e.g.,9,0
+CAGAYAN,BAGGAO,Other Fish,38,5.35
+CAGAYAN,BAGGAO,Other fruit-bearing trees and vines,8,13.16
+CAGAYAN,BAGGAO,Other fruit-bearing vegetables,57,22.11
+CAGAYAN,BAGGAO,Other leafy vegetables,53,17.21
+CAGAYAN,BAGGAO,Other poultry,8,0
+CAGAYAN,BAGGAO,Peanuts,3,1.75
+CAGAYAN,BAGGAO,Pigeons,5,0
+CAGAYAN,BAGGAO,Pigs or swine,2943,0
+CAGAYAN,BAGGAO,Pineapple,2,1.74
+CAGAYAN,BAGGAO,Rabbits and hares,14,0
+CAGAYAN,BAGGAO,Rice/Palay,9149,10511.29
+CAGAYAN,BAGGAO,Rubber,1,1
+CAGAYAN,BAGGAO,Sheep,9,0
+CAGAYAN,BAGGAO,String beans - harvested green (sitao),2,0.75
+CAGAYAN,BAGGAO,Tiger Grass,1,0.25
+CAGAYAN,BAGGAO,Tilapia,30,3.45
+CAGAYAN,BAGGAO,Tobacco (native),5,2.25
+CAGAYAN,BAGGAO,Turkeys,76,0
+CAGAYAN,BAGGAO,Water melon,1,0.5
+CAGAYAN,BALLESTEROS,Ampalaya,3,3.7
+CAGAYAN,BALLESTEROS,Avocado,30,8.78
+CAGAYAN,BALLESTEROS,Banana,240,116.45
+CAGAYAN,BALLESTEROS,Beans - dry,1,0.02
+CAGAYAN,BALLESTEROS,Betel Nut (Nga-nga),3,0.63
+CAGAYAN,BALLESTEROS,Buffaloes (Carabaos),286,0
+CAGAYAN,BALLESTEROS,Cacao,5,1.49
+CAGAYAN,BALLESTEROS,Cassava (kamoteng kahoy),16,5.95
+CAGAYAN,BALLESTEROS,Cattle,241,0
+CAGAYAN,BALLESTEROS,Chickens,563,0
+CAGAYAN,BALLESTEROS,Chico,2,2.92
+CAGAYAN,BALLESTEROS,Citronella,3,9.25
+CAGAYAN,BALLESTEROS,Coconut,356,220.46
+CAGAYAN,BALLESTEROS,Coffee - other varieties,3,3
+CAGAYAN,BALLESTEROS,Corn,31,33.98
+CAGAYAN,BALLESTEROS,Dogs and cats,1,0
+CAGAYAN,BALLESTEROS,Dragon Fruit,29,4.85
+CAGAYAN,BALLESTEROS,Ducks,235,0
+CAGAYAN,BALLESTEROS,Eggplant (talong),2,0.02
+CAGAYAN,BALLESTEROS,Gabi tubers,6,1.33
+CAGAYAN,BALLESTEROS,Geese,11,0
+CAGAYAN,BALLESTEROS,Goats,68,0
+CAGAYAN,BALLESTEROS,Grapes (ubas),1,0
+CAGAYAN,BALLESTEROS,Guyabano,3,1.3
+CAGAYAN,BALLESTEROS,Horses,2,0
+CAGAYAN,BALLESTEROS,Kalamansi,21,14.15
+CAGAYAN,BALLESTEROS,Lanzones,5,2.59
+CAGAYAN,BALLESTEROS,Lime (Calamansi),25,18.21
+CAGAYAN,BALLESTEROS,Mandarin (dalanghita),201,143.11
+CAGAYAN,BALLESTEROS,Mango,33,9.57
+CAGAYAN,BALLESTEROS,Okra,1,0
+CAGAYAN,BALLESTEROS,Other crops for fiber production,1,1
+CAGAYAN,BALLESTEROS,Other Fish,2,3.13
+CAGAYAN,BALLESTEROS,Other fruit-bearing trees and vines,26,25.1
+CAGAYAN,BALLESTEROS,Other fruit-bearing vegetables,95,81.37
+CAGAYAN,BALLESTEROS,Other industrial crops,32,39
+CAGAYAN,BALLESTEROS,Other leafy vegetables,2,0.37
+CAGAYAN,BALLESTEROS,Other poultry,3,0
+CAGAYAN,BALLESTEROS,Pigs or swine,321,0
+CAGAYAN,BALLESTEROS,Pineapple,32,19.75
+CAGAYAN,BALLESTEROS,Pomelo (suha),1,0.03
+CAGAYAN,BALLESTEROS,Potato (patatas),1,0.05
+CAGAYAN,BALLESTEROS,Rabbits and hares,1,0
+CAGAYAN,BALLESTEROS,Rambutan,44,14.35
+CAGAYAN,BALLESTEROS,Rice/Palay,3237,6139.97
+CAGAYAN,BALLESTEROS,Santol,19,4.92
+CAGAYAN,BALLESTEROS,Sheep,9,0
+CAGAYAN,BALLESTEROS,Squash (kalabasa),1,0.02
+CAGAYAN,BALLESTEROS,Tilapia,5,6.02
+CAGAYAN,BALLESTEROS,Tomato (kamatis),1,0.02
+CAGAYAN,BALLESTEROS,Turkeys,47,0
+CAGAYAN,BALLESTEROS,Ube,1,0.05
+CAGAYAN,BUGUEY,Banana,8,7.87
+CAGAYAN,BUGUEY,Bangus,1,1
+CAGAYAN,BUGUEY,Buffaloes (Carabaos),144,0
+CAGAYAN,BUGUEY,Cassava (kamoteng kahoy),8,11.6
+CAGAYAN,BUGUEY,Cattle,72,0
+CAGAYAN,BUGUEY,Chickens,269,0
+CAGAYAN,BUGUEY,Citronella,1,1
+CAGAYAN,BUGUEY,Coconut,5,4.5
+CAGAYAN,BUGUEY,Corn,668,1274.02
+CAGAYAN,BUGUEY,Cowpea,1,1
+CAGAYAN,BUGUEY,Ducks,128,0
+CAGAYAN,BUGUEY,Eggplant (talong),4,3.25
+CAGAYAN,BUGUEY,Geese,2,0
+CAGAYAN,BUGUEY,Goats,22,0
+CAGAYAN,BUGUEY,Horses,1,0
+CAGAYAN,BUGUEY,Lime (Calamansi),1,0.5
+CAGAYAN,BUGUEY,Mango,1,0.5
+CAGAYAN,BUGUEY,Mongo (Mung Bean),1,0.4
+CAGAYAN,BUGUEY,Other animals (e.g.,5,0
+CAGAYAN,BUGUEY,Other Fish,90,118.91
+CAGAYAN,BUGUEY,Other fruit-bearing vegetables,4,3.16
+CAGAYAN,BUGUEY,Other leafy vegetables,4,1.52
+CAGAYAN,BUGUEY,Other leguminous plants,1,0.25
+CAGAYAN,BUGUEY,Other poultry,1,0
+CAGAYAN,BUGUEY,Peanuts,1,0.4
+CAGAYAN,BUGUEY,Pigeons,2,0
+CAGAYAN,BUGUEY,Pigs or swine,172,0
+CAGAYAN,BUGUEY,Rice/Palay,3450,5412.56
+CAGAYAN,BUGUEY,Sheep,2,0
+CAGAYAN,BUGUEY,Tilapia,14,27.13
+CAGAYAN,BUGUEY,Turkeys,5,0
+CAGAYAN,CALAYAN,Banana,240,155.03
+CAGAYAN,CALAYAN,Beans - dry,2,0.25
+CAGAYAN,CALAYAN,Black pepper,2,0.35
+CAGAYAN,CALAYAN,Broccoli,1,2
+CAGAYAN,CALAYAN,Buffaloes (Carabaos),622,0
+CAGAYAN,CALAYAN,Bush Sitao,2,0.11
+CAGAYAN,CALAYAN,Camote,5,0.35
+CAGAYAN,CALAYAN,Cassava (kamoteng kahoy),10,0.73
+CAGAYAN,CALAYAN,Cattle,27,0
+CAGAYAN,CALAYAN,Chickens,1123,0
+CAGAYAN,CALAYAN,Coconut,711,754.87
+CAGAYAN,CALAYAN,Coffee - other varieties,1,0.08
+CAGAYAN,CALAYAN,Corn,1050,820.38
+CAGAYAN,CALAYAN,Dogs and cats,3,0
+CAGAYAN,CALAYAN,Dragon Fruit,1,0.09
+CAGAYAN,CALAYAN,Ducks,94,0
+CAGAYAN,CALAYAN,Eggplant (talong),15,1.8
+CAGAYAN,CALAYAN,Garlic (bawang),9,0.39
+CAGAYAN,CALAYAN,Geese,4,0
+CAGAYAN,CALAYAN,Ginger (luya),21,7.87
+CAGAYAN,CALAYAN,Goats,201,0
+CAGAYAN,CALAYAN,Horses,14,0
+CAGAYAN,CALAYAN,Kalamansi,1,0.5
+CAGAYAN,CALAYAN,Mango,2,0.38
+CAGAYAN,CALAYAN,Mongo (Mung Bean),2,0.37
+CAGAYAN,CALAYAN,Okra,4,0.25
+CAGAYAN,CALAYAN,Onion bulbs (sibuyas),12,0.47
+CAGAYAN,CALAYAN,Other crops for fiber production,7,1.57
+CAGAYAN,CALAYAN,Other Fish,3,0.43
+CAGAYAN,CALAYAN,Other fruit-bearing trees and vines,3,0.35
+CAGAYAN,CALAYAN,Other fruit-bearing vegetables,282,48.51
+CAGAYAN,CALAYAN,Other herbs and spices,1,0.25
+CAGAYAN,CALAYAN,Other industrial crops,33,10.71
+CAGAYAN,CALAYAN,Other leafy vegetables,46,8.78
+CAGAYAN,CALAYAN,Other leguminous plants,73,8.79
+CAGAYAN,CALAYAN,Other poultry,2,0
+CAGAYAN,CALAYAN,Other spices,1,0
+CAGAYAN,CALAYAN,Other tubers - roots and bulbs,19,3.64
+CAGAYAN,CALAYAN,Patola,1,0.25
+CAGAYAN,CALAYAN,Peanuts,16,4.11
+CAGAYAN,CALAYAN,Pechay,8,0.39
+CAGAYAN,CALAYAN,Pepper - small green,1,0.15
+CAGAYAN,CALAYAN,Pigs or swine,945,0
+CAGAYAN,CALAYAN,Pineapple,2,0.7
+CAGAYAN,CALAYAN,Quail,2,0
+CAGAYAN,CALAYAN,Rice/Palay,1733,991.79
+CAGAYAN,CALAYAN,Sheep,8,0
+CAGAYAN,CALAYAN,Squash (kalabasa),2,0
+CAGAYAN,CALAYAN,String beans - harvested green (sitao),2,0
+CAGAYAN,CALAYAN,Taro,2,0
+CAGAYAN,CALAYAN,Tigre grass,1,0
+CAGAYAN,CALAYAN,Tomato (kamatis),4,0.11
+CAGAYAN,CALAYAN,Turkeys,4,0
+CAGAYAN,CALAYAN,Water melon,1,0.5
+CAGAYAN,CAMALANIUGAN,Avocado,1,0
+CAGAYAN,CAMALANIUGAN,Banana,3,2
+CAGAYAN,CAMALANIUGAN,Buffaloes (Carabaos),103,0
+CAGAYAN,CAMALANIUGAN,Cabbage (repolyo),1,0.5
+CAGAYAN,CAMALANIUGAN,Cassava (kamoteng kahoy),1,1
+CAGAYAN,CAMALANIUGAN,Cattle,12,0
+CAGAYAN,CAMALANIUGAN,Chickens,174,0
+CAGAYAN,CAMALANIUGAN,Coconut,4,5.57
+CAGAYAN,CAMALANIUGAN,Corn,230,356.07
+CAGAYAN,CAMALANIUGAN,Dogs and cats,1,0
+CAGAYAN,CAMALANIUGAN,Ducks,86,0
+CAGAYAN,CAMALANIUGAN,Geese,4,0
+CAGAYAN,CAMALANIUGAN,Ginger (luya),2,0.4
+CAGAYAN,CAMALANIUGAN,Goats,12,0
+CAGAYAN,CAMALANIUGAN,Green Beans (Baguio Beans),1,0.3
+CAGAYAN,CAMALANIUGAN,Lime (Calamansi),1,0.5
+CAGAYAN,CAMALANIUGAN,Luyang dilaw,1,0.2
+CAGAYAN,CAMALANIUGAN,Mandarin (dalanghita),2,2.2
+CAGAYAN,CAMALANIUGAN,Mango,1,0
+CAGAYAN,CAMALANIUGAN,Okra,2,0.38
+CAGAYAN,CAMALANIUGAN,Other Fish,1,0.03
+CAGAYAN,CAMALANIUGAN,Other fruit-bearing trees and vines,1,0.25
+CAGAYAN,CAMALANIUGAN,Other fruit-bearing vegetables,9,8.37
+CAGAYAN,CAMALANIUGAN,Other leafy vegetables,1,0.6
+CAGAYAN,CAMALANIUGAN,Pigs or swine,51,0
+CAGAYAN,CAMALANIUGAN,Pineapple,2,7.44
+CAGAYAN,CAMALANIUGAN,Rabbits and hares,1,0
+CAGAYAN,CAMALANIUGAN,Rice/Palay,2838,5106.22
+CAGAYAN,CAMALANIUGAN,Sheep,1,0
+CAGAYAN,CAMALANIUGAN,String beans - harvested green (sitao),1,0.2
+CAGAYAN,CAMALANIUGAN,Taro,1,0.15
+CAGAYAN,CAMALANIUGAN,Turkeys,10,0
+CAGAYAN,CLAVERIA,Abaca,1,0.15
+CAGAYAN,CLAVERIA,Ampalaya,1,0.25
+CAGAYAN,CLAVERIA,Avocado,1,0
+CAGAYAN,CLAVERIA,Balimbing,1,0
+CAGAYAN,CLAVERIA,Banana,68,10.98
+CAGAYAN,CLAVERIA,Broccoli,1,0.5
+CAGAYAN,CLAVERIA,Buffaloes (Carabaos),144,0
+CAGAYAN,CLAVERIA,Cacao,9,9.5
+CAGAYAN,CLAVERIA,Camote,1,0.1
+CAGAYAN,CLAVERIA,Cassava (kamoteng kahoy),5,0.7
+CAGAYAN,CLAVERIA,Cattle,218,0
+CAGAYAN,CLAVERIA,Chickens,594,0
+CAGAYAN,CLAVERIA,Chico,1,0
+CAGAYAN,CLAVERIA,Citronella,1,3.75
+CAGAYAN,CLAVERIA,Coconut,146,141.19
+CAGAYAN,CLAVERIA,Coffee - other varieties,19,17.24
+CAGAYAN,CLAVERIA,Corn,19,17.98
+CAGAYAN,CLAVERIA,Dogs and cats,1,0
+CAGAYAN,CLAVERIA,Dragon Fruit,5,0.3
+CAGAYAN,CLAVERIA,Ducks,179,0
+CAGAYAN,CLAVERIA,Eggplant (talong),1,0.02
+CAGAYAN,CLAVERIA,Geese,5,0
+CAGAYAN,CLAVERIA,Gemilina,1,0
+CAGAYAN,CLAVERIA,Goats,48,0
+CAGAYAN,CLAVERIA,Herbal/medicinal plants (banaba),2,0
+CAGAYAN,CLAVERIA,Hito/Catfish,9,0.23
+CAGAYAN,CLAVERIA,Kalamansi,3,0.3
+CAGAYAN,CLAVERIA,Lanzones,2,0.25
+CAGAYAN,CLAVERIA,Lime (Calamansi),2,0.01
+CAGAYAN,CLAVERIA,Mahogany,1,0
+CAGAYAN,CLAVERIA,Mandarin (dalanghita),9,0.8
+CAGAYAN,CLAVERIA,Mango,1,3.75
+CAGAYAN,CLAVERIA,Medicinal plants,1,0
+CAGAYAN,CLAVERIA,Mulberry,1,3
+CAGAYAN,CLAVERIA,Other Fish,21,0.53
+CAGAYAN,CLAVERIA,Other fruit-bearing trees and vines,6,1.14
+CAGAYAN,CLAVERIA,Other fruit-bearing vegetables,59,11.55
+CAGAYAN,CLAVERIA,Other leafy vegetables,23,2.82
+CAGAYAN,CLAVERIA,Other poultry,1,0
+CAGAYAN,CLAVERIA,Papaya,1,0
+CAGAYAN,CLAVERIA,Pigs or swine,338,0
+CAGAYAN,CLAVERIA,Pineapple,3,1.2
+CAGAYAN,CLAVERIA,Pomelo (suha),3,0.75
+CAGAYAN,CLAVERIA,Potato (patatas),1,0.02
+CAGAYAN,CLAVERIA,Rabbits and hares,1,0
+CAGAYAN,CLAVERIA,Rambutan,11,4.9
+CAGAYAN,CLAVERIA,Rice/Palay,3515,3820.91
+CAGAYAN,CLAVERIA,Sheep,3,0
+CAGAYAN,CLAVERIA,Taro,1,0.02
+CAGAYAN,CLAVERIA,Tilapia,13,1.34
+CAGAYAN,CLAVERIA,Tugi,1,0.1
+CAGAYAN,CLAVERIA,Turkeys,21,0
+CAGAYAN,ENRILE,Banana,1,0.7
+CAGAYAN,ENRILE,Beans - dry,1,0.5
+CAGAYAN,ENRILE,Buffaloes (Carabaos),150,0
+CAGAYAN,ENRILE,Cacao,1,1.5
+CAGAYAN,ENRILE,Cassava (kamoteng kahoy),1,1.1
+CAGAYAN,ENRILE,Cattle,292,0
+CAGAYAN,ENRILE,Chickens,113,0
+CAGAYAN,ENRILE,Coconut,1,2.5
+CAGAYAN,ENRILE,Corn,1963,2614.73
+CAGAYAN,ENRILE,Dogs and cats,3,0
+CAGAYAN,ENRILE,Ducks,59,0
+CAGAYAN,ENRILE,"Forage grass (sacate, alfalfa, green corn stalk)",1,0.6
+CAGAYAN,ENRILE,Geese,3,0
+CAGAYAN,ENRILE,Goats,27,0
+CAGAYAN,ENRILE,Green corn,2,1
+CAGAYAN,ENRILE,Horses,18,0
+CAGAYAN,ENRILE,Mango,3,1.31
+CAGAYAN,ENRILE,Mongo (Mung Bean),6,2.8
+CAGAYAN,ENRILE,Other animals (e.g.,7,0
+CAGAYAN,ENRILE,Other Fish,4,2.42
+CAGAYAN,ENRILE,Other fruit-bearing trees and vines,4,8.32
+CAGAYAN,ENRILE,Other fruit-bearing vegetables,27,8.99
+CAGAYAN,ENRILE,Other leafy vegetables,19,9.91
+CAGAYAN,ENRILE,Other poultry,1,0
+CAGAYAN,ENRILE,Peanuts,224,110.45
+CAGAYAN,ENRILE,Pigeons,1,0
+CAGAYAN,ENRILE,Pigs or swine,84,0
+CAGAYAN,ENRILE,Rabbits and hares,1,0
+CAGAYAN,ENRILE,Rice/Palay,2743,4901.95
+CAGAYAN,ENRILE,String beans - harvested green (sitao),1,0.5
+CAGAYAN,ENRILE,Sugarcane,3,11.01
+CAGAYAN,ENRILE,Tilapia,2,0.9
+CAGAYAN,ENRILE,Turkeys,7,0
+CAGAYAN,GATTARAN,Ampalaya,2,0.35
+CAGAYAN,GATTARAN,Avocado,2,0.85
+CAGAYAN,GATTARAN,Banana,179,216.44
+CAGAYAN,GATTARAN,Beans - dry,2,0.7
+CAGAYAN,GATTARAN,Bermuda Grass,1,1.49
+CAGAYAN,GATTARAN,Buffaloes (Carabaos),330,0
+CAGAYAN,GATTARAN,Cacao,4,19.5
+CAGAYAN,GATTARAN,Cantaloupes- honey dew and other melon varieties,1,1
+CAGAYAN,GATTARAN,Cassava (kamoteng kahoy),3,6
+CAGAYAN,GATTARAN,Cattle,41,0
+CAGAYAN,GATTARAN,Chickens,171,0
+CAGAYAN,GATTARAN,Coconut,52,101.39
+CAGAYAN,GATTARAN,Coffee - other varieties,1,1
+CAGAYAN,GATTARAN,Corn,5776,9589.06
+CAGAYAN,GATTARAN,Cotton,1,0.15
+CAGAYAN,GATTARAN,crops for seed and seedling,1,0.5
+CAGAYAN,GATTARAN,Cucumber (pipino),1,0.2
+CAGAYAN,GATTARAN,Ducks,50,0
+CAGAYAN,GATTARAN,Eggplant (talong),7,2.05
+CAGAYAN,GATTARAN,"Forage grass (sacate, alfalfa, green corn stalk)",7,20.95
+CAGAYAN,GATTARAN,Geese,1,0
+CAGAYAN,GATTARAN,Gmelina Arborea,1,5
+CAGAYAN,GATTARAN,Goats,33,0
+CAGAYAN,GATTARAN,Green corn,1,1
+CAGAYAN,GATTARAN,Hito/Catfish,1,0.08
+CAGAYAN,GATTARAN,Horses,2,0
+CAGAYAN,GATTARAN,Mandarin (dalanghita),2,0.5
+CAGAYAN,GATTARAN,Mango,11,14.13
+CAGAYAN,GATTARAN,Other crops for fiber production,1,1.6
+CAGAYAN,GATTARAN,Other Fish,4,1.08
+CAGAYAN,GATTARAN,Other fruit-bearing trees and vines,7,11.35
+CAGAYAN,GATTARAN,Other fruit-bearing vegetables,28,18.21
+CAGAYAN,GATTARAN,Other industrial crops,4,13.58
+CAGAYAN,GATTARAN,Other leafy vegetables,13,26.6
+CAGAYAN,GATTARAN,Other leguminous plants,2,0.69
+CAGAYAN,GATTARAN,Other varieties of tobacco,6,2.09
+CAGAYAN,GATTARAN,Patola,1,0.1
+CAGAYAN,GATTARAN,Peanuts,1,0.12
+CAGAYAN,GATTARAN,Pepper - small green,2,0.28
+CAGAYAN,GATTARAN,Pepper - sweet,1,1.5
+CAGAYAN,GATTARAN,Pigs or swine,142,0
+CAGAYAN,GATTARAN,Pineapple,2,2
+CAGAYAN,GATTARAN,Rambutan,1,0.5
+CAGAYAN,GATTARAN,Rice/Palay,6826,8160.8
+CAGAYAN,GATTARAN,Rubber,1,0.5
+CAGAYAN,GATTARAN,Sheep,2,0
+CAGAYAN,GATTARAN,String beans - harvested green (sitao),2,0.35
+CAGAYAN,GATTARAN,Taro,2,9.5
+CAGAYAN,GATTARAN,Tilapia,6,1.63
+CAGAYAN,GATTARAN,Tobacco (native),21,8.28
+CAGAYAN,GATTARAN,Tobacco (Virginia),1,0.34
+CAGAYAN,GATTARAN,Tomato (kamatis),1,0.02
+CAGAYAN,GATTARAN,Turkeys,2,0
+CAGAYAN,GATTARAN,Water melon,10,10.75
+CAGAYAN,GONZAGA,Avocado,1,0.25
+CAGAYAN,GONZAGA,Bamboo (Kawayan),2,0.75
+CAGAYAN,GONZAGA,Banana,12,6.39
+CAGAYAN,GONZAGA,Beans - dry,4,1.1
+CAGAYAN,GONZAGA,Bellpepper (Green/Red),1,0.01
+CAGAYAN,GONZAGA,Bermuda Grass,1,0.5
+CAGAYAN,GONZAGA,Buffaloes (Carabaos),1253,0
+CAGAYAN,GONZAGA,Cacao,2,9
+CAGAYAN,GONZAGA,Camote,1,0.25
+CAGAYAN,GONZAGA,Camote tops (talbos ng kamote),1,0
+CAGAYAN,GONZAGA,Cassava (kamoteng kahoy),5,5.75
+CAGAYAN,GONZAGA,Cattle,864,0
+CAGAYAN,GONZAGA,Chickens,1620,0
+CAGAYAN,GONZAGA,Chico,1,0.03
+CAGAYAN,GONZAGA,Coconut,16,17.95
+CAGAYAN,GONZAGA,Coffee - other varieties,1,0.38
+CAGAYAN,GONZAGA,Common gourd (upo),1,0
+CAGAYAN,GONZAGA,Corn,2604,5466.98
+CAGAYAN,GONZAGA,Cowpea,1,0
+CAGAYAN,GONZAGA,crops for seed and seedling,2,0.13
+CAGAYAN,GONZAGA,Cucumber (pipino),1,0.02
+CAGAYAN,GONZAGA,Dogs and cats,1,0
+CAGAYAN,GONZAGA,Dragon Fruit,3,0.47
+CAGAYAN,GONZAGA,Ducks,712,0
+CAGAYAN,GONZAGA,Durian,1,0.03
+CAGAYAN,GONZAGA,Eggplant (talong),5,0.51
+CAGAYAN,GONZAGA,"Forage grass (sacate, alfalfa, green corn stalk)",1,0.5
+CAGAYAN,GONZAGA,Geese,19,0
+CAGAYAN,GONZAGA,Ginger (luya),1,0.5
+CAGAYAN,GONZAGA,Goats,224,0
+CAGAYAN,GONZAGA,Guinea Fowls,4,0
+CAGAYAN,GONZAGA,Hito/Catfish,2,0.29
+CAGAYAN,GONZAGA,Horses,1,0
+CAGAYAN,GONZAGA,Jackfruit,1,0.03
+CAGAYAN,GONZAGA,Kalamansi,3,0.88
+CAGAYAN,GONZAGA,Lemon,1,1.5
+CAGAYAN,GONZAGA,Lettuce,2,0.02
+CAGAYAN,GONZAGA,Lime (Calamansi),3,1.38
+CAGAYAN,GONZAGA,Mandarin (dalanghita),3,0.9
+CAGAYAN,GONZAGA,Mango,3,0.78
+CAGAYAN,GONZAGA,Mongo (Mung Bean),2,1.5
+CAGAYAN,GONZAGA,Mushroom,1,0
+CAGAYAN,GONZAGA,Okra,1,0.01
+CAGAYAN,GONZAGA,Other animals (e.g.,3,0
+CAGAYAN,GONZAGA,Other Fish,69,6.7
+CAGAYAN,GONZAGA,Other fruit-bearing trees and vines,8,9.1
+CAGAYAN,GONZAGA,Other fruit-bearing vegetables,101,41.09
+CAGAYAN,GONZAGA,Other industrial crops,3,1.38
+CAGAYAN,GONZAGA,Other leafy vegetables,41,11.01
+CAGAYAN,GONZAGA,Other poultry,3,0
+CAGAYAN,GONZAGA,Patola,1,0.13
+CAGAYAN,GONZAGA,Peanuts,7,3.17
+CAGAYAN,GONZAGA,Pechay,1,0
+CAGAYAN,GONZAGA,Pepper - small green,1,0.25
+CAGAYAN,GONZAGA,Pigeons,12,0
+CAGAYAN,GONZAGA,Pigs or swine,1028,0
+CAGAYAN,GONZAGA,Pineapple,7,6.3
+CAGAYAN,GONZAGA,Pomelo (suha),1,0.05
+CAGAYAN,GONZAGA,Rabbits and hares,9,0
+CAGAYAN,GONZAGA,Rambutan,1,0.03
+CAGAYAN,GONZAGA,Rice/Palay,4287,5372.93
+CAGAYAN,GONZAGA,Sheep,14,0
+CAGAYAN,GONZAGA,Squash (kalabasa),2,0.26
+CAGAYAN,GONZAGA,String beans - harvested green (sitao),2,0.35
+CAGAYAN,GONZAGA,Sugarcane,3,11.27
+CAGAYAN,GONZAGA,Tamarind (sampaloc),1,0.03
+CAGAYAN,GONZAGA,Tiger Grass,1,0.5
+CAGAYAN,GONZAGA,Tilapia,63,7.44
+CAGAYAN,GONZAGA,Tomato (kamatis),1,0.13
+CAGAYAN,GONZAGA,Turkeys,30,0
+CAGAYAN,GONZAGA,Water melon,17,22.76
+CAGAYAN,IGUIG,Ampalaya,8,3
+CAGAYAN,IGUIG,Banana,2,1.25
+CAGAYAN,IGUIG,Buffaloes (Carabaos),170,0
+CAGAYAN,IGUIG,Cattle,17,0
+CAGAYAN,IGUIG,Chickens,230,0
+CAGAYAN,IGUIG,Coconut,3,15.21
+CAGAYAN,IGUIG,Corn,1520,2638.34
+CAGAYAN,IGUIG,Ducks,97,0
+CAGAYAN,IGUIG,Eggplant (talong),4,1.22
+CAGAYAN,IGUIG,"Forage grass (sacate, alfalfa, green corn stalk)",2,1.1
+CAGAYAN,IGUIG,Geese,5,0
+CAGAYAN,IGUIG,Goats,28,0
+CAGAYAN,IGUIG,Hito/Catfish,1,0.01
+CAGAYAN,IGUIG,Horses,2,0
+CAGAYAN,IGUIG,Long Chili,1,0.08
+CAGAYAN,IGUIG,Other Fish,3,0.28
+CAGAYAN,IGUIG,Other fruit-bearing trees and vines,1,1.1
+CAGAYAN,IGUIG,Other fruit-bearing vegetables,38,15.43
+CAGAYAN,IGUIG,Other industrial crops,1,0.25
+CAGAYAN,IGUIG,Other leafy vegetables,23,8.02
+CAGAYAN,IGUIG,Other poultry,1,0
+CAGAYAN,IGUIG,Peanuts,1,0.75
+CAGAYAN,IGUIG,Pigeons,1,0
+CAGAYAN,IGUIG,Pigs or swine,121,0
+CAGAYAN,IGUIG,Pineapple,1,1
+CAGAYAN,IGUIG,Quail,2,0
+CAGAYAN,IGUIG,Rice/Palay,1855,1899.01
+CAGAYAN,IGUIG,Sheep,3,0
+CAGAYAN,IGUIG,Tilapia,2,0.11
+CAGAYAN,IGUIG,Tobacco (native),1,0.5
+CAGAYAN,IGUIG,Turkeys,8,0
+CAGAYAN,IGUIG,Water melon,8,5.35
+CAGAYAN,LAL LO,Ampalaya,1,0.85
+CAGAYAN,LAL LO,Avocado,1,0.5
+CAGAYAN,LAL LO,Banana,136,149.73
+CAGAYAN,LAL LO,Beans - dry,1,0.5
+CAGAYAN,LAL LO,Buffaloes (Carabaos),630,0
+CAGAYAN,LAL LO,Cacao,1,0.5
+CAGAYAN,LAL LO,Camote tops (talbos ng kamote),1,0.05
+CAGAYAN,LAL LO,Cantaloupes- honey dew and other melon varieties,1,0.3
+CAGAYAN,LAL LO,Carrot,1,0.5
+CAGAYAN,LAL LO,Cassava (kamoteng kahoy),7,9.5
+CAGAYAN,LAL LO,Cattle,80,0
+CAGAYAN,LAL LO,Chickens,611,0
+CAGAYAN,LAL LO,Coconut,58,47.65
+CAGAYAN,LAL LO,Coffee - other varieties,2,0.6
+CAGAYAN,LAL LO,Corn,3757,6207.38
+CAGAYAN,LAL LO,Cowpea,1,0
+CAGAYAN,LAL LO,Dogs and cats,1,0
+CAGAYAN,LAL LO,Ducks,312,0
+CAGAYAN,LAL LO,Eggplant (talong),2,0.1
+CAGAYAN,LAL LO,"Forage grass (sacate, alfalfa, green corn stalk)",1,1
+CAGAYAN,LAL LO,Geese,17,0
+CAGAYAN,LAL LO,Gmelina Arborea,1,0.5
+CAGAYAN,LAL LO,Goats,45,0
+CAGAYAN,LAL LO,Green corn,1,0.5
+CAGAYAN,LAL LO,Guyabano,1,0.5
+CAGAYAN,LAL LO,Kalamansi,1,0
+CAGAYAN,LAL LO,Lime (Calamansi),2,1.4
+CAGAYAN,LAL LO,Mandarin (dalanghita),3,5.5
+CAGAYAN,LAL LO,Mango,10,17.78
+CAGAYAN,LAL LO,Mongo (Mung Bean),2,0.6
+CAGAYAN,LAL LO,Other animals (e.g.,1,0
+CAGAYAN,LAL LO,Other Fish,3,0.19
+CAGAYAN,LAL LO,Other fruit-bearing trees and vines,22,28.18
+CAGAYAN,LAL LO,Other fruit-bearing vegetables,46,24.11
+CAGAYAN,LAL LO,Other industrial crops,16,11.3
+CAGAYAN,LAL LO,Other leafy vegetables,62,38.45
+CAGAYAN,LAL LO,Other leguminous plants,1,0.2
+CAGAYAN,LAL LO,Other poultry,2,0
+CAGAYAN,LAL LO,Other temporary crops not reported elsewhere,1,3.72
+CAGAYAN,LAL LO,Other tubers - roots and bulbs,1,0.2
+CAGAYAN,LAL LO,Peanuts,26,22.53
+CAGAYAN,LAL LO,Pigeons,4,0
+CAGAYAN,LAL LO,Pigs or swine,393,0
+CAGAYAN,LAL LO,Pineapple,43,33.75
+CAGAYAN,LAL LO,Quail,1,0
+CAGAYAN,LAL LO,Rice/Palay,5010,7354.91
+CAGAYAN,LAL LO,Sheep,3,0
+CAGAYAN,LAL LO,Squash (kalabasa),3,2.75
+CAGAYAN,LAL LO,String beans - harvested green (sitao),1,0.4
+CAGAYAN,LAL LO,Tiger Grass,1,0.5
+CAGAYAN,LAL LO,Tilapia,3,0.54
+CAGAYAN,LAL LO,Turkeys,19,0
+CAGAYAN,LAL LO,Water melon,3,2
+CAGAYAN,LASAM,Adlai,1,2
+CAGAYAN,LASAM,Ampalaya,2,1.18
+CAGAYAN,LASAM,Banana,217,311.02
+CAGAYAN,LASAM,Buffaloes (Carabaos),1104,0
+CAGAYAN,LASAM,Cacao,17,21.39
+CAGAYAN,LASAM,Camote,1,0.05
+CAGAYAN,LASAM,Cantaloupes- honey dew and other melon varieties,2,1.07
+CAGAYAN,LASAM,Cassava (kamoteng kahoy),2,0.17
+CAGAYAN,LASAM,Cattle,22,0
+CAGAYAN,LASAM,Chickens,1150,0
+CAGAYAN,LASAM,Chili (labuyo),1,0.08
+CAGAYAN,LASAM,Coconut,108,150.44
+CAGAYAN,LASAM,Coffee - other varieties,2,1.5
+CAGAYAN,LASAM,Corn,2297,3358.82
+CAGAYAN,LASAM,crops for seed and seedling,1,1
+CAGAYAN,LASAM,Dogs and cats,5,0
+CAGAYAN,LASAM,Ducks,587,0
+CAGAYAN,LASAM,Eggplant (talong),2,0.75
+CAGAYAN,LASAM,"Forage grass (sacate, alfalfa, green corn stalk)",1,4.09
+CAGAYAN,LASAM,Geese,24,0
+CAGAYAN,LASAM,Gmelina Arborea,3,3.34
+CAGAYAN,LASAM,Goats,107,0
+CAGAYAN,LASAM,Green corn,1,0.4
+CAGAYAN,LASAM,Hito/Catfish,4,0.56
+CAGAYAN,LASAM,Lime (Calamansi),1,2
+CAGAYAN,LASAM,Mango,2,4.7
+CAGAYAN,LASAM,Mongo (Mung Bean),2,0.5
+CAGAYAN,LASAM,Other crops for fiber production,1,0.5
+CAGAYAN,LASAM,Other Fish,31,2.02
+CAGAYAN,LASAM,Other fruit-bearing trees and vines,9,14.08
+CAGAYAN,LASAM,Other fruit-bearing vegetables,54,20.39
+CAGAYAN,LASAM,Other leafy vegetables,14,5.98
+CAGAYAN,LASAM,Other poultry,1,0
+CAGAYAN,LASAM,Peanuts,1,0.25
+CAGAYAN,LASAM,Pigs or swine,664,0
+CAGAYAN,LASAM,Pineapple,3,6.19
+CAGAYAN,LASAM,Rabbits and hares,1,0
+CAGAYAN,LASAM,Rice/Palay,4897,7659.39
+CAGAYAN,LASAM,Sheep,3,0
+CAGAYAN,LASAM,Tilapia,48,8.04
+CAGAYAN,LASAM,Tomato (kamatis),1,0.08
+CAGAYAN,LASAM,Turkeys,74,0
+CAGAYAN,LASAM,Water melon,1,0.75
+CAGAYAN,PAMPLONA,Ampalaya,6,1.6
+CAGAYAN,PAMPLONA,Banana,83,32.24
+CAGAYAN,PAMPLONA,Betel Nut (Nga-nga),11,10.3
+CAGAYAN,PAMPLONA,Buffaloes (Carabaos),152,1
+CAGAYAN,PAMPLONA,Cacao,64,59.24
+CAGAYAN,PAMPLONA,Cassava (kamoteng kahoy),11,3.34
+CAGAYAN,PAMPLONA,Cattle,123,0
+CAGAYAN,PAMPLONA,Chickens,249,0
+CAGAYAN,PAMPLONA,Coconut,449,570.59
+CAGAYAN,PAMPLONA,Coffee - other varieties,11,6.25
+CAGAYAN,PAMPLONA,Corn,778,1120.02
+CAGAYAN,PAMPLONA,Dogs and cats,1,0
+CAGAYAN,PAMPLONA,Dragon Fruit,3,3.5
+CAGAYAN,PAMPLONA,Ducks,121,0
+CAGAYAN,PAMPLONA,Eggplant (talong),1,0.5
+CAGAYAN,PAMPLONA,Geese,5,0
+CAGAYAN,PAMPLONA,Gmelina Arborea,1,1
+CAGAYAN,PAMPLONA,Goats,23,0
+CAGAYAN,PAMPLONA,Hito/Catfish,2,0.65
+CAGAYAN,PAMPLONA,Horses,1,0
+CAGAYAN,PAMPLONA,Kalamansi,4,1.78
+CAGAYAN,PAMPLONA,Lime (Calamansi),24,17.83
+CAGAYAN,PAMPLONA,Mahogany,2,1.3
+CAGAYAN,PAMPLONA,Mandarin (dalanghita),4,2.1
+CAGAYAN,PAMPLONA,Mango,1,0.24
+CAGAYAN,PAMPLONA,Narra,1,0.2
+CAGAYAN,PAMPLONA,Other animals (e.g.,4,0
+CAGAYAN,PAMPLONA,Other Fish,89,8.82
+CAGAYAN,PAMPLONA,Other fruit-bearing trees and vines,2,2
+CAGAYAN,PAMPLONA,Other fruit-bearing vegetables,13,7.25
+CAGAYAN,PAMPLONA,Other industrial crops,4,8.6
+CAGAYAN,PAMPLONA,Other leafy vegetables,9,1.25
+CAGAYAN,PAMPLONA,Other leguminous plants,1,1.6
+CAGAYAN,PAMPLONA,Other poultry,1,0
+CAGAYAN,PAMPLONA,Pigeons,2,0
+CAGAYAN,PAMPLONA,Pigs or swine,247,0
+CAGAYAN,PAMPLONA,Pineapple,36,26.15
+CAGAYAN,PAMPLONA,Rambutan,2,1.5
+CAGAYAN,PAMPLONA,Rice/Palay,3067,5070.61
+CAGAYAN,PAMPLONA,Squash (kalabasa),1,3
+CAGAYAN,PAMPLONA,Tilapia,20,2.06
+CAGAYAN,PAMPLONA,Turkeys,11,0
+CAGAYAN,PAMPLONA,Water melon,3,1.5
+CAGAYAN,PEÑABLANCA,Banana,7,6.88
+CAGAYAN,PEÑABLANCA,Beans - dry,6,1.86
+CAGAYAN,PEÑABLANCA,Buffaloes (Carabaos),1838,1.5
+CAGAYAN,PEÑABLANCA,Cacao,3,1.5
+CAGAYAN,PEÑABLANCA,Cattle,186,0
+CAGAYAN,PEÑABLANCA,Chickens,1618,8
+CAGAYAN,PEÑABLANCA,Coconut,4,3.4
+CAGAYAN,PEÑABLANCA,Corn,6616,11403.2
+CAGAYAN,PEÑABLANCA,Cowpea,1,0
+CAGAYAN,PEÑABLANCA,Dogs and cats,500,0
+CAGAYAN,PEÑABLANCA,Ducks,647,13
+CAGAYAN,PEÑABLANCA,Eggplant (talong),1,0.13
+CAGAYAN,PEÑABLANCA,"Forage grass (sacate, alfalfa, green corn stalk)",2,1.25
+CAGAYAN,PEÑABLANCA,Geese,11,0
+CAGAYAN,PEÑABLANCA,Goats,97,0
+CAGAYAN,PEÑABLANCA,Horses,157,0
+CAGAYAN,PEÑABLANCA,Kalamansi,1,0.06
+CAGAYAN,PEÑABLANCA,Mango,1,0.25
+CAGAYAN,PEÑABLANCA,Mongo (Mung Bean),3,1.36
+CAGAYAN,PEÑABLANCA,Other animals (e.g.,5,0
+CAGAYAN,PEÑABLANCA,Other Fish,2,0.16
+CAGAYAN,PEÑABLANCA,Other fruit-bearing trees and vines,1,0.11
+CAGAYAN,PEÑABLANCA,Other fruit-bearing vegetables,21,13.96
+CAGAYAN,PEÑABLANCA,Other leafy vegetables,13,7.67
+CAGAYAN,PEÑABLANCA,Other leguminous plants,1,0.02
+CAGAYAN,PEÑABLANCA,Other poultry,1,0
+CAGAYAN,PEÑABLANCA,Peanuts,8,4.14
+CAGAYAN,PEÑABLANCA,Pigeon pea,1,0
+CAGAYAN,PEÑABLANCA,Pigs or swine,1016,0
+CAGAYAN,PEÑABLANCA,Pomelo (suha),1,0.1
+CAGAYAN,PEÑABLANCA,Rabbits and hares,1,0
+CAGAYAN,PEÑABLANCA,Rambutan,1,0.1
+CAGAYAN,PEÑABLANCA,Rice/Palay,2060,1785.56
+CAGAYAN,PEÑABLANCA,Sheep,12,0
+CAGAYAN,PEÑABLANCA,Squash (kalabasa),1,0.13
+CAGAYAN,PEÑABLANCA,Tilapia,2,0.8
+CAGAYAN,PEÑABLANCA,Tobacco (native),1,0.39
+CAGAYAN,PEÑABLANCA,Tomato (kamatis),1,0.13
+CAGAYAN,PEÑABLANCA,Turkeys,18,0
+CAGAYAN,PIAT,Ampalaya,1,1
+CAGAYAN,PIAT,Banana,2,0.12
+CAGAYAN,PIAT,Buffaloes (Carabaos),907,0
+CAGAYAN,PIAT,Cassava (kamoteng kahoy),1,0.5
+CAGAYAN,PIAT,Cattle,274,0
+CAGAYAN,PIAT,Chickens,1126,0
+CAGAYAN,PIAT,Corn,2433,3361.79
+CAGAYAN,PIAT,Dogs and cats,33,0
+CAGAYAN,PIAT,Ducks,586,0
+CAGAYAN,PIAT,Geese,29,0
+CAGAYAN,PIAT,Goats,98,0
+CAGAYAN,PIAT,Horses,23,0
+CAGAYAN,PIAT,Lime (Calamansi),1,1
+CAGAYAN,PIAT,Mango,2,4.1
+CAGAYAN,PIAT,Mongo (Mung Bean),1,1
+CAGAYAN,PIAT,Mushroom,1,0.05
+CAGAYAN,PIAT,Other animals (e.g.,1,0
+CAGAYAN,PIAT,Other Fish,2,0.7
+CAGAYAN,PIAT,Other fruit-bearing trees and vines,1,0.2
+CAGAYAN,PIAT,Other fruit-bearing vegetables,43,23.13
+CAGAYAN,PIAT,Other leafy vegetables,42,10.29
+CAGAYAN,PIAT,Other leguminous plants,1,0.3
+CAGAYAN,PIAT,Other varieties of tobacco,21,9.53
+CAGAYAN,PIAT,Peacock,1,0
+CAGAYAN,PIAT,Peanuts,2,2.7
+CAGAYAN,PIAT,Pigeons,1,0
+CAGAYAN,PIAT,Pigs or swine,556,0
+CAGAYAN,PIAT,Rabbits and hares,1,0
+CAGAYAN,PIAT,Rice/Palay,2194,3422.47
+CAGAYAN,PIAT,Sheep,10,0
+CAGAYAN,PIAT,Sugarcane,128,347.52
+CAGAYAN,PIAT,Tilapia,1,0.02
+CAGAYAN,PIAT,Tobacco (native),22,8.31
+CAGAYAN,PIAT,Turkeys,29,0
+CAGAYAN,RIZAL,Banana,511,541.96
+CAGAYAN,RIZAL,Buffaloes (Carabaos),203,0
+CAGAYAN,RIZAL,Cacao,3,1.1
+CAGAYAN,RIZAL,Cattle,3,0
+CAGAYAN,RIZAL,Chickens,149,0
+CAGAYAN,RIZAL,Citronella,1,0.25
+CAGAYAN,RIZAL,Coconut,56,50.27
+CAGAYAN,RIZAL,Coffee - other varieties,3,7.4
+CAGAYAN,RIZAL,Corn,3547,5245.79
+CAGAYAN,RIZAL,Dogs and cats,9,0
+CAGAYAN,RIZAL,Ducks,94,0
+CAGAYAN,RIZAL,Eggplant (talong),1,3
+CAGAYAN,RIZAL,Geese,2,0
+CAGAYAN,RIZAL,Goats,12,0
+CAGAYAN,RIZAL,Horses,1,0
+CAGAYAN,RIZAL,Kalamansi,1,6
+CAGAYAN,RIZAL,Lanzones,2,0.8
+CAGAYAN,RIZAL,Lime (Calamansi),2,0.55
+CAGAYAN,RIZAL,Mandarin (dalanghita),7,11.33
+CAGAYAN,RIZAL,Mango,69,62.74
+CAGAYAN,RIZAL,Ostrich,1,0
+CAGAYAN,RIZAL,Other animals (e.g.,3,0
+CAGAYAN,RIZAL,Other Fish,1,0.2
+CAGAYAN,RIZAL,Other fruit-bearing trees and vines,18,28.3
+CAGAYAN,RIZAL,Other fruit-bearing vegetables,9,5.76
+CAGAYAN,RIZAL,Other industrial crops,1,1.3
+CAGAYAN,RIZAL,Other leafy vegetables,3,3.95
+CAGAYAN,RIZAL,Other leguminous plants,1,1
+CAGAYAN,RIZAL,Peanuts,1,0.75
+CAGAYAN,RIZAL,Pigs or swine,140,0
+CAGAYAN,RIZAL,Pineapple,1,0.5
+CAGAYAN,RIZAL,Rambutan,3,1.3
+CAGAYAN,RIZAL,Rice/Palay,1804,1514.8
+CAGAYAN,RIZAL,Squash (kalabasa),1,0.7
+CAGAYAN,RIZAL,Tilapia,5,0.16
+CAGAYAN,RIZAL,Tobacco (native),6,3.48
+CAGAYAN,RIZAL,Tobacco (Virginia),1,0.4
+CAGAYAN,RIZAL,Turkeys,4,0
+CAGAYAN,SANCHEZ MIRA,Banana,1,3
+CAGAYAN,SANCHEZ MIRA,Buffaloes (Carabaos),21,0
+CAGAYAN,SANCHEZ MIRA,Cacao,1,3.25
+CAGAYAN,SANCHEZ MIRA,Cattle,75,0
+CAGAYAN,SANCHEZ MIRA,Chickens,87,0
+CAGAYAN,SANCHEZ MIRA,Coconut,166,213.56
+CAGAYAN,SANCHEZ MIRA,Coffee - other varieties,1,2
+CAGAYAN,SANCHEZ MIRA,Corn,75,70.43
+CAGAYAN,SANCHEZ MIRA,Ducks,28,0
+CAGAYAN,SANCHEZ MIRA,Geese,1,0
+CAGAYAN,SANCHEZ MIRA,Goats,16,0
+CAGAYAN,SANCHEZ MIRA,Hito/Catfish,1,0.03
+CAGAYAN,SANCHEZ MIRA,Mushroom,1,0.05
+CAGAYAN,SANCHEZ MIRA,Other animals (e.g.,4,0
+CAGAYAN,SANCHEZ MIRA,Other Fish,90,9.25
+CAGAYAN,SANCHEZ MIRA,Other fruit-bearing trees and vines,1,0.2
+CAGAYAN,SANCHEZ MIRA,Other fruit-bearing vegetables,5,8.58
+CAGAYAN,SANCHEZ MIRA,Other leafy vegetables,1,0.05
+CAGAYAN,SANCHEZ MIRA,Other poultry,1,0
+CAGAYAN,SANCHEZ MIRA,Pigs or swine,117,0
+CAGAYAN,SANCHEZ MIRA,Rice/Palay,1997,2946.65
+CAGAYAN,SANCHEZ MIRA,Sheep,1,0
+CAGAYAN,SANCHEZ MIRA,Tilapia,5,1.67
+CAGAYAN,SANCHEZ MIRA,Turkeys,5,0
+CAGAYAN,SANTA ANA,Banana,7,3.8
+CAGAYAN,SANTA ANA,Buffaloes (Carabaos),148,0
+CAGAYAN,SANTA ANA,Camote tops (talbos ng kamote),1,1
+CAGAYAN,SANTA ANA,Cattle,48,0
+CAGAYAN,SANTA ANA,Chickens,131,0
+CAGAYAN,SANTA ANA,Coconut,8,11.9
+CAGAYAN,SANTA ANA,Corn,171,233.21
+CAGAYAN,SANTA ANA,Ducks,37,0
+CAGAYAN,SANTA ANA,Eggplant (talong),9,0.7
+CAGAYAN,SANTA ANA,Goats,15,0
+CAGAYAN,SANTA ANA,Lime (Calamansi),2,0.35
+CAGAYAN,SANTA ANA,Mandarin (dalanghita),1,0.3
+CAGAYAN,SANTA ANA,Other crops for fiber production,1,0.5
+CAGAYAN,SANTA ANA,Other Fish,4,0.18
+CAGAYAN,SANTA ANA,Other fruit-bearing trees and vines,2,1.8
+CAGAYAN,SANTA ANA,Other fruit-bearing vegetables,18,16.43
+CAGAYAN,SANTA ANA,Other leafy vegetables,3,0.9
+CAGAYAN,SANTA ANA,Other leguminous plants,3,1.73
+CAGAYAN,SANTA ANA,Peanuts,1,0.1
+CAGAYAN,SANTA ANA,Pigs or swine,77,0
+CAGAYAN,SANTA ANA,Pineapple,117,190.78
+CAGAYAN,SANTA ANA,Rabbits and hares,1,0
+CAGAYAN,SANTA ANA,Rice/Palay,2527,3617.61
+CAGAYAN,SANTA ANA,Sheep,1,0
+CAGAYAN,SANTA ANA,String beans - harvested green (sitao),1,0.5
+CAGAYAN,SANTA ANA,Turkeys,1,0
+CAGAYAN,SANTA ANA,Water melon,19,23.26
+CAGAYAN,SANTA PRAXEDES,Ampalaya,1,0
+CAGAYAN,SANTA PRAXEDES,Banana,27,11.4
+CAGAYAN,SANTA PRAXEDES,Betel Nut (Nga-nga),1,0.44
+CAGAYAN,SANTA PRAXEDES,Black pepper,1,0.25
+CAGAYAN,SANTA PRAXEDES,Buffaloes (Carabaos),19,0
+CAGAYAN,SANTA PRAXEDES,Cacao,2,0.65
+CAGAYAN,SANTA PRAXEDES,Camote tops (talbos ng kamote),1,0.01
+CAGAYAN,SANTA PRAXEDES,Cassava (kamoteng kahoy),5,0.46
+CAGAYAN,SANTA PRAXEDES,Cattle,22,0
+CAGAYAN,SANTA PRAXEDES,Chickens,83,0
+CAGAYAN,SANTA PRAXEDES,Coconut,104,84.37
+CAGAYAN,SANTA PRAXEDES,Coffee - other varieties,1,0.15
+CAGAYAN,SANTA PRAXEDES,Corn,2,2.58
+CAGAYAN,SANTA PRAXEDES,Ducks,33,0
+CAGAYAN,SANTA PRAXEDES,Eggplant (talong),1,0
+CAGAYAN,SANTA PRAXEDES,Geese,1,0
+CAGAYAN,SANTA PRAXEDES,Ginger (luya),1,0.06
+CAGAYAN,SANTA PRAXEDES,Gmelina Arborea,1,0.3
+CAGAYAN,SANTA PRAXEDES,Goats,6,0
+CAGAYAN,SANTA PRAXEDES,Grapes (ubas),1,0.37
+CAGAYAN,SANTA PRAXEDES,Hito/Catfish,1,0
+CAGAYAN,SANTA PRAXEDES,Jackfruit,2,0.75
+CAGAYAN,SANTA PRAXEDES,Lanzones,1,1.75
+CAGAYAN,SANTA PRAXEDES,Lime (Calamansi),2,1.56
+CAGAYAN,SANTA PRAXEDES,Mahogany,1,0.3
+CAGAYAN,SANTA PRAXEDES,Mandarin (dalanghita),8,6.06
+CAGAYAN,SANTA PRAXEDES,Other Fish,79,1.93
+CAGAYAN,SANTA PRAXEDES,Other fruit-bearing trees and vines,53,55.37
+CAGAYAN,SANTA PRAXEDES,Other fruit-bearing vegetables,7,1.88
+CAGAYAN,SANTA PRAXEDES,Other leafy vegetables,24,3.49
+CAGAYAN,SANTA PRAXEDES,Other leguminous plants,1,0.02
+CAGAYAN,SANTA PRAXEDES,Other tubers - roots and bulbs,1,0.13
+CAGAYAN,SANTA PRAXEDES,Palm tree,1,0.6
+CAGAYAN,SANTA PRAXEDES,Pechay,1,0
+CAGAYAN,SANTA PRAXEDES,Pigs or swine,83,0
+CAGAYAN,SANTA PRAXEDES,Pineapple,7,1.96
+CAGAYAN,SANTA PRAXEDES,Pomelo (suha),1,0.5
+CAGAYAN,SANTA PRAXEDES,Rambutan,9,3.31
+CAGAYAN,SANTA PRAXEDES,Rice/Palay,575,421.31
+CAGAYAN,SANTA PRAXEDES,Sheep,1,0
+CAGAYAN,SANTA PRAXEDES,Squash (kalabasa),1,0
+CAGAYAN,SANTA PRAXEDES,Tilapia,5,0.13
+CAGAYAN,SANTA PRAXEDES,Turkeys,2,0
+CAGAYAN,SANTA TERESITA,Ampalaya,2,1.5
+CAGAYAN,SANTA TERESITA,Banana,7,7.5
+CAGAYAN,SANTA TERESITA,Buffaloes (Carabaos),333,0
+CAGAYAN,SANTA TERESITA,Cattle,139,0
+CAGAYAN,SANTA TERESITA,Chickens,162,0.13
+CAGAYAN,SANTA TERESITA,Coconut,18,20.71
+CAGAYAN,SANTA TERESITA,Corn,1784,2797.63
+CAGAYAN,SANTA TERESITA,Crab,1,0.3
+CAGAYAN,SANTA TERESITA,crops for seed and seedling,1,1
+CAGAYAN,SANTA TERESITA,Dragon Fruit,1,2
+CAGAYAN,SANTA TERESITA,Ducks,109,0
+CAGAYAN,SANTA TERESITA,Geese,2,0
+CAGAYAN,SANTA TERESITA,Goats,20,0
+CAGAYAN,SANTA TERESITA,Guinea Fowls,1,0
+CAGAYAN,SANTA TERESITA,Horses,1,0
+CAGAYAN,SANTA TERESITA,Malaga,1,0.25
+CAGAYAN,SANTA TERESITA,Other animals (e.g.,7,0
+CAGAYAN,SANTA TERESITA,Other Fish,36,20.25
+CAGAYAN,SANTA TERESITA,Other fruit-bearing trees and vines,5,20.45
+CAGAYAN,SANTA TERESITA,Other fruit-bearing vegetables,14,25.09
+CAGAYAN,SANTA TERESITA,Other industrial crops,2,1.25
+CAGAYAN,SANTA TERESITA,Other leafy vegetables,11,6.25
+CAGAYAN,SANTA TERESITA,Other spices,1,0.25
+CAGAYAN,SANTA TERESITA,Other tubers - roots and bulbs,1,0.6
+CAGAYAN,SANTA TERESITA,Pigeons,1,0
+CAGAYAN,SANTA TERESITA,Pigs or swine,144,0.25
+CAGAYAN,SANTA TERESITA,Pineapple,2,5
+CAGAYAN,SANTA TERESITA,Rice/Palay,2951,3565.8
+CAGAYAN,SANTA TERESITA,Sheep,5,0
+CAGAYAN,SANTA TERESITA,Tilapia,29,16.75
+CAGAYAN,SANTA TERESITA,Turkeys,5,0
+CAGAYAN,SANTA TERESITA,Water melon,1,0.75
+CAGAYAN,SANTO NIÑO FAIRE,Ampalaya,4,1.8
+CAGAYAN,SANTO NIÑO FAIRE,Banana,4,5.25
+CAGAYAN,SANTO NIÑO FAIRE,Buffaloes (Carabaos),1363,0
+CAGAYAN,SANTO NIÑO FAIRE,Cabbage (repolyo),2,0.72
+CAGAYAN,SANTO NIÑO FAIRE,Cattle,86,0
+CAGAYAN,SANTO NIÑO FAIRE,Chickens,1375,0
+CAGAYAN,SANTO NIÑO FAIRE,Corn,3714,4725.36
+CAGAYAN,SANTO NIÑO FAIRE,Dogs and cats,5,0
+CAGAYAN,SANTO NIÑO FAIRE,Ducks,537,0
+CAGAYAN,SANTO NIÑO FAIRE,Eggplant (talong),9,5
+CAGAYAN,SANTO NIÑO FAIRE,"Forage grass (sacate, alfalfa, green corn stalk)",1,5
+CAGAYAN,SANTO NIÑO FAIRE,Geese,19,0
+CAGAYAN,SANTO NIÑO FAIRE,Goats,313,0
+CAGAYAN,SANTO NIÑO FAIRE,Green corn,2,1.25
+CAGAYAN,SANTO NIÑO FAIRE,Horses,7,0
+CAGAYAN,SANTO NIÑO FAIRE,Mango,1,1
+CAGAYAN,SANTO NIÑO FAIRE,Other Fish,4,0.31
+CAGAYAN,SANTO NIÑO FAIRE,Other fruit-bearing trees and vines,2,0.75
+CAGAYAN,SANTO NIÑO FAIRE,Other fruit-bearing vegetables,77,33.62
+CAGAYAN,SANTO NIÑO FAIRE,Other leafy vegetables,56,23.31
+CAGAYAN,SANTO NIÑO FAIRE,Other varieties of tobacco,2,1.35
+CAGAYAN,SANTO NIÑO FAIRE,Pigeons,1,0
+CAGAYAN,SANTO NIÑO FAIRE,Pigs or swine,942,0
+CAGAYAN,SANTO NIÑO FAIRE,Rice/Palay,4070,4756.23
+CAGAYAN,SANTO NIÑO FAIRE,Sheep,1,0
+CAGAYAN,SANTO NIÑO FAIRE,Squash (kalabasa),1,0.5
+CAGAYAN,SANTO NIÑO FAIRE,Sugarcane,21,39.4
+CAGAYAN,SANTO NIÑO FAIRE,Tilapia,3,0.29
+CAGAYAN,SANTO NIÑO FAIRE,Tobacco (native),5,1.78
+CAGAYAN,SANTO NIÑO FAIRE,Turkeys,20,0
+CAGAYAN,SANTO NIÑO FAIRE,Wax gourd (kondol),1,0.25
+CAGAYAN,SOLANA,Ampalaya,17,7.14
+CAGAYAN,SOLANA,Banana,6,6.14
+CAGAYAN,SOLANA,Buffaloes (Carabaos),779,0
+CAGAYAN,SOLANA,Cacao,1,1
+CAGAYAN,SOLANA,Cattle,186,0
+CAGAYAN,SOLANA,Chickens,1223,0
+CAGAYAN,SOLANA,Chili (labuyo),1,0.3
+CAGAYAN,SOLANA,Coconut,2,1.3
+CAGAYAN,SOLANA,Common gourd (upo),6,1.05
+CAGAYAN,SOLANA,Corn,4562,7085.86
+CAGAYAN,SOLANA,crops for seed and seedling,1,0.75
+CAGAYAN,SOLANA,Dogs and cats,4,0
+CAGAYAN,SOLANA,Ducks,873,0
+CAGAYAN,SOLANA,Eggplant (talong),7,2.42
+CAGAYAN,SOLANA,"Forage grass (sacate, alfalfa, green corn stalk)",1,1.34
+CAGAYAN,SOLANA,Geese,26,0
+CAGAYAN,SOLANA,Goats,73,0
+CAGAYAN,SOLANA,Green corn,2,0.91
+CAGAYAN,SOLANA,Hito/Catfish,2,0.16
+CAGAYAN,SOLANA,Horses,11,0
+CAGAYAN,SOLANA,Kalamansi,1,0.4
+CAGAYAN,SOLANA,Mango,4,3.16
+CAGAYAN,SOLANA,Okra,3,0.5
+CAGAYAN,SOLANA,Other animals (e.g.,3,0
+CAGAYAN,SOLANA,Other Fish,13,5.38
+CAGAYAN,SOLANA,Other fruit-bearing trees and vines,5,4.85
+CAGAYAN,SOLANA,Other fruit-bearing vegetables,90,50.63
+CAGAYAN,SOLANA,Other industrial crops,8,4.4
+CAGAYAN,SOLANA,Other leafy vegetables,52,32.35
+CAGAYAN,SOLANA,Other leguminous plants,2,1.5
+CAGAYAN,SOLANA,Other poultry,1,0
+CAGAYAN,SOLANA,Other varieties of tobacco,14,7.09
+CAGAYAN,SOLANA,Patola,8,3.47
+CAGAYAN,SOLANA,Pigeons,1,0
+CAGAYAN,SOLANA,Pigs or swine,708,0
+CAGAYAN,SOLANA,Rabbits and hares,2,0
+CAGAYAN,SOLANA,Rice/Palay,8986,15135.49
+CAGAYAN,SOLANA,Sheep,11,0
+CAGAYAN,SOLANA,Squash (kalabasa),2,0.6
+CAGAYAN,SOLANA,String beans - harvested green (sitao),8,1.37
+CAGAYAN,SOLANA,Sugarcane,148,407.54
+CAGAYAN,SOLANA,Tilapia,2,0.4
+CAGAYAN,SOLANA,Tobacco (native),18,8.57
+CAGAYAN,SOLANA,Tomato (kamatis),1,0.1
+CAGAYAN,SOLANA,Turkeys,29,0
+CAGAYAN,TUAO,Ampalaya,1,1.7
+CAGAYAN,TUAO,Banana,3,2
+CAGAYAN,TUAO,Buffaloes (Carabaos),376,0
+CAGAYAN,TUAO,Cacao,1,0.1
+CAGAYAN,TUAO,Cattle,57,0
+CAGAYAN,TUAO,Chickens,984,0
+CAGAYAN,TUAO,Chinese Cabbage,1,0.01
+CAGAYAN,TUAO,Corn,3038,3619.34
+CAGAYAN,TUAO,Dogs and cats,7,0
+CAGAYAN,TUAO,Ducks,657,0
+CAGAYAN,TUAO,Eggplant (talong),1,0.1
+CAGAYAN,TUAO,Geese,14,0
+CAGAYAN,TUAO,Goats,73,0
+CAGAYAN,TUAO,Hito/Catfish,6,1.68
+CAGAYAN,TUAO,Horses,8,0
+CAGAYAN,TUAO,Mango,1,1
+CAGAYAN,TUAO,Other animals (e.g.,10,0
+CAGAYAN,TUAO,Other Fish,6,0.95
+CAGAYAN,TUAO,Other fruit-bearing trees and vines,1,0.3
+CAGAYAN,TUAO,Other fruit-bearing vegetables,35,9.66
+CAGAYAN,TUAO,Other leafy vegetables,21,5.08
+CAGAYAN,TUAO,Other poultry,1,0
+CAGAYAN,TUAO,Other varieties of tobacco,11,4.38
+CAGAYAN,TUAO,Peanuts,2,0.9
+CAGAYAN,TUAO,Pigs or swine,492,0
+CAGAYAN,TUAO,Rice/Palay,7794,10684.29
+CAGAYAN,TUAO,Sheep,4,0
+CAGAYAN,TUAO,Squash (kalabasa),2,1.1
+CAGAYAN,TUAO,Sugarcane,142,385.29
+CAGAYAN,TUAO,Tilapia,5,5.94
+CAGAYAN,TUAO,Tobacco (native),17,8.22
+CAGAYAN,TUAO,Turkeys,15,0
+CAGAYAN,TUGUEGARAO CITY Capital,Banana,6,2.34
+CAGAYAN,TUGUEGARAO CITY Capital,Buffaloes (Carabaos),609,0
+CAGAYAN,TUGUEGARAO CITY Capital,Cattle,303,0
+CAGAYAN,TUGUEGARAO CITY Capital,Chickens,669,0
+CAGAYAN,TUGUEGARAO CITY Capital,Coconut,1,0.8
+CAGAYAN,TUGUEGARAO CITY Capital,Corn,2641,3783.44
+CAGAYAN,TUGUEGARAO CITY Capital,Dogs and cats,34,0
+CAGAYAN,TUGUEGARAO CITY Capital,Ducks,329,0
+CAGAYAN,TUGUEGARAO CITY Capital,Eggplant (talong),1,0.4
+CAGAYAN,TUGUEGARAO CITY Capital,Geese,33,0
+CAGAYAN,TUGUEGARAO CITY Capital,Goats,54,0
+CAGAYAN,TUGUEGARAO CITY Capital,Guinea Fowls,1,0
+CAGAYAN,TUGUEGARAO CITY Capital,Horses,35,0
+CAGAYAN,TUGUEGARAO CITY Capital,Lettuce,1,0.5
+CAGAYAN,TUGUEGARAO CITY Capital,Lime (Calamansi),1,0.5
+CAGAYAN,TUGUEGARAO CITY Capital,Mango,3,1.85
+CAGAYAN,TUGUEGARAO CITY Capital,Mongo (Mung Bean),2,0.32
+CAGAYAN,TUGUEGARAO CITY Capital,Mushroom,2,0.14
+CAGAYAN,TUGUEGARAO CITY Capital,Other Fish,6,0.85
+CAGAYAN,TUGUEGARAO CITY Capital,Other fruit-bearing trees and vines,4,31.57
+CAGAYAN,TUGUEGARAO CITY Capital,Other fruit-bearing vegetables,86,22.26
+CAGAYAN,TUGUEGARAO CITY Capital,Other leafy vegetables,73,24.9
+CAGAYAN,TUGUEGARAO CITY Capital,Other leguminous plants,25,7.25
+CAGAYAN,TUGUEGARAO CITY Capital,Papaya,1,0.5
+CAGAYAN,TUGUEGARAO CITY Capital,Peanuts,20,9.45
+CAGAYAN,TUGUEGARAO CITY Capital,Pigeons,1,0
+CAGAYAN,TUGUEGARAO CITY Capital,Pigs or swine,149,0
+CAGAYAN,TUGUEGARAO CITY Capital,Rabbits and hares,2,0
+CAGAYAN,TUGUEGARAO CITY Capital,Radish (labanos),1,0.05
+CAGAYAN,TUGUEGARAO CITY Capital,Rice/Palay,1188,1622.21
+CAGAYAN,TUGUEGARAO CITY Capital,Sheep,15,0
+CAGAYAN,TUGUEGARAO CITY Capital,Squash (kalabasa),1,0.04
+CAGAYAN,TUGUEGARAO CITY Capital,String beans - harvested green (sitao),2,0.15
+CAGAYAN,TUGUEGARAO CITY Capital,Sugarcane,5,24.12
+CAGAYAN,TUGUEGARAO CITY Capital,Tilapia,6,1.09
+CAGAYAN,TUGUEGARAO CITY Capital,Tobacco (native),4,2.25
+CAGAYAN,TUGUEGARAO CITY Capital,Turkeys,38,0
+ISABELA,ALICIA,Banana,2,2.5
+ISABELA,ALICIA,Buffaloes (Carabaos),2,0
+ISABELA,ALICIA,Cattle,2,0
+ISABELA,ALICIA,Chickens,5,0
+ISABELA,ALICIA,Corn,38,63.46
+ISABELA,ALICIA,Ducks,4,0
+ISABELA,ALICIA,Lemon,1,0.41
+ISABELA,ALICIA,Mango,2,2.42
+ISABELA,ALICIA,Mongo (Mung Bean),1,3.02
+ISABELA,ALICIA,Other Fish,24,4.35
+ISABELA,ALICIA,Other fruit-bearing vegetables,1,2
+ISABELA,ALICIA,Other leafy vegetables,1,0.75
+ISABELA,ALICIA,Other leguminous plants,3,1.2
+ISABELA,ALICIA,Pigs or swine,48,0
+ISABELA,ALICIA,Rice/Palay,4921,8800.56
+ISABELA,ALICIA,Sugarcane,7,7.35
+ISABELA,ALICIA,Tilapia,5,6
+ISABELA,ANGADANAN,Ampalaya,2,3
+ISABELA,ANGADANAN,Bamboo (Kawayan),3,1.85
+ISABELA,ANGADANAN,Banana,190,117.43
+ISABELA,ANGADANAN,Buffaloes (Carabaos),219,0
+ISABELA,ANGADANAN,Cacao,4,1.33
+ISABELA,ANGADANAN,Cassava (kamoteng kahoy),76,70.37
+ISABELA,ANGADANAN,Cattle,198,0
+ISABELA,ANGADANAN,Chickens,460,0
+ISABELA,ANGADANAN,Coconut,9,8.98
+ISABELA,ANGADANAN,Coffee - other varieties,10,5.42
+ISABELA,ANGADANAN,Coffee arabica,1,0.13
+ISABELA,ANGADANAN,Corn,4197,6355.73
+ISABELA,ANGADANAN,Deer,1,0
+ISABELA,ANGADANAN,Dogs and cats,3,0
+ISABELA,ANGADANAN,Dragon Fruit,1,0.25
+ISABELA,ANGADANAN,Ducks,162,0
+ISABELA,ANGADANAN,"Forage grass (sacate, alfalfa, green corn stalk)",1,0.29
+ISABELA,ANGADANAN,Geese,1,0
+ISABELA,ANGADANAN,Goats,38,0
+ISABELA,ANGADANAN,Grapes (ubas),1,0.05
+ISABELA,ANGADANAN,Hito/Catfish,1,0.07
+ISABELA,ANGADANAN,Kalamansi,2,0.8
+ISABELA,ANGADANAN,Mango,7,9.05
+ISABELA,ANGADANAN,Mongo (Mung Bean),2,0.35
+ISABELA,ANGADANAN,Other animals (e.g.,2,0
+ISABELA,ANGADANAN,Other Fish,12,1.1
+ISABELA,ANGADANAN,Other fruit-bearing trees and vines,4,2.69
+ISABELA,ANGADANAN,Other fruit-bearing vegetables,36,8.34
+ISABELA,ANGADANAN,Other industrial crops,2,1.15
+ISABELA,ANGADANAN,Other leafy vegetables,34,9.04
+ISABELA,ANGADANAN,Other leguminous plants,1,0.14
+ISABELA,ANGADANAN,Other poultry,4,0
+ISABELA,ANGADANAN,Other spices,1,1.8
+ISABELA,ANGADANAN,Other varieties of tobacco,26,27.18
+ISABELA,ANGADANAN,Papaya,1,0.5
+ISABELA,ANGADANAN,Peanuts,7,2.15
+ISABELA,ANGADANAN,Pigs or swine,234,0
+ISABELA,ANGADANAN,Pineapple,3,4.25
+ISABELA,ANGADANAN,Rambutan,1,1
+ISABELA,ANGADANAN,Rice/Palay,3986,4777.3
+ISABELA,ANGADANAN,Sheep,1,0
+ISABELA,ANGADANAN,Soybeans,1,0.31
+ISABELA,ANGADANAN,String beans - harvested green (sitao),1,0.1
+ISABELA,ANGADANAN,Sugarcane,51,131.64
+ISABELA,ANGADANAN,Tilapia,9,3.08
+ISABELA,ANGADANAN,Tobacco (native),20,18.79
+ISABELA,ANGADANAN,Turkeys,3,0
+ISABELA,ANGADANAN,Water melon,2,0.9
+ISABELA,AURORA,Ampalaya,1,0.5
+ISABELA,AURORA,Blue Ternate,1,0.5
+ISABELA,AURORA,Buffaloes (Carabaos),15,0
+ISABELA,AURORA,Cattle,49,0
+ISABELA,AURORA,Chickens,41,0
+ISABELA,AURORA,Corn,1433,2058.84
+ISABELA,AURORA,Ducks,30,0
+ISABELA,AURORA,Eggplant (talong),3,1.05
+ISABELA,AURORA,"Forage grass (sacate, alfalfa, green corn stalk)",1,1.57
+ISABELA,AURORA,Geese,1,0
+ISABELA,AURORA,Goats,33,0
+ISABELA,AURORA,Horses,1,0
+ISABELA,AURORA,Kalamansi,163,148.37
+ISABELA,AURORA,Lime (Calamansi),71,53.09
+ISABELA,AURORA,Mandarin (dalanghita),1,1
+ISABELA,AURORA,Mango,2,2.3
+ISABELA,AURORA,Okra,1,0
+ISABELA,AURORA,Orchard,1,8.5
+ISABELA,AURORA,Other animals (e.g.,1,0
+ISABELA,AURORA,Other fruit-bearing trees and vines,2,0.8
+ISABELA,AURORA,Other fruit-bearing vegetables,78,45.71
+ISABELA,AURORA,Other industrial crops,1,0.5
+ISABELA,AURORA,Other leafy vegetables,55,29.56
+ISABELA,AURORA,Other leguminous plants,1,0.5
+ISABELA,AURORA,Other varieties of tobacco,113,82.64
+ISABELA,AURORA,Papaya,1,1.5
+ISABELA,AURORA,Pigs or swine,41,0
+ISABELA,AURORA,Rice/Palay,1918,3418.54
+ISABELA,AURORA,Sheep,1,0
+ISABELA,AURORA,Sugarcane,2,15.8
+ISABELA,AURORA,Tobacco (native),35,30.83
+ISABELA,AURORA,Tobacco (Virginia),1,0.5
+ISABELA,BENITO SOLIVEN,Bamboo (Kawayan),1,0.5
+ISABELA,BENITO SOLIVEN,Banana,1135,1306.46
+ISABELA,BENITO SOLIVEN,Beans - dry,2,0.4
+ISABELA,BENITO SOLIVEN,Buffaloes (Carabaos),754,0
+ISABELA,BENITO SOLIVEN,Cassava (kamoteng kahoy),26,21.92
+ISABELA,BENITO SOLIVEN,Cattle,91,0
+ISABELA,BENITO SOLIVEN,Chickens,838,0
+ISABELA,BENITO SOLIVEN,Coconut,2,6.1
+ISABELA,BENITO SOLIVEN,Corn,5106,7659.08
+ISABELA,BENITO SOLIVEN,Dogs and cats,96,0
+ISABELA,BENITO SOLIVEN,Ducks,414,0
+ISABELA,BENITO SOLIVEN,"Forage grass (sacate, alfalfa, green corn stalk)",1,1.1
+ISABELA,BENITO SOLIVEN,Geese,10,0
+ISABELA,BENITO SOLIVEN,Goats,37,0
+ISABELA,BENITO SOLIVEN,Horses,2,0
+ISABELA,BENITO SOLIVEN,Kalamansi,2,0.95
+ISABELA,BENITO SOLIVEN,Mango,3,2.9
+ISABELA,BENITO SOLIVEN,Mongo (Mung Bean),1,0.25
+ISABELA,BENITO SOLIVEN,Other fruit-bearing trees and vines,1,0.75
+ISABELA,BENITO SOLIVEN,Other fruit-bearing vegetables,7,6.27
+ISABELA,BENITO SOLIVEN,Other industrial crops,2,0.6
+ISABELA,BENITO SOLIVEN,Other leafy vegetables,4,4.75
+ISABELA,BENITO SOLIVEN,Other leguminous plants,1,1
+ISABELA,BENITO SOLIVEN,Other oilseed crops,1,0.8
+ISABELA,BENITO SOLIVEN,Other varieties of tobacco,7,4
+ISABELA,BENITO SOLIVEN,Peanuts,3,0.65
+ISABELA,BENITO SOLIVEN,Pigeons,4,0
+ISABELA,BENITO SOLIVEN,Pigs or swine,461,0
+ISABELA,BENITO SOLIVEN,Pineapple,1,0.25
+ISABELA,BENITO SOLIVEN,Potato (patatas),1,0.5
+ISABELA,BENITO SOLIVEN,Quail,1,0
+ISABELA,BENITO SOLIVEN,Rice/Palay,4110,2905.03
+ISABELA,BENITO SOLIVEN,Sheep,3,0
+ISABELA,BENITO SOLIVEN,String beans - harvested green (sitao),2,0.35
+ISABELA,BENITO SOLIVEN,Sugarcane,38,109.98
+ISABELA,BENITO SOLIVEN,Tilapia,3,0.68
+ISABELA,BENITO SOLIVEN,Tobacco (native),6,1.8
+ISABELA,BENITO SOLIVEN,Turkeys,10,0
+ISABELA,BENITO SOLIVEN,Water melon,5,3.7
+ISABELA,BURGOS,Buffaloes (Carabaos),1,0
+ISABELA,BURGOS,Cattle,2,0
+ISABELA,BURGOS,Chickens,4,0
+ISABELA,BURGOS,Corn,496,756.7
+ISABELA,BURGOS,Ducks,6,0
+ISABELA,BURGOS,Goats,1,0
+ISABELA,BURGOS,Hito/Catfish,3,2.03
+ISABELA,BURGOS,Kalamansi,2,2
+ISABELA,BURGOS,Lime (Calamansi),27,33.26
+ISABELA,BURGOS,Other Fish,2,0.4
+ISABELA,BURGOS,Other fruit-bearing vegetables,2,0.7
+ISABELA,BURGOS,Other leafy vegetables,1,0.1
+ISABELA,BURGOS,Other varieties of tobacco,11,13.15
+ISABELA,BURGOS,Pigs or swine,8,0
+ISABELA,BURGOS,Rice/Palay,2326,4957.1
+ISABELA,BURGOS,Tilapia,2,0.39
+ISABELA,BURGOS,Tobacco (native),5,5.15
+ISABELA,CABAGAN,Ampalaya,4,2.8
+ISABELA,CABAGAN,Banana,7,3.5
+ISABELA,CABAGAN,Buffaloes (Carabaos),352,0
+ISABELA,CABAGAN,Cacao,1,0
+ISABELA,CABAGAN,Cattle,484,7
+ISABELA,CABAGAN,Chickens,506,3
+ISABELA,CABAGAN,Coconut,1,0
+ISABELA,CABAGAN,Coffee - other varieties,1,0
+ISABELA,CABAGAN,Corn,4051,6092.61
+ISABELA,CABAGAN,Dogs and cats,3,0
+ISABELA,CABAGAN,Ducks,183,0
+ISABELA,CABAGAN,Eggplant (talong),1,0
+ISABELA,CABAGAN,Geese,4,0
+ISABELA,CABAGAN,Ginger (luya),1,0.03
+ISABELA,CABAGAN,Goats,18,0
+ISABELA,CABAGAN,Green corn,1,0.5
+ISABELA,CABAGAN,Guyabano,1,0
+ISABELA,CABAGAN,Horses,14,0
+ISABELA,CABAGAN,Lime (Calamansi),1,0.6
+ISABELA,CABAGAN,Mango,2,1
+ISABELA,CABAGAN,Other Fish,4,0.48
+ISABELA,CABAGAN,Other fruit-bearing trees and vines,2,1.89
+ISABELA,CABAGAN,Other fruit-bearing vegetables,33,45.2
+ISABELA,CABAGAN,Other leafy vegetables,9,2.32
+ISABELA,CABAGAN,Other leguminous plants,1,0.1
+ISABELA,CABAGAN,Other poultry,5,0
+ISABELA,CABAGAN,Other varieties of tobacco,9,4.55
+ISABELA,CABAGAN,Peanuts,1,0.5
+ISABELA,CABAGAN,Pigeons,2,0
+ISABELA,CABAGAN,Pigs or swine,212,0
+ISABELA,CABAGAN,Rice/Palay,3028,3403.85
+ISABELA,CABAGAN,Sheep,5,0
+ISABELA,CABAGAN,Sugarcane,7,32.25
+ISABELA,CABAGAN,Tilapia,4,1.37
+ISABELA,CABAGAN,Tobacco (native),19,11.48
+ISABELA,CABAGAN,Turkeys,10,0
+ISABELA,CABAGAN,Water melon,1,0.3
+ISABELA,CABATUAN,Ampalaya,2,1.29
+ISABELA,CABATUAN,Banana,8,1.54
+ISABELA,CABATUAN,Buffaloes (Carabaos),2,0
+ISABELA,CABATUAN,Cassava (kamoteng kahoy),1,1
+ISABELA,CABATUAN,Cattle,5,0
+ISABELA,CABATUAN,Chickens,57,0
+ISABELA,CABATUAN,Coconut,109,19.23
+ISABELA,CABATUAN,Coffee - other varieties,1,0.5
+ISABELA,CABATUAN,Corn,481,589.1
+ISABELA,CABATUAN,Dogs and cats,1,0
+ISABELA,CABATUAN,Ducks,23,0
+ISABELA,CABATUAN,Eggplant (talong),2,0.15
+ISABELA,CABATUAN,"Forage grass (sacate, alfalfa, green corn stalk)",1,2
+ISABELA,CABATUAN,Goats,2,0
+ISABELA,CABATUAN,Hito/Catfish,4,0.25
+ISABELA,CABATUAN,Lime (Calamansi),1,0.8
+ISABELA,CABATUAN,Mango,16,0.98
+ISABELA,CABATUAN,Mongo (Mung Bean),22,5.35
+ISABELA,CABATUAN,Okra,1,0.01
+ISABELA,CABATUAN,Other animals (e.g.,1,0
+ISABELA,CABATUAN,Other crops for fiber production,1,0.5
+ISABELA,CABATUAN,Other Fish,4,0.45
+ISABELA,CABATUAN,Other fruit-bearing vegetables,67,16.72
+ISABELA,CABATUAN,Other leafy vegetables,25,6.03
+ISABELA,CABATUAN,Other leguminous plants,1,0.3
+ISABELA,CABATUAN,Other poultry,6,0
+ISABELA,CABATUAN,Other varieties of tobacco,79,62
+ISABELA,CABATUAN,Pechay,1,0.01
+ISABELA,CABATUAN,Pigs or swine,15,0
+ISABELA,CABATUAN,Rice/Palay,4038,5677.78
+ISABELA,CABATUAN,String beans - harvested green (sitao),1,0.01
+ISABELA,CABATUAN,Tilapia,48,3.88
+ISABELA,CABATUAN,Tobacco (native),232,179.18
+ISABELA,CABATUAN,Tobacco (Virginia),1,1
+ISABELA,CABATUAN,Tomato (kamatis),1,0.01
+ISABELA,CABATUAN,Turkeys,2,0
+ISABELA,CITY OF CAUAYAN,Ampalaya,1,0.5
+ISABELA,CITY OF CAUAYAN,Banana,125,218.73
+ISABELA,CITY OF CAUAYAN,Buffaloes (Carabaos),14,0
+ISABELA,CITY OF CAUAYAN,Cassava (kamoteng kahoy),321,365.73
+ISABELA,CITY OF CAUAYAN,Cattle,8,0
+ISABELA,CITY OF CAUAYAN,Chickens,36,0
+ISABELA,CITY OF CAUAYAN,Coconut,3,1.05
+ISABELA,CITY OF CAUAYAN,Corn,6394,10740.34
+ISABELA,CITY OF CAUAYAN,crops for seed and seedling,1,2.16
+ISABELA,CITY OF CAUAYAN,Dogs and cats,4,0
+ISABELA,CITY OF CAUAYAN,Ducks,11,0
+ISABELA,CITY OF CAUAYAN,Eggplant (talong),1,0.7
+ISABELA,CITY OF CAUAYAN,"Forage grass (sacate, alfalfa, green corn stalk)",1,0.5
+ISABELA,CITY OF CAUAYAN,Goats,16,0
+ISABELA,CITY OF CAUAYAN,Green corn,3,5.6
+ISABELA,CITY OF CAUAYAN,Mango,3,5.53
+ISABELA,CITY OF CAUAYAN,Other animals (e.g.,1,0
+ISABELA,CITY OF CAUAYAN,Other crops for fiber production,1,1
+ISABELA,CITY OF CAUAYAN,Other Fish,14,3.44
+ISABELA,CITY OF CAUAYAN,Other fruit-bearing trees and vines,3,1.2
+ISABELA,CITY OF CAUAYAN,Other fruit-bearing vegetables,48,21.74
+ISABELA,CITY OF CAUAYAN,Other leafy vegetables,11,5.5
+ISABELA,CITY OF CAUAYAN,Other poultry,3,0
+ISABELA,CITY OF CAUAYAN,Other temporary crops not reported elsewhere,1,0.04
+ISABELA,CITY OF CAUAYAN,Other varieties of tobacco,39,39.9
+ISABELA,CITY OF CAUAYAN,Pigs or swine,69,0
+ISABELA,CITY OF CAUAYAN,Rice/Palay,8315,12486.95
+ISABELA,CITY OF CAUAYAN,Sheep,5,0
+ISABELA,CITY OF CAUAYAN,Sugarcane,2,12.28
+ISABELA,CITY OF CAUAYAN,Tiger Grass,2,1.5
+ISABELA,CITY OF CAUAYAN,Tilapia,12,3.01
+ISABELA,CITY OF CAUAYAN,Tobacco (native),6,6
+ISABELA,CITY OF SANTIAGO,Ampalaya,6,3.02
+ISABELA,CITY OF SANTIAGO,Bamboo (Kawayan),1,0.5
+ISABELA,CITY OF SANTIAGO,Banana,11,6.43
+ISABELA,CITY OF SANTIAGO,Buffaloes (Carabaos),62,0
+ISABELA,CITY OF SANTIAGO,Cantaloupes- honey dew and other melon varieties,1,0.5
+ISABELA,CITY OF SANTIAGO,Cassava (kamoteng kahoy),9,4.98
+ISABELA,CITY OF SANTIAGO,Cattle,88,0
+ISABELA,CITY OF SANTIAGO,Chickens,266,0
+ISABELA,CITY OF SANTIAGO,Coconut,6,4.87
+ISABELA,CITY OF SANTIAGO,Coffee - other varieties,1,0.5
+ISABELA,CITY OF SANTIAGO,Common gourd (upo),1,0.01
+ISABELA,CITY OF SANTIAGO,Corn,304,429.16
+ISABELA,CITY OF SANTIAGO,Dragon Fruit,4,1.82
+ISABELA,CITY OF SANTIAGO,Ducks,216,0
+ISABELA,CITY OF SANTIAGO,Eggplant (talong),6,4.37
+ISABELA,CITY OF SANTIAGO,"Forage grass (sacate, alfalfa, green corn stalk)",1,1.1
+ISABELA,CITY OF SANTIAGO,Geese,7,0
+ISABELA,CITY OF SANTIAGO,Goats,29,0
+ISABELA,CITY OF SANTIAGO,Grapes (ubas),1,0.29
+ISABELA,CITY OF SANTIAGO,Guyabano,1,0.01
+ISABELA,CITY OF SANTIAGO,Hito/Catfish,3,2.4
+ISABELA,CITY OF SANTIAGO,Kalamansi,2,0.31
+ISABELA,CITY OF SANTIAGO,Lime (Calamansi),6,5.65
+ISABELA,CITY OF SANTIAGO,Mahogany,1,1.5
+ISABELA,CITY OF SANTIAGO,Mango,24,36.95
+ISABELA,CITY OF SANTIAGO,Mongo (Mung Bean),2,3
+ISABELA,CITY OF SANTIAGO,Mulberry,1,0.2
+ISABELA,CITY OF SANTIAGO,Mushroom,1,0.05
+ISABELA,CITY OF SANTIAGO,Nipa,1,0.1
+ISABELA,CITY OF SANTIAGO,Okra,1,0.2
+ISABELA,CITY OF SANTIAGO,Orchard,4,5.08
+ISABELA,CITY OF SANTIAGO,Other crops for fiber production,1,0.28
+ISABELA,CITY OF SANTIAGO,Other Fish,56,34.6
+ISABELA,CITY OF SANTIAGO,Other fruit-bearing trees and vines,10,12.35
+ISABELA,CITY OF SANTIAGO,Other fruit-bearing vegetables,79,48.28
+ISABELA,CITY OF SANTIAGO,Other herbs and spices,1,0.2
+ISABELA,CITY OF SANTIAGO,Other industrial crops,16,12.58
+ISABELA,CITY OF SANTIAGO,Other leafy vegetables,56,22.91
+ISABELA,CITY OF SANTIAGO,Other leguminous plants,6,4
+ISABELA,CITY OF SANTIAGO,Other poultry,2,0
+ISABELA,CITY OF SANTIAGO,Other temporary crops not reported elsewhere,2,0.36
+ISABELA,CITY OF SANTIAGO,Patola,1,0.01
+ISABELA,CITY OF SANTIAGO,Peanuts,11,6.66
+ISABELA,CITY OF SANTIAGO,Pepper - small green,1,0.1
+ISABELA,CITY OF SANTIAGO,Pepper - sweet,1,0.01
+ISABELA,CITY OF SANTIAGO,Pigs or swine,171,0
+ISABELA,CITY OF SANTIAGO,Potato (patatas),1,0.3
+ISABELA,CITY OF SANTIAGO,Rice/Palay,5399,9137.99
+ISABELA,CITY OF SANTIAGO,Sheep,4,0
+ISABELA,CITY OF SANTIAGO,Squash (kalabasa),1,0.01
+ISABELA,CITY OF SANTIAGO,String beans - harvested green (sitao),2,0.21
+ISABELA,CITY OF SANTIAGO,Sugarcane,31,54.51
+ISABELA,CITY OF SANTIAGO,Tilapia,54,15.39
+ISABELA,CITY OF SANTIAGO,Tomato (kamatis),2,0.02
+ISABELA,CITY OF SANTIAGO,Turkeys,8,0
+ISABELA,CITY OF SANTIAGO,Water melon,3,1.59
+ISABELA,CORDON,Ampalaya,1,0.1
+ISABELA,CORDON,Arrowroot,1,0.7
+ISABELA,CORDON,Avocado,10,3.8
+ISABELA,CORDON,Bamboo (Kawayan),1,2
+ISABELA,CORDON,Banana,101,78.54
+ISABELA,CORDON,Buffaloes (Carabaos),586,0
+ISABELA,CORDON,Bush Sitao,1,0.3
+ISABELA,CORDON,Cabbage (repolyo),1,0.24
+ISABELA,CORDON,Cacao,2,1.4
+ISABELA,CORDON,Cassava (kamoteng kahoy),6,2.66
+ISABELA,CORDON,Cattle,422,0
+ISABELA,CORDON,Chickens,931,0
+ISABELA,CORDON,Chili (labuyo),1,0.5
+ISABELA,CORDON,Coconut,26,21.05
+ISABELA,CORDON,Corn,2870,4114.23
+ISABELA,CORDON,Cowpea,1,1
+ISABELA,CORDON,Deer,1,0
+ISABELA,CORDON,Dogs and cats,22,0
+ISABELA,CORDON,Ducks,603,0
+ISABELA,CORDON,Eggplant (talong),5,2.8
+ISABELA,CORDON,"Forage grass (sacate, alfalfa, green corn stalk)",1,1.9
+ISABELA,CORDON,Geese,12,0
+ISABELA,CORDON,Ginger (luya),1,1
+ISABELA,CORDON,Gmelina Arborea,3,2.25
+ISABELA,CORDON,Goats,203,0
+ISABELA,CORDON,Grapes (ubas),1,0.1
+ISABELA,CORDON,Guyabano,25,15.5
+ISABELA,CORDON,Hito/Catfish,99,33.3
+ISABELA,CORDON,Horses,1,0
+ISABELA,CORDON,Ipil-ipil,1,0.75
+ISABELA,CORDON,Kalamansi,4,3.46
+ISABELA,CORDON,Lemon,1,0.15
+ISABELA,CORDON,Lemon grass,1,0.2
+ISABELA,CORDON,Lime (Calamansi),1,2.09
+ISABELA,CORDON,Mandarin (dalanghita),3,1.8
+ISABELA,CORDON,Mango,37,29.59
+ISABELA,CORDON,Mushroom,1,0
+ISABELA,CORDON,Okra,1,0.5
+ISABELA,CORDON,Orchard,1,0.2
+ISABELA,CORDON,Other animals (e.g.,4,0
+ISABELA,CORDON,Other crops for fiber production,4,2.1
+ISABELA,CORDON,Other Fish,322,125.39
+ISABELA,CORDON,Other fruit-bearing trees and vines,44,40.2
+ISABELA,CORDON,Other fruit-bearing vegetables,113,48.92
+ISABELA,CORDON,Other industrial crops,8,8.19
+ISABELA,CORDON,Other leafy vegetables,28,10.14
+ISABELA,CORDON,Other leguminous plants,2,1
+ISABELA,CORDON,Other poultry,21,0
+ISABELA,CORDON,Other temporary crops not reported elsewhere,2,0.52
+ISABELA,CORDON,Papaya,1,2
+ISABELA,CORDON,Peacock,2,0
+ISABELA,CORDON,Pigs or swine,779,0
+ISABELA,CORDON,Pineapple,5,2.45
+ISABELA,CORDON,Quail,1,0
+ISABELA,CORDON,Rabbits and hares,2,0
+ISABELA,CORDON,Rambutan,8,5.34
+ISABELA,CORDON,Rice/Palay,4184,5299.09
+ISABELA,CORDON,Sheep,11,0
+ISABELA,CORDON,Squash (kalabasa),11,5.05
+ISABELA,CORDON,String beans - harvested green (sitao),7,1.47
+ISABELA,CORDON,Sugarcane,3,17.38
+ISABELA,CORDON,Swan,1,0
+ISABELA,CORDON,Tilapia,440,189.18
+ISABELA,CORDON,Tomato (kamatis),2,0.43
+ISABELA,CORDON,Turkeys,17,0
+ISABELA,DELFIN ALBANO MAGSAYSAY,Banana,2,2
+ISABELA,DELFIN ALBANO MAGSAYSAY,Buffaloes (Carabaos),6,0
+ISABELA,DELFIN ALBANO MAGSAYSAY,Cassava (kamoteng kahoy),2,4
+ISABELA,DELFIN ALBANO MAGSAYSAY,Cattle,18,0
+ISABELA,DELFIN ALBANO MAGSAYSAY,Chickens,18,0
+ISABELA,DELFIN ALBANO MAGSAYSAY,Coffee - other varieties,1,2
+ISABELA,DELFIN ALBANO MAGSAYSAY,Corn,1530,2855.23
+ISABELA,DELFIN ALBANO MAGSAYSAY,Ducks,14,0
+ISABELA,DELFIN ALBANO MAGSAYSAY,Ginger (luya),1,0.5
+ISABELA,DELFIN ALBANO MAGSAYSAY,Goats,19,0
+ISABELA,DELFIN ALBANO MAGSAYSAY,Onion bulbs (sibuyas),1,0.5
+ISABELA,DELFIN ALBANO MAGSAYSAY,Other Fish,10,1.78
+ISABELA,DELFIN ALBANO MAGSAYSAY,Other fruit-bearing trees and vines,2,0.8
+ISABELA,DELFIN ALBANO MAGSAYSAY,Other fruit-bearing vegetables,50,33.15
+ISABELA,DELFIN ALBANO MAGSAYSAY,Other industrial crops,2,0.45
+ISABELA,DELFIN ALBANO MAGSAYSAY,Other leafy vegetables,21,6.32
+ISABELA,DELFIN ALBANO MAGSAYSAY,Other leguminous plants,4,2.62
+ISABELA,DELFIN ALBANO MAGSAYSAY,Other varieties of tobacco,3,1.75
+ISABELA,DELFIN ALBANO MAGSAYSAY,Pigs or swine,17,0
+ISABELA,DELFIN ALBANO MAGSAYSAY,Rice/Palay,3891,8723.93
+ISABELA,DELFIN ALBANO MAGSAYSAY,Sugarcane,1,4
+ISABELA,DELFIN ALBANO MAGSAYSAY,Tilapia,5,1
+ISABELA,DELFIN ALBANO MAGSAYSAY,Tobacco (native),3,2.5
+ISABELA,DINAPIGUE,Banana,13,12
+ISABELA,DINAPIGUE,Buffaloes (Carabaos),78,0
+ISABELA,DINAPIGUE,Cassava (kamoteng kahoy),1,0.25
+ISABELA,DINAPIGUE,Cattle,29,0
+ISABELA,DINAPIGUE,Chickens,111,0
+ISABELA,DINAPIGUE,Coconut,18,23.38
+ISABELA,DINAPIGUE,Corn,50,81.85
+ISABELA,DINAPIGUE,Ducks,53,0
+ISABELA,DINAPIGUE,Gabi tubers,3,2.15
+ISABELA,DINAPIGUE,Ginger (luya),2,0.5
+ISABELA,DINAPIGUE,Goats,30,0
+ISABELA,DINAPIGUE,Other animals (e.g.,15,0
+ISABELA,DINAPIGUE,Other Fish,1,5
+ISABELA,DINAPIGUE,Other fruit-bearing trees and vines,5,5.4
+ISABELA,DINAPIGUE,Other fruit-bearing vegetables,26,31.06
+ISABELA,DINAPIGUE,Other leafy vegetables,8,3.22
+ISABELA,DINAPIGUE,Peanuts,2,0.75
+ISABELA,DINAPIGUE,Pigs or swine,67,0
+ISABELA,DINAPIGUE,Rice/Palay,405,445.78
+ISABELA,DINAPIGUE,Taro,1,0.25
+ISABELA,DINAPIGUE,Turkeys,2,0
+ISABELA,DINAPIGUE,Ube,1,1
+ISABELA,DIVILACAN,Buffaloes (Carabaos),193,0
+ISABELA,DIVILACAN,Cassava (kamoteng kahoy),1,1
+ISABELA,DIVILACAN,Cattle,6,0
+ISABELA,DIVILACAN,Chickens,260,0
+ISABELA,DIVILACAN,Coconut,2,2.4
+ISABELA,DIVILACAN,Corn,12,13.8
+ISABELA,DIVILACAN,Ducks,58,0
+ISABELA,DIVILACAN,Geese,1,0
+ISABELA,DIVILACAN,Goats,8,0
+ISABELA,DIVILACAN,Other fruit-bearing trees and vines,1,0.05
+ISABELA,DIVILACAN,Other fruit-bearing vegetables,12,3.85
+ISABELA,DIVILACAN,Other leafy vegetables,5,2.65
+ISABELA,DIVILACAN,Pigs or swine,150,0
+ISABELA,DIVILACAN,Quail,1,0
+ISABELA,DIVILACAN,Rice/Palay,558,518.79
+ISABELA,DIVILACAN,Turkeys,1,0
+ISABELA,ECHAGUE,Ampalaya,2,1.6
+ISABELA,ECHAGUE,Arrowroot,1,1
+ISABELA,ECHAGUE,Banana,759,570.08
+ISABELA,ECHAGUE,Buffaloes (Carabaos),391,0
+ISABELA,ECHAGUE,Cacao,1,0.1
+ISABELA,ECHAGUE,Camote,2,2.5
+ISABELA,ECHAGUE,Cantaloupes- honey dew and other melon varieties,1,1
+ISABELA,ECHAGUE,Cassava (kamoteng kahoy),126,111.36
+ISABELA,ECHAGUE,Cattle,139,0
+ISABELA,ECHAGUE,Chickens,584,0
+ISABELA,ECHAGUE,Coconut,8,4.88
+ISABELA,ECHAGUE,Coffee - other varieties,1,1.2
+ISABELA,ECHAGUE,Corn,5033,7626.5
+ISABELA,ECHAGUE,Cowpea,2,2
+ISABELA,ECHAGUE,Dogs and cats,4,0
+ISABELA,ECHAGUE,Ducks,274,0
+ISABELA,ECHAGUE,"Forage grass (sacate, alfalfa, green corn stalk)",2,5
+ISABELA,ECHAGUE,Gabi tubers,1,0.25
+ISABELA,ECHAGUE,Geese,8,0
+ISABELA,ECHAGUE,Ginger (luya),1,1
+ISABELA,ECHAGUE,Goats,38,0
+ISABELA,ECHAGUE,Hito/Catfish,36,5.96
+ISABELA,ECHAGUE,Lime (Calamansi),2,0.75
+ISABELA,ECHAGUE,Mango,2,1.75
+ISABELA,ECHAGUE,Mongo (Mung Bean),1,0.5
+ISABELA,ECHAGUE,Orchard,1,0.26
+ISABELA,ECHAGUE,Other animals (e.g.,20,0
+ISABELA,ECHAGUE,Other crops for fiber production,2,1.5
+ISABELA,ECHAGUE,Other Fish,23,5.96
+ISABELA,ECHAGUE,Other fruit-bearing trees and vines,81,75.3
+ISABELA,ECHAGUE,Other fruit-bearing vegetables,35,35.59
+ISABELA,ECHAGUE,Other leafy vegetables,47,32.82
+ISABELA,ECHAGUE,Other leguminous plants,4,2.75
+ISABELA,ECHAGUE,Other poultry,2,0
+ISABELA,ECHAGUE,Other varieties of tobacco,1,0.5
+ISABELA,ECHAGUE,Peanuts,2,1.8
+ISABELA,ECHAGUE,Pigs or swine,207,0
+ISABELA,ECHAGUE,Pineapple,264,185.53
+ISABELA,ECHAGUE,Rabbits and hares,1,0
+ISABELA,ECHAGUE,Rice/Palay,6997,9496.7
+ISABELA,ECHAGUE,Sheep,1,0
+ISABELA,ECHAGUE,Squash (kalabasa),1,0.01
+ISABELA,ECHAGUE,String beans - harvested green (sitao),1,0
+ISABELA,ECHAGUE,Sugarcane,103,268.2
+ISABELA,ECHAGUE,Swan,1,0
+ISABELA,ECHAGUE,Tilapia,126,22.61
+ISABELA,ECHAGUE,Turkeys,7,0
+ISABELA,ECHAGUE,Water melon,2,2.4
+ISABELA,GAMU,Ampalaya,1,3
+ISABELA,GAMU,Banana,1,0.1
+ISABELA,GAMU,Bangus,2,0.25
+ISABELA,GAMU,Buffaloes (Carabaos),29,0
+ISABELA,GAMU,Cassava (kamoteng kahoy),1,0.6
+ISABELA,GAMU,Cattle,36,0
+ISABELA,GAMU,Chickens,11,0
+ISABELA,GAMU,Coconut,1,0.5
+ISABELA,GAMU,Corn,1001,1352.83
+ISABELA,GAMU,Ducks,7,0
+ISABELA,GAMU,"Forage grass (sacate, alfalfa, green corn stalk)",1,1
+ISABELA,GAMU,Geese,1,0
+ISABELA,GAMU,Goats,18,0
+ISABELA,GAMU,Hito/Catfish,8,1.7
+ISABELA,GAMU,Mango,1,4.8
+ISABELA,GAMU,Mushroom,1,0
+ISABELA,GAMU,Other Fish,7,0.95
+ISABELA,GAMU,Other fruit-bearing trees and vines,2,9.6
+ISABELA,GAMU,Other fruit-bearing vegetables,36,15.29
+ISABELA,GAMU,Other industrial crops,1,0.03
+ISABELA,GAMU,Other leafy vegetables,11,6.86
+ISABELA,GAMU,Other leguminous plants,3,0.31
+ISABELA,GAMU,Other varieties of tobacco,1,0.6
+ISABELA,GAMU,Peanuts,2,0.7
+ISABELA,GAMU,Pigs or swine,72,0
+ISABELA,GAMU,Quail,1,0
+ISABELA,GAMU,Rice/Palay,2114,5070.88
+ISABELA,GAMU,Sheep,1,0
+ISABELA,GAMU,Soybeans,1,0.5
+ISABELA,GAMU,Tilapia,52,8.86
+ISABELA,GAMU,Turkeys,1,0
+ISABELA,ILAGAN CITY Capital,Ampalaya,3,0.5
+ISABELA,ILAGAN CITY Capital,Arrowroot,1,1.8
+ISABELA,ILAGAN CITY Capital,Banana,91,142.01
+ISABELA,ILAGAN CITY Capital,Beans - dry,1,0.23
+ISABELA,ILAGAN CITY Capital,Buffaloes (Carabaos),13,0
+ISABELA,ILAGAN CITY Capital,Camote,12,12
+ISABELA,ILAGAN CITY Capital,Cassava (kamoteng kahoy),88,86.46
+ISABELA,ILAGAN CITY Capital,Cattle,6,0
+ISABELA,ILAGAN CITY Capital,Chickens,5,0
+ISABELA,ILAGAN CITY Capital,Coconut,5,6.25
+ISABELA,ILAGAN CITY Capital,Corn,11349,14649.81
+ISABELA,ILAGAN CITY Capital,Ducks,2,0
+ISABELA,ILAGAN CITY Capital,"Forage grass (sacate, alfalfa, green corn stalk)",5,3.51
+ISABELA,ILAGAN CITY Capital,Gabi tubers,1,0.5
+ISABELA,ILAGAN CITY Capital,Ginger (luya),2,0.75
+ISABELA,ILAGAN CITY Capital,Goats,3,0
+ISABELA,ILAGAN CITY Capital,Green corn,3,1.31
+ISABELA,ILAGAN CITY Capital,Lemon,1,2.5
+ISABELA,ILAGAN CITY Capital,Lime (Calamansi),1,2
+ISABELA,ILAGAN CITY Capital,Mandarin (dalanghita),1,0.25
+ISABELA,ILAGAN CITY Capital,Mango,4,9.46
+ISABELA,ILAGAN CITY Capital,Other animals (e.g.,1,0
+ISABELA,ILAGAN CITY Capital,Other Fish,5,2.17
+ISABELA,ILAGAN CITY Capital,Other fruit-bearing vegetables,15,6.47
+ISABELA,ILAGAN CITY Capital,Other leafy vegetables,24,8.47
+ISABELA,ILAGAN CITY Capital,Other leguminous plants,1,0.75
+ISABELA,ILAGAN CITY Capital,Peanuts,1,0.25
+ISABELA,ILAGAN CITY Capital,Pigs or swine,7,0
+ISABELA,ILAGAN CITY Capital,Pineapple,1,0.2
+ISABELA,ILAGAN CITY Capital,Pomelo (suha),2,1.5
+ISABELA,ILAGAN CITY Capital,Rambutan,1,0.25
+ISABELA,ILAGAN CITY Capital,Rice/Palay,9488,9467.2
+ISABELA,ILAGAN CITY Capital,Sugarcane,7,21
+ISABELA,ILAGAN CITY Capital,Taro,1,0.5
+ISABELA,ILAGAN CITY Capital,Tilapia,5,2.24
+ISABELA,ILAGAN CITY Capital,Turkeys,1,0
+ISABELA,ILAGAN CITY Capital,Ube,1,1
+ISABELA,ILAGAN CITY Capital,Water melon,3,1.6
+ISABELA,JONES,Avocado,3,0.55
+ISABELA,JONES,Banana,1049,1023.55
+ISABELA,JONES,Bermuda Grass,1,0.38
+ISABELA,JONES,Buffaloes (Carabaos),1903,0
+ISABELA,JONES,Cacao,13,7.45
+ISABELA,JONES,Cassava (kamoteng kahoy),786,723.99
+ISABELA,JONES,Cattle,622,0
+ISABELA,JONES,Chickens,2450,0
+ISABELA,JONES,Chico,2,0.4
+ISABELA,JONES,Coconut,26,12.43
+ISABELA,JONES,Coffee - other varieties,2,1.25
+ISABELA,JONES,Corn,5235,9372.32
+ISABELA,JONES,Dragon Fruit,1,0.5
+ISABELA,JONES,Ducks,898,0
+ISABELA,JONES,"Forage grass (sacate, alfalfa, green corn stalk)",6,4.3
+ISABELA,JONES,Geese,26,0
+ISABELA,JONES,Gemilina,1,0.3
+ISABELA,JONES,Ginger (luya),15,6.4
+ISABELA,JONES,Gmelina Arborea,10,15.1
+ISABELA,JONES,Goats,198,0
+ISABELA,JONES,Green corn,1,0.5
+ISABELA,JONES,Guyabano,1,0.01
+ISABELA,JONES,Hito/Catfish,2,0.61
+ISABELA,JONES,Horses,7,0
+ISABELA,JONES,Lanzones,1,0.5
+ISABELA,JONES,Lemon grass,1,0.68
+ISABELA,JONES,Lime (Calamansi),7,3.79
+ISABELA,JONES,Mahogany,1,1.25
+ISABELA,JONES,Mandarin (dalanghita),1,0.25
+ISABELA,JONES,Mango,33,26.78
+ISABELA,JONES,Narra,3,6.4
+ISABELA,JONES,Orange (dalandan),1,0.1
+ISABELA,JONES,Orchard,2,0.45
+ISABELA,JONES,Ornamental Flowers,1,0.5
+ISABELA,JONES,Other animals (e.g.,7,0
+ISABELA,JONES,Other crops for fiber production,3,1.7
+ISABELA,JONES,Other Fish,12,3.62
+ISABELA,JONES,Other fruit-bearing trees and vines,18,16.08
+ISABELA,JONES,Other fruit-bearing vegetables,38,20.51
+ISABELA,JONES,Other industrial crops,9,7.75
+ISABELA,JONES,Other industrial permanent crops not elsewhere classified,3,1.84
+ISABELA,JONES,Other leafy vegetables,16,7.8
+ISABELA,JONES,Other leguminous plants,2,0.85
+ISABELA,JONES,Other poultry,6,0
+ISABELA,JONES,Other temporary crops not reported elsewhere,1,1.5
+ISABELA,JONES,Other varieties of tobacco,3,1.12
+ISABELA,JONES,Peanuts,13,3.59
+ISABELA,JONES,Pigs or swine,1390,0
+ISABELA,JONES,Pineapple,13,12.55
+ISABELA,JONES,Potato (patatas),3,2.5
+ISABELA,JONES,Rabbits and hares,1,0
+ISABELA,JONES,Rambutan,4,2.05
+ISABELA,JONES,Rice/Palay,3936,3354.65
+ISABELA,JONES,Sheep,2,0
+ISABELA,JONES,Sugarcane,1,1
+ISABELA,JONES,Tiger Grass,1,1
+ISABELA,JONES,Tilapia,25,4.3
+ISABELA,JONES,Tobacco (native),1,0.5
+ISABELA,JONES,Turkeys,20,0
+ISABELA,JONES,Ube,2,1
+ISABELA,JONES,Water melon,1,0.08
+ISABELA,LUNA,Banana,1,1.5
+ISABELA,LUNA,Beans - dry,1,0.2
+ISABELA,LUNA,Cacao,1,1.52
+ISABELA,LUNA,Cassava (kamoteng kahoy),1,1.5
+ISABELA,LUNA,Cattle,1,0
+ISABELA,LUNA,Coconut,1,1.52
+ISABELA,LUNA,Corn,485,635.07
+ISABELA,LUNA,Ducks,1,0
+ISABELA,LUNA,Goats,2,0
+ISABELA,LUNA,Kalamansi,1,0.5
+ISABELA,LUNA,Mango,1,1.44
+ISABELA,LUNA,Mongo (Mung Bean),2,0.3
+ISABELA,LUNA,Mushroom,1,0.3
+ISABELA,LUNA,Other fruit-bearing trees and vines,2,2.52
+ISABELA,LUNA,Other fruit-bearing vegetables,6,1.5
+ISABELA,LUNA,Other leafy vegetables,2,0.8
+ISABELA,LUNA,Peanuts,8,5.03
+ISABELA,LUNA,Pigs or swine,3,0
+ISABELA,LUNA,Rice/Palay,1457,2526.73
+ISABELA,LUNA,String beans - harvested green (sitao),1,1
+ISABELA,LUNA,Tilapia,1,0.21
+ISABELA,MACONACON,Buffaloes (Carabaos),9,0
+ISABELA,MACONACON,Chickens,10,0
+ISABELA,MACONACON,Corn,3,4.25
+ISABELA,MACONACON,Ducks,1,0
+ISABELA,MACONACON,Other Fish,1,0.3
+ISABELA,MACONACON,Other fruit-bearing vegetables,5,1.37
+ISABELA,MACONACON,Other leafy vegetables,3,0.57
+ISABELA,MACONACON,Pigs or swine,7,0
+ISABELA,MACONACON,Rice/Palay,482,540.25
+ISABELA,MACONACON,Tilapia,1,0.08
+ISABELA,MALLIG,Banana,1,1.5
+ISABELA,MALLIG,Beans - dry,1,1
+ISABELA,MALLIG,Buffaloes (Carabaos),42,0
+ISABELA,MALLIG,Camote tops (talbos ng kamote),1,3
+ISABELA,MALLIG,Cassava (kamoteng kahoy),2,1.8
+ISABELA,MALLIG,Cattle,67,0
+ISABELA,MALLIG,Chickens,30,0
+ISABELA,MALLIG,Chili (labuyo),1,0.3
+ISABELA,MALLIG,Coffee - other varieties,1,2
+ISABELA,MALLIG,Corn,649,1028.26
+ISABELA,MALLIG,Ducks,13,0
+ISABELA,MALLIG,Eggplant (talong),6,3.49
+ISABELA,MALLIG,Geese,1,0
+ISABELA,MALLIG,Goats,22,0
+ISABELA,MALLIG,Horses,1,0
+ISABELA,MALLIG,Kalamansi,1,0.5
+ISABELA,MALLIG,Lime (Calamansi),2,1.4
+ISABELA,MALLIG,Mango,2,2.1
+ISABELA,MALLIG,Mongo (Mung Bean),1,0.2
+ISABELA,MALLIG,Other Fish,17,3.14
+ISABELA,MALLIG,Other fruit-bearing trees and vines,1,0.9
+ISABELA,MALLIG,Other fruit-bearing vegetables,28,23
+ISABELA,MALLIG,Other industrial crops,1,0.2
+ISABELA,MALLIG,Other leafy vegetables,4,0.88
+ISABELA,MALLIG,Other varieties of tobacco,28,27.31
+ISABELA,MALLIG,Pigs or swine,101,0
+ISABELA,MALLIG,Quail,1,0
+ISABELA,MALLIG,Rabbits and hares,1,0
+ISABELA,MALLIG,Rice/Palay,3390,6956.26
+ISABELA,MALLIG,Sheep,1,0
+ISABELA,MALLIG,Squash (kalabasa),1,1.1
+ISABELA,MALLIG,Sugarcane,4,8
+ISABELA,MALLIG,Tilapia,30,6.79
+ISABELA,MALLIG,Tobacco (native),12,9.55
+ISABELA,MALLIG,Turkeys,2,0
+ISABELA,NAGUILIAN,Banana,19,22.25
+ISABELA,NAGUILIAN,Buffaloes (Carabaos),511,0
+ISABELA,NAGUILIAN,Camote tops (talbos ng kamote),2,1.5
+ISABELA,NAGUILIAN,Cassava (kamoteng kahoy),297,255.79
+ISABELA,NAGUILIAN,Cattle,72,0
+ISABELA,NAGUILIAN,Chickens,278,0
+ISABELA,NAGUILIAN,Coconut,1,0.5
+ISABELA,NAGUILIAN,Corn,3305,5331.86
+ISABELA,NAGUILIAN,Cowpea,1,0
+ISABELA,NAGUILIAN,Dogs and cats,1,0
+ISABELA,NAGUILIAN,Dragon Fruit,1,0.1
+ISABELA,NAGUILIAN,Ducks,106,0
+ISABELA,NAGUILIAN,Geese,1,0
+ISABELA,NAGUILIAN,Gmelina Arborea,1,1
+ISABELA,NAGUILIAN,Goats,37,0
+ISABELA,NAGUILIAN,Kalamansi,2,3.5
+ISABELA,NAGUILIAN,Lime (Calamansi),3,0.46
+ISABELA,NAGUILIAN,Mandarin (dalanghita),1,0.5
+ISABELA,NAGUILIAN,Mango,15,27.63
+ISABELA,NAGUILIAN,Orchard,1,0.5
+ISABELA,NAGUILIAN,Other animals (e.g.,1,0
+ISABELA,NAGUILIAN,Other Fish,7,2.49
+ISABELA,NAGUILIAN,Other fruit-bearing trees and vines,1,1
+ISABELA,NAGUILIAN,Other fruit-bearing vegetables,27,11.85
+ISABELA,NAGUILIAN,Other leafy vegetables,23,7.84
+ISABELA,NAGUILIAN,Other poultry,2,0
+ISABELA,NAGUILIAN,Other varieties of tobacco,4,2.35
+ISABELA,NAGUILIAN,Peanuts,2,1.4
+ISABELA,NAGUILIAN,Pigs or swine,255,0
+ISABELA,NAGUILIAN,Pineapple,2,1
+ISABELA,NAGUILIAN,Potato (patatas),4,1.32
+ISABELA,NAGUILIAN,Rice/Palay,3341,3713.41
+ISABELA,NAGUILIAN,Sheep,3,0
+ISABELA,NAGUILIAN,Sugarcane,28,115.71
+ISABELA,NAGUILIAN,Tilapia,12,6.65
+ISABELA,NAGUILIAN,Tobacco (native),6,4.4
+ISABELA,NAGUILIAN,Ube,14,16.33
+ISABELA,NAGUILIAN,Water melon,2,1
+ISABELA,PALANAN,Banana,1,0.25
+ISABELA,PALANAN,Buffaloes (Carabaos),446,0
+ISABELA,PALANAN,Cattle,7,0
+ISABELA,PALANAN,Chickens,187,0
+ISABELA,PALANAN,Coconut,33,37.03
+ISABELA,PALANAN,Corn,584,588.15
+ISABELA,PALANAN,Ducks,1,0
+ISABELA,PALANAN,Goats,1,0
+ISABELA,PALANAN,Lime (Calamansi),1,0.5
+ISABELA,PALANAN,Pigs or swine,4,0
+ISABELA,PALANAN,Pineapple,1,0.75
+ISABELA,PALANAN,Rice/Palay,2350,2274.98
+ISABELA,QUEZON,Adlai,1,1
+ISABELA,QUEZON,Ampalaya,1,2
+ISABELA,QUEZON,Bamboo (Kawayan),2,1.4
+ISABELA,QUEZON,Banana,19,18.9
+ISABELA,QUEZON,Bermuda Grass,1,1.3
+ISABELA,QUEZON,Buffaloes (Carabaos),151,0
+ISABELA,QUEZON,Cacao,1,1.5
+ISABELA,QUEZON,Camote tops (talbos ng kamote),2,0.5
+ISABELA,QUEZON,Cassava (kamoteng kahoy),2,1.5
+ISABELA,QUEZON,Cattle,155,0
+ISABELA,QUEZON,Chickens,36,0
+ISABELA,QUEZON,Coconut,2,0.6
+ISABELA,QUEZON,Coffee - other varieties,2,0.6
+ISABELA,QUEZON,Corn,811,1373.77
+ISABELA,QUEZON,crops for seed and seedling,1,0.5
+ISABELA,QUEZON,Dogs and cats,2,0
+ISABELA,QUEZON,Ducks,21,0
+ISABELA,QUEZON,Eggplant (talong),1,0.2
+ISABELA,QUEZON,"Forage grass (sacate, alfalfa, green corn stalk)",2,1.53
+ISABELA,QUEZON,Geese,1,0
+ISABELA,QUEZON,Goats,23,0
+ISABELA,QUEZON,Hito/Catfish,1,0.05
+ISABELA,QUEZON,Horses,4,0
+ISABELA,QUEZON,Kalamansi,1,0.5
+ISABELA,QUEZON,Mango,9,12.4
+ISABELA,QUEZON,Orchard,8,2.93
+ISABELA,QUEZON,Other animals (e.g.,4,0
+ISABELA,QUEZON,Other crops for fiber production,10,8.68
+ISABELA,QUEZON,Other Fish,106,29.56
+ISABELA,QUEZON,Other fruit-bearing trees and vines,75,100.65
+ISABELA,QUEZON,Other fruit-bearing vegetables,100,70.52
+ISABELA,QUEZON,Other herbs and spices,1,0.3
+ISABELA,QUEZON,Other industrial crops,24,54.46
+ISABELA,QUEZON,Other industrial permanent crops not elsewhere classified,6,11.25
+ISABELA,QUEZON,Other leafy vegetables,59,42.66
+ISABELA,QUEZON,Other poultry,2,0
+ISABELA,QUEZON,Other temporary crops not reported elsewhere,13,17.84
+ISABELA,QUEZON,Palm tree,2,0.61
+ISABELA,QUEZON,Pigeons,1,0
+ISABELA,QUEZON,Pigs or swine,170,0
+ISABELA,QUEZON,Rabbits and hares,1,0
+ISABELA,QUEZON,Rice/Palay,2921,6683.71
+ISABELA,QUEZON,Sheep,1,0
+ISABELA,QUEZON,Siguidillas - harvested green,1,0.5
+ISABELA,QUEZON,String beans - harvested green (sitao),1,2.6
+ISABELA,QUEZON,Sugarcane,5,18.5
+ISABELA,QUEZON,Tilapia,61,14.68
+ISABELA,QUEZON,Tobacco (native),9,5.78
+ISABELA,QUEZON,Turkeys,1,0
+ISABELA,QUIRINO,Buffaloes (Carabaos),95,0
+ISABELA,QUIRINO,Cattle,68,0
+ISABELA,QUIRINO,Chickens,86,0
+ISABELA,QUIRINO,Coconut,1,0.37
+ISABELA,QUIRINO,Corn,749,896.35
+ISABELA,QUIRINO,Ducks,32,0
+ISABELA,QUIRINO,"Forage grass (sacate, alfalfa, green corn stalk)",2,2.71
+ISABELA,QUIRINO,Geese,1,0
+ISABELA,QUIRINO,Goats,17,0
+ISABELA,QUIRINO,Mango,6,4.81
+ISABELA,QUIRINO,Other animals (e.g.,2,0
+ISABELA,QUIRINO,Other Fish,1,0.15
+ISABELA,QUIRINO,Other fruit-bearing trees and vines,1,1.2
+ISABELA,QUIRINO,Other fruit-bearing vegetables,5,1
+ISABELA,QUIRINO,Other industrial crops,2,3.55
+ISABELA,QUIRINO,Other leafy vegetables,3,1.6
+ISABELA,QUIRINO,Other leguminous plants,2,0.6
+ISABELA,QUIRINO,Other poultry,66,0
+ISABELA,QUIRINO,Other temporary crops not reported elsewhere,1,0.5
+ISABELA,QUIRINO,Other varieties of tobacco,2,0.5
+ISABELA,QUIRINO,Pigeons,1,0
+ISABELA,QUIRINO,Pigs or swine,138,0
+ISABELA,QUIRINO,Rice/Palay,2857,4612.82
+ISABELA,QUIRINO,Tilapia,8,2.1
+ISABELA,QUIRINO,Tobacco (native),7,4.55
+ISABELA,QUIRINO,Tobacco (Virginia),2,2.05
+ISABELA,QUIRINO,Turkeys,2,0
+ISABELA,RAMON,Ampalaya,1,0.56
+ISABELA,RAMON,Banana,4,6.98
+ISABELA,RAMON,Buffaloes (Carabaos),25,0
+ISABELA,RAMON,Cacao,1,0.88
+ISABELA,RAMON,Cantaloupes- honey dew and other melon varieties,1,1.1
+ISABELA,RAMON,Cassava (kamoteng kahoy),1,1.8
+ISABELA,RAMON,Cattle,65,0
+ISABELA,RAMON,Chickens,103,0
+ISABELA,RAMON,Coconut,1,0.1
+ISABELA,RAMON,Corn,136,229.14
+ISABELA,RAMON,Dogs and cats,2,0
+ISABELA,RAMON,Ducks,75,0
+ISABELA,RAMON,Geese,3,0
+ISABELA,RAMON,Goats,23,0
+ISABELA,RAMON,Hito/Catfish,4,0.96
+ISABELA,RAMON,Mahogany,1,0.03
+ISABELA,RAMON,Mango,5,7.8
+ISABELA,RAMON,Other animals (e.g.,2,0
+ISABELA,RAMON,Other Fish,169,64.14
+ISABELA,RAMON,Other fruit-bearing trees and vines,2,0.7
+ISABELA,RAMON,Other fruit-bearing vegetables,3,1.32
+ISABELA,RAMON,Other leafy vegetables,5,2.27
+ISABELA,RAMON,Other leguminous plants,1,0.84
+ISABELA,RAMON,Other poultry,1,0
+ISABELA,RAMON,Other varieties of tobacco,1,1.2
+ISABELA,RAMON,Pigs or swine,146,0
+ISABELA,RAMON,Rice/Palay,4377,8504.97
+ISABELA,RAMON,Sheep,3,0
+ISABELA,RAMON,Tilapia,110,41.4
+ISABELA,RAMON,Turkeys,4,0
+ISABELA,RAMON,Water melon,1,2
+ISABELA,REINA MERCEDES,Ampalaya,19,6.9
+ISABELA,REINA MERCEDES,Banana,1,1
+ISABELA,REINA MERCEDES,Beans - dry,1,0.1
+ISABELA,REINA MERCEDES,Broccoli,1,0.5
+ISABELA,REINA MERCEDES,Buffaloes (Carabaos),72,0
+ISABELA,REINA MERCEDES,Cassava (kamoteng kahoy),2,1.3
+ISABELA,REINA MERCEDES,Cattle,187,0
+ISABELA,REINA MERCEDES,Chickens,434,0
+ISABELA,REINA MERCEDES,Coconut,1,2
+ISABELA,REINA MERCEDES,Corn,1516,1684.54
+ISABELA,REINA MERCEDES,Cowpea,2,0
+ISABELA,REINA MERCEDES,Dogs and cats,1,0
+ISABELA,REINA MERCEDES,Ducks,239,0
+ISABELA,REINA MERCEDES,Eggplant (talong),1,0
+ISABELA,REINA MERCEDES,Geese,10,0
+ISABELA,REINA MERCEDES,Goats,14,0
+ISABELA,REINA MERCEDES,Kalamansi,1,1.4
+ISABELA,REINA MERCEDES,Lime (Calamansi),1,0.5
+ISABELA,REINA MERCEDES,Other crops for fiber production,23,8.85
+ISABELA,REINA MERCEDES,Other Fish,1,0.06
+ISABELA,REINA MERCEDES,Other fruit-bearing vegetables,76,31.86
+ISABELA,REINA MERCEDES,Other leafy vegetables,14,4.49
+ISABELA,REINA MERCEDES,Other leguminous plants,14,5.75
+ISABELA,REINA MERCEDES,Other varieties of tobacco,113,97.85
+ISABELA,REINA MERCEDES,Peanuts,5,2.3
+ISABELA,REINA MERCEDES,Pigeons,2,0
+ISABELA,REINA MERCEDES,Pigs or swine,184,0
+ISABELA,REINA MERCEDES,Rice/Palay,1229,1345.42
+ISABELA,REINA MERCEDES,Sheep,1,0
+ISABELA,REINA MERCEDES,Squash (kalabasa),1,0.1
+ISABELA,REINA MERCEDES,String beans - harvested green (sitao),2,0.6
+ISABELA,REINA MERCEDES,Sugarcane,1,6
+ISABELA,REINA MERCEDES,Tobacco (native),15,8.2
+ISABELA,REINA MERCEDES,Tobacco (Virginia),1,1.25
+ISABELA,REINA MERCEDES,Turkeys,3,0
+ISABELA,ROXAS,Avocado,1,0.19
+ISABELA,ROXAS,Banana,4,5.24
+ISABELA,ROXAS,Buffaloes (Carabaos),43,0
+ISABELA,ROXAS,Cattle,23,0
+ISABELA,ROXAS,Chickens,30,0
+ISABELA,ROXAS,Coconut,5,8.04
+ISABELA,ROXAS,Corn,1410,1762.08
+ISABELA,ROXAS,Dogs and cats,1,0
+ISABELA,ROXAS,Ducks,37,0
+ISABELA,ROXAS,Eggplant (talong),1,0.19
+ISABELA,ROXAS,Geese,1,0
+ISABELA,ROXAS,Goats,9,0
+ISABELA,ROXAS,Hito/Catfish,2,0.26
+ISABELA,ROXAS,Lemon,1,0.1
+ISABELA,ROXAS,Lime (Calamansi),2,0.9
+ISABELA,ROXAS,Mango,10,20.1
+ISABELA,ROXAS,Mushroom,1,0.02
+ISABELA,ROXAS,Other Fish,9,4.34
+ISABELA,ROXAS,Other fruit-bearing trees and vines,9,3.81
+ISABELA,ROXAS,Other fruit-bearing vegetables,71,42.06
+ISABELA,ROXAS,Other leafy vegetables,24,8.01
+ISABELA,ROXAS,Other leguminous plants,1,0.81
+ISABELA,ROXAS,Other varieties of tobacco,1,0.98
+ISABELA,ROXAS,Peanuts,1,0.2
+ISABELA,ROXAS,Pigs or swine,25,0
+ISABELA,ROXAS,Quail,1,0
+ISABELA,ROXAS,Rabbits and hares,1,0
+ISABELA,ROXAS,Rambutan,1,0.5
+ISABELA,ROXAS,Rice/Palay,3941,7291.42
+ISABELA,ROXAS,Sheep,1,0
+ISABELA,ROXAS,Squash (kalabasa),1,0.3
+ISABELA,ROXAS,Tamarind (sampaloc),1,0.1
+ISABELA,ROXAS,Tilapia,9,3.86
+ISABELA,ROXAS,Tobacco (native),4,2.31
+ISABELA,ROXAS,Turkeys,2,0
+ISABELA,SAN AGUSTIN,Ampalaya,1,0.5
+ISABELA,SAN AGUSTIN,Avocado,1,7.5
+ISABELA,SAN AGUSTIN,Banana,306,340.73
+ISABELA,SAN AGUSTIN,Black Turtle Beans,1,1
+ISABELA,SAN AGUSTIN,Buffaloes (Carabaos),1380,0
+ISABELA,SAN AGUSTIN,Cacao,6,3.75
+ISABELA,SAN AGUSTIN,Camote,6,4.35
+ISABELA,SAN AGUSTIN,Cassava (kamoteng kahoy),636,636.92
+ISABELA,SAN AGUSTIN,Cattle,467,0
+ISABELA,SAN AGUSTIN,Chickens,1499,0
+ISABELA,SAN AGUSTIN,Coconut,7,4.1
+ISABELA,SAN AGUSTIN,Coffee - other varieties,1,0.25
+ISABELA,SAN AGUSTIN,Corn,3239,5587.21
+ISABELA,SAN AGUSTIN,Cowpea,1,0
+ISABELA,SAN AGUSTIN,Dogs and cats,3,0
+ISABELA,SAN AGUSTIN,Ducks,649,0
+ISABELA,SAN AGUSTIN,Eggplant (talong),4,0.69
+ISABELA,SAN AGUSTIN,"Forage grass (sacate, alfalfa, green corn stalk)",3,1.7
+ISABELA,SAN AGUSTIN,Geese,24,0
+ISABELA,SAN AGUSTIN,Ginger (luya),1,0.13
+ISABELA,SAN AGUSTIN,Goats,127,0
+ISABELA,SAN AGUSTIN,Green corn,1,1
+ISABELA,SAN AGUSTIN,Guyabano,1,5
+ISABELA,SAN AGUSTIN,Hito/Catfish,3,0.03
+ISABELA,SAN AGUSTIN,Horses,5,0
+ISABELA,SAN AGUSTIN,Lime (Calamansi),1,0
+ISABELA,SAN AGUSTIN,Mango,8,16.8
+ISABELA,SAN AGUSTIN,Other animals (e.g.,35,0
+ISABELA,SAN AGUSTIN,Other Fish,10,1.6
+ISABELA,SAN AGUSTIN,Other fruit-bearing trees and vines,2,0.5
+ISABELA,SAN AGUSTIN,Other fruit-bearing vegetables,29,5.57
+ISABELA,SAN AGUSTIN,Other leafy vegetables,10,3.88
+ISABELA,SAN AGUSTIN,Other leguminous plants,1,2
+ISABELA,SAN AGUSTIN,Other tubers - roots and bulbs,1,1
+ISABELA,SAN AGUSTIN,Peanuts,10,3.94
+ISABELA,SAN AGUSTIN,Pigeons,1,0
+ISABELA,SAN AGUSTIN,Pigs or swine,476,0
+ISABELA,SAN AGUSTIN,Rabbits and hares,1,0
+ISABELA,SAN AGUSTIN,Rambutan,2,7.75
+ISABELA,SAN AGUSTIN,Rice/Palay,2619,2532.6
+ISABELA,SAN AGUSTIN,Sheep,1,0
+ISABELA,SAN AGUSTIN,String beans - harvested green (sitao),4,0.9
+ISABELA,SAN AGUSTIN,Sugarcane,1,1
+ISABELA,SAN AGUSTIN,Tilapia,25,7.37
+ISABELA,SAN AGUSTIN,Tobacco (native),2,1
+ISABELA,SAN AGUSTIN,Turkeys,20,0
+ISABELA,SAN AGUSTIN,Water melon,3,1.38
+ISABELA,SAN GUILLERMO,Arrowroot,1,0.2
+ISABELA,SAN GUILLERMO,Atis,1,0.5
+ISABELA,SAN GUILLERMO,Banana,2269,1671.42
+ISABELA,SAN GUILLERMO,Beans - dry,1,0.5
+ISABELA,SAN GUILLERMO,Buffaloes (Carabaos),876,0
+ISABELA,SAN GUILLERMO,Cacao,11,6.2
+ISABELA,SAN GUILLERMO,Cassava (kamoteng kahoy),603,474.96
+ISABELA,SAN GUILLERMO,Cattle,19,0
+ISABELA,SAN GUILLERMO,Chickens,761,0
+ISABELA,SAN GUILLERMO,Coconut,11,4.38
+ISABELA,SAN GUILLERMO,Coffee - other varieties,2,1.75
+ISABELA,SAN GUILLERMO,Corn,4126,6582.03
+ISABELA,SAN GUILLERMO,Dogs and cats,73,0
+ISABELA,SAN GUILLERMO,Dragon Fruit,1,0.5
+ISABELA,SAN GUILLERMO,Ducks,334,0
+ISABELA,SAN GUILLERMO,Durian,2,0.12
+ISABELA,SAN GUILLERMO,Gabi tubers,1,0.8
+ISABELA,SAN GUILLERMO,Geese,7,0
+ISABELA,SAN GUILLERMO,Ginger (luya),6,2.35
+ISABELA,SAN GUILLERMO,Gmelina Arborea,4,3
+ISABELA,SAN GUILLERMO,Goats,41,0
+ISABELA,SAN GUILLERMO,Guyabano,6,4.5
+ISABELA,SAN GUILLERMO,Hito/Catfish,3,0.94
+ISABELA,SAN GUILLERMO,Horses,3,0
+ISABELA,SAN GUILLERMO,Kalamansi,2,2.3
+ISABELA,SAN GUILLERMO,Lanzones,2,0.14
+ISABELA,SAN GUILLERMO,Lime (Calamansi),1,3
+ISABELA,SAN GUILLERMO,Lumbang,1,0.1
+ISABELA,SAN GUILLERMO,Malunggay,1,0.25
+ISABELA,SAN GUILLERMO,Mango,8,2.5
+ISABELA,SAN GUILLERMO,Mongo (Mung Bean),1,0.25
+ISABELA,SAN GUILLERMO,Orange (dalandan),1,1.2
+ISABELA,SAN GUILLERMO,Other animals (e.g.,1,0
+ISABELA,SAN GUILLERMO,Other Fish,12,1.35
+ISABELA,SAN GUILLERMO,Other fruit-bearing trees and vines,20,24.9
+ISABELA,SAN GUILLERMO,Other fruit-bearing vegetables,32,7.35
+ISABELA,SAN GUILLERMO,Other industrial crops,1,1
+ISABELA,SAN GUILLERMO,Other leafy vegetables,41,7.81
+ISABELA,SAN GUILLERMO,Other tubers - roots and bulbs,2,0.75
+ISABELA,SAN GUILLERMO,Pigeons,3,0
+ISABELA,SAN GUILLERMO,Pigs or swine,409,0
+ISABELA,SAN GUILLERMO,Pineapple,457,280.1
+ISABELA,SAN GUILLERMO,Pomelo (suha),1,2
+ISABELA,SAN GUILLERMO,Potato (patatas),2,0.8
+ISABELA,SAN GUILLERMO,Rambutan,10,5
+ISABELA,SAN GUILLERMO,Rice/Palay,3092,1936.41
+ISABELA,SAN GUILLERMO,Sheep,9,0
+ISABELA,SAN GUILLERMO,Squash (kalabasa),2,1
+ISABELA,SAN GUILLERMO,Sugarcane,7,11.05
+ISABELA,SAN GUILLERMO,Sweet peas - harvested green (sitsaro),1,3
+ISABELA,SAN GUILLERMO,Taro,2,0.5
+ISABELA,SAN GUILLERMO,Tiger Grass,3,1.15
+ISABELA,SAN GUILLERMO,Tilapia,8,1.53
+ISABELA,SAN GUILLERMO,Turkeys,11,0
+ISABELA,SAN ISIDRO,Buffaloes (Carabaos),21,0
+ISABELA,SAN ISIDRO,Cattle,47,0
+ISABELA,SAN ISIDRO,Chickens,70,0
+ISABELA,SAN ISIDRO,Corn,85,110.06
+ISABELA,SAN ISIDRO,Ducks,55,0
+ISABELA,SAN ISIDRO,Geese,2,0
+ISABELA,SAN ISIDRO,Goats,21,0
+ISABELA,SAN ISIDRO,Mango,1,4.7
+ISABELA,SAN ISIDRO,Other animals (e.g.,1,0
+ISABELA,SAN ISIDRO,Other Fish,26,6.09
+ISABELA,SAN ISIDRO,Other fruit-bearing trees and vines,1,0.37
+ISABELA,SAN ISIDRO,Other fruit-bearing vegetables,10,2.96
+ISABELA,SAN ISIDRO,Other leafy vegetables,20,5.81
+ISABELA,SAN ISIDRO,Papaya,1,1.5
+ISABELA,SAN ISIDRO,Pigs or swine,39,0
+ISABELA,SAN ISIDRO,Rice/Palay,2874,4577.8
+ISABELA,SAN ISIDRO,Sheep,1,0
+ISABELA,SAN ISIDRO,Squash (kalabasa),1,1.5
+ISABELA,SAN ISIDRO,Sugarcane,2,5.23
+ISABELA,SAN ISIDRO,Tilapia,14,2.31
+ISABELA,SAN ISIDRO,Turkeys,1,0
+ISABELA,SAN ISIDRO,Water melon,1,0.83
+ISABELA,SAN MANUEL,Ampalaya,1,0.7
+ISABELA,SAN MANUEL,Banana,5,1.27
+ISABELA,SAN MANUEL,Beans - dry,1,0.24
+ISABELA,SAN MANUEL,Buffaloes (Carabaos),73,0
+ISABELA,SAN MANUEL,Cassava (kamoteng kahoy),1,0.25
+ISABELA,SAN MANUEL,Cattle,58,0
+ISABELA,SAN MANUEL,Chickens,265,0
+ISABELA,SAN MANUEL,Corn,195,344.95
+ISABELA,SAN MANUEL,Dogs and cats,1,0
+ISABELA,SAN MANUEL,Ducks,194,0
+ISABELA,SAN MANUEL,Eggplant (talong),1,0.5
+ISABELA,SAN MANUEL,Geese,14,0
+ISABELA,SAN MANUEL,Goats,33,0
+ISABELA,SAN MANUEL,Kalamansi,1,1
+ISABELA,SAN MANUEL,Lime (Calamansi),4,3.8
+ISABELA,SAN MANUEL,Mango,1,0.02
+ISABELA,SAN MANUEL,Okra,1,0.5
+ISABELA,SAN MANUEL,Other fruit-bearing trees and vines,1,0.6
+ISABELA,SAN MANUEL,Other fruit-bearing vegetables,1,0.19
+ISABELA,SAN MANUEL,Other leafy vegetables,4,1.14
+ISABELA,SAN MANUEL,Pigs or swine,181,0
+ISABELA,SAN MANUEL,Rabbits and hares,1,0
+ISABELA,SAN MANUEL,Rice/Palay,2690,5737.1
+ISABELA,SAN MANUEL,Sheep,1,0
+ISABELA,SAN MANUEL,String beans - harvested green (sitao),1,0
+ISABELA,SAN MANUEL,Sugarcane,2,8.4
+ISABELA,SAN MANUEL,Tilapia,3,0.33
+ISABELA,SAN MANUEL,Tobacco (native),1,0.5
+ISABELA,SAN MANUEL,Turkeys,13,0
+ISABELA,SAN MARIANO,Acacia,1,1
+ISABELA,SAN MARIANO,Ampalaya,1,0.5
+ISABELA,SAN MARIANO,Banana,2545,2348.71
+ISABELA,SAN MARIANO,Beans - dry,4,1.13
+ISABELA,SAN MARIANO,Broccoli,1,0.5
+ISABELA,SAN MARIANO,Buffaloes (Carabaos),1110,0
+ISABELA,SAN MARIANO,Camote,1,1
+ISABELA,SAN MARIANO,Cassava (kamoteng kahoy),2236,2197.02
+ISABELA,SAN MARIANO,Castorbeans (tangantangan),1,0.5
+ISABELA,SAN MARIANO,Cattle,53,0
+ISABELA,SAN MARIANO,Chickens,998,0
+ISABELA,SAN MARIANO,Coconut,10,9.07
+ISABELA,SAN MARIANO,Coffee - other varieties,2,1.3
+ISABELA,SAN MARIANO,Common beans (habitchuelas),1,0.25
+ISABELA,SAN MARIANO,Corn,9236,16042.79
+ISABELA,SAN MARIANO,Dogs and cats,66,0
+ISABELA,SAN MARIANO,Dragon Fruit,1,0.25
+ISABELA,SAN MARIANO,Ducks,316,0
+ISABELA,SAN MARIANO,"Forage grass (sacate, alfalfa, green corn stalk)",4,2.75
+ISABELA,SAN MARIANO,Geese,9,0
+ISABELA,SAN MARIANO,Gemilina,2,1
+ISABELA,SAN MARIANO,Ginger (luya),8,3.85
+ISABELA,SAN MARIANO,Gmelina Arborea,6,4.25
+ISABELA,SAN MARIANO,Goats,37,0
+ISABELA,SAN MARIANO,Green corn,1,0.08
+ISABELA,SAN MARIANO,Guyabano,1,1.5
+ISABELA,SAN MARIANO,Hito/Catfish,4,1.15
+ISABELA,SAN MARIANO,Horses,5,0
+ISABELA,SAN MARIANO,Lime (Calamansi),2,0.63
+ISABELA,SAN MARIANO,Mahogany,2,0.75
+ISABELA,SAN MARIANO,Mandarin (dalanghita),1,0.5
+ISABELA,SAN MARIANO,Mango,7,10.86
+ISABELA,SAN MARIANO,Mongo (Mung Bean),4,1.5
+ISABELA,SAN MARIANO,Narra,1,3
+ISABELA,SAN MARIANO,Orange (dalandan),1,1
+ISABELA,SAN MARIANO,Other animals (e.g.,1,0
+ISABELA,SAN MARIANO,Other crops for fiber production,1,3
+ISABELA,SAN MARIANO,Other Fish,29,7.6
+ISABELA,SAN MARIANO,Other fruit-bearing trees and vines,12,11.64
+ISABELA,SAN MARIANO,Other fruit-bearing vegetables,38,24.49
+ISABELA,SAN MARIANO,Other industrial crops,2,2.02
+ISABELA,SAN MARIANO,Other industrial permanent crops not elsewhere classified,1,0.5
+ISABELA,SAN MARIANO,Other leafy vegetables,22,5.55
+ISABELA,SAN MARIANO,Other varieties of tobacco,6,3.6
+ISABELA,SAN MARIANO,Palm tree,1,1
+ISABELA,SAN MARIANO,Peacock,1,0
+ISABELA,SAN MARIANO,Peanuts,1,0.25
+ISABELA,SAN MARIANO,Pigeons,1,0
+ISABELA,SAN MARIANO,Pigs or swine,376,0
+ISABELA,SAN MARIANO,Pineapple,6,3.25
+ISABELA,SAN MARIANO,Potato (patatas),2,0.4
+ISABELA,SAN MARIANO,Quail,1,0
+ISABELA,SAN MARIANO,Rabbits and hares,1,0
+ISABELA,SAN MARIANO,Rambutan,1,0.25
+ISABELA,SAN MARIANO,Rice/Palay,4784,3133.45
+ISABELA,SAN MARIANO,String beans - harvested green (sitao),1,0.25
+ISABELA,SAN MARIANO,Sugarcane,174,660.65
+ISABELA,SAN MARIANO,Taro,1,0.5
+ISABELA,SAN MARIANO,Tilapia,56,13.75
+ISABELA,SAN MARIANO,Tobacco (native),25,14.11
+ISABELA,SAN MARIANO,Tobacco (Virginia),1,1
+ISABELA,SAN MARIANO,Turkeys,14,0
+ISABELA,SAN MARIANO,Ube,1,0.5
+ISABELA,SAN MARIANO,Water melon,60,78.55
+ISABELA,SAN MATEO,Ampalaya,1,0.05
+ISABELA,SAN MATEO,Arrowroot,1,0.75
+ISABELA,SAN MATEO,Banana,3,1.7
+ISABELA,SAN MATEO,Beans - dry,1,0.02
+ISABELA,SAN MATEO,Buffaloes (Carabaos),46,0
+ISABELA,SAN MATEO,Cattle,175,0
+ISABELA,SAN MATEO,Chickens,835,0
+ISABELA,SAN MATEO,Coconut,3,40
+ISABELA,SAN MATEO,Corn,219,309.16
+ISABELA,SAN MATEO,Cowpea,1,0
+ISABELA,SAN MATEO,Dogs and cats,6,0
+ISABELA,SAN MATEO,Ducks,547,0
+ISABELA,SAN MATEO,Eggplant (talong),1,0.8
+ISABELA,SAN MATEO,Geese,22,0
+ISABELA,SAN MATEO,Goats,98,0
+ISABELA,SAN MATEO,Hito/Catfish,8,1.35
+ISABELA,SAN MATEO,Kalamansi,1,20
+ISABELA,SAN MATEO,Lettuce,1,0.06
+ISABELA,SAN MATEO,Mango,5,59.1
+ISABELA,SAN MATEO,Mongo (Mung Bean),12,11.55
+ISABELA,SAN MATEO,Orchard,1,0.1
+ISABELA,SAN MATEO,Other animals (e.g.,1,0
+ISABELA,SAN MATEO,Other Fish,103,26.89
+ISABELA,SAN MATEO,Other fruit-bearing trees and vines,1,0.2
+ISABELA,SAN MATEO,Other fruit-bearing vegetables,36,14.94
+ISABELA,SAN MATEO,Other leafy vegetables,15,3.05
+ISABELA,SAN MATEO,Other leguminous plants,2,0.41
+ISABELA,SAN MATEO,Other varieties of tobacco,2,3.29
+ISABELA,SAN MATEO,Palm tree,1,0.5
+ISABELA,SAN MATEO,Peanuts,3,2.07
+ISABELA,SAN MATEO,Pechay,1,0.1
+ISABELA,SAN MATEO,Pigs or swine,457,0
+ISABELA,SAN MATEO,Rabbits and hares,2,0
+ISABELA,SAN MATEO,Rice/Palay,5000,8927.18
+ISABELA,SAN MATEO,Sheep,6,0
+ISABELA,SAN MATEO,Squash (kalabasa),2,0.04
+ISABELA,SAN MATEO,String beans - harvested green (sitao),7,0.36
+ISABELA,SAN MATEO,Sugarcane,1,2
+ISABELA,SAN MATEO,Tilapia,46,7.88
+ISABELA,SAN MATEO,Tobacco (native),4,2.3
+ISABELA,SAN MATEO,Tobacco (Virginia),1,0.9
+ISABELA,SAN MATEO,Turkeys,16,0
+ISABELA,SAN PABLO,Ampalaya,5,1.95
+ISABELA,SAN PABLO,Buffaloes (Carabaos),466,0
+ISABELA,SAN PABLO,Cattle,284,0
+ISABELA,SAN PABLO,Chickens,90,0
+ISABELA,SAN PABLO,Corn,3729,5137.63
+ISABELA,SAN PABLO,Ducks,7,0
+ISABELA,SAN PABLO,Eggplant (talong),2,0.5
+ISABELA,SAN PABLO,Goats,4,0
+ISABELA,SAN PABLO,Herbal/medicinal plants (banaba),1,0
+ISABELA,SAN PABLO,Horses,1,0
+ISABELA,SAN PABLO,Mango,2,8
+ISABELA,SAN PABLO,Mongo (Mung Bean),5,2.45
+ISABELA,SAN PABLO,Other fruit-bearing vegetables,8,8.55
+ISABELA,SAN PABLO,Other leguminous plants,4,1
+ISABELA,SAN PABLO,Other poultry,2,0
+ISABELA,SAN PABLO,Pigeon pea,1,0
+ISABELA,SAN PABLO,Pigs or swine,127,0
+ISABELA,SAN PABLO,Rice/Palay,1655,1478.91
+ISABELA,SAN PABLO,Squash (kalabasa),7,3.45
+ISABELA,SAN PABLO,Tobacco (native),2,1
+ISABELA,SAN PABLO,Tomato (kamatis),1,0.25
+ISABELA,SAN PABLO,Water melon,2,1.8
+ISABELA,SANTA MARIA,Ampalaya,1,0.5
+ISABELA,SANTA MARIA,Buffaloes (Carabaos),68,0
+ISABELA,SANTA MARIA,Camote,2,0.9
+ISABELA,SANTA MARIA,Cassava (kamoteng kahoy),1,2.5
+ISABELA,SANTA MARIA,Cattle,276,0
+ISABELA,SANTA MARIA,Chickens,374,0
+ISABELA,SANTA MARIA,Corn,1531,1986.86
+ISABELA,SANTA MARIA,Dogs and cats,122,0
+ISABELA,SANTA MARIA,Ducks,218,0
+ISABELA,SANTA MARIA,Geese,5,0
+ISABELA,SANTA MARIA,Goats,31,0
+ISABELA,SANTA MARIA,Horses,8,0
+ISABELA,SANTA MARIA,Other Fish,11,4.59
+ISABELA,SANTA MARIA,Other fruit-bearing vegetables,14,4.47
+ISABELA,SANTA MARIA,Other industrial crops,2,1.08
+ISABELA,SANTA MARIA,Other leafy vegetables,12,3.08
+ISABELA,SANTA MARIA,Other poultry,1,0
+ISABELA,SANTA MARIA,Peanuts,4,1.97
+ISABELA,SANTA MARIA,Pigs or swine,144,0
+ISABELA,SANTA MARIA,Potato (patatas),5,5.55
+ISABELA,SANTA MARIA,Quail,1,0
+ISABELA,SANTA MARIA,Rice/Palay,1459,1977.94
+ISABELA,SANTA MARIA,Sheep,2,0
+ISABELA,SANTA MARIA,Sugarcane,36,249.92
+ISABELA,SANTA MARIA,Tilapia,25,4.46
+ISABELA,SANTA MARIA,Tobacco (native),1,0.58
+ISABELA,SANTA MARIA,Turkeys,13,0
+ISABELA,SANTA MARIA,Water melon,2,0.5
+ISABELA,SANTO TOMAS,Ampalaya,1,1
+ISABELA,SANTO TOMAS,Buffaloes (Carabaos),61,0
+ISABELA,SANTO TOMAS,Cattle,264,0
+ISABELA,SANTO TOMAS,Chickens,412,1
+ISABELA,SANTO TOMAS,Corn,2590,3079.83
+ISABELA,SANTO TOMAS,Dogs and cats,4,0
+ISABELA,SANTO TOMAS,Ducks,52,0
+ISABELA,SANTO TOMAS,Geese,1,0
+ISABELA,SANTO TOMAS,Goats,6,0
+ISABELA,SANTO TOMAS,Hito/Catfish,1,0.12
+ISABELA,SANTO TOMAS,Other Fish,26,5.06
+ISABELA,SANTO TOMAS,Other fruit-bearing trees and vines,3,0.42
+ISABELA,SANTO TOMAS,Other fruit-bearing vegetables,84,12.49
+ISABELA,SANTO TOMAS,Other leafy vegetables,47,7.41
+ISABELA,SANTO TOMAS,Other leguminous plants,3,0.3
+ISABELA,SANTO TOMAS,Other poultry,1,0
+ISABELA,SANTO TOMAS,Other varieties of tobacco,5,6
+ISABELA,SANTO TOMAS,Peanuts,8,3.45
+ISABELA,SANTO TOMAS,Pigs or swine,168,0
+ISABELA,SANTO TOMAS,Rice/Palay,2434,3632.24
+ISABELA,SANTO TOMAS,Tilapia,13,2.12
+ISABELA,SANTO TOMAS,Tobacco (native),5,3.75
+ISABELA,SANTO TOMAS,Tobacco (Virginia),1,0.8
+ISABELA,SANTO TOMAS,Turkeys,2,0
+ISABELA,TUMAUINI,Banana,12,6.85
+ISABELA,TUMAUINI,Buffaloes (Carabaos),89,0
+ISABELA,TUMAUINI,Cantaloupes- honey dew and other melon varieties,1,0.4
+ISABELA,TUMAUINI,Cassava (kamoteng kahoy),7,6.3
+ISABELA,TUMAUINI,Cattle,388,0
+ISABELA,TUMAUINI,Chickens,79,0
+ISABELA,TUMAUINI,Coconut,1,0.25
+ISABELA,TUMAUINI,Corn,5125,7902.77
+ISABELA,TUMAUINI,crops for seed and seedling,1,0.25
+ISABELA,TUMAUINI,Dragon Fruit,41,3.99
+ISABELA,TUMAUINI,Ducks,32,0
+ISABELA,TUMAUINI,Eggplant (talong),2,0.05
+ISABELA,TUMAUINI,Geese,5,0
+ISABELA,TUMAUINI,Goats,24,0
+ISABELA,TUMAUINI,Hito/Catfish,1,2
+ISABELA,TUMAUINI,Mango,9,9.59
+ISABELA,TUMAUINI,Mongo (Mung Bean),1,1.5
+ISABELA,TUMAUINI,Ornamental Flowers,7,1.52
+ISABELA,TUMAUINI,Other animals (e.g.,1,0
+ISABELA,TUMAUINI,Other Fish,3,3
+ISABELA,TUMAUINI,Other fruit-bearing trees and vines,3,1.35
+ISABELA,TUMAUINI,Other fruit-bearing vegetables,42,14.3
+ISABELA,TUMAUINI,Other leafy vegetables,100,33.96
+ISABELA,TUMAUINI,Other leguminous plants,4,0.83
+ISABELA,TUMAUINI,Other poultry,2,0
+ISABELA,TUMAUINI,Other varieties of tobacco,1,0.25
+ISABELA,TUMAUINI,Pigs or swine,361,0
+ISABELA,TUMAUINI,Rice/Palay,4582,6144.54
+ISABELA,TUMAUINI,Sugarcane,3,7.9
+ISABELA,TUMAUINI,Tilapia,7,2.08
+ISABELA,TUMAUINI,Tobacco (native),43,36.02
+ISABELA,TUMAUINI,Turkeys,2,0
+ISABELA,TUMAUINI,Water melon,1,1
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Avocado,1,0.05
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Bamboo (Kawayan),1,0.15
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Banana,13,6.6
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Basil,1,0.5
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Beans - dry,84,32.83
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Bellpepper (Green/Red),16,6.55
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Black pepper,2,0.63
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Buffaloes (Carabaos),21,0
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Bush Sitao,1,0.05
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Cacao,2,1
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Camote,9,2.76
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Camote tops (talbos ng kamote),5,1.95
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Cassava (kamoteng kahoy),8,4.7
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Cattle,7,0
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Cauliflower,1,0.5
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Chickens,53,0
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Chili (labuyo),47,16.02
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Coconut,11,10.86
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Coffee - other varieties,2,0.38
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Common beans (habitchuelas),11,4.13
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Corn,438,406.88
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Cucumber (pipino),18,5.78
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Dragon Fruit,54,34.14
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Ducks,20,0
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Eggplant (talong),4,1.43
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Gabi tubers,7,1.47
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Ginger (luya),56,20.91
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Goats,7,0
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Green Beans (Baguio Beans),1,0.6
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Guavas (bayabas),1,0.25
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Guyabano,3,1.66
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Lemon,2,0.6
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Lime (Calamansi),5,4.09
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Long Chili,22,11.44
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Luyang dilaw,1,0.25
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Mango,1,0.5
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Mangosteen,1,0.2
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Mongo (Mung Bean),1,0.5
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Onion bulbs (sibuyas),134,79.05
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Other Fish,1,0.02
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Other fruit-bearing trees and vines,14,13
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Other fruit-bearing vegetables,125,61.2
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Other leafy vegetables,28,21.19
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Other leguminous plants,21,14.55
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Other tubers - roots and bulbs,1,0.3
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Papaya,8,3.9
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Pepper - small green,1,0.5
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Pepper - sweet,2,0.75
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Pigs or swine,38,0
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Pineapple,1,0.3
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Potato (patatas),1,0.25
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Rabbits and hares,1,0
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Rambutan,2,0.5
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Rice/Palay,704,572.32
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Squash (kalabasa),10,6.75
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Starapple (caimito),1,0.2
+NUEVA VIZCAYA,ALFONSO CASTANEDA,String beans - harvested green (sitao),32,22.5
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Sweet peas - harvested green (sitsaro),3,0.53
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Taro,3,1
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Tiger Grass,17,10.05
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Tilapia,2,0.01
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Tomato (kamatis),58,24.97
+NUEVA VIZCAYA,ALFONSO CASTANEDA,Turkeys,2,0
+NUEVA VIZCAYA,AMBAGUIO,Abaca,1,1
+NUEVA VIZCAYA,AMBAGUIO,Ampalaya,3,0.67
+NUEVA VIZCAYA,AMBAGUIO,Avocado,1,0.7
+NUEVA VIZCAYA,AMBAGUIO,Banana,7,1.32
+NUEVA VIZCAYA,AMBAGUIO,Beans - dry,418,153.79
+NUEVA VIZCAYA,AMBAGUIO,Bellpepper (Green/Red),27,12.6
+NUEVA VIZCAYA,AMBAGUIO,Betel Nut (Nga-nga),28,6.91
+NUEVA VIZCAYA,AMBAGUIO,Black pepper,4,1.3
+NUEVA VIZCAYA,AMBAGUIO,Black Turtle Beans,1,0.25
+NUEVA VIZCAYA,AMBAGUIO,Broccoli,20,8.07
+NUEVA VIZCAYA,AMBAGUIO,Buffaloes (Carabaos),39,0
+NUEVA VIZCAYA,AMBAGUIO,Cabbage (repolyo),188,99.39
+NUEVA VIZCAYA,AMBAGUIO,Cacao,1,0.75
+NUEVA VIZCAYA,AMBAGUIO,Camote,680,248.76
+NUEVA VIZCAYA,AMBAGUIO,Camote tops (talbos ng kamote),6,1.5
+NUEVA VIZCAYA,AMBAGUIO,Carrot,84,51.72
+NUEVA VIZCAYA,AMBAGUIO,Cassava (kamoteng kahoy),20,6.52
+NUEVA VIZCAYA,AMBAGUIO,Cattle,19,0
+NUEVA VIZCAYA,AMBAGUIO,Cauliflower,2,0.35
+NUEVA VIZCAYA,AMBAGUIO,Chayote,21,10.94
+NUEVA VIZCAYA,AMBAGUIO,Chickens,819,0
+NUEVA VIZCAYA,AMBAGUIO,Chili (labuyo),52,21.96
+NUEVA VIZCAYA,AMBAGUIO,Chinese Cabbage,18,8.79
+NUEVA VIZCAYA,AMBAGUIO,Coconut,1,0.13
+NUEVA VIZCAYA,AMBAGUIO,Coffee - other varieties,68,43.48
+NUEVA VIZCAYA,AMBAGUIO,Coffee arabica,1,0.5
+NUEVA VIZCAYA,AMBAGUIO,Coffee robusta,2,0.97
+NUEVA VIZCAYA,AMBAGUIO,Common beans (habitchuelas),12,4.92
+NUEVA VIZCAYA,AMBAGUIO,Corn,59,16.72
+NUEVA VIZCAYA,AMBAGUIO,Cucumber (pipino),279,115.74
+NUEVA VIZCAYA,AMBAGUIO,Dogs and cats,40,0
+NUEVA VIZCAYA,AMBAGUIO,Ducks,319,0
+NUEVA VIZCAYA,AMBAGUIO,Durian,1,0.8
+NUEVA VIZCAYA,AMBAGUIO,Eggplant (talong),12,4.41
+NUEVA VIZCAYA,AMBAGUIO,Gabi tubers,66,13.42
+NUEVA VIZCAYA,AMBAGUIO,Geese,2,0
+NUEVA VIZCAYA,AMBAGUIO,Ginger (luya),615,181.91
+NUEVA VIZCAYA,AMBAGUIO,Goats,27,0
+NUEVA VIZCAYA,AMBAGUIO,Green Beans (Baguio Beans),27,14.11
+NUEVA VIZCAYA,AMBAGUIO,Guyabano,3,0.53
+NUEVA VIZCAYA,AMBAGUIO,Horses,1,0
+NUEVA VIZCAYA,AMBAGUIO,Kalamansi,1,0.5
+NUEVA VIZCAYA,AMBAGUIO,Lanzones,3,0.6
+NUEVA VIZCAYA,AMBAGUIO,Lettuce,1,0.25
+NUEVA VIZCAYA,AMBAGUIO,Lime (Calamansi),2,1.4
+NUEVA VIZCAYA,AMBAGUIO,Long Chili,4,1.33
+NUEVA VIZCAYA,AMBAGUIO,Luyang dilaw,4,1.46
+NUEVA VIZCAYA,AMBAGUIO,Mandarin (dalanghita),3,1
+NUEVA VIZCAYA,AMBAGUIO,Mango,2,0.5
+NUEVA VIZCAYA,AMBAGUIO,Mangosteen,1,0.13
+NUEVA VIZCAYA,AMBAGUIO,Okra,1,0.25
+NUEVA VIZCAYA,AMBAGUIO,Onion bulbs (sibuyas),3,1
+NUEVA VIZCAYA,AMBAGUIO,Onion shoot,1,0.1
+NUEVA VIZCAYA,AMBAGUIO,Other edible nuts,3,0.5
+NUEVA VIZCAYA,AMBAGUIO,Other fruit-bearing trees and vines,3,0.45
+NUEVA VIZCAYA,AMBAGUIO,Other fruit-bearing vegetables,164,106.93
+NUEVA VIZCAYA,AMBAGUIO,Other leafy vegetables,31,28.25
+NUEVA VIZCAYA,AMBAGUIO,Other spices,3,1.13
+NUEVA VIZCAYA,AMBAGUIO,Patane - dry,1,0.5
+NUEVA VIZCAYA,AMBAGUIO,Peanuts,35,10.13
+NUEVA VIZCAYA,AMBAGUIO,Peas- dry (gisantes),2,0.75
+NUEVA VIZCAYA,AMBAGUIO,Pechay,3,0.38
+NUEVA VIZCAYA,AMBAGUIO,Pepper - small green,12,3.77
+NUEVA VIZCAYA,AMBAGUIO,Pepper - sweet,63,26.36
+NUEVA VIZCAYA,AMBAGUIO,Pepper mint,1,0.5
+NUEVA VIZCAYA,AMBAGUIO,Pigeons,2,0
+NUEVA VIZCAYA,AMBAGUIO,Pigs or swine,140,0
+NUEVA VIZCAYA,AMBAGUIO,Pomelo (suha),1,1
+NUEVA VIZCAYA,AMBAGUIO,Potato (patatas),200,76.03
+NUEVA VIZCAYA,AMBAGUIO,Rabbits and hares,3,0
+NUEVA VIZCAYA,AMBAGUIO,Rambutan,9,1.95
+NUEVA VIZCAYA,AMBAGUIO,Rice/Palay,1146,673.61
+NUEVA VIZCAYA,AMBAGUIO,Squash (kalabasa),190,108.31
+NUEVA VIZCAYA,AMBAGUIO,String beans - harvested green (sitao),19,7.32
+NUEVA VIZCAYA,AMBAGUIO,Sweet peas - harvested green (sitsaro),56,18.71
+NUEVA VIZCAYA,AMBAGUIO,Taro,160,35.35
+NUEVA VIZCAYA,AMBAGUIO,Tilapia,1,0.1
+NUEVA VIZCAYA,AMBAGUIO,Tomato (kamatis),1243,661.51
+NUEVA VIZCAYA,AMBAGUIO,Turkeys,17,0
+NUEVA VIZCAYA,AMBAGUIO,Turnip (sinkamas),1,0.13
+NUEVA VIZCAYA,AMBAGUIO,White Turtle Beans,57,22.21
+NUEVA VIZCAYA,ARITAO,Ampalaya,1,0
+NUEVA VIZCAYA,ARITAO,Banana,5,0.88
+NUEVA VIZCAYA,ARITAO,Beans - dry,89,43.37
+NUEVA VIZCAYA,ARITAO,Bellpepper (Green/Red),1,0.5
+NUEVA VIZCAYA,ARITAO,Buffaloes (Carabaos),96,0
+NUEVA VIZCAYA,ARITAO,Cabbage (repolyo),12,6.51
+NUEVA VIZCAYA,ARITAO,Camote,23,9.74
+NUEVA VIZCAYA,ARITAO,Camote tops (talbos ng kamote),6,5.15
+NUEVA VIZCAYA,ARITAO,Cantaloupes- honey dew and other melon varieties,1,1.8
+NUEVA VIZCAYA,ARITAO,Cassava (kamoteng kahoy),7,3.9
+NUEVA VIZCAYA,ARITAO,Cattle,45,0
+NUEVA VIZCAYA,ARITAO,Cauliflower,5,2.7
+NUEVA VIZCAYA,ARITAO,Chayote,10,4.52
+NUEVA VIZCAYA,ARITAO,Chickens,285,0
+NUEVA VIZCAYA,ARITAO,Chili (labuyo),10,2.56
+NUEVA VIZCAYA,ARITAO,Coconut,2,2.8
+NUEVA VIZCAYA,ARITAO,Common beans (habitchuelas),1,0.25
+NUEVA VIZCAYA,ARITAO,Corn,65,55.26
+NUEVA VIZCAYA,ARITAO,Cucumber (pipino),34,13.07
+NUEVA VIZCAYA,ARITAO,Dogs and cats,4,0
+NUEVA VIZCAYA,ARITAO,Ducks,121,0
+NUEVA VIZCAYA,ARITAO,Eggplant (talong),10,3.84
+NUEVA VIZCAYA,ARITAO,Gabi tubers,2,0.13
+NUEVA VIZCAYA,ARITAO,Geese,4,0
+NUEVA VIZCAYA,ARITAO,Ginger (luya),31,20.98
+NUEVA VIZCAYA,ARITAO,Goats,44,0
+NUEVA VIZCAYA,ARITAO,Green Beans (Baguio Beans),4,1.75
+NUEVA VIZCAYA,ARITAO,Guyabano,2,0.13
+NUEVA VIZCAYA,ARITAO,Kalamansi,1,0.3
+NUEVA VIZCAYA,ARITAO,Lemon,3,0.75
+NUEVA VIZCAYA,ARITAO,Lime (Calamansi),1,0
+NUEVA VIZCAYA,ARITAO,Mandarin (dalanghita),2,0.83
+NUEVA VIZCAYA,ARITAO,Mongo (Mung Bean),1,2
+NUEVA VIZCAYA,ARITAO,Okra,1,0.25
+NUEVA VIZCAYA,ARITAO,Onion bulbs (sibuyas),534,272.85
+NUEVA VIZCAYA,ARITAO,Onion shoot,14,11.5
+NUEVA VIZCAYA,ARITAO,Other animals (e.g.,2,0
+NUEVA VIZCAYA,ARITAO,Other crops for fiber production,1,2
+NUEVA VIZCAYA,ARITAO,Other Fish,1,0.5
+NUEVA VIZCAYA,ARITAO,Other fruit-bearing trees and vines,14,12.8
+NUEVA VIZCAYA,ARITAO,Other fruit-bearing vegetables,361,421.52
+NUEVA VIZCAYA,ARITAO,Other industrial crops,3,1.35
+NUEVA VIZCAYA,ARITAO,Other leafy vegetables,105,93.34
+NUEVA VIZCAYA,ARITAO,Other leguminous plants,21,14
+NUEVA VIZCAYA,ARITAO,Other tubers - roots and bulbs,2,2.3
+NUEVA VIZCAYA,ARITAO,Pechay,3,0.25
+NUEVA VIZCAYA,ARITAO,Pepper - small green,1,0.33
+NUEVA VIZCAYA,ARITAO,Pepper - sweet,2,0
+NUEVA VIZCAYA,ARITAO,Pigs or swine,135,0
+NUEVA VIZCAYA,ARITAO,Pineapple,2,0.45
+NUEVA VIZCAYA,ARITAO,Pomelo (suha),1,0
+NUEVA VIZCAYA,ARITAO,Rabbits and hares,1,0
+NUEVA VIZCAYA,ARITAO,Rambutan,1,0
+NUEVA VIZCAYA,ARITAO,Rice/Palay,3582,4067.06
+NUEVA VIZCAYA,ARITAO,Sheep,1,0
+NUEVA VIZCAYA,ARITAO,Squash (kalabasa),23,7.78
+NUEVA VIZCAYA,ARITAO,String beans - harvested green (sitao),4,0.8
+NUEVA VIZCAYA,ARITAO,Sweet peas - harvested green (sitsaro),1,0.03
+NUEVA VIZCAYA,ARITAO,Taro,1,0
+NUEVA VIZCAYA,ARITAO,Tiger Grass,2,0.33
+NUEVA VIZCAYA,ARITAO,Tilapia,10,3.42
+NUEVA VIZCAYA,ARITAO,Tomato (kamatis),86,46.24
+NUEVA VIZCAYA,ARITAO,Turkeys,2,0
+NUEVA VIZCAYA,ARITAO,Ube,1,0
+NUEVA VIZCAYA,BAGABAG,Atis,1,0.1
+NUEVA VIZCAYA,BAGABAG,Avocado,1,0.1
+NUEVA VIZCAYA,BAGABAG,Bamboo (Kawayan),1,1
+NUEVA VIZCAYA,BAGABAG,Banana,14,7.76
+NUEVA VIZCAYA,BAGABAG,Beans - dry,3,0.6
+NUEVA VIZCAYA,BAGABAG,Buffaloes (Carabaos),162,0
+NUEVA VIZCAYA,BAGABAG,Cacao,6,3.16
+NUEVA VIZCAYA,BAGABAG,Camote,1,1.5
+NUEVA VIZCAYA,BAGABAG,Cassava (kamoteng kahoy),3,2.25
+NUEVA VIZCAYA,BAGABAG,Cattle,227,0
+NUEVA VIZCAYA,BAGABAG,Chickens,504,0
+NUEVA VIZCAYA,BAGABAG,Chico,1,0.1
+NUEVA VIZCAYA,BAGABAG,Chili (labuyo),1,0.1
+NUEVA VIZCAYA,BAGABAG,Coconut,4,0.7
+NUEVA VIZCAYA,BAGABAG,Coffee - other varieties,8,7.35
+NUEVA VIZCAYA,BAGABAG,Corn,1319,1689.01
+NUEVA VIZCAYA,BAGABAG,Cucumber (pipino),1,0.3
+NUEVA VIZCAYA,BAGABAG,Dogs and cats,4,0
+NUEVA VIZCAYA,BAGABAG,Dragon Fruit,1,0
+NUEVA VIZCAYA,BAGABAG,Ducks,280,0
+NUEVA VIZCAYA,BAGABAG,Durian,1,0.1
+NUEVA VIZCAYA,BAGABAG,Eggplant (talong),1,0.05
+NUEVA VIZCAYA,BAGABAG,"Forage grass (sacate, alfalfa, green corn stalk)",3,1
+NUEVA VIZCAYA,BAGABAG,Geese,12,0
+NUEVA VIZCAYA,BAGABAG,Ginger (luya),4,4.7
+NUEVA VIZCAYA,BAGABAG,Gmelina Arborea,1,0.07
+NUEVA VIZCAYA,BAGABAG,Goats,104,0
+NUEVA VIZCAYA,BAGABAG,Grapes (ubas),1,0.29
+NUEVA VIZCAYA,BAGABAG,Guinea Fowls,1,0
+NUEVA VIZCAYA,BAGABAG,Guyabano,2,0.33
+NUEVA VIZCAYA,BAGABAG,Hito/Catfish,7,1.95
+NUEVA VIZCAYA,BAGABAG,Horses,1,0
+NUEVA VIZCAYA,BAGABAG,Kalamansi,1,0.2
+NUEVA VIZCAYA,BAGABAG,Lanzones,1,0.23
+NUEVA VIZCAYA,BAGABAG,Lemon,1,0.1
+NUEVA VIZCAYA,BAGABAG,Mandarin (dalanghita),1,0
+NUEVA VIZCAYA,BAGABAG,Mango,16,14.25
+NUEVA VIZCAYA,BAGABAG,Marang,1,0.1
+NUEVA VIZCAYA,BAGABAG,Narra,1,0
+NUEVA VIZCAYA,BAGABAG,Okra,1,0.1
+NUEVA VIZCAYA,BAGABAG,Onion bulbs (sibuyas),1,0.02
+NUEVA VIZCAYA,BAGABAG,Ornamental Flowers,1,0.12
+NUEVA VIZCAYA,BAGABAG,Other animals (e.g.,5,0
+NUEVA VIZCAYA,BAGABAG,Other edible nuts,1,0.2
+NUEVA VIZCAYA,BAGABAG,Other Fish,20,6.56
+NUEVA VIZCAYA,BAGABAG,Other fruit-bearing trees and vines,77,57.88
+NUEVA VIZCAYA,BAGABAG,Other fruit-bearing vegetables,155,102.73
+NUEVA VIZCAYA,BAGABAG,Other industrial crops,3,2.76
+NUEVA VIZCAYA,BAGABAG,Other industrial permanent crops not elsewhere classified,1,1
+NUEVA VIZCAYA,BAGABAG,Other leafy vegetables,66,44.42
+NUEVA VIZCAYA,BAGABAG,Other poultry,1,0
+NUEVA VIZCAYA,BAGABAG,Other varieties of tobacco,1,0.1
+NUEVA VIZCAYA,BAGABAG,Palm tree,1,0.2
+NUEVA VIZCAYA,BAGABAG,Peanuts,1,0.1
+NUEVA VIZCAYA,BAGABAG,Pepper - small green,1,0.15
+NUEVA VIZCAYA,BAGABAG,Persimmon,1,0.1
+NUEVA VIZCAYA,BAGABAG,Pigeons,1,0
+NUEVA VIZCAYA,BAGABAG,Pigs or swine,260,0
+NUEVA VIZCAYA,BAGABAG,Pineapple,296,317.12
+NUEVA VIZCAYA,BAGABAG,Pomelo (suha),1,0
+NUEVA VIZCAYA,BAGABAG,Rabbits and hares,2,0
+NUEVA VIZCAYA,BAGABAG,Rambutan,4,1.22
+NUEVA VIZCAYA,BAGABAG,Rice/Palay,2697,3566.74
+NUEVA VIZCAYA,BAGABAG,Sheep,10,0
+NUEVA VIZCAYA,BAGABAG,Squash (kalabasa),2,0.77
+NUEVA VIZCAYA,BAGABAG,Strawberry,1,0.5
+NUEVA VIZCAYA,BAGABAG,Swan,1,0
+NUEVA VIZCAYA,BAGABAG,Tilapia,21,7.81
+NUEVA VIZCAYA,BAGABAG,Tobacco (native),5,0.51
+NUEVA VIZCAYA,BAGABAG,Tomato (kamatis),2,0.7
+NUEVA VIZCAYA,BAGABAG,Turkeys,13,0
+NUEVA VIZCAYA,BAMBANG,Alugbati,1,0
+NUEVA VIZCAYA,BAMBANG,Ampalaya,28,7.09
+NUEVA VIZCAYA,BAMBANG,Avocado,3,0.25
+NUEVA VIZCAYA,BAMBANG,Banana,56,64.88
+NUEVA VIZCAYA,BAMBANG,Beans - dry,142,54.86
+NUEVA VIZCAYA,BAMBANG,Bellpepper (Green/Red),1,0.63
+NUEVA VIZCAYA,BAMBANG,Black pepper,22,3.96
+NUEVA VIZCAYA,BAMBANG,Buffaloes (Carabaos),397,0
+NUEVA VIZCAYA,BAMBANG,Cabbage (repolyo),6,2
+NUEVA VIZCAYA,BAMBANG,Cacao,1,0
+NUEVA VIZCAYA,BAMBANG,Camote,28,7.79
+NUEVA VIZCAYA,BAMBANG,Camote tops (talbos ng kamote),1,0.3
+NUEVA VIZCAYA,BAMBANG,Cassava (kamoteng kahoy),3,1.6
+NUEVA VIZCAYA,BAMBANG,Cattle,354,0
+NUEVA VIZCAYA,BAMBANG,Celery (kinchai),8,1.02
+NUEVA VIZCAYA,BAMBANG,Chickens,896,0
+NUEVA VIZCAYA,BAMBANG,Chili (labuyo),27,7.17
+NUEVA VIZCAYA,BAMBANG,Chinese Cabbage,1,0.5
+NUEVA VIZCAYA,BAMBANG,Coconut,10,1.29
+NUEVA VIZCAYA,BAMBANG,Coffee - other varieties,2,0.5
+NUEVA VIZCAYA,BAMBANG,Common beans (habitchuelas),4,1.98
+NUEVA VIZCAYA,BAMBANG,Common gourd (upo),1,0
+NUEVA VIZCAYA,BAMBANG,Corn,735,871.62
+NUEVA VIZCAYA,BAMBANG,Cowpea,1,0.75
+NUEVA VIZCAYA,BAMBANG,Cucumber (pipino),21,3.31
+NUEVA VIZCAYA,BAMBANG,Dogs and cats,92,0
+NUEVA VIZCAYA,BAMBANG,Dragon Fruit,3,0.5
+NUEVA VIZCAYA,BAMBANG,Ducks,532,0
+NUEVA VIZCAYA,BAMBANG,Eggplant (talong),39,11.4
+NUEVA VIZCAYA,BAMBANG,"Forage grass (sacate, alfalfa, green corn stalk)",1,0.31
+NUEVA VIZCAYA,BAMBANG,Gabi tubers,1,0
+NUEVA VIZCAYA,BAMBANG,Garlic (bawang),23,2.8
+NUEVA VIZCAYA,BAMBANG,Geese,25,0
+NUEVA VIZCAYA,BAMBANG,Ginger (luya),11,7.28
+NUEVA VIZCAYA,BAMBANG,Goats,192,0
+NUEVA VIZCAYA,BAMBANG,Green Beans (Baguio Beans),1,0.3
+NUEVA VIZCAYA,BAMBANG,Guyabano,3,0
+NUEVA VIZCAYA,BAMBANG,Hito/Catfish,1,1.67
+NUEVA VIZCAYA,BAMBANG,Horses,1,0
+NUEVA VIZCAYA,BAMBANG,Lemon,1,0.1
+NUEVA VIZCAYA,BAMBANG,Lima Beans,1,0.5
+NUEVA VIZCAYA,BAMBANG,Lime (Calamansi),6,2.4
+NUEVA VIZCAYA,BAMBANG,Mahogany,2,0.7
+NUEVA VIZCAYA,BAMBANG,Mandarin (dalanghita),7,3.73
+NUEVA VIZCAYA,BAMBANG,Mango,14,8.84
+NUEVA VIZCAYA,BAMBANG,Mongo (Mung Bean),2,0.67
+NUEVA VIZCAYA,BAMBANG,Mushroom,1,0.06
+NUEVA VIZCAYA,BAMBANG,Mustard,2,0
+NUEVA VIZCAYA,BAMBANG,Okra,10,1.3
+NUEVA VIZCAYA,BAMBANG,Onion bulbs (sibuyas),235,97.1
+NUEVA VIZCAYA,BAMBANG,Onion shoot,9,2.45
+NUEVA VIZCAYA,BAMBANG,Orange (dalandan),1,1.5
+NUEVA VIZCAYA,BAMBANG,Other animals (e.g.,2,0
+NUEVA VIZCAYA,BAMBANG,Other crops for fiber production,2,1.21
+NUEVA VIZCAYA,BAMBANG,Other Fish,7,1.59
+NUEVA VIZCAYA,BAMBANG,Other fruit-bearing trees and vines,98,76.92
+NUEVA VIZCAYA,BAMBANG,Other fruit-bearing vegetables,665,505.89
+NUEVA VIZCAYA,BAMBANG,Other herbs and spices,1,0.25
+NUEVA VIZCAYA,BAMBANG,Other industrial crops,5,0.9
+NUEVA VIZCAYA,BAMBANG,Other leafy vegetables,289,227.65
+NUEVA VIZCAYA,BAMBANG,Other leguminous plants,38,32.86
+NUEVA VIZCAYA,BAMBANG,Other oilseed crops,1,0.37
+NUEVA VIZCAYA,BAMBANG,Other poultry,1,0
+NUEVA VIZCAYA,BAMBANG,Other tubers - roots and bulbs,1,1.5
+NUEVA VIZCAYA,BAMBANG,Papaya,1,0
+NUEVA VIZCAYA,BAMBANG,Patola,1,0
+NUEVA VIZCAYA,BAMBANG,Peanuts,22,3.03
+NUEVA VIZCAYA,BAMBANG,Pechay,43,4.33
+NUEVA VIZCAYA,BAMBANG,Pepper - small green,2,0
+NUEVA VIZCAYA,BAMBANG,Pepper - sweet,3,2
+NUEVA VIZCAYA,BAMBANG,Pigeons,1,0
+NUEVA VIZCAYA,BAMBANG,Pigs or swine,427,0
+NUEVA VIZCAYA,BAMBANG,Pineapple,1,0.1
+NUEVA VIZCAYA,BAMBANG,Potato (patatas),4,1.5
+NUEVA VIZCAYA,BAMBANG,Rabbits and hares,4,0
+NUEVA VIZCAYA,BAMBANG,Rambutan,5,1.86
+NUEVA VIZCAYA,BAMBANG,Rice/Palay,3776,4556.44
+NUEVA VIZCAYA,BAMBANG,Santol,1,0
+NUEVA VIZCAYA,BAMBANG,Sheep,6,0
+NUEVA VIZCAYA,BAMBANG,Squash (kalabasa),83,46.95
+NUEVA VIZCAYA,BAMBANG,String beans - harvested green (sitao),23,3.72
+NUEVA VIZCAYA,BAMBANG,Sweet peas - harvested green (sitsaro),3,0
+NUEVA VIZCAYA,BAMBANG,Taro,1,1
+NUEVA VIZCAYA,BAMBANG,Tilapia,10,2.08
+NUEVA VIZCAYA,BAMBANG,Tomato (kamatis),194,45.98
+NUEVA VIZCAYA,BAMBANG,Turkeys,28,0
+NUEVA VIZCAYA,BAMBANG,Water melon,4,0.62
+NUEVA VIZCAYA,BAYOMBONG Capital,Abaca,1,1
+NUEVA VIZCAYA,BAYOMBONG Capital,Ampalaya,22,5.07
+NUEVA VIZCAYA,BAYOMBONG Capital,Avocado,11,2.2
+NUEVA VIZCAYA,BAYOMBONG Capital,Banana,51,28.57
+NUEVA VIZCAYA,BAYOMBONG Capital,Beans - dry,186,81.8
+NUEVA VIZCAYA,BAYOMBONG Capital,Bellpepper (Green/Red),10,4.5
+NUEVA VIZCAYA,BAYOMBONG Capital,Betel Nut (Nga-nga),4,1.13
+NUEVA VIZCAYA,BAYOMBONG Capital,Black pepper,10,3.05
+NUEVA VIZCAYA,BAYOMBONG Capital,Black Turtle Beans,2,1.13
+NUEVA VIZCAYA,BAYOMBONG Capital,Broccoli,1,0.25
+NUEVA VIZCAYA,BAYOMBONG Capital,Buffaloes (Carabaos),278,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Bush Sitao,9,2.4
+NUEVA VIZCAYA,BAYOMBONG Capital,Cabbage (repolyo),4,1.05
+NUEVA VIZCAYA,BAYOMBONG Capital,Cacao,7,3.05
+NUEVA VIZCAYA,BAYOMBONG Capital,Camote,9,1.27
+NUEVA VIZCAYA,BAYOMBONG Capital,Camote tops (talbos ng kamote),5,2.35
+NUEVA VIZCAYA,BAYOMBONG Capital,Cassava (kamoteng kahoy),6,1.61
+NUEVA VIZCAYA,BAYOMBONG Capital,Castorbeans (tangantangan),28,8.23
+NUEVA VIZCAYA,BAYOMBONG Capital,Cattle,210,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Chayote,6,1.83
+NUEVA VIZCAYA,BAYOMBONG Capital,Chickens,684,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Chili (labuyo),10,2.71
+NUEVA VIZCAYA,BAYOMBONG Capital,Coconut,18,10.72
+NUEVA VIZCAYA,BAYOMBONG Capital,Coffee - other varieties,8,3.58
+NUEVA VIZCAYA,BAYOMBONG Capital,Corn,946,842.13
+NUEVA VIZCAYA,BAYOMBONG Capital,Crayfish,1,0.02
+NUEVA VIZCAYA,BAYOMBONG Capital,Cucumber (pipino),51,15.56
+NUEVA VIZCAYA,BAYOMBONG Capital,Dragon Fruit,4,2.55
+NUEVA VIZCAYA,BAYOMBONG Capital,Ducks,332,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Durian,2,0.62
+NUEVA VIZCAYA,BAYOMBONG Capital,Eggplant (talong),33,8.99
+NUEVA VIZCAYA,BAYOMBONG Capital,Gabi tubers,5,0.65
+NUEVA VIZCAYA,BAYOMBONG Capital,Geese,21,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Ginger (luya),71,40.06
+NUEVA VIZCAYA,BAYOMBONG Capital,Goats,127,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Green Beans (Baguio Beans),3,0.6
+NUEVA VIZCAYA,BAYOMBONG Capital,Green corn,1,2
+NUEVA VIZCAYA,BAYOMBONG Capital,Guyabano,14,4.87
+NUEVA VIZCAYA,BAYOMBONG Capital,Hito/Catfish,2,0.01
+NUEVA VIZCAYA,BAYOMBONG Capital,Horses,1,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Jackfruit,1,0.5
+NUEVA VIZCAYA,BAYOMBONG Capital,Kalamansi,5,3.1
+NUEVA VIZCAYA,BAYOMBONG Capital,Kidney Bean (Patani),1,0.1
+NUEVA VIZCAYA,BAYOMBONG Capital,Lanzones,6,1.54
+NUEVA VIZCAYA,BAYOMBONG Capital,Lemon,2,0.6
+NUEVA VIZCAYA,BAYOMBONG Capital,Lettuce,1,1
+NUEVA VIZCAYA,BAYOMBONG Capital,Lime (Calamansi),9,4.03
+NUEVA VIZCAYA,BAYOMBONG Capital,Mahogany,1,6
+NUEVA VIZCAYA,BAYOMBONG Capital,Mandarin (dalanghita),6,3.18
+NUEVA VIZCAYA,BAYOMBONG Capital,Mango,18,5.32
+NUEVA VIZCAYA,BAYOMBONG Capital,Mangosteen,1,0.2
+NUEVA VIZCAYA,BAYOMBONG Capital,Mongo (Mung Bean),2,0.5
+NUEVA VIZCAYA,BAYOMBONG Capital,Mushroom,6,1.5
+NUEVA VIZCAYA,BAYOMBONG Capital,Mustard,5,0.69
+NUEVA VIZCAYA,BAYOMBONG Capital,Okra,11,1.97
+NUEVA VIZCAYA,BAYOMBONG Capital,Onion bulbs (sibuyas),7,0.91
+NUEVA VIZCAYA,BAYOMBONG Capital,Other animals (e.g.,1,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Other crops for fiber production,1,0.5
+NUEVA VIZCAYA,BAYOMBONG Capital,Other Fish,53,20.96
+NUEVA VIZCAYA,BAYOMBONG Capital,Other fruit-bearing trees and vines,87,79.63
+NUEVA VIZCAYA,BAYOMBONG Capital,Other fruit-bearing vegetables,313,245.01
+NUEVA VIZCAYA,BAYOMBONG Capital,Other industrial crops,17,16.95
+NUEVA VIZCAYA,BAYOMBONG Capital,Other industrial permanent crops not elsewhere classified,4,7.83
+NUEVA VIZCAYA,BAYOMBONG Capital,Other leafy vegetables,168,98.3
+NUEVA VIZCAYA,BAYOMBONG Capital,Other poultry,4,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Other temporary crops not reported elsewhere,1,0.5
+NUEVA VIZCAYA,BAYOMBONG Capital,Peanuts,42,16.42
+NUEVA VIZCAYA,BAYOMBONG Capital,Pechay,5,0.69
+NUEVA VIZCAYA,BAYOMBONG Capital,Pepper - small green,6,2.29
+NUEVA VIZCAYA,BAYOMBONG Capital,Pepper mint,1,0.2
+NUEVA VIZCAYA,BAYOMBONG Capital,Pigeons,3,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Pigs or swine,285,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Pineapple,7,4.99
+NUEVA VIZCAYA,BAYOMBONG Capital,Pomelo (suha),4,1.54
+NUEVA VIZCAYA,BAYOMBONG Capital,Potato (patatas),9,3.44
+NUEVA VIZCAYA,BAYOMBONG Capital,Rabbits and hares,5,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Rambutan,30,17.28
+NUEVA VIZCAYA,BAYOMBONG Capital,Rattan,1,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Rattan fruit,2,0.54
+NUEVA VIZCAYA,BAYOMBONG Capital,Rice/Palay,2692,2891.61
+NUEVA VIZCAYA,BAYOMBONG Capital,Sheep,3,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Squash (kalabasa),62,25.65
+NUEVA VIZCAYA,BAYOMBONG Capital,String beans - harvested green (sitao),60,16.09
+NUEVA VIZCAYA,BAYOMBONG Capital,Sweet peas - harvested green (sitsaro),2,0.76
+NUEVA VIZCAYA,BAYOMBONG Capital,Taro,40,17.57
+NUEVA VIZCAYA,BAYOMBONG Capital,Tiger Grass,3,0.63
+NUEVA VIZCAYA,BAYOMBONG Capital,Tilapia,32,6.55
+NUEVA VIZCAYA,BAYOMBONG Capital,Tomato (kamatis),165,61.76
+NUEVA VIZCAYA,BAYOMBONG Capital,Turkeys,12,0
+NUEVA VIZCAYA,BAYOMBONG Capital,Ube,3,0.9
+NUEVA VIZCAYA,BAYOMBONG Capital,Water melon,1,0.17
+NUEVA VIZCAYA,BAYOMBONG Capital,Winged Bean (pallang),1,0.25
+NUEVA VIZCAYA,DIADI,Ampalaya,46,10.24
+NUEVA VIZCAYA,DIADI,Avocado,80,14.05
+NUEVA VIZCAYA,DIADI,Banana,326,110.33
+NUEVA VIZCAYA,DIADI,Beans - dry,266,109.66
+NUEVA VIZCAYA,DIADI,Bellpepper (Green/Red),13,2.58
+NUEVA VIZCAYA,DIADI,Betel Nut (Nga-nga),5,0.9
+NUEVA VIZCAYA,DIADI,Black pepper,3,0.93
+NUEVA VIZCAYA,DIADI,Buffaloes (Carabaos),479,0
+NUEVA VIZCAYA,DIADI,Bush Sitao,28,3.45
+NUEVA VIZCAYA,DIADI,Cabbage (repolyo),2,0.45
+NUEVA VIZCAYA,DIADI,Cacao,22,6.2
+NUEVA VIZCAYA,DIADI,Camansi,1,0.25
+NUEVA VIZCAYA,DIADI,Camote,16,4.27
+NUEVA VIZCAYA,DIADI,Camote tops (talbos ng kamote),1,0.5
+NUEVA VIZCAYA,DIADI,Cassava (kamoteng kahoy),3,0.8
+NUEVA VIZCAYA,DIADI,Castorbeans (tangantangan),1,0.25
+NUEVA VIZCAYA,DIADI,Cattle,114,0
+NUEVA VIZCAYA,DIADI,Chayote,5,2.71
+NUEVA VIZCAYA,DIADI,Chickens,858,0
+NUEVA VIZCAYA,DIADI,Chili (labuyo),27,6.6
+NUEVA VIZCAYA,DIADI,Citronella,1,0.3
+NUEVA VIZCAYA,DIADI,Coconut,140,32.56
+NUEVA VIZCAYA,DIADI,Coffee - other varieties,14,7.76
+NUEVA VIZCAYA,DIADI,Common beans (habitchuelas),2,1.25
+NUEVA VIZCAYA,DIADI,Common gourd (upo),2,0.15
+NUEVA VIZCAYA,DIADI,Corn,2251,3341.87
+NUEVA VIZCAYA,DIADI,crops for seed and seedling,1,0.06
+NUEVA VIZCAYA,DIADI,Cucumber (pipino),93,32.44
+NUEVA VIZCAYA,DIADI,Dogs and cats,10,0
+NUEVA VIZCAYA,DIADI,Dragon Fruit,10,2.37
+NUEVA VIZCAYA,DIADI,Ducks,366,0
+NUEVA VIZCAYA,DIADI,Duhat,1,0.2
+NUEVA VIZCAYA,DIADI,Durian,4,0.52
+NUEVA VIZCAYA,DIADI,Eggplant (talong),55,10.89
+NUEVA VIZCAYA,DIADI,"Forage grass (sacate, alfalfa, green corn stalk)",2,1.3
+NUEVA VIZCAYA,DIADI,Gabi tubers,12,3.47
+NUEVA VIZCAYA,DIADI,Garlic (bawang),4,0.7
+NUEVA VIZCAYA,DIADI,Geese,11,0
+NUEVA VIZCAYA,DIADI,Ginger (luya),268,92.98
+NUEVA VIZCAYA,DIADI,Goats,65,0
+NUEVA VIZCAYA,DIADI,Green Beans (Baguio Beans),1,0.1
+NUEVA VIZCAYA,DIADI,Guyabano,259,85.05
+NUEVA VIZCAYA,DIADI,Hito/Catfish,18,5.56
+NUEVA VIZCAYA,DIADI,Jackfruit,15,2.01
+NUEVA VIZCAYA,DIADI,Kalamansi,74,22.07
+NUEVA VIZCAYA,DIADI,Lanzones,40,11.01
+NUEVA VIZCAYA,DIADI,Lemon,29,8.23
+NUEVA VIZCAYA,DIADI,Lime (Calamansi),28,7.42
+NUEVA VIZCAYA,DIADI,Long Chili,1,0.67
+NUEVA VIZCAYA,DIADI,Longgan,2,0.2
+NUEVA VIZCAYA,DIADI,Mandarin (dalanghita),153,97.92
+NUEVA VIZCAYA,DIADI,Mango,331,152.2
+NUEVA VIZCAYA,DIADI,Marang,2,0.5
+NUEVA VIZCAYA,DIADI,Mongo (Mung Bean),7,1.87
+NUEVA VIZCAYA,DIADI,Okra,23,2.34
+NUEVA VIZCAYA,DIADI,Onion bulbs (sibuyas),1,0.01
+NUEVA VIZCAYA,DIADI,Orange (dalandan),4,0.62
+NUEVA VIZCAYA,DIADI,Other Fish,11,3
+NUEVA VIZCAYA,DIADI,Other fruit-bearing trees and vines,65,45.64
+NUEVA VIZCAYA,DIADI,Other fruit-bearing vegetables,107,71.51
+NUEVA VIZCAYA,DIADI,Other industrial crops,3,2.05
+NUEVA VIZCAYA,DIADI,Other industrial permanent crops not elsewhere classified,1,0.1
+NUEVA VIZCAYA,DIADI,Other leafy vegetables,25,12.75
+NUEVA VIZCAYA,DIADI,Other poultry,1,0
+NUEVA VIZCAYA,DIADI,Other spices,3,0.38
+NUEVA VIZCAYA,DIADI,Papaya,4,0.35
+NUEVA VIZCAYA,DIADI,Passion Fruit,1,0.25
+NUEVA VIZCAYA,DIADI,Patola,4,0.93
+NUEVA VIZCAYA,DIADI,Peanuts,4,0.6
+NUEVA VIZCAYA,DIADI,Peas- dry (gisantes),5,1.6
+NUEVA VIZCAYA,DIADI,Pechay,12,1.2
+NUEVA VIZCAYA,DIADI,Pepper - small green,4,0.92
+NUEVA VIZCAYA,DIADI,Pepper - sweet,14,4.24
+NUEVA VIZCAYA,DIADI,Pigeon pea,6,1.38
+NUEVA VIZCAYA,DIADI,Pigeons,1,0
+NUEVA VIZCAYA,DIADI,Pigs or swine,444,0
+NUEVA VIZCAYA,DIADI,Pineapple,109,54.02
+NUEVA VIZCAYA,DIADI,Pinya,1,0.5
+NUEVA VIZCAYA,DIADI,Pomelo (suha),15,3.51
+NUEVA VIZCAYA,DIADI,Potato (patatas),1,0.2
+NUEVA VIZCAYA,DIADI,Pusit/Squid,1,0.25
+NUEVA VIZCAYA,DIADI,Rambutan,296,105.24
+NUEVA VIZCAYA,DIADI,Rattan,1,0.05
+NUEVA VIZCAYA,DIADI,Rice/Palay,909,658.09
+NUEVA VIZCAYA,DIADI,Saluyot,1,0.25
+NUEVA VIZCAYA,DIADI,Santol,1,1.5
+NUEVA VIZCAYA,DIADI,Sheep,6,0
+NUEVA VIZCAYA,DIADI,Squash (kalabasa),133,61.86
+NUEVA VIZCAYA,DIADI,String beans - harvested green (sitao),77,13.35
+NUEVA VIZCAYA,DIADI,Tamarind (sampaloc),3,1.29
+NUEVA VIZCAYA,DIADI,Taro,3,0.24
+NUEVA VIZCAYA,DIADI,Tilapia,42,10.25
+NUEVA VIZCAYA,DIADI,Tomato (kamatis),123,36.99
+NUEVA VIZCAYA,DIADI,Turkeys,13,0
+NUEVA VIZCAYA,DIADI,Ube,4,0.42
+NUEVA VIZCAYA,DIADI,Winged Bean (pallang),1,0.05
+NUEVA VIZCAYA,DUPAX DEL NORTE,Alugbati,1,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Ampalaya,5,0.57
+NUEVA VIZCAYA,DUPAX DEL NORTE,Atis,1,0.25
+NUEVA VIZCAYA,DUPAX DEL NORTE,Avocado,1,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Banana,28,12.13
+NUEVA VIZCAYA,DUPAX DEL NORTE,Beans - dry,200,82.91
+NUEVA VIZCAYA,DUPAX DEL NORTE,Bellpepper (Green/Red),5,1.1
+NUEVA VIZCAYA,DUPAX DEL NORTE,Black pepper,2,1.25
+NUEVA VIZCAYA,DUPAX DEL NORTE,Broccoli,1,0.51
+NUEVA VIZCAYA,DUPAX DEL NORTE,Buffaloes (Carabaos),220,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Cabbage (repolyo),37,9.02
+NUEVA VIZCAYA,DUPAX DEL NORTE,Cacao,2,0.5
+NUEVA VIZCAYA,DUPAX DEL NORTE,Camansi,2,1.5
+NUEVA VIZCAYA,DUPAX DEL NORTE,Camote,24,5.19
+NUEVA VIZCAYA,DUPAX DEL NORTE,Camote tops (talbos ng kamote),1,0.5
+NUEVA VIZCAYA,DUPAX DEL NORTE,Carrot,1,0.5
+NUEVA VIZCAYA,DUPAX DEL NORTE,Cassava (kamoteng kahoy),2,1.22
+NUEVA VIZCAYA,DUPAX DEL NORTE,Cattle,77,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Cauliflower,15,2.04
+NUEVA VIZCAYA,DUPAX DEL NORTE,Celery (kinchai),2,0.38
+NUEVA VIZCAYA,DUPAX DEL NORTE,Chayote,8,3.96
+NUEVA VIZCAYA,DUPAX DEL NORTE,Chickens,634,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Chili (labuyo),6,2.03
+NUEVA VIZCAYA,DUPAX DEL NORTE,Coconut,9,1.85
+NUEVA VIZCAYA,DUPAX DEL NORTE,Coffee - other varieties,1,0.67
+NUEVA VIZCAYA,DUPAX DEL NORTE,Common beans (habitchuelas),6,2.24
+NUEVA VIZCAYA,DUPAX DEL NORTE,Corn,227,129.21
+NUEVA VIZCAYA,DUPAX DEL NORTE,Cucumber (pipino),54,12.04
+NUEVA VIZCAYA,DUPAX DEL NORTE,Dogs and cats,1,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Dragon Fruit,1,0.5
+NUEVA VIZCAYA,DUPAX DEL NORTE,Ducks,215,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Duhat,1,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Eggplant (talong),22,8.89
+NUEVA VIZCAYA,DUPAX DEL NORTE,"Forage grass (sacate, alfalfa, green corn stalk)",1,0.81
+NUEVA VIZCAYA,DUPAX DEL NORTE,Gabi tubers,5,0.5
+NUEVA VIZCAYA,DUPAX DEL NORTE,Geese,9,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Ginger (luya),139,65.8
+NUEVA VIZCAYA,DUPAX DEL NORTE,Gmelina Arborea,3,1.43
+NUEVA VIZCAYA,DUPAX DEL NORTE,Goats,28,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Green Beans (Baguio Beans),5,2.31
+NUEVA VIZCAYA,DUPAX DEL NORTE,Guyabano,7,3.43
+NUEVA VIZCAYA,DUPAX DEL NORTE,Hito/Catfish,3,0.21
+NUEVA VIZCAYA,DUPAX DEL NORTE,Kalamansi,6,4.6
+NUEVA VIZCAYA,DUPAX DEL NORTE,Lemon,3,1.77
+NUEVA VIZCAYA,DUPAX DEL NORTE,Lettuce,2,1.85
+NUEVA VIZCAYA,DUPAX DEL NORTE,Lime (Calamansi),2,2.05
+NUEVA VIZCAYA,DUPAX DEL NORTE,Luyang dilaw,2,1.5
+NUEVA VIZCAYA,DUPAX DEL NORTE,Mandarin (dalanghita),16,8.85
+NUEVA VIZCAYA,DUPAX DEL NORTE,Mango,17,12.14
+NUEVA VIZCAYA,DUPAX DEL NORTE,Marang,1,0.2
+NUEVA VIZCAYA,DUPAX DEL NORTE,Mushroom,1,0.7
+NUEVA VIZCAYA,DUPAX DEL NORTE,Okra,10,3.56
+NUEVA VIZCAYA,DUPAX DEL NORTE,Orange (dalandan),2,1.85
+NUEVA VIZCAYA,DUPAX DEL NORTE,Other animals (e.g.,1,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Other crops for fiber production,1,0.9
+NUEVA VIZCAYA,DUPAX DEL NORTE,Other Fish,8,1.33
+NUEVA VIZCAYA,DUPAX DEL NORTE,Other fruit-bearing trees and vines,81,112.39
+NUEVA VIZCAYA,DUPAX DEL NORTE,Other fruit-bearing vegetables,1310,1685.66
+NUEVA VIZCAYA,DUPAX DEL NORTE,Other industrial crops,5,5.28
+NUEVA VIZCAYA,DUPAX DEL NORTE,Other leafy vegetables,324,429.37
+NUEVA VIZCAYA,DUPAX DEL NORTE,Other leguminous plants,7,7.04
+NUEVA VIZCAYA,DUPAX DEL NORTE,Other spices,1,0.3
+NUEVA VIZCAYA,DUPAX DEL NORTE,Peanuts,3,0.27
+NUEVA VIZCAYA,DUPAX DEL NORTE,Peas- dry (gisantes),3,0.35
+NUEVA VIZCAYA,DUPAX DEL NORTE,Pechay,4,1.13
+NUEVA VIZCAYA,DUPAX DEL NORTE,Pepper - small green,9,2.84
+NUEVA VIZCAYA,DUPAX DEL NORTE,Pepper - sweet,9,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Pigeon pea,1,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Pigs or swine,288,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Pomelo (suha),1,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Potato (patatas),3,0.25
+NUEVA VIZCAYA,DUPAX DEL NORTE,Pusit/Squid,1,1
+NUEVA VIZCAYA,DUPAX DEL NORTE,Radish (labanos),1,0.5
+NUEVA VIZCAYA,DUPAX DEL NORTE,Rambutan,10,3.47
+NUEVA VIZCAYA,DUPAX DEL NORTE,Rice/Palay,2537,2534.15
+NUEVA VIZCAYA,DUPAX DEL NORTE,Sheep,3,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Squash (kalabasa),89,41.2
+NUEVA VIZCAYA,DUPAX DEL NORTE,String beans - harvested green (sitao),13,1.54
+NUEVA VIZCAYA,DUPAX DEL NORTE,Sweet peas - harvested green (sitsaro),11,4.41
+NUEVA VIZCAYA,DUPAX DEL NORTE,Taro,7,2.64
+NUEVA VIZCAYA,DUPAX DEL NORTE,Tiger Grass,1,0.2
+NUEVA VIZCAYA,DUPAX DEL NORTE,Tilapia,9,0.63
+NUEVA VIZCAYA,DUPAX DEL NORTE,Tomato (kamatis),169,75.52
+NUEVA VIZCAYA,DUPAX DEL NORTE,Turkeys,4,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Ube,1,0
+NUEVA VIZCAYA,DUPAX DEL NORTE,Water melon,1,0.25
+NUEVA VIZCAYA,DUPAX DEL SUR,Ampalaya,1,0.3
+NUEVA VIZCAYA,DUPAX DEL SUR,Banana,3,0.85
+NUEVA VIZCAYA,DUPAX DEL SUR,Beans - dry,28,16.73
+NUEVA VIZCAYA,DUPAX DEL SUR,Bellpepper (Green/Red),8,4.2
+NUEVA VIZCAYA,DUPAX DEL SUR,Betel Nut (Nga-nga),1,2.5
+NUEVA VIZCAYA,DUPAX DEL SUR,Buffaloes (Carabaos),422,0
+NUEVA VIZCAYA,DUPAX DEL SUR,Cabbage (repolyo),16,12.45
+NUEVA VIZCAYA,DUPAX DEL SUR,Cacao,2,1.5
+NUEVA VIZCAYA,DUPAX DEL SUR,Camansi,1,0.75
+NUEVA VIZCAYA,DUPAX DEL SUR,Camote,9,5.1
+NUEVA VIZCAYA,DUPAX DEL SUR,Cattle,150,0
+NUEVA VIZCAYA,DUPAX DEL SUR,Cauliflower,2,0.75
+NUEVA VIZCAYA,DUPAX DEL SUR,Celery (kinchai),1,0.5
+NUEVA VIZCAYA,DUPAX DEL SUR,Chayote,6,7.6
+NUEVA VIZCAYA,DUPAX DEL SUR,Chickens,986,0
+NUEVA VIZCAYA,DUPAX DEL SUR,Chili (labuyo),3,2.6
+NUEVA VIZCAYA,DUPAX DEL SUR,Coconut,2,1.34
+NUEVA VIZCAYA,DUPAX DEL SUR,Coffee - other varieties,51,57.8
+NUEVA VIZCAYA,DUPAX DEL SUR,Coffee arabica,1,1
+NUEVA VIZCAYA,DUPAX DEL SUR,Common beans (habitchuelas),1,0.25
+NUEVA VIZCAYA,DUPAX DEL SUR,Corn,25,20.4
+NUEVA VIZCAYA,DUPAX DEL SUR,crops for seed and seedling,1,0.5
+NUEVA VIZCAYA,DUPAX DEL SUR,Cucumber (pipino),10,4
+NUEVA VIZCAYA,DUPAX DEL SUR,Dogs and cats,2,0
+NUEVA VIZCAYA,DUPAX DEL SUR,Dragon Fruit,3,3
+NUEVA VIZCAYA,DUPAX DEL SUR,Ducks,226,0
+NUEVA VIZCAYA,DUPAX DEL SUR,Eggplant (talong),4,1.5
+NUEVA VIZCAYA,DUPAX DEL SUR,Gabi tubers,2,4
+NUEVA VIZCAYA,DUPAX DEL SUR,Geese,16,0
+NUEVA VIZCAYA,DUPAX DEL SUR,Ginger (luya),65,43.6
+NUEVA VIZCAYA,DUPAX DEL SUR,Goats,37,0
+NUEVA VIZCAYA,DUPAX DEL SUR,Green Beans (Baguio Beans),2,0.75
+NUEVA VIZCAYA,DUPAX DEL SUR,Guyabano,15,24.83
+NUEVA VIZCAYA,DUPAX DEL SUR,Hito/Catfish,3,0.93
+NUEVA VIZCAYA,DUPAX DEL SUR,Lemon,4,3.15
+NUEVA VIZCAYA,DUPAX DEL SUR,Lima Beans,4,1.75
+NUEVA VIZCAYA,DUPAX DEL SUR,Lime (Calamansi),5,4.9
+NUEVA VIZCAYA,DUPAX DEL SUR,Long Chili,3,1.5
+NUEVA VIZCAYA,DUPAX DEL SUR,Mandarin (dalanghita),23,23.75
+NUEVA VIZCAYA,DUPAX DEL SUR,Mango,4,4
+NUEVA VIZCAYA,DUPAX DEL SUR,Onion bulbs (sibuyas),8,1.6
+NUEVA VIZCAYA,DUPAX DEL SUR,Onion shoot,1,0.17
+NUEVA VIZCAYA,DUPAX DEL SUR,Orange (dalandan),1,1
+NUEVA VIZCAYA,DUPAX DEL SUR,Other Fish,3,0.7
+NUEVA VIZCAYA,DUPAX DEL SUR,Other fruit-bearing trees and vines,106,134.6
+NUEVA VIZCAYA,DUPAX DEL SUR,Other fruit-bearing vegetables,1724,1948.39
+NUEVA VIZCAYA,DUPAX DEL SUR,Other industrial crops,1,1
+NUEVA VIZCAYA,DUPAX DEL SUR,Other leafy vegetables,637,739.45
+NUEVA VIZCAYA,DUPAX DEL SUR,Other leguminous plants,12,9
+NUEVA VIZCAYA,DUPAX DEL SUR,Other poultry,10,0
+NUEVA VIZCAYA,DUPAX DEL SUR,Other spices,1,0.5
+NUEVA VIZCAYA,DUPAX DEL SUR,Other tubers - roots and bulbs,22,12.1
+NUEVA VIZCAYA,DUPAX DEL SUR,Pepper - small green,1,0.5
+NUEVA VIZCAYA,DUPAX DEL SUR,Pigs or swine,368,0
+NUEVA VIZCAYA,DUPAX DEL SUR,Potato (patatas),3,1.8
+NUEVA VIZCAYA,DUPAX DEL SUR,Rabbits and hares,1,0
+NUEVA VIZCAYA,DUPAX DEL SUR,Rambutan,5,3.83
+NUEVA VIZCAYA,DUPAX DEL SUR,Rice/Palay,2655,2256.68
+NUEVA VIZCAYA,DUPAX DEL SUR,Sheep,3,0
+NUEVA VIZCAYA,DUPAX DEL SUR,Squash (kalabasa),19,13.88
+NUEVA VIZCAYA,DUPAX DEL SUR,String beans - harvested green (sitao),1,1
+NUEVA VIZCAYA,DUPAX DEL SUR,Sweet peas - harvested green (sitsaro),5,3.1
+NUEVA VIZCAYA,DUPAX DEL SUR,Taro,1,0.25
+NUEVA VIZCAYA,DUPAX DEL SUR,Tilapia,6,0.96
+NUEVA VIZCAYA,DUPAX DEL SUR,Tomato (kamatis),58,41.1
+NUEVA VIZCAYA,DUPAX DEL SUR,Turkeys,4,0
+NUEVA VIZCAYA,KASIBU,Ampalaya,1,0.2
+NUEVA VIZCAYA,KASIBU,Avocado,6,3.48
+NUEVA VIZCAYA,KASIBU,Banana,1568,906.3
+NUEVA VIZCAYA,KASIBU,Bangus,2,0.08
+NUEVA VIZCAYA,KASIBU,Beans - dry,195,83.11
+NUEVA VIZCAYA,KASIBU,Bellpepper (Green/Red),34,12.59
+NUEVA VIZCAYA,KASIBU,Betel Leaf,1,0.02
+NUEVA VIZCAYA,KASIBU,Betel Nut (Nga-nga),18,4.93
+NUEVA VIZCAYA,KASIBU,Black pepper,14,6.62
+NUEVA VIZCAYA,KASIBU,Broccoli,1,0.22
+NUEVA VIZCAYA,KASIBU,Buffaloes (Carabaos),1267,0
+NUEVA VIZCAYA,KASIBU,Cabbage (repolyo),43,21.05
+NUEVA VIZCAYA,KASIBU,Cacao,7,5.06
+NUEVA VIZCAYA,KASIBU,Camote,81,22.8
+NUEVA VIZCAYA,KASIBU,Camote tops (talbos ng kamote),4,0.7
+NUEVA VIZCAYA,KASIBU,Cantaloupes- honey dew and other melon varieties,1,0.9
+NUEVA VIZCAYA,KASIBU,Carrot,1,0.5
+NUEVA VIZCAYA,KASIBU,Cassava (kamoteng kahoy),9,2.33
+NUEVA VIZCAYA,KASIBU,Cattle,22,0
+NUEVA VIZCAYA,KASIBU,Cauliflower,3,0.85
+NUEVA VIZCAYA,KASIBU,Chayote,109,45.39
+NUEVA VIZCAYA,KASIBU,Chickens,2968,0
+NUEVA VIZCAYA,KASIBU,Chili (labuyo),6,3
+NUEVA VIZCAYA,KASIBU,Chinese Cabbage,2,0.49
+NUEVA VIZCAYA,KASIBU,Coconut,14,4.3
+NUEVA VIZCAYA,KASIBU,Coffee - other varieties,155,113.53
+NUEVA VIZCAYA,KASIBU,Coffee robusta,5,4.2
+NUEVA VIZCAYA,KASIBU,Corn,1833,1002.77
+NUEVA VIZCAYA,KASIBU,crops for seed and seedling,10,9.14
+NUEVA VIZCAYA,KASIBU,Cucumber (pipino),78,38.95
+NUEVA VIZCAYA,KASIBU,Dogs and cats,14,0
+NUEVA VIZCAYA,KASIBU,Dragon Fruit,64,22.92
+NUEVA VIZCAYA,KASIBU,Ducks,951,0
+NUEVA VIZCAYA,KASIBU,Durian,15,4.96
+NUEVA VIZCAYA,KASIBU,Eggplant (talong),10,3.15
+NUEVA VIZCAYA,KASIBU,"Forage grass (sacate, alfalfa, green corn stalk)",1,0.65
+NUEVA VIZCAYA,KASIBU,Gabi tubers,15,3.29
+NUEVA VIZCAYA,KASIBU,"Garlic shoot, harvested green",1,0.25
+NUEVA VIZCAYA,KASIBU,Geese,23,0
+NUEVA VIZCAYA,KASIBU,Ginger (luya),500,183.85
+NUEVA VIZCAYA,KASIBU,Gmelina Arborea,1,0.66
+NUEVA VIZCAYA,KASIBU,Goats,79,0
+NUEVA VIZCAYA,KASIBU,Green Beans (Baguio Beans),12,4.23
+NUEVA VIZCAYA,KASIBU,Guyabano,11,6.37
+NUEVA VIZCAYA,KASIBU,Hito/Catfish,6,0.35
+NUEVA VIZCAYA,KASIBU,Jackfruit,2,0.16
+NUEVA VIZCAYA,KASIBU,Kalamansi,130,82.39
+NUEVA VIZCAYA,KASIBU,Lanzones,13,3.82
+NUEVA VIZCAYA,KASIBU,Lemon,32,18.2
+NUEVA VIZCAYA,KASIBU,Lime (Calamansi),91,59.01
+NUEVA VIZCAYA,KASIBU,Lime (dayap),12,8.7
+NUEVA VIZCAYA,KASIBU,Long Chili,1,0.26
+NUEVA VIZCAYA,KASIBU,Longgan,1,0.15
+NUEVA VIZCAYA,KASIBU,Mahogany,2,1.14
+NUEVA VIZCAYA,KASIBU,Mandarin (dalanghita),185,99.95
+NUEVA VIZCAYA,KASIBU,Mango,8,1.37
+NUEVA VIZCAYA,KASIBU,Mangosteen,2,0.24
+NUEVA VIZCAYA,KASIBU,Marang,2,1.05
+NUEVA VIZCAYA,KASIBU,Narra,2,1.16
+NUEVA VIZCAYA,KASIBU,Okra,1,0.1
+NUEVA VIZCAYA,KASIBU,Orange (dalandan),46,20.57
+NUEVA VIZCAYA,KASIBU,Ornamental Flowers,1,0.05
+NUEVA VIZCAYA,KASIBU,Other animals (e.g.,6,0
+NUEVA VIZCAYA,KASIBU,Other crops for fiber production,2,4.73
+NUEVA VIZCAYA,KASIBU,Other edible nuts,2,0.3
+NUEVA VIZCAYA,KASIBU,Other Fish,91,6.28
+NUEVA VIZCAYA,KASIBU,Other fruit-bearing trees and vines,253,181.05
+NUEVA VIZCAYA,KASIBU,Other fruit-bearing vegetables,3715,3045.69
+NUEVA VIZCAYA,KASIBU,Other herbs and spices,1,0.2
+NUEVA VIZCAYA,KASIBU,Other industrial crops,126,102.16
+NUEVA VIZCAYA,KASIBU,Other leafy vegetables,663,521.79
+NUEVA VIZCAYA,KASIBU,Other leguminous plants,24,14.6
+NUEVA VIZCAYA,KASIBU,Other poultry,9,0
+NUEVA VIZCAYA,KASIBU,Other temporary crops not reported elsewhere,1,0.05
+NUEVA VIZCAYA,KASIBU,Other tubers - roots and bulbs,9,7.35
+NUEVA VIZCAYA,KASIBU,Papaya,3,1.45
+NUEVA VIZCAYA,KASIBU,Peanuts,2,0.56
+NUEVA VIZCAYA,KASIBU,Pechay,1,0.1
+NUEVA VIZCAYA,KASIBU,Pepper - small green,12,6.3
+NUEVA VIZCAYA,KASIBU,Pepper - sweet,6,1.31
+NUEVA VIZCAYA,KASIBU,Pepper mint,3,0.95
+NUEVA VIZCAYA,KASIBU,Pigeons,2,0
+NUEVA VIZCAYA,KASIBU,Pigs or swine,1317,0
+NUEVA VIZCAYA,KASIBU,Pineapple,19,5.42
+NUEVA VIZCAYA,KASIBU,Pomelo (suha),366,215.19
+NUEVA VIZCAYA,KASIBU,Potato (patatas),32,11.57
+NUEVA VIZCAYA,KASIBU,Pusit/Squid,1,0.3
+NUEVA VIZCAYA,KASIBU,Rabbits and hares,10,0
+NUEVA VIZCAYA,KASIBU,Rambutan,63,26.25
+NUEVA VIZCAYA,KASIBU,Rattan,1,1.5
+NUEVA VIZCAYA,KASIBU,Rattan fruit,1,1
+NUEVA VIZCAYA,KASIBU,Rice/Palay,5127,3282.83
+NUEVA VIZCAYA,KASIBU,Rubber,1,0.5
+NUEVA VIZCAYA,KASIBU,Sheep,3,0
+NUEVA VIZCAYA,KASIBU,Squash (kalabasa),332,210.46
+NUEVA VIZCAYA,KASIBU,Strawberry,1,0.3
+NUEVA VIZCAYA,KASIBU,String beans - harvested green (sitao),9,3.71
+NUEVA VIZCAYA,KASIBU,Sugarcane,2,2.5
+NUEVA VIZCAYA,KASIBU,Swan,1,0
+NUEVA VIZCAYA,KASIBU,Sweet peas - harvested green (sitsaro),8,2.55
+NUEVA VIZCAYA,KASIBU,Taro,35,6.69
+NUEVA VIZCAYA,KASIBU,Tiger Grass,3,0.5
+NUEVA VIZCAYA,KASIBU,Tigre grass,1,0.86
+NUEVA VIZCAYA,KASIBU,Tilapia,187,10.48
+NUEVA VIZCAYA,KASIBU,Tomato (kamatis),313,161.44
+NUEVA VIZCAYA,KASIBU,Turkeys,38,0
+NUEVA VIZCAYA,KASIBU,Ube,3,0.8
+NUEVA VIZCAYA,KASIBU,Water melon,2,0.55
+NUEVA VIZCAYA,KAYAPA,Ampalaya,12,2.72
+NUEVA VIZCAYA,KAYAPA,Avocado,35,1.58
+NUEVA VIZCAYA,KAYAPA,Bamboo (Kawayan),4,0
+NUEVA VIZCAYA,KAYAPA,Banana,54,3.17
+NUEVA VIZCAYA,KAYAPA,Basil,1,0.06
+NUEVA VIZCAYA,KAYAPA,Beans - dry,785,284.86
+NUEVA VIZCAYA,KAYAPA,Bellpepper (Green/Red),49,20.59
+NUEVA VIZCAYA,KAYAPA,Betel Nut (Nga-nga),5,1
+NUEVA VIZCAYA,KAYAPA,Black pepper,30,10.58
+NUEVA VIZCAYA,KAYAPA,Broccoli,28,10.25
+NUEVA VIZCAYA,KAYAPA,Buffaloes (Carabaos),292,0
+NUEVA VIZCAYA,KAYAPA,Cabbage (repolyo),538,207.69
+NUEVA VIZCAYA,KAYAPA,Cacao,8,0.63
+NUEVA VIZCAYA,KAYAPA,Camote,214,64.66
+NUEVA VIZCAYA,KAYAPA,Camote tops (talbos ng kamote),4,0.97
+NUEVA VIZCAYA,KAYAPA,Carrot,100,45.55
+NUEVA VIZCAYA,KAYAPA,Cassava (kamoteng kahoy),15,2.87
+NUEVA VIZCAYA,KAYAPA,Cattle,371,0
+NUEVA VIZCAYA,KAYAPA,Cauliflower,479,182.18
+NUEVA VIZCAYA,KAYAPA,Celery (kinchai),15,2.71
+NUEVA VIZCAYA,KAYAPA,Chayote,62,23.5
+NUEVA VIZCAYA,KAYAPA,Chickens,2675,0
+NUEVA VIZCAYA,KAYAPA,Chili (labuyo),51,14.86
+NUEVA VIZCAYA,KAYAPA,Chinese Cabbage,65,25.08
+NUEVA VIZCAYA,KAYAPA,Coconut,14,0.1
+NUEVA VIZCAYA,KAYAPA,Coffee - other varieties,102,12.09
+NUEVA VIZCAYA,KAYAPA,Coffee arabica,1,1
+NUEVA VIZCAYA,KAYAPA,Common beans (habitchuelas),9,4.65
+NUEVA VIZCAYA,KAYAPA,Common gourd (upo),1,0.05
+NUEVA VIZCAYA,KAYAPA,Corn,101,45.79
+NUEVA VIZCAYA,KAYAPA,Cucumber (pipino),119,45.57
+NUEVA VIZCAYA,KAYAPA,Cut-flowers,22,6.3
+NUEVA VIZCAYA,KAYAPA,Dogs and cats,444,0
+NUEVA VIZCAYA,KAYAPA,Ducks,542,0
+NUEVA VIZCAYA,KAYAPA,Eggplant (talong),66,18.67
+NUEVA VIZCAYA,KAYAPA,Gabi tubers,57,16.06
+NUEVA VIZCAYA,KAYAPA,Geese,12,0
+NUEVA VIZCAYA,KAYAPA,Ginger (luya),204,67.02
+NUEVA VIZCAYA,KAYAPA,Goats,178,0
+NUEVA VIZCAYA,KAYAPA,Green Beans (Baguio Beans),89,35.01
+NUEVA VIZCAYA,KAYAPA,Guyabano,33,0.9
+NUEVA VIZCAYA,KAYAPA,Horses,3,0
+NUEVA VIZCAYA,KAYAPA,Ipil-ipil,1,0.65
+NUEVA VIZCAYA,KAYAPA,Jackfruit,16,0.37
+NUEVA VIZCAYA,KAYAPA,Kalamansi,7,0.02
+NUEVA VIZCAYA,KAYAPA,Lanzones,7,0
+NUEVA VIZCAYA,KAYAPA,Lemon,4,0.75
+NUEVA VIZCAYA,KAYAPA,Lettuce,13,3.27
+NUEVA VIZCAYA,KAYAPA,Lime (Calamansi),3,0
+NUEVA VIZCAYA,KAYAPA,Long Chili,5,1.88
+NUEVA VIZCAYA,KAYAPA,Luyang dilaw,8,1.42
+NUEVA VIZCAYA,KAYAPA,Mandarin (dalanghita),3,0.25
+NUEVA VIZCAYA,KAYAPA,Mango,66,2.75
+NUEVA VIZCAYA,KAYAPA,Okra,2,0.06
+NUEVA VIZCAYA,KAYAPA,Onion bulbs (sibuyas),62,18.27
+NUEVA VIZCAYA,KAYAPA,Onion shoot,6,1.04
+NUEVA VIZCAYA,KAYAPA,Orange (dalandan),10,0.25
+NUEVA VIZCAYA,KAYAPA,Ornamental Flowers,6,1.26
+NUEVA VIZCAYA,KAYAPA,Other fruit-bearing trees and vines,55,26.49
+NUEVA VIZCAYA,KAYAPA,Other fruit-bearing vegetables,1477,828.47
+NUEVA VIZCAYA,KAYAPA,Other herbs and spices,1,0.25
+NUEVA VIZCAYA,KAYAPA,Other industrial crops,6,3.5
+NUEVA VIZCAYA,KAYAPA,Other leafy vegetables,449,222.53
+NUEVA VIZCAYA,KAYAPA,Other leguminous plants,32,16.4
+NUEVA VIZCAYA,KAYAPA,Other poultry,2,0
+NUEVA VIZCAYA,KAYAPA,Other spices,1,0.25
+NUEVA VIZCAYA,KAYAPA,Other tubers - roots and bulbs,4,1.18
+NUEVA VIZCAYA,KAYAPA,Papaya,5,0
+NUEVA VIZCAYA,KAYAPA,Parsley,1,0.2
+NUEVA VIZCAYA,KAYAPA,Peanuts,37,10.71
+NUEVA VIZCAYA,KAYAPA,Peas- dry (gisantes),8,2.32
+NUEVA VIZCAYA,KAYAPA,Pechay,25,3.52
+NUEVA VIZCAYA,KAYAPA,Pechay (baguio),2,0.5
+NUEVA VIZCAYA,KAYAPA,Pepper - small green,100,31.1
+NUEVA VIZCAYA,KAYAPA,Pepper - sweet,23,6.53
+NUEVA VIZCAYA,KAYAPA,Pepper mint,2,0.45
+NUEVA VIZCAYA,KAYAPA,Pigeon pea,3,0.34
+NUEVA VIZCAYA,KAYAPA,Pigs or swine,661,0
+NUEVA VIZCAYA,KAYAPA,Pineapple,3,1.25
+NUEVA VIZCAYA,KAYAPA,Pomelo (suha),20,0.95
+NUEVA VIZCAYA,KAYAPA,Potato (patatas),79,31.19
+NUEVA VIZCAYA,KAYAPA,Rabbits and hares,5,0
+NUEVA VIZCAYA,KAYAPA,Rambutan,20,0.32
+NUEVA VIZCAYA,KAYAPA,Rattan,3,0
+NUEVA VIZCAYA,KAYAPA,Rice/Palay,1748,977.23
+NUEVA VIZCAYA,KAYAPA,Sheep,2,0
+NUEVA VIZCAYA,KAYAPA,Soybeans,1,0.5
+NUEVA VIZCAYA,KAYAPA,Spinach,1,0.25
+NUEVA VIZCAYA,KAYAPA,Squash (kalabasa),83,33
+NUEVA VIZCAYA,KAYAPA,Starapple (caimito),3,0
+NUEVA VIZCAYA,KAYAPA,String beans - harvested green (sitao),139,44.08
+NUEVA VIZCAYA,KAYAPA,Sweet peas - harvested green (sitsaro),103,36.29
+NUEVA VIZCAYA,KAYAPA,Taro,101,28.94
+NUEVA VIZCAYA,KAYAPA,Tiger Grass,1,0.25
+NUEVA VIZCAYA,KAYAPA,Tilapia,1,0.05
+NUEVA VIZCAYA,KAYAPA,Tomato (kamatis),1116,436.72
+NUEVA VIZCAYA,KAYAPA,Turkeys,9,0
+NUEVA VIZCAYA,KAYAPA,Turnip (sinkamas),1,0.25
+NUEVA VIZCAYA,KAYAPA,Ube,9,4.04
+NUEVA VIZCAYA,KAYAPA,Water melon,1,0.25
+NUEVA VIZCAYA,KAYAPA,White Turtle Beans,1,0.05
+NUEVA VIZCAYA,QUEZON,Ampalaya,4,1.75
+NUEVA VIZCAYA,QUEZON,Avocado,2,0.11
+NUEVA VIZCAYA,QUEZON,Bamboo (Kawayan),2,1.9
+NUEVA VIZCAYA,QUEZON,Banana,334,203.35
+NUEVA VIZCAYA,QUEZON,Beans - dry,84,37.25
+NUEVA VIZCAYA,QUEZON,Bellpepper (Green/Red),2,0.61
+NUEVA VIZCAYA,QUEZON,Betel Nut (Nga-nga),10,2.67
+NUEVA VIZCAYA,QUEZON,Black pepper,2,0.35
+NUEVA VIZCAYA,QUEZON,Buffaloes (Carabaos),584,0
+NUEVA VIZCAYA,QUEZON,Cabbage (repolyo),8,2.4
+NUEVA VIZCAYA,QUEZON,Cacao,7,6.89
+NUEVA VIZCAYA,QUEZON,Camote,25,8.11
+NUEVA VIZCAYA,QUEZON,Camote tops (talbos ng kamote),3,1.6
+NUEVA VIZCAYA,QUEZON,Cassava (kamoteng kahoy),18,11.45
+NUEVA VIZCAYA,QUEZON,Cattle,296,0
+NUEVA VIZCAYA,QUEZON,Chayote,31,11.77
+NUEVA VIZCAYA,QUEZON,Chickens,1180,0
+NUEVA VIZCAYA,QUEZON,Chili (labuyo),5,1.87
+NUEVA VIZCAYA,QUEZON,Chinese Cabbage,1,0.5
+NUEVA VIZCAYA,QUEZON,Citronella,1,0.05
+NUEVA VIZCAYA,QUEZON,Coconut,23,7.76
+NUEVA VIZCAYA,QUEZON,Coffee - other varieties,13,7.8
+NUEVA VIZCAYA,QUEZON,Coffee arabica,1,1
+NUEVA VIZCAYA,QUEZON,Common beans (habitchuelas),1,0.03
+NUEVA VIZCAYA,QUEZON,Corn,1772,2005.53
+NUEVA VIZCAYA,QUEZON,crops for seed and seedling,1,0.3
+NUEVA VIZCAYA,QUEZON,Cucumber (pipino),36,15.12
+NUEVA VIZCAYA,QUEZON,Dogs and cats,9,0
+NUEVA VIZCAYA,QUEZON,Dragon Fruit,4,1.6
+NUEVA VIZCAYA,QUEZON,Ducks,504,0
+NUEVA VIZCAYA,QUEZON,Durian,4,2.2
+NUEVA VIZCAYA,QUEZON,Eggplant (talong),10,2.71
+NUEVA VIZCAYA,QUEZON,Gabi tubers,19,7.25
+NUEVA VIZCAYA,QUEZON,Geese,15,0
+NUEVA VIZCAYA,QUEZON,Gemilina,1,0.55
+NUEVA VIZCAYA,QUEZON,Ginger (luya),277,138.76
+NUEVA VIZCAYA,QUEZON,Gmelina Arborea,6,3.81
+NUEVA VIZCAYA,QUEZON,Goats,116,0
+NUEVA VIZCAYA,QUEZON,Green Beans (Baguio Beans),4,6.5
+NUEVA VIZCAYA,QUEZON,Guyabano,17,10.17
+NUEVA VIZCAYA,QUEZON,Hito/Catfish,11,1.28
+NUEVA VIZCAYA,QUEZON,Horses,1,0
+NUEVA VIZCAYA,QUEZON,Jackfruit,2,2.1
+NUEVA VIZCAYA,QUEZON,Kalamansi,7,2.76
+NUEVA VIZCAYA,QUEZON,Lanzones,16,4.84
+NUEVA VIZCAYA,QUEZON,Lemon,5,2.99
+NUEVA VIZCAYA,QUEZON,Lime (Calamansi),13,6.54
+NUEVA VIZCAYA,QUEZON,Long Chili,2,0.75
+NUEVA VIZCAYA,QUEZON,Longgan,1,0.5
+NUEVA VIZCAYA,QUEZON,Luyang dilaw,3,0.8
+NUEVA VIZCAYA,QUEZON,Mandarin (dalanghita),21,13.5
+NUEVA VIZCAYA,QUEZON,Mango,24,11.46
+NUEVA VIZCAYA,QUEZON,Mangosteen,1,0.1
+NUEVA VIZCAYA,QUEZON,Okra,2,0.25
+NUEVA VIZCAYA,QUEZON,Orange (dalandan),7,5.2
+NUEVA VIZCAYA,QUEZON,Other animals (e.g.,3,0
+NUEVA VIZCAYA,QUEZON,Other crops for fiber production,3,3.89
+NUEVA VIZCAYA,QUEZON,Other Fish,75,24.32
+NUEVA VIZCAYA,QUEZON,Other fruit-bearing trees and vines,469,461.43
+NUEVA VIZCAYA,QUEZON,Other fruit-bearing vegetables,574,408.61
+NUEVA VIZCAYA,QUEZON,Other industrial crops,35,27.57
+NUEVA VIZCAYA,QUEZON,Other leafy vegetables,133,74.32
+NUEVA VIZCAYA,QUEZON,Other leguminous plants,64,61.83
+NUEVA VIZCAYA,QUEZON,Other poultry,5,0
+NUEVA VIZCAYA,QUEZON,Other temporary crops not reported elsewhere,2,0.4
+NUEVA VIZCAYA,QUEZON,Other tubers - roots and bulbs,7,2.44
+NUEVA VIZCAYA,QUEZON,Palm tree,1,1.87
+NUEVA VIZCAYA,QUEZON,Papaya,1,0.02
+NUEVA VIZCAYA,QUEZON,Peacock,1,0
+NUEVA VIZCAYA,QUEZON,Peanuts,5,1.25
+NUEVA VIZCAYA,QUEZON,Pigs or swine,487,0
+NUEVA VIZCAYA,QUEZON,Pineapple,46,39.95
+NUEVA VIZCAYA,QUEZON,Pomelo (suha),42,17.69
+NUEVA VIZCAYA,QUEZON,Potato (patatas),36,16.59
+NUEVA VIZCAYA,QUEZON,Pusit/Squid,2,4.2
+NUEVA VIZCAYA,QUEZON,Rabbits and hares,3,0
+NUEVA VIZCAYA,QUEZON,Rambutan,79,46.87
+NUEVA VIZCAYA,QUEZON,Rice/Palay,2048,1649.05
+NUEVA VIZCAYA,QUEZON,Sheep,1,0
+NUEVA VIZCAYA,QUEZON,Squash (kalabasa),79,59.71
+NUEVA VIZCAYA,QUEZON,String beans - harvested green (sitao),12,5.21
+NUEVA VIZCAYA,QUEZON,Sweet peas - harvested green (sitsaro),5,1.95
+NUEVA VIZCAYA,QUEZON,Taro,71,21.1
+NUEVA VIZCAYA,QUEZON,Tiger Grass,11,4.4
+NUEVA VIZCAYA,QUEZON,Tigre grass,2,0.5
+NUEVA VIZCAYA,QUEZON,Tilapia,78,11.29
+NUEVA VIZCAYA,QUEZON,Tobacco (native),1,0.5
+NUEVA VIZCAYA,QUEZON,Tomato (kamatis),48,24.83
+NUEVA VIZCAYA,QUEZON,Turkeys,22,0
+NUEVA VIZCAYA,QUEZON,Ube,1,0.2
+NUEVA VIZCAYA,QUEZON,Water melon,1,0.5
+NUEVA VIZCAYA,SANTA FE,Ampalaya,2,0.6
+NUEVA VIZCAYA,SANTA FE,Avocado,2,0.63
+NUEVA VIZCAYA,SANTA FE,Banana,13,8.95
+NUEVA VIZCAYA,SANTA FE,Bangus,1,0.01
+NUEVA VIZCAYA,SANTA FE,Beans - dry,224,72.01
+NUEVA VIZCAYA,SANTA FE,Bellpepper (Green/Red),17,4.95
+NUEVA VIZCAYA,SANTA FE,Black pepper,4,0.76
+NUEVA VIZCAYA,SANTA FE,Black Turtle Beans,6,6.9
+NUEVA VIZCAYA,SANTA FE,Buffaloes (Carabaos),54,0
+NUEVA VIZCAYA,SANTA FE,Cabbage (repolyo),29,10.61
+NUEVA VIZCAYA,SANTA FE,Camote,68,25.44
+NUEVA VIZCAYA,SANTA FE,Camote tops (talbos ng kamote),1,0.3
+NUEVA VIZCAYA,SANTA FE,Cantaloupes- honey dew and other melon varieties,1,1
+NUEVA VIZCAYA,SANTA FE,Carrot,7,4.83
+NUEVA VIZCAYA,SANTA FE,Cassava (kamoteng kahoy),5,3.2
+NUEVA VIZCAYA,SANTA FE,Cattle,34,0
+NUEVA VIZCAYA,SANTA FE,Cauliflower,8,2.71
+NUEVA VIZCAYA,SANTA FE,Celery (kinchai),3,1.75
+NUEVA VIZCAYA,SANTA FE,Chayote,94,39.79
+NUEVA VIZCAYA,SANTA FE,Chickens,351,0
+NUEVA VIZCAYA,SANTA FE,Chili (labuyo),3,1.25
+NUEVA VIZCAYA,SANTA FE,Chinese Cabbage,2,0.55
+NUEVA VIZCAYA,SANTA FE,Coconut,2,0.75
+NUEVA VIZCAYA,SANTA FE,Coffee - other varieties,29,21.28
+NUEVA VIZCAYA,SANTA FE,Common beans (habitchuelas),5,0.84
+NUEVA VIZCAYA,SANTA FE,Corn,32,18.9
+NUEVA VIZCAYA,SANTA FE,Cucumber (pipino),99,31.48
+NUEVA VIZCAYA,SANTA FE,Dragon Fruit,2,2.5
+NUEVA VIZCAYA,SANTA FE,Ducks,52,0
+NUEVA VIZCAYA,SANTA FE,Eggplant (talong),9,3.27
+NUEVA VIZCAYA,SANTA FE,"Forage grass (sacate, alfalfa, green corn stalk)",1,0.13
+NUEVA VIZCAYA,SANTA FE,Gabi tubers,1,0.5
+NUEVA VIZCAYA,SANTA FE,Ginger (luya),154,65.24
+NUEVA VIZCAYA,SANTA FE,Goats,23,0
+NUEVA VIZCAYA,SANTA FE,Green Beans (Baguio Beans),22,8.4
+NUEVA VIZCAYA,SANTA FE,Guyabano,2,0.75
+NUEVA VIZCAYA,SANTA FE,Lemon,1,2
+NUEVA VIZCAYA,SANTA FE,Lettuce,1,0.25
+NUEVA VIZCAYA,SANTA FE,Lime (Calamansi),2,1.2
+NUEVA VIZCAYA,SANTA FE,Mandarin (dalanghita),1,0.75
+NUEVA VIZCAYA,SANTA FE,Mango,4,2.15
+NUEVA VIZCAYA,SANTA FE,Okra,1,0.25
+NUEVA VIZCAYA,SANTA FE,Onion bulbs (sibuyas),7,3.99
+NUEVA VIZCAYA,SANTA FE,Ornamental Flowers,1,0.5
+NUEVA VIZCAYA,SANTA FE,Other animals (e.g.,1,0
+NUEVA VIZCAYA,SANTA FE,Other crops for fiber production,47,86.37
+NUEVA VIZCAYA,SANTA FE,Other Fish,1,0.01
+NUEVA VIZCAYA,SANTA FE,Other fruit-bearing trees and vines,44,59.33
+NUEVA VIZCAYA,SANTA FE,Other fruit-bearing vegetables,1215,966.09
+NUEVA VIZCAYA,SANTA FE,Other industrial crops,19,17.35
+NUEVA VIZCAYA,SANTA FE,Other industrial permanent crops not elsewhere classified,1,1.15
+NUEVA VIZCAYA,SANTA FE,Other leafy vegetables,284,240.73
+NUEVA VIZCAYA,SANTA FE,Other leguminous plants,57,44.5
+NUEVA VIZCAYA,SANTA FE,Other poultry,4,0
+NUEVA VIZCAYA,SANTA FE,Other temporary crops not reported elsewhere,1,1.65
+NUEVA VIZCAYA,SANTA FE,Other tubers - roots and bulbs,12,5.25
+NUEVA VIZCAYA,SANTA FE,Pechay,5,0.84
+NUEVA VIZCAYA,SANTA FE,Pepper - small green,19,5.53
+NUEVA VIZCAYA,SANTA FE,Pepper - sweet,5,3
+NUEVA VIZCAYA,SANTA FE,Pigs or swine,196,0
+NUEVA VIZCAYA,SANTA FE,Pineapple,1,2.5
+NUEVA VIZCAYA,SANTA FE,Pomelo (suha),2,1
+NUEVA VIZCAYA,SANTA FE,Potato (patatas),8,3.2
+NUEVA VIZCAYA,SANTA FE,Rabbits and hares,2,0
+NUEVA VIZCAYA,SANTA FE,Radish (labanos),1,0.25
+NUEVA VIZCAYA,SANTA FE,Rambutan,2,1.25
+NUEVA VIZCAYA,SANTA FE,Rattan fruit,1,3.03
+NUEVA VIZCAYA,SANTA FE,Rice/Palay,1268,976.57
+NUEVA VIZCAYA,SANTA FE,Squash (kalabasa),27,11.62
+NUEVA VIZCAYA,SANTA FE,String beans - harvested green (sitao),44,17.34
+NUEVA VIZCAYA,SANTA FE,Sweet peas - harvested green (sitsaro),43,13.82
+NUEVA VIZCAYA,SANTA FE,Taro,12,2.56
+NUEVA VIZCAYA,SANTA FE,Tiger Grass,26,14.11
+NUEVA VIZCAYA,SANTA FE,Tilapia,5,2.85
+NUEVA VIZCAYA,SANTA FE,Tomato (kamatis),267,102.8
+NUEVA VIZCAYA,SOLANO,Ampalaya,2,0.35
+NUEVA VIZCAYA,SOLANO,Banana,11,19.59
+NUEVA VIZCAYA,SOLANO,Beans - dry,23,14.6
+NUEVA VIZCAYA,SOLANO,Buffaloes (Carabaos),73,0
+NUEVA VIZCAYA,SOLANO,Camote tops (talbos ng kamote),1,0.5
+NUEVA VIZCAYA,SOLANO,Cattle,118,0
+NUEVA VIZCAYA,SOLANO,Chayote,1,1
+NUEVA VIZCAYA,SOLANO,Chickens,362,0
+NUEVA VIZCAYA,SOLANO,Chili (labuyo),2,0.75
+NUEVA VIZCAYA,SOLANO,Coconut,2,0.52
+NUEVA VIZCAYA,SOLANO,Coffee - other varieties,2,1.5
+NUEVA VIZCAYA,SOLANO,Common beans (habitchuelas),1,0.68
+NUEVA VIZCAYA,SOLANO,Corn,815,885.12
+NUEVA VIZCAYA,SOLANO,Cucumber (pipino),5,3.35
+NUEVA VIZCAYA,SOLANO,Ducks,218,0
+NUEVA VIZCAYA,SOLANO,Geese,5,0
+NUEVA VIZCAYA,SOLANO,Ginger (luya),15,7.15
+NUEVA VIZCAYA,SOLANO,Goats,66,0
+NUEVA VIZCAYA,SOLANO,Green Beans (Baguio Beans),1,0.2
+NUEVA VIZCAYA,SOLANO,Guinea Fowls,1,0
+NUEVA VIZCAYA,SOLANO,Guyabano,1,0.25
+NUEVA VIZCAYA,SOLANO,Hito/Catfish,3,0.97
+NUEVA VIZCAYA,SOLANO,Kalamansi,2,1
+NUEVA VIZCAYA,SOLANO,Lettuce,1,0.3
+NUEVA VIZCAYA,SOLANO,Lime (Calamansi),2,0.75
+NUEVA VIZCAYA,SOLANO,Mandarin (dalanghita),23,17
+NUEVA VIZCAYA,SOLANO,Mongo (Mung Bean),1,0.5
+NUEVA VIZCAYA,SOLANO,Okra,2,0.3
+NUEVA VIZCAYA,SOLANO,Orange (dalandan),1,1
+NUEVA VIZCAYA,SOLANO,Other animals (e.g.,2,0
+NUEVA VIZCAYA,SOLANO,Other crops for fiber production,1,0.4
+NUEVA VIZCAYA,SOLANO,Other Fish,31,11.47
+NUEVA VIZCAYA,SOLANO,Other fruit-bearing trees and vines,34,33.42
+NUEVA VIZCAYA,SOLANO,Other fruit-bearing vegetables,196,129.9
+NUEVA VIZCAYA,SOLANO,Other industrial crops,1,0.3
+NUEVA VIZCAYA,SOLANO,Other leafy vegetables,40,20.88
+NUEVA VIZCAYA,SOLANO,Other leguminous plants,81,68.38
+NUEVA VIZCAYA,SOLANO,Other poultry,2,0
+NUEVA VIZCAYA,SOLANO,Other tubers - roots and bulbs,1,1
+NUEVA VIZCAYA,SOLANO,Papaya,1,0.01
+NUEVA VIZCAYA,SOLANO,Peanuts,2,1.13
+NUEVA VIZCAYA,SOLANO,Pigs or swine,260,0
+NUEVA VIZCAYA,SOLANO,Pineapple,3,2.65
+NUEVA VIZCAYA,SOLANO,Rabbits and hares,1,0
+NUEVA VIZCAYA,SOLANO,Rambutan,4,3.4
+NUEVA VIZCAYA,SOLANO,Rice/Palay,4194,4572.27
+NUEVA VIZCAYA,SOLANO,Sheep,1,0
+NUEVA VIZCAYA,SOLANO,Squash (kalabasa),2,0.5
+NUEVA VIZCAYA,SOLANO,String beans - harvested green (sitao),2,1.5
+NUEVA VIZCAYA,SOLANO,Taro,2,0.45
+NUEVA VIZCAYA,SOLANO,Tilapia,50,9.8
+NUEVA VIZCAYA,SOLANO,Tomato (kamatis),11,6.53
+NUEVA VIZCAYA,SOLANO,Turkeys,8,0
+NUEVA VIZCAYA,VILLAVERDE,Banana,24,12.07
+NUEVA VIZCAYA,VILLAVERDE,Beans - dry,6,1.1
+NUEVA VIZCAYA,VILLAVERDE,Buffaloes (Carabaos),203,0
+NUEVA VIZCAYA,VILLAVERDE,Bush Sitao,2,0
+NUEVA VIZCAYA,VILLAVERDE,Camote,1,0
+NUEVA VIZCAYA,VILLAVERDE,Cattle,137,0
+NUEVA VIZCAYA,VILLAVERDE,Chickens,695,0
+NUEVA VIZCAYA,VILLAVERDE,Chili (labuyo),1,0
+NUEVA VIZCAYA,VILLAVERDE,Coconut,4,1.48
+NUEVA VIZCAYA,VILLAVERDE,Coffee - other varieties,10,6.39
+NUEVA VIZCAYA,VILLAVERDE,Coffee robusta,2,3.21
+NUEVA VIZCAYA,VILLAVERDE,Corn,798,996.84
+NUEVA VIZCAYA,VILLAVERDE,Ducks,452,0
+NUEVA VIZCAYA,VILLAVERDE,Eggplant (talong),8,0.98
+NUEVA VIZCAYA,VILLAVERDE,"Forage grass (sacate, alfalfa, green corn stalk)",1,0.5
+NUEVA VIZCAYA,VILLAVERDE,Geese,23,0
+NUEVA VIZCAYA,VILLAVERDE,Ginger (luya),11,6.03
+NUEVA VIZCAYA,VILLAVERDE,Gmelina Arborea,2,1.14
+NUEVA VIZCAYA,VILLAVERDE,Goats,104,0
+NUEVA VIZCAYA,VILLAVERDE,Grapes (ubas),1,0
+NUEVA VIZCAYA,VILLAVERDE,Green Beans (Baguio Beans),1,0.33
+NUEVA VIZCAYA,VILLAVERDE,Hito/Catfish,3,0.19
+NUEVA VIZCAYA,VILLAVERDE,Horses,1,0
+NUEVA VIZCAYA,VILLAVERDE,Kalamansi,36,30.9
+NUEVA VIZCAYA,VILLAVERDE,Kale,1,1
+NUEVA VIZCAYA,VILLAVERDE,Lime (Calamansi),27,18.37
+NUEVA VIZCAYA,VILLAVERDE,Lime (dayap),4,4.49
+NUEVA VIZCAYA,VILLAVERDE,Long Chili,1,0
+NUEVA VIZCAYA,VILLAVERDE,Mandarin (dalanghita),25,20.37
+NUEVA VIZCAYA,VILLAVERDE,Mango,3,1.84
+NUEVA VIZCAYA,VILLAVERDE,Mongo (Mung Bean),1,0
+NUEVA VIZCAYA,VILLAVERDE,Mustard,1,0
+NUEVA VIZCAYA,VILLAVERDE,Okra,2,0
+NUEVA VIZCAYA,VILLAVERDE,Orange (dalandan),7,5.16
+NUEVA VIZCAYA,VILLAVERDE,Ornamental Flowers,1,0.1
+NUEVA VIZCAYA,VILLAVERDE,Other animals (e.g.,4,0
+NUEVA VIZCAYA,VILLAVERDE,Other crops for fiber production,1,0.9
+NUEVA VIZCAYA,VILLAVERDE,Other Fish,16,1.83
+NUEVA VIZCAYA,VILLAVERDE,Other fruit-bearing trees and vines,27,27.03
+NUEVA VIZCAYA,VILLAVERDE,Other fruit-bearing vegetables,178,140.63
+NUEVA VIZCAYA,VILLAVERDE,Other industrial crops,3,1.75
+NUEVA VIZCAYA,VILLAVERDE,Other leafy vegetables,99,62.01
+NUEVA VIZCAYA,VILLAVERDE,Other poultry,5,0
+NUEVA VIZCAYA,VILLAVERDE,Other temporary crops not reported elsewhere,1,0.65
+NUEVA VIZCAYA,VILLAVERDE,Pechay,2,1.34
+NUEVA VIZCAYA,VILLAVERDE,Pigs or swine,469,0
+NUEVA VIZCAYA,VILLAVERDE,Pineapple,1,0.5
+NUEVA VIZCAYA,VILLAVERDE,Pomelo (suha),2,2.45
+NUEVA VIZCAYA,VILLAVERDE,Rabbits and hares,1,0
+NUEVA VIZCAYA,VILLAVERDE,Rice/Palay,2256,2528.17
+NUEVA VIZCAYA,VILLAVERDE,Sheep,2,0
+NUEVA VIZCAYA,VILLAVERDE,Squash (kalabasa),9,4.65
+NUEVA VIZCAYA,VILLAVERDE,String beans - harvested green (sitao),1,0.12
+NUEVA VIZCAYA,VILLAVERDE,Tilapia,104,16.74
+NUEVA VIZCAYA,VILLAVERDE,Tomato (kamatis),18,9.68
+NUEVA VIZCAYA,VILLAVERDE,Turkeys,12,0
+QUIRINO,AGLIPAY,Abaca,1,1
+QUIRINO,AGLIPAY,Avocado,2,0.1
+QUIRINO,AGLIPAY,Banana,1137,1223.37
+QUIRINO,AGLIPAY,Beans - dry,56,24.89
+QUIRINO,AGLIPAY,Bellpepper (Green/Red),1,0.99
+QUIRINO,AGLIPAY,Betel Nut (Nga-nga),3,1.95
+QUIRINO,AGLIPAY,Black pepper,1,1
+QUIRINO,AGLIPAY,Black Turtle Beans,1,1
+QUIRINO,AGLIPAY,Buffaloes (Carabaos),459,0
+QUIRINO,AGLIPAY,Cacao,12,4.23
+QUIRINO,AGLIPAY,Camote,5,1.52
+QUIRINO,AGLIPAY,Cassava (kamoteng kahoy),237,250.24
+QUIRINO,AGLIPAY,Cattle,176,0
+QUIRINO,AGLIPAY,Chickens,301,0
+QUIRINO,AGLIPAY,Chili (labuyo),3,1
+QUIRINO,AGLIPAY,Coconut,19,14.22
+QUIRINO,AGLIPAY,Coffee - other varieties,23,9.24
+QUIRINO,AGLIPAY,Common beans (habitchuelas),2,1.1
+QUIRINO,AGLIPAY,Corn,3235,4493.57
+QUIRINO,AGLIPAY,Cucumber (pipino),2,1.59
+QUIRINO,AGLIPAY,Dogs and cats,5,0
+QUIRINO,AGLIPAY,Dragon Fruit,2,1.24
+QUIRINO,AGLIPAY,Ducks,138,0
+QUIRINO,AGLIPAY,Eggplant (talong),2,0.75
+QUIRINO,AGLIPAY,"Forage grass (sacate, alfalfa, green corn stalk)",46,65.44
+QUIRINO,AGLIPAY,Gabi tubers,20,8.9
+QUIRINO,AGLIPAY,Garlic (bawang),1,0.25
+QUIRINO,AGLIPAY,Geese,4,0
+QUIRINO,AGLIPAY,Gemilina,4,3.9
+QUIRINO,AGLIPAY,Ginger (luya),145,66.25
+QUIRINO,AGLIPAY,Gmelina Arborea,2,1.25
+QUIRINO,AGLIPAY,Goats,38,0
+QUIRINO,AGLIPAY,Green Beans (Baguio Beans),6,2.35
+QUIRINO,AGLIPAY,Guyabano,2,0.9
+QUIRINO,AGLIPAY,Hito/Catfish,1,0.2
+QUIRINO,AGLIPAY,Horses,5,0
+QUIRINO,AGLIPAY,Kalamansi,3,3.6
+QUIRINO,AGLIPAY,Lemon,1,4
+QUIRINO,AGLIPAY,Lime (Calamansi),2,0.3
+QUIRINO,AGLIPAY,Lime (dayap),1,1
+QUIRINO,AGLIPAY,Long Chili,1,0.25
+QUIRINO,AGLIPAY,Luyang dilaw,2,0.55
+QUIRINO,AGLIPAY,Mahogany,2,1.2
+QUIRINO,AGLIPAY,Mandarin (dalanghita),4,3.6
+QUIRINO,AGLIPAY,Mango,22,18.92
+QUIRINO,AGLIPAY,Mongo (Mung Bean),2,0.66
+QUIRINO,AGLIPAY,Other animals (e.g.,2,0
+QUIRINO,AGLIPAY,Other crops for fiber production,4,2.4
+QUIRINO,AGLIPAY,Other Fish,33,6.33
+QUIRINO,AGLIPAY,Other fruit-bearing trees and vines,70,75.79
+QUIRINO,AGLIPAY,Other fruit-bearing vegetables,144,76.88
+QUIRINO,AGLIPAY,Other industrial crops,3,5
+QUIRINO,AGLIPAY,Other leafy vegetables,40,15.33
+QUIRINO,AGLIPAY,Other leguminous plants,19,9.47
+QUIRINO,AGLIPAY,Other poultry,3,0
+QUIRINO,AGLIPAY,Other tubers - roots and bulbs,4,1.75
+QUIRINO,AGLIPAY,Palm tree,1,0.5
+QUIRINO,AGLIPAY,Peanuts,7,2.72
+QUIRINO,AGLIPAY,Pigs or swine,261,0
+QUIRINO,AGLIPAY,Pineapple,11,4.63
+QUIRINO,AGLIPAY,Pomelo (suha),1,0.2
+QUIRINO,AGLIPAY,Potato (patatas),2,0.9
+QUIRINO,AGLIPAY,Rabbits and hares,4,0
+QUIRINO,AGLIPAY,Rambutan,7,3.4
+QUIRINO,AGLIPAY,Rice/Palay,3584,3284.59
+QUIRINO,AGLIPAY,Sheep,5,0
+QUIRINO,AGLIPAY,Soybeans,1,0.5
+QUIRINO,AGLIPAY,Squash (kalabasa),10,6.25
+QUIRINO,AGLIPAY,String beans - harvested green (sitao),5,1.98
+QUIRINO,AGLIPAY,Sugarcane,1,1.52
+QUIRINO,AGLIPAY,Taro,60,32.48
+QUIRINO,AGLIPAY,Tiger Grass,2,1.7
+QUIRINO,AGLIPAY,Tilapia,41,14.68
+QUIRINO,AGLIPAY,Tomato (kamatis),2,0.85
+QUIRINO,AGLIPAY,Turkeys,7,0
+QUIRINO,AGLIPAY,Ube,34,13.52
+QUIRINO,AGLIPAY,Water melon,4,5.5
+QUIRINO,AGLIPAY,White Turtle Beans,1,1
+QUIRINO,CABARROGUIS Capital,Acacia,2,2.59
+QUIRINO,CABARROGUIS Capital,Alugbati,1,0.33
+QUIRINO,CABARROGUIS Capital,Ampalaya,1,0.7
+QUIRINO,CABARROGUIS Capital,Arrowroot,2,1.5
+QUIRINO,CABARROGUIS Capital,Avocado,2,0.6
+QUIRINO,CABARROGUIS Capital,Bamboo (Kawayan),1,0.1
+QUIRINO,CABARROGUIS Capital,Banana,1807,1820.67
+QUIRINO,CABARROGUIS Capital,Beans - dry,33,12.05
+QUIRINO,CABARROGUIS Capital,Bellpepper (Green/Red),1,0.3
+QUIRINO,CABARROGUIS Capital,Betel Nut (Nga-nga),7,2.72
+QUIRINO,CABARROGUIS Capital,Buffaloes (Carabaos),551,0
+QUIRINO,CABARROGUIS Capital,Cacao,11,3.58
+QUIRINO,CABARROGUIS Capital,Camote,1,0.18
+QUIRINO,CABARROGUIS Capital,Cassava (kamoteng kahoy),174,117.42
+QUIRINO,CABARROGUIS Capital,Cattle,144,0
+QUIRINO,CABARROGUIS Capital,Chickens,850,0
+QUIRINO,CABARROGUIS Capital,Coconut,35,10.28
+QUIRINO,CABARROGUIS Capital,Coffee - other varieties,44,21.19
+QUIRINO,CABARROGUIS Capital,Coffee robusta,1,0.4
+QUIRINO,CABARROGUIS Capital,Common beans (habitchuelas),3,0.8
+QUIRINO,CABARROGUIS Capital,Corn,1886,2089.05
+QUIRINO,CABARROGUIS Capital,Cucumber (pipino),4,1.35
+QUIRINO,CABARROGUIS Capital,Dragon Fruit,4,1.42
+QUIRINO,CABARROGUIS Capital,Ducks,345,0
+QUIRINO,CABARROGUIS Capital,Durian,1,0.1
+QUIRINO,CABARROGUIS Capital,Eggplant (talong),2,5.08
+QUIRINO,CABARROGUIS Capital,"Forage grass (sacate, alfalfa, green corn stalk)",2,1.6
+QUIRINO,CABARROGUIS Capital,Gabi tubers,26,6.83
+QUIRINO,CABARROGUIS Capital,Geese,9,0
+QUIRINO,CABARROGUIS Capital,Gemilina,61,41.03
+QUIRINO,CABARROGUIS Capital,Ginger (luya),120,46.14
+QUIRINO,CABARROGUIS Capital,Gmelina Arborea,62,43.07
+QUIRINO,CABARROGUIS Capital,Goats,50,0
+QUIRINO,CABARROGUIS Capital,Green Beans (Baguio Beans),1,0.25
+QUIRINO,CABARROGUIS Capital,Guyabano,14,5.2
+QUIRINO,CABARROGUIS Capital,Hito/Catfish,6,0.2
+QUIRINO,CABARROGUIS Capital,Ipil-ipil,6,3.4
+QUIRINO,CABARROGUIS Capital,Jackfruit,1,0.1
+QUIRINO,CABARROGUIS Capital,Kalamansi,13,7.01
+QUIRINO,CABARROGUIS Capital,Lanzones,20,6.15
+QUIRINO,CABARROGUIS Capital,Lime (Calamansi),11,5.92
+QUIRINO,CABARROGUIS Capital,Lime (dayap),2,2.1
+QUIRINO,CABARROGUIS Capital,Luyang dilaw,1,0.1
+QUIRINO,CABARROGUIS Capital,Mahogany,6,2.13
+QUIRINO,CABARROGUIS Capital,Mandarin (dalanghita),72,36.57
+QUIRINO,CABARROGUIS Capital,Mango,35,17.33
+QUIRINO,CABARROGUIS Capital,Mangrove,1,0.13
+QUIRINO,CABARROGUIS Capital,Mushroom,1,0.05
+QUIRINO,CABARROGUIS Capital,Narra,2,0.5
+QUIRINO,CABARROGUIS Capital,Orange (dalandan),1,0.5
+QUIRINO,CABARROGUIS Capital,Other animals (e.g.,2,0
+QUIRINO,CABARROGUIS Capital,Other crops for fiber production,3,7.6
+QUIRINO,CABARROGUIS Capital,Other edible nuts,1,0.1
+QUIRINO,CABARROGUIS Capital,Other Fish,33,3.77
+QUIRINO,CABARROGUIS Capital,Other fruit-bearing trees and vines,536,474.96
+QUIRINO,CABARROGUIS Capital,Other fruit-bearing vegetables,405,181.87
+QUIRINO,CABARROGUIS Capital,Other industrial crops,7,6.84
+QUIRINO,CABARROGUIS Capital,Other industrial permanent crops not elsewhere classified,1,1
+QUIRINO,CABARROGUIS Capital,Other leafy vegetables,82,32.65
+QUIRINO,CABARROGUIS Capital,Other leguminous plants,14,7.45
+QUIRINO,CABARROGUIS Capital,Other temporary crops not reported elsewhere,1,2.3
+QUIRINO,CABARROGUIS Capital,Other tubers - roots and bulbs,8,4.16
+QUIRINO,CABARROGUIS Capital,Palm tree,2,2.2
+QUIRINO,CABARROGUIS Capital,Peanuts,7,1.73
+QUIRINO,CABARROGUIS Capital,Pechay,3,0.38
+QUIRINO,CABARROGUIS Capital,Pigs or swine,590,0
+QUIRINO,CABARROGUIS Capital,Pineapple,16,5.29
+QUIRINO,CABARROGUIS Capital,Pomelo (suha),24,12.04
+QUIRINO,CABARROGUIS Capital,Potato (patatas),1,0.5
+QUIRINO,CABARROGUIS Capital,Rabbits and hares,2,0
+QUIRINO,CABARROGUIS Capital,Rambutan,89,42.78
+QUIRINO,CABARROGUIS Capital,Rice/Palay,3019,3038.34
+QUIRINO,CABARROGUIS Capital,Sheep,5,0
+QUIRINO,CABARROGUIS Capital,Squash (kalabasa),9,2.8
+QUIRINO,CABARROGUIS Capital,String beans - harvested green (sitao),2,0.26
+QUIRINO,CABARROGUIS Capital,Taro,26,7.39
+QUIRINO,CABARROGUIS Capital,Tilapia,166,18.57
+QUIRINO,CABARROGUIS Capital,Tomato (kamatis),13,4.76
+QUIRINO,CABARROGUIS Capital,Turkeys,15,0
+QUIRINO,CABARROGUIS Capital,Ube,6,2.8
+QUIRINO,DIFFUN,Ampalaya,1,0.2
+QUIRINO,DIFFUN,Banana,99,77.66
+QUIRINO,DIFFUN,Beans - dry,8,3.95
+QUIRINO,DIFFUN,Bellpepper (Green/Red),1,0.25
+QUIRINO,DIFFUN,Broccoli,4,4.6
+QUIRINO,DIFFUN,Buffaloes (Carabaos),142,0
+QUIRINO,DIFFUN,Camote,2,1.25
+QUIRINO,DIFFUN,Camote tops (talbos ng kamote),1,0.5
+QUIRINO,DIFFUN,Cantaloupes- honey dew and other melon varieties,1,1
+QUIRINO,DIFFUN,Cassava (kamoteng kahoy),8,6.18
+QUIRINO,DIFFUN,Cattle,42,0
+QUIRINO,DIFFUN,Chickens,242,0
+QUIRINO,DIFFUN,Coconut,5,4.95
+QUIRINO,DIFFUN,Coffee - other varieties,8,14.64
+QUIRINO,DIFFUN,Coffee robusta,1,1.25
+QUIRINO,DIFFUN,Common beans (habitchuelas),7,2.95
+QUIRINO,DIFFUN,Corn,3314,5548.3
+QUIRINO,DIFFUN,Cucumber (pipino),4,2.1
+QUIRINO,DIFFUN,Dogs and cats,2,0
+QUIRINO,DIFFUN,Dragon Fruit,1,3.3
+QUIRINO,DIFFUN,Ducks,52,0
+QUIRINO,DIFFUN,Eggplant (talong),1,1.3
+QUIRINO,DIFFUN,"Forage grass (sacate, alfalfa, green corn stalk)",1,1
+QUIRINO,DIFFUN,Gabi tubers,8,2.3
+QUIRINO,DIFFUN,"Garlic shoot, harvested green",1,0.5
+QUIRINO,DIFFUN,Ginger (luya),88,43.1
+QUIRINO,DIFFUN,Gmelina Arborea,2,0.4
+QUIRINO,DIFFUN,Goats,10,0
+QUIRINO,DIFFUN,Guavas (bayabas),1,0.12
+QUIRINO,DIFFUN,Hito/Catfish,5,0.79
+QUIRINO,DIFFUN,Jackfruit,1,0.2
+QUIRINO,DIFFUN,Kalamansi,3,2.65
+QUIRINO,DIFFUN,Lemon,1,2.2
+QUIRINO,DIFFUN,Lime (Calamansi),1,0.13
+QUIRINO,DIFFUN,Lime (dayap),4,2.6
+QUIRINO,DIFFUN,Mandarin (dalanghita),4,3.78
+QUIRINO,DIFFUN,Mango,4,3.8
+QUIRINO,DIFFUN,Mongo (Mung Bean),1,0.25
+QUIRINO,DIFFUN,Orchard,3,2.75
+QUIRINO,DIFFUN,Other crops for fiber production,21,23.05
+QUIRINO,DIFFUN,Other Fish,42,9.43
+QUIRINO,DIFFUN,Other fruit-bearing trees and vines,78,77.13
+QUIRINO,DIFFUN,Other fruit-bearing vegetables,198,137.38
+QUIRINO,DIFFUN,Other industrial crops,3,2.74
+QUIRINO,DIFFUN,Other leafy vegetables,136,77.92
+QUIRINO,DIFFUN,Other leguminous plants,7,5.19
+QUIRINO,DIFFUN,Peanuts,4,2.5
+QUIRINO,DIFFUN,Pepper - small green,1,0.1
+QUIRINO,DIFFUN,Pigs or swine,130,0
+QUIRINO,DIFFUN,Rabbits and hares,1,0
+QUIRINO,DIFFUN,Rambutan,2,5.44
+QUIRINO,DIFFUN,Rice/Palay,3825,4226.05
+QUIRINO,DIFFUN,Sheep,2,0
+QUIRINO,DIFFUN,Squash (kalabasa),9,8
+QUIRINO,DIFFUN,String beans - harvested green (sitao),2,0.5
+QUIRINO,DIFFUN,Taro,22,13.03
+QUIRINO,DIFFUN,Tiger Grass,12,12.04
+QUIRINO,DIFFUN,Tigre grass,2,1
+QUIRINO,DIFFUN,Tilapia,37,9.91
+QUIRINO,DIFFUN,Tomato (kamatis),4,2
+QUIRINO,DIFFUN,Turkeys,2,0
+QUIRINO,MADDELA,Adlai,1,0.25
+QUIRINO,MADDELA,Avocado,1,0.25
+QUIRINO,MADDELA,Banana,1906,1904.2
+QUIRINO,MADDELA,Beans - dry,89,35.54
+QUIRINO,MADDELA,Bellpepper (Green/Red),1,1
+QUIRINO,MADDELA,Betel Leaf,1,0.3
+QUIRINO,MADDELA,Betel Nut (Nga-nga),9,2.87
+QUIRINO,MADDELA,Black pepper,1,0.5
+QUIRINO,MADDELA,Black Turtle Beans,1,0.5
+QUIRINO,MADDELA,Buffaloes (Carabaos),1744,0
+QUIRINO,MADDELA,Bush Sitao,1,0.13
+QUIRINO,MADDELA,Cabbage (repolyo),2,0.5
+QUIRINO,MADDELA,Cacao,11,3.95
+QUIRINO,MADDELA,Camote,15,5.3
+QUIRINO,MADDELA,Camote tops (talbos ng kamote),5,1.5
+QUIRINO,MADDELA,Cassava (kamoteng kahoy),295,239.33
+QUIRINO,MADDELA,Cattle,285,0
+QUIRINO,MADDELA,Chickens,2545,0
+QUIRINO,MADDELA,Chili (labuyo),1,0.25
+QUIRINO,MADDELA,Coconut,40,18.15
+QUIRINO,MADDELA,Coffee - other varieties,68,84.88
+QUIRINO,MADDELA,Common beans (habitchuelas),1,0.25
+QUIRINO,MADDELA,Corn,4866,6539.15
+QUIRINO,MADDELA,crops for seed and seedling,1,0.5
+QUIRINO,MADDELA,Cucumber (pipino),8,4.52
+QUIRINO,MADDELA,Dogs and cats,29,0
+QUIRINO,MADDELA,Ducks,1006,0
+QUIRINO,MADDELA,Eggplant (talong),8,1.98
+QUIRINO,MADDELA,"Forage grass (sacate, alfalfa, green corn stalk)",3,8.93
+QUIRINO,MADDELA,Gabi tubers,158,61.2
+QUIRINO,MADDELA,Garlic (bawang),2,1.25
+QUIRINO,MADDELA,Geese,31,0
+QUIRINO,MADDELA,Gemilina,1,0.25
+QUIRINO,MADDELA,Ginger (luya),255,115.09
+QUIRINO,MADDELA,Gmelina Arborea,38,24.64
+QUIRINO,MADDELA,Goats,230,0
+QUIRINO,MADDELA,Green Beans (Baguio Beans),1,0.6
+QUIRINO,MADDELA,Guyabano,2,1.3
+QUIRINO,MADDELA,Hito/Catfish,3,0.53
+QUIRINO,MADDELA,Kalamansi,3,2.67
+QUIRINO,MADDELA,Lanzones,2,1.5
+QUIRINO,MADDELA,Lime (Calamansi),12,4.05
+QUIRINO,MADDELA,Mahogany,2,2
+QUIRINO,MADDELA,Mandarin (dalanghita),3,1.6
+QUIRINO,MADDELA,Mango,30,35.48
+QUIRINO,MADDELA,Mongo (Mung Bean),6,2.35
+QUIRINO,MADDELA,Mushroom,1,0.3
+QUIRINO,MADDELA,Narra,1,0.5
+QUIRINO,MADDELA,Okra,2,0.13
+QUIRINO,MADDELA,Other animals (e.g.,2,0
+QUIRINO,MADDELA,Other crops for fiber production,2,1.25
+QUIRINO,MADDELA,Other edible nuts,6,4.35
+QUIRINO,MADDELA,Other Fish,28,4.97
+QUIRINO,MADDELA,Other fruit-bearing trees and vines,206,178.64
+QUIRINO,MADDELA,Other fruit-bearing vegetables,282,153.06
+QUIRINO,MADDELA,Other industrial crops,21,8.65
+QUIRINO,MADDELA,Other industrial permanent crops not elsewhere classified,1,0.25
+QUIRINO,MADDELA,Other leafy vegetables,283,123.41
+QUIRINO,MADDELA,Other tubers - roots and bulbs,49,22.3
+QUIRINO,MADDELA,Peanuts,59,27.96
+QUIRINO,MADDELA,Pechay,2,0.25
+QUIRINO,MADDELA,Pepper - small green,2,0.63
+QUIRINO,MADDELA,Pigs or swine,1089,0
+QUIRINO,MADDELA,Pineapple,16,6.17
+QUIRINO,MADDELA,Pomelo (suha),7,4
+QUIRINO,MADDELA,Potato (patatas),10,3.53
+QUIRINO,MADDELA,Quail,1,0
+QUIRINO,MADDELA,Rabbits and hares,9,0
+QUIRINO,MADDELA,Rambutan,38,15.51
+QUIRINO,MADDELA,Rice/Palay,3677,2985.19
+QUIRINO,MADDELA,Sheep,7,0
+QUIRINO,MADDELA,Squash (kalabasa),9,5
+QUIRINO,MADDELA,String beans - harvested green (sitao),12,4.04
+QUIRINO,MADDELA,Sugarcane,1,3
+QUIRINO,MADDELA,Taro,134,60.68
+QUIRINO,MADDELA,Tiger Grass,7,2.47
+QUIRINO,MADDELA,Tigre grass,7,3.62
+QUIRINO,MADDELA,Tilapia,37,9.22
+QUIRINO,MADDELA,Tomato (kamatis),13,6.71
+QUIRINO,MADDELA,Turkeys,47,0
+QUIRINO,MADDELA,Ube,34,14.61
+QUIRINO,MADDELA,Water melon,4,3.5
+QUIRINO,MADDELA,Wax gourd (kondol),1,0.05
+QUIRINO,NAGTIPUNAN,Ampalaya,1,0.5
+QUIRINO,NAGTIPUNAN,Banana,809,642.82
+QUIRINO,NAGTIPUNAN,Beans - dry,213,157.1
+QUIRINO,NAGTIPUNAN,Bellpepper (Green/Red),3,1.5
+QUIRINO,NAGTIPUNAN,Betel Leaf,1,0.5
+QUIRINO,NAGTIPUNAN,Betel Nut (Nga-nga),1,0.5
+QUIRINO,NAGTIPUNAN,Black pepper,1,0
+QUIRINO,NAGTIPUNAN,Black Turtle Beans,2,1.25
+QUIRINO,NAGTIPUNAN,Broccoli,1,0.5
+QUIRINO,NAGTIPUNAN,Buffaloes (Carabaos),385,0
+QUIRINO,NAGTIPUNAN,Cabbage (repolyo),8,3
+QUIRINO,NAGTIPUNAN,Cacao,1,1
+QUIRINO,NAGTIPUNAN,Camote,13,4.5
+QUIRINO,NAGTIPUNAN,Camote tops (talbos ng kamote),1,0
+QUIRINO,NAGTIPUNAN,Carrot,2,0.7
+QUIRINO,NAGTIPUNAN,Cassava (kamoteng kahoy),24,12.88
+QUIRINO,NAGTIPUNAN,Cattle,27,0
+QUIRINO,NAGTIPUNAN,Cauliflower,1,0.45
+QUIRINO,NAGTIPUNAN,Chickens,633,0
+QUIRINO,NAGTIPUNAN,Chili (labuyo),1,0.25
+QUIRINO,NAGTIPUNAN,Citronella,1,1
+QUIRINO,NAGTIPUNAN,Coconut,7,2.43
+QUIRINO,NAGTIPUNAN,Coffee - other varieties,3,4
+QUIRINO,NAGTIPUNAN,Common beans (habitchuelas),17,19.25
+QUIRINO,NAGTIPUNAN,Corn,4963,6111.32
+QUIRINO,NAGTIPUNAN,crops for seed and seedling,2,1.5
+QUIRINO,NAGTIPUNAN,Cucumber (pipino),10,3
+QUIRINO,NAGTIPUNAN,Dogs and cats,121,0
+QUIRINO,NAGTIPUNAN,Ducks,155,0
+QUIRINO,NAGTIPUNAN,"Forage grass (sacate, alfalfa, green corn stalk)",6,10.45
+QUIRINO,NAGTIPUNAN,Gabi tubers,31,12.75
+QUIRINO,NAGTIPUNAN,"Garlic shoot, harvested green",1,0.5
+QUIRINO,NAGTIPUNAN,Geese,5,0
+QUIRINO,NAGTIPUNAN,Gemilina,1,1
+QUIRINO,NAGTIPUNAN,Ginger (luya),382,248.08
+QUIRINO,NAGTIPUNAN,Gmelina Arborea,2,0.72
+QUIRINO,NAGTIPUNAN,Goats,23,0
+QUIRINO,NAGTIPUNAN,Green Beans (Baguio Beans),5,2.25
+QUIRINO,NAGTIPUNAN,Guyabano,1,0.25
+QUIRINO,NAGTIPUNAN,Hito/Catfish,1,0.25
+QUIRINO,NAGTIPUNAN,Horses,1,0
+QUIRINO,NAGTIPUNAN,Jackfruit,1,0.75
+QUIRINO,NAGTIPUNAN,Lime (Calamansi),3,1.55
+QUIRINO,NAGTIPUNAN,Luyang dilaw,1,0.3
+QUIRINO,NAGTIPUNAN,Mandarin (dalanghita),1,2
+QUIRINO,NAGTIPUNAN,Mango,2,0.5
+QUIRINO,NAGTIPUNAN,Mongo (Mung Bean),2,1.25
+QUIRINO,NAGTIPUNAN,Onion bulbs (sibuyas),1,0.25
+QUIRINO,NAGTIPUNAN,Other animals (e.g.,1,0
+QUIRINO,NAGTIPUNAN,Other crops for fiber production,4,3
+QUIRINO,NAGTIPUNAN,Other Fish,1,0.25
+QUIRINO,NAGTIPUNAN,Other fruit-bearing trees and vines,47,49.08
+QUIRINO,NAGTIPUNAN,Other fruit-bearing vegetables,861,846.52
+QUIRINO,NAGTIPUNAN,Other industrial crops,21,16.7
+QUIRINO,NAGTIPUNAN,Other industrial permanent crops not elsewhere classified,2,1.25
+QUIRINO,NAGTIPUNAN,Other leafy vegetables,386,376.09
+QUIRINO,NAGTIPUNAN,Other leguminous plants,90,84.89
+QUIRINO,NAGTIPUNAN,Other poultry,59,0
+QUIRINO,NAGTIPUNAN,Other temporary crops not reported elsewhere,1,0.5
+QUIRINO,NAGTIPUNAN,Other tubers - roots and bulbs,3,1.5
+QUIRINO,NAGTIPUNAN,Papaya,3,3.25
+QUIRINO,NAGTIPUNAN,Peanuts,11,5
+QUIRINO,NAGTIPUNAN,Pechay,1,0.25
+QUIRINO,NAGTIPUNAN,Pepper - small green,1,0.5
+QUIRINO,NAGTIPUNAN,Pepper - sweet,1,0.5
+QUIRINO,NAGTIPUNAN,Pigs or swine,313,0
+QUIRINO,NAGTIPUNAN,Pineapple,2,0.75
+QUIRINO,NAGTIPUNAN,Potato (patatas),5,2
+QUIRINO,NAGTIPUNAN,Pusit/Squid,1,0.5
+QUIRINO,NAGTIPUNAN,Rabbits and hares,1,0
+QUIRINO,NAGTIPUNAN,Rambutan,1,0.1
+QUIRINO,NAGTIPUNAN,Rice/Palay,2601,2129.6
+QUIRINO,NAGTIPUNAN,Squash (kalabasa),36,30.3
+QUIRINO,NAGTIPUNAN,String beans - harvested green (sitao),12,5.55
+QUIRINO,NAGTIPUNAN,Sweet peas - harvested green (sitsaro),5,1.63
+QUIRINO,NAGTIPUNAN,Taro,94,40.39
+QUIRINO,NAGTIPUNAN,Tomato (kamatis),35,18.86
+QUIRINO,NAGTIPUNAN,Turkeys,2,0
+QUIRINO,NAGTIPUNAN,Ube,24,10.18
+QUIRINO,NAGTIPUNAN,White Turtle Beans,3,1.75
+QUIRINO,SAGUDAY,Banana,6,1.55
+QUIRINO,SAGUDAY,Beans - dry,1,0.25
+QUIRINO,SAGUDAY,Buffaloes (Carabaos),39,0
+QUIRINO,SAGUDAY,Cassava (kamoteng kahoy),2,1.11
+QUIRINO,SAGUDAY,Cattle,21,0
+QUIRINO,SAGUDAY,Chickens,104,0
+QUIRINO,SAGUDAY,Coconut,2,4.3
+QUIRINO,SAGUDAY,Corn,285,392.45
+QUIRINO,SAGUDAY,Cucumber (pipino),1,0.69
+QUIRINO,SAGUDAY,Ducks,61,0
+QUIRINO,SAGUDAY,Eggplant (talong),3,1.48
+QUIRINO,SAGUDAY,"Forage grass (sacate, alfalfa, green corn stalk)",1,0.36
+QUIRINO,SAGUDAY,Geese,1,0
+QUIRINO,SAGUDAY,Ginger (luya),1,0.5
+QUIRINO,SAGUDAY,Gmelina Arborea,1,1
+QUIRINO,SAGUDAY,Goats,5,0
+QUIRINO,SAGUDAY,Hito/Catfish,3,0.39
+QUIRINO,SAGUDAY,Lime (Calamansi),2,0.56
+QUIRINO,SAGUDAY,Mango,4,2.9
+QUIRINO,SAGUDAY,Orchard,1,1.6
+QUIRINO,SAGUDAY,Other crops for fiber production,2,2.8
+QUIRINO,SAGUDAY,Other Fish,28,6.78
+QUIRINO,SAGUDAY,Other fruit-bearing trees and vines,9,4.2
+QUIRINO,SAGUDAY,Other fruit-bearing vegetables,25,12.18
+QUIRINO,SAGUDAY,Other leafy vegetables,24,12.67
+QUIRINO,SAGUDAY,Other leguminous plants,1,1
+QUIRINO,SAGUDAY,Other temporary crops not reported elsewhere,1,0.29
+QUIRINO,SAGUDAY,Pigs or swine,35,0
+QUIRINO,SAGUDAY,Rice/Palay,1640,2798.34
+QUIRINO,SAGUDAY,Sheep,1,0
+QUIRINO,SAGUDAY,Tiger Grass,1,0.45
+QUIRINO,SAGUDAY,Tilapia,31,5.55
