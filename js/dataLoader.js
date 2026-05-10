@@ -13,6 +13,8 @@ const DataLoader = (() => {
   let droughtOutlookData = [];
   let plansProjectsData = [];
   let soilFertilityData = [];
+  let fmrProjectsData = [];
+  let fmrSummaryData = [];
   let facilitiesData = [];
   let joinMismatches = [];
 
@@ -164,11 +166,30 @@ const DataLoader = (() => {
     }
 
     try {
+      fmrSummaryData = await fetchCSV(dataPath + "fmr_municipal_summary.csv");
+      mergeFmrSummaryData(fmrSummaryData);
+      console.info(`Loaded fmr_municipal_summary.csv: ${fmrSummaryData.length} records`);
+    } catch (e) {
+      console.warn("fmr_municipal_summary.csv not found. FMR inventory indicators will be unavailable.", e);
+      fmrSummaryData = [];
+      addFmrDefaults();
+    }
+
+    try {
       facilitiesData = await fetchCSV(dataPath + "facilities.csv");
       console.info(`Loaded facilities.csv: ${facilitiesData.length} records`);
     } catch (e) {
       console.warn("facilities.csv not found.", e);
       facilitiesData = [];
+    }
+
+    try {
+      fmrProjectsData = await fetchCSV(dataPath + "fmr_projects.csv");
+      facilitiesData = facilitiesData.concat(toFmrFacilityRows(fmrProjectsData));
+      console.info(`Loaded fmr_projects.csv: ${fmrProjectsData.length} records`);
+    } catch (e) {
+      console.warn("fmr_projects.csv not found. FMR point layer will be unavailable.", e);
+      fmrProjectsData = [];
     }
 
     performJoin();
@@ -185,6 +206,8 @@ const DataLoader = (() => {
       droughtOutlookData,
       plansProjectsData,
       soilFertilityData,
+      fmrProjectsData,
+      fmrSummaryData,
       facilitiesData,
       joinMismatches
     };
@@ -429,6 +452,24 @@ const DataLoader = (() => {
     addSoilFertilityDefaults();
   }
 
+  function mergeFmrSummaryData(rows) {
+    rows.forEach(fmrRow => {
+      const row = findMunicipalDataRow(fmrRow.province, fmrRow.municipality);
+      if (!row) {
+        joinMismatches.push({
+          type: "fmr_no_csv",
+          name: `${fmrRow.municipality}, ${fmrRow.province}`,
+          message: "FMR summary row has no matching municipal_data.csv row"
+        });
+        return;
+      }
+
+      Object.assign(row, fmrRow);
+    });
+
+    addFmrDefaults();
+  }
+
   function addPlansProjectDefaults() {
     Object.values(municipalData).forEach(row => addPlansDerivedFields(row));
   }
@@ -470,6 +511,45 @@ const DataLoader = (() => {
         if (row[field] === undefined || row[field] === null || row[field] === "") row[field] = "0";
       });
     });
+  }
+
+  function addFmrDefaults() {
+    const numericFields = [
+      "fmr_inventory_count",
+      "fmr_completed_count",
+      "fmr_ongoing_count",
+      "fmr_pipeline_count",
+      "fmr_inventory_length_km",
+      "fmr_avg_length_km",
+      "fmr_influence_area_ha",
+      "fmr_farmer_beneficiaries",
+      "fmr_latest_year"
+    ];
+
+    Object.values(municipalData).forEach(row => {
+      numericFields.forEach(field => {
+        if (row[field] === undefined || row[field] === null || row[field] === "") row[field] = "0";
+      });
+    });
+  }
+
+  function toFmrFacilityRows(rows) {
+    return rows.map((row, index) => ({
+      facility_id: `FMR${String(index + 1).padStart(4, "0")}`,
+      facility_name: row.project_name || "Farm-to-Market Road",
+      facility_type: "FMR",
+      province: row.province,
+      municipality: row.municipality,
+      barangay: row.barangay,
+      latitude: row.latitude,
+      longitude: row.longitude,
+      status: row.status,
+      capacity: row.length_km ? `${row.length_km} km` : "",
+      service_area_ha: row.influence_area_ha || "",
+      year_constructed: row.year_funded || "",
+      farmer_beneficiaries: row.farmer_beneficiaries || "",
+      remarks: row.district ? `District: ${row.district}` : ""
+    }));
   }
 
   function addPlansDerivedFields(row) {
@@ -657,6 +737,8 @@ const DataLoader = (() => {
     get droughtOutlookData() { return droughtOutlookData; },
     get plansProjectsData() { return plansProjectsData; },
     get soilFertilityData() { return soilFertilityData; },
+    get fmrProjectsData() { return fmrProjectsData; },
+    get fmrSummaryData() { return fmrSummaryData; },
     get facilitiesData() { return facilitiesData; }
   };
 })();

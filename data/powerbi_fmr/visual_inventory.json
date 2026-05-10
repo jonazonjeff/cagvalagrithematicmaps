@@ -1,0 +1,145 @@
+[
+  {
+    "id": 1492399938,
+    "name": "de0d673038f77bbe5832",
+    "type": "map",
+    "x": 694.19,
+    "y": 117.98,
+    "queryLen": 808,
+    "projections": {
+      "Series": [
+        {
+          "queryRef": "OVERALL FMR (2).PROVINCE"
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Min(OVERALL FMR (2).LATITUDE)"
+        }
+      ],
+      "X": [
+        {
+          "queryRef": "Min(OVERALL FMR (2).LONGITUDE)"
+        }
+      ]
+    }
+  },
+  {
+    "id": 1492399940,
+    "name": "9f1db6990b8adb397532",
+    "type": "slicer",
+    "x": 7.33,
+    "y": 55.01,
+    "queryLen": 472,
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "OVERALL FMR (2).YEAR FUNDED",
+          "active": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1492399946,
+    "name": "fcf897e428ae5548bb15",
+    "type": "multiRowCard",
+    "x": 437.62,
+    "y": 248.15,
+    "queryLen": 773,
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "OVERALL FMR (2).MUNICIPALITY"
+        },
+        {
+          "queryRef": "Sum(OVERALL FMR (2).PROJECTS)"
+        }
+      ]
+    }
+  },
+  {
+    "id": 1492399945,
+    "name": "78837b1b20340494ba52",
+    "type": "card",
+    "x": 437.62,
+    "y": 118.57,
+    "queryLen": 489,
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Sum(OVERALL FMR (2).LENGTH)"
+        }
+      ]
+    }
+  },
+  {
+    "id": 1492399944,
+    "name": "5de00c24b364a4005f2a",
+    "type": "multiRowCard",
+    "x": 265.26,
+    "y": 118.57,
+    "queryLen": 749,
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "OVERALL FMR (2).STATUS"
+        },
+        {
+          "queryRef": "Sum(OVERALL FMR (2).PROJECTS)"
+        }
+      ]
+    }
+  },
+  {
+    "id": 1492399943,
+    "name": "8a51fc2adda0d599fac6",
+    "type": "pieChart",
+    "x": 31.78,
+    "y": 413.17,
+    "queryLen": 802,
+    "projections": {
+      "Category": [
+        {
+          "queryRef": "OVERALL FMR (2).PROVINCE",
+          "active": true
+        }
+      ],
+      "Y": [
+        {
+          "queryRef": "Sum(OVERALL FMR (2).PROJECTS)"
+        }
+      ]
+    }
+  },
+  {
+    "id": 1492399942,
+    "name": "3e09ae68e994ba8459f4",
+    "type": "card",
+    "x": 31.78,
+    "y": 270.15,
+    "queryLen": 535,
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Sum(OVERALL FMR (2).FARMER BENEFICIARY (FB))"
+        }
+      ]
+    }
+  },
+  {
+    "id": 1492399941,
+    "name": "167d9502a39640ac1722",
+    "type": "card",
+    "x": 31.78,
+    "y": 118.57,
+    "queryLen": 516,
+    "projections": {
+      "Values": [
+        {
+          "queryRef": "Min(OVERALL FMR (2).NAME OF PROJECTS)"
+        }
+      ]
+    }
+  }
+]

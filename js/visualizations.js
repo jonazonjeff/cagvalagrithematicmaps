@@ -556,6 +556,7 @@ const Visualizations = (() => {
       { label: "PRiSM Rice Monitoring", fields: ["prism_rice_area_2026s1", "prism_standing_crop_area", "prism_harvest_progress_pct", "prism_upcoming_harvest_area", "prism_area_gap_vs_app_ha"] },
       { label: "El Nino Rice Risk", fields: ["pagasa_drought_outlook", "elnino_rice_risk_score", "elnino_prism_standing_exposed_area", "elnino_irrigation_gap_pct"] },
       { label: "Plans & Projects", fields: ["plans_projects_2027_count", "plans_projects_2027_budget", "plans_2027_budget_per_small_farm", "plans_2027_need_gap_score", "plans_fmr_2027_count", "plans_irrigation_2027_count"] },
+      { label: "FMR Inventory", fields: ["fmr_inventory_count", "fmr_completed_count", "fmr_ongoing_count", "fmr_inventory_length_km", "fmr_influence_area_ha", "fmr_farmer_beneficiaries", "fmr_latest_year"] },
       { label: "Corn", fields: ["corn_production_2023", "corn_area_2023", "corn_yield_2023", "poor_corn_farmers", "corn_mechanization_level"] },
       { label: "Risk & Resources", fields: ["pest_disease_occurrence", "asf_status", "soil_fertility", "irrigated_area", "rpc_site"] }
     ];

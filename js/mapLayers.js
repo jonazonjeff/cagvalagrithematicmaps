@@ -134,6 +134,8 @@ const MapLayers = (() => {
       const extraFields = [
         f.capacity       ? `<div class="popup-row"><b>Capacity:</b> ${f.capacity}</div>` : "",
         f.service_area_ha? `<div class="popup-row"><b>Service Area:</b> ${f.service_area_ha} ha</div>` : "",
+        f.barangay       ? `<div class="popup-row"><b>Barangay:</b> ${f.barangay}</div>` : "",
+        f.farmer_beneficiaries ? `<div class="popup-row"><b>Farmer Beneficiaries:</b> ${f.farmer_beneficiaries}</div>` : "",
         f.year_constructed?`<div class="popup-row"><b>Year Built:</b> ${f.year_constructed}</div>` : "",
         f.remarks        ? `<div class="popup-row"><b>Notes:</b> ${f.remarks}</div>` : "",
         isApproximate    ? `<div class="popup-warning">📍 Location approximate (municipality centroid)</div>` : ""

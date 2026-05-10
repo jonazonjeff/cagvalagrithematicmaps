@@ -182,6 +182,18 @@ const App = (() => {
         "Compare proposed FMR, irrigation, seed, and mechanization support against rice/corn exposure and farms below 0.5 ha.",
         "Use the plans detail CSV as the audit trail before recommending realignment, augmentation, or project bundling."
       ]
+    },
+    fmr_access: {
+      label: "Review FMR coverage and access",
+      question: "Where do existing FMR projects, farmer beneficiaries, influence area, and 2027 FMR plans need closer review?",
+      category: "FMR Inventory",
+      indicator: "fmr_inventory_length_km",
+      evidence: ["fmr_inventory_count", "fmr_completed_count", "fmr_ongoing_count", "fmr_inventory_length_km", "fmr_influence_area_ha", "fmr_farmer_beneficiaries", "plans_fmr_2027_count", "plans_fmr_2027_length_km", "poor_rice_farmers", "poor_corn_farmers"],
+      actions: [
+        "Turn on the Farm-to-Market Roads layer and inspect project points by status, year funded, length, influence area, and farmer beneficiaries.",
+        "Compare existing FMR inventory with 2027 FMR plan items to identify extension, rehabilitation, or possible duplication issues.",
+        "Prioritize field validation where small-farm concentration is high and FMR coverage appears strategically important for market access."
+      ]
     }
   };
 

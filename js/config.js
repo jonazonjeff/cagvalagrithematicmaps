@@ -12,7 +12,7 @@ const APP_CONFIG = {
   mapCenter: [17.6132, 121.7270],
   mapZoom: 8,
   dataPath: "data/",
-  assetVersion: "20260510-soil-fertility",
+  assetVersion: "20260510-fmr-layer",
 };
 
 // ============================================================
@@ -574,6 +574,71 @@ const INDICATOR_CONFIG = {
     description: "Presence of Rice Processing Complex site"
   },
 
+  // --- FMR Inventory from public Power BI report ---
+  fmr_inventory_count: {
+    label: "FMR Projects",
+    category: "FMR Inventory",
+    type: "numeric",
+    unit: "projects",
+    aggregation: "sum",
+    colorScheme: "YlOrBr",
+    description: "Farm-to-market road project count from the DA RFO 02 public FMR inventory."
+  },
+  fmr_completed_count: {
+    label: "Completed FMR Projects",
+    category: "FMR Inventory",
+    type: "numeric",
+    unit: "projects",
+    aggregation: "sum",
+    colorScheme: "Greens",
+    description: "Completed FMR projects from the public FMR inventory."
+  },
+  fmr_ongoing_count: {
+    label: "Ongoing FMR Projects",
+    category: "FMR Inventory",
+    type: "numeric",
+    unit: "projects",
+    aggregation: "sum",
+    colorScheme: "Oranges",
+    description: "Ongoing or under-construction FMR projects from the public FMR inventory."
+  },
+  fmr_inventory_length_km: {
+    label: "FMR Length",
+    category: "FMR Inventory",
+    type: "numeric",
+    unit: "km",
+    aggregation: "sum",
+    colorScheme: "YlOrBr",
+    description: "Total FMR length from the public FMR inventory."
+  },
+  fmr_influence_area_ha: {
+    label: "FMR Influence Area",
+    category: "FMR Inventory",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Greens",
+    description: "Total agricultural influence area served by FMR projects."
+  },
+  fmr_farmer_beneficiaries: {
+    label: "FMR Farmer Beneficiaries",
+    category: "FMR Inventory",
+    type: "numeric",
+    unit: "farmers",
+    aggregation: "sum",
+    colorScheme: "Blues",
+    description: "Farmer beneficiaries reported in the public FMR inventory."
+  },
+  fmr_latest_year: {
+    label: "Latest FMR Funding Year",
+    category: "FMR Inventory",
+    type: "numeric",
+    unit: "",
+    aggregation: "dominant",
+    colorScheme: "Blues",
+    description: "Latest funding year represented in the FMR inventory for the area."
+  },
+
   // --- PhilRice PRiSM Rice Season Monitoring ---
   prism_rice_area_2026s1: {
     label: "PRiSM Rice Area 2026 S1",
@@ -1098,6 +1163,7 @@ const CATEGORIES = [
   "Soil Fertility",
   "Irrigation",
   "Infrastructure",
+  "FMR Inventory",
   "PRiSM Rice Monitoring",
   "El Nino Rice Risk",
   "Plans & Projects",
@@ -1347,6 +1413,18 @@ const PRIORITY_MODELS = {
       crva_index_rice: 0.05,
       irrigation_gap: 0.05
     }
+  },
+  fmr_access: {
+    label: "FMR Access and Coverage Priority",
+    weights: {
+      plans_fmr_2027_count: 0.18,
+      fmr_inventory_count: 0.17,
+      fmr_inventory_length_km: 0.17,
+      fmr_influence_area_ha: 0.14,
+      fmr_farmer_beneficiaries: 0.14,
+      poor_rice_farmers: 0.10,
+      poor_corn_farmers: 0.10
+    }
   }
 };
 
@@ -1508,6 +1586,16 @@ const PLANNING_INSIGHTS = [
     icon: "Plans", level: "high"
   },
   {
+    condition: (d) => parseFloat(d.fmr_inventory_count) >= 10,
+    insight: "This area has a substantial FMR inventory. Use the FMR map layer to inspect project locations, status, influence area, and beneficiaries.",
+    icon: "FMR", level: "moderate"
+  },
+  {
+    condition: (d) => parseFloat(d.plans_fmr_2027_count) > 0 && parseFloat(d.fmr_inventory_count) > 0,
+    insight: "Existing FMR inventory overlaps with extracted 2027 FMR plans. Check whether new projects extend coverage or duplicate already-served locations.",
+    icon: "FMR", level: "moderate"
+  },
+  {
     condition: (d) => parseFloat(d.plans_projects_2027_budget) <= 0 && (parseFloat(d.poverty_2023) > 20 || parseFloat(d.elnino_rice_risk_score) > 40),
     insight: "No extracted 2027 plan allocation was found despite notable poverty or climate exposure. Check if projects are missing, unfunded, or encoded under another municipality.",
     icon: "Plans", level: "moderate"
@@ -1547,6 +1635,13 @@ const FACILITY_CATEGORIES = {
       Cornmill:   { label: "Corn Mill",            icon: "🌽", color: "#d97706" },
       Dryer:      { label: "Drying Facility",      icon: "🔆", color: "#f59e0b" },
       Processing: { label: "Processing Facility",  icon: "🏪", color: "#f97316" }
+    }
+  },
+  fmr: {
+    label: "Farm-to-Market Roads",
+    groupColor: "#7a4a18",
+    types: {
+      FMR: { label: "Farm-to-Market Road (FMR)", icon: "FMR", color: "#7a4a18" }
     }
   }
   // Add more categories here freely, e.g.:
