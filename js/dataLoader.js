@@ -15,6 +15,8 @@ const DataLoader = (() => {
   let soilFertilityData = [];
   let fmrProjectsData = [];
   let fmrSummaryData = [];
+  let f2c2ClustersData = [];
+  let f2c2SummaryData = [];
   let facilitiesData = [];
   let joinMismatches = [];
 
@@ -176,6 +178,16 @@ const DataLoader = (() => {
     }
 
     try {
+      f2c2SummaryData = await fetchCSV(dataPath + "f2c2_municipal_summary.csv");
+      mergeF2c2SummaryData(f2c2SummaryData);
+      console.info(`Loaded f2c2_municipal_summary.csv: ${f2c2SummaryData.length} records`);
+    } catch (e) {
+      console.warn("f2c2_municipal_summary.csv not found. F2C2 cluster indicators will be unavailable.", e);
+      f2c2SummaryData = [];
+      addF2c2Defaults();
+    }
+
+    try {
       facilitiesData = await fetchCSV(dataPath + "facilities.csv");
       console.info(`Loaded facilities.csv: ${facilitiesData.length} records`);
     } catch (e) {
@@ -190,6 +202,15 @@ const DataLoader = (() => {
     } catch (e) {
       console.warn("fmr_projects.csv not found. FMR point layer will be unavailable.", e);
       fmrProjectsData = [];
+    }
+
+    try {
+      f2c2ClustersData = await fetchCSV(dataPath + "f2c2_clusters.csv");
+      facilitiesData = facilitiesData.concat(toF2c2FacilityRows(f2c2ClustersData));
+      console.info(`Loaded f2c2_clusters.csv: ${f2c2ClustersData.length} records`);
+    } catch (e) {
+      console.warn("f2c2_clusters.csv not found. F2C2 cluster point layer will be unavailable.", e);
+      f2c2ClustersData = [];
     }
 
     performJoin();
@@ -208,6 +229,8 @@ const DataLoader = (() => {
       soilFertilityData,
       fmrProjectsData,
       fmrSummaryData,
+      f2c2ClustersData,
+      f2c2SummaryData,
       facilitiesData,
       joinMismatches
     };
@@ -364,10 +387,16 @@ const DataLoader = (() => {
       const targetCompact = municipalityNorm.replace(/\s+/g, "");
       const rowExpanded = rowMunicipality.replace(/^sta\s+/, "santa ");
       const targetExpanded = municipalityNorm.replace(/^sta\s+/, "santa ");
+      const rowCityVariant = rowMunicipality.replace(/^city of\s+(.+?)(\s+capital)?$/, "$1 city");
+      const targetCityVariant = municipalityNorm.replace(/^city of\s+(.+?)(\s+capital)?$/, "$1 city");
+      const rowWithoutCapital = rowCityVariant.replace(/\s+capital$/, "");
+      const targetWithoutCapital = targetCityVariant.replace(/\s+capital$/, "");
       return rowMunicipality.includes(municipalityNorm) ||
         municipalityNorm.includes(rowMunicipality) ||
         rowCompact === targetCompact ||
         rowExpanded === targetExpanded ||
+        rowCityVariant === targetCityVariant ||
+        rowWithoutCapital === targetWithoutCapital ||
         levenshteinDistance(rowCompact, targetCompact) <= 1;
     }) || null;
   }
@@ -470,6 +499,24 @@ const DataLoader = (() => {
     addFmrDefaults();
   }
 
+  function mergeF2c2SummaryData(rows) {
+    rows.forEach(f2c2Row => {
+      const row = findMunicipalDataRow(f2c2Row.province, f2c2Row.municipality);
+      if (!row) {
+        joinMismatches.push({
+          type: "f2c2_no_csv",
+          name: `${f2c2Row.municipality}, ${f2c2Row.province}`,
+          message: "F2C2 summary row has no matching municipal_data.csv row"
+        });
+        return;
+      }
+
+      Object.assign(row, f2c2Row);
+    });
+
+    addF2c2Defaults();
+  }
+
   function addPlansProjectDefaults() {
     Object.values(municipalData).forEach(row => addPlansDerivedFields(row));
   }
@@ -533,6 +580,27 @@ const DataLoader = (() => {
     });
   }
 
+  function addF2c2Defaults() {
+    const numericFields = [
+      "f2c2_cluster_count",
+      "f2c2_area_ha",
+      "f2c2_farmer_members",
+      "f2c2_heads_count",
+      "f2c2_cluster_leaders",
+      "f2c2_with_eom_count",
+      "f2c2_latest_year"
+    ];
+
+    Object.values(municipalData).forEach(row => {
+      numericFields.forEach(field => {
+        if (row[field] === undefined || row[field] === null || row[field] === "") row[field] = "0";
+      });
+      ["f2c2_commodities", "f2c2_banner_programs", "f2c2_enterprise_statuses"].forEach(field => {
+        if (row[field] === undefined || row[field] === null) row[field] = "";
+      });
+    });
+  }
+
   function toFmrFacilityRows(rows) {
     return rows.map((row, index) => ({
       facility_id: `FMR${String(index + 1).padStart(4, "0")}`,
@@ -549,6 +617,27 @@ const DataLoader = (() => {
       year_constructed: row.year_funded || "",
       farmer_beneficiaries: row.farmer_beneficiaries || "",
       remarks: row.district ? `District: ${row.district}` : ""
+    }));
+  }
+
+  function toF2c2FacilityRows(rows) {
+    return rows.map((row, index) => ({
+      facility_id: `F2C2${String(index + 1).padStart(4, "0")}`,
+      facility_name: row.cluster_name || "FCA/F2C2 Cluster",
+      facility_type: "F2C2",
+      province: row.province,
+      municipality: row.municipality,
+      latitude: row.latitude,
+      longitude: row.longitude,
+      status: row.enterprise_status || row.registration || "",
+      capacity: row.area_ha ? `${row.area_ha} ha` : "",
+      farmer_beneficiaries: row.farmer_members || "",
+      year_constructed: row.year || "",
+      commodity: row.commodity || "",
+      banner_program: row.banner_program || "",
+      existing_business_enterprise: row.existing_business_enterprise || "",
+      proposed_business_enterprise: row.proposed_business_enterprise || "",
+      remarks: row.with_eom ? `With EOM: ${row.with_eom}` : ""
     }));
   }
 
@@ -739,6 +828,8 @@ const DataLoader = (() => {
     get soilFertilityData() { return soilFertilityData; },
     get fmrProjectsData() { return fmrProjectsData; },
     get fmrSummaryData() { return fmrSummaryData; },
+    get f2c2ClustersData() { return f2c2ClustersData; },
+    get f2c2SummaryData() { return f2c2SummaryData; },
     get facilitiesData() { return facilitiesData; }
   };
 })();

@@ -135,8 +135,12 @@ const MapLayers = (() => {
         f.capacity       ? `<div class="popup-row"><b>Capacity:</b> ${f.capacity}</div>` : "",
         f.service_area_ha? `<div class="popup-row"><b>Service Area:</b> ${f.service_area_ha} ha</div>` : "",
         f.barangay       ? `<div class="popup-row"><b>Barangay:</b> ${f.barangay}</div>` : "",
+        f.commodity      ? `<div class="popup-row"><b>Commodity:</b> ${f.commodity}</div>` : "",
+        f.banner_program ? `<div class="popup-row"><b>Banner Program:</b> ${f.banner_program}</div>` : "",
         f.farmer_beneficiaries ? `<div class="popup-row"><b>Farmer Beneficiaries:</b> ${f.farmer_beneficiaries}</div>` : "",
-        f.year_constructed?`<div class="popup-row"><b>Year Built:</b> ${f.year_constructed}</div>` : "",
+        f.existing_business_enterprise ? `<div class="popup-row"><b>Existing Enterprise:</b> ${f.existing_business_enterprise}</div>` : "",
+        f.proposed_business_enterprise ? `<div class="popup-row"><b>Proposed Enterprise:</b> ${f.proposed_business_enterprise}</div>` : "",
+        f.year_constructed?`<div class="popup-row"><b>Year:</b> ${f.year_constructed}</div>` : "",
         f.remarks        ? `<div class="popup-row"><b>Notes:</b> ${f.remarks}</div>` : "",
         isApproximate    ? `<div class="popup-warning">📍 Location approximate (municipality centroid)</div>` : ""
       ].join("");

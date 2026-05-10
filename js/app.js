@@ -194,6 +194,18 @@ const App = (() => {
         "Compare existing FMR inventory with 2027 FMR plan items to identify extension, rehabilitation, or possible duplication issues.",
         "Prioritize field validation where small-farm concentration is high and FMR coverage appears strategically important for market access."
       ]
+    },
+    f2c2_cluster_support: {
+      label: "Review F2C2 cluster and enterprise support",
+      question: "Where do FCA/F2C2 clusters, farmer membership, cluster area, enterprise status, and small-farm concentration suggest stronger enterprise support?",
+      category: "F2C2 Clusters",
+      indicator: "f2c2_farmer_members",
+      evidence: ["f2c2_cluster_count", "f2c2_area_ha", "f2c2_farmer_members", "f2c2_cluster_leaders", "f2c2_with_eom_count", "f2c2_latest_year", "f2c2_commodities", "f2c2_banner_programs", "f2c2_enterprise_statuses", "poor_rice_farmers", "poor_corn_farmers"],
+      actions: [
+        "Turn on the F2C2 / FCA Clusters layer and inspect cluster locations, commodities, farmer members, and enterprise status.",
+        "Compare cluster membership with small rice and corn farm concentrations to identify where consolidation support can reach more producers.",
+        "Use commodity and proposed enterprise details to match support packages with market linkage, processing, credit, or enterprise operation gaps."
+      ]
     }
   };
 

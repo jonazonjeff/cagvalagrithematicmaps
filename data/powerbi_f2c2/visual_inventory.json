@@ -1,0 +1,859 @@
+[
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "clusteredBarChart",
+    "id": 2238951509,
+    "refs": [
+      "Category:FCA Onedrive.Banner Program",
+      "Y:Sum(FCA Onedrive.AREA (HA))"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "clusteredBarChart",
+    "id": 2238951510,
+    "refs": [
+      "Category:FCA Onedrive.Banner Program",
+      "Y:Sum(FCA Onedrive.FARMER MEMBERS (NO))"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "slicer",
+    "id": 2238951511,
+    "refs": [
+      "Values:FCA Onedrive.PROVINCE"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951512,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951513,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951514,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951515,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951516,
+    "refs": [
+      "Values:Sum(FCA Onedrive.GAP CERTIFICATION)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951517,
+    "refs": [
+      "Values:Sum(FCA Onedrive.ORGANIC AGRICULTURE CERTIFICATION)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951518,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951519,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951520,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951521,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951522,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951523,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951524,
+    "refs": [
+      "Values:Sum(FCA Onedrive.AREA (HA))"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951525,
+    "refs": [
+      "Values:Sum(FCA Onedrive.FARMER MEMBERS (NO))"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951526,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "slicer",
+    "id": 2238951530,
+    "refs": [
+      "Values:FCA Onedrive.YEAR"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "donutChart",
+    "id": 2238951531,
+    "refs": [
+      "Category:FCA Onedrive.Financial Assets",
+      "Y:CountNonNull(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "donutChart",
+    "id": 2238951532,
+    "refs": [
+      "Category:FCA Onedrive.STATUS OF PROPOSED BUSINESS ENTERPRISE",
+      "Y:CountNonNull(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "map",
+    "id": 2238951533,
+    "refs": [
+      "Category:FCA Onedrive.MUNICIPALITY",
+      "Y:Avg(FCA Onedrive.OneDrive Coordinates.LATITUDE)",
+      "X:Avg(FCA Onedrive.OneDrive Coordinates.LONGITUDE)",
+      "Series:FCA Onedrive.CLUSTER NAME"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951536,
+    "refs": [
+      "Values:Min(FCA Onedrive.With EOM)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "card",
+    "id": 2238951538,
+    "refs": [
+      "Values:Sum(FCA Onedrive.No. of Cluster Leaders)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "donutChart",
+    "id": 2238951539,
+    "refs": [
+      "Category:FCA Onedrive.Registration.1",
+      "Y:CountNonNull(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "slicer",
+    "id": 2238951540,
+    "refs": [
+      "Values:FCA Onedrive.MUNICIPALITY"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER SUMMARY",
+    "visualType": "slicer",
+    "id": 2238951541,
+    "refs": [
+      "Values:FCA Onedrive.OneDrive Coordinates.DISTRICT"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "slicer",
+    "id": 2238951543,
+    "refs": [
+      "Values:FCA Onedrive.CLUSTER NAME"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951544,
+    "refs": [
+      "Values:Min(FCA Onedrive.REGISTRATION)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951545,
+    "refs": [
+      "Values:Sum(FCA Onedrive.AREA (HA))"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951546,
+    "refs": [
+      "Values:Sum(FCA Onedrive.FARMER MEMBERS (NO))"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951549,
+    "refs": [
+      "Values:Min(FCA Onedrive.CSO ACCREDITATION)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951550,
+    "refs": [
+      "Values:Min(FCA Onedrive.RCEF ACCREDITATION)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951551,
+    "refs": [
+      "Values:Min(FCA Onedrive.FFEDIS ACCREDITATION)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951552,
+    "refs": [
+      "Values:Min(FCA Onedrive.YIELD (MT/HA))"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951553,
+    "refs": [
+      "Values:Sum(FCA Onedrive.NO. OF HEADS)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951554,
+    "refs": [
+      "Values:Min(FCA Onedrive.FOOD PASS)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951555,
+    "refs": [
+      "Values:Sum(FCA Onedrive.GAP CERTIFICATION)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951556,
+    "refs": [
+      "Values:Sum(FCA Onedrive.ORGANIC AGRICULTURE CERTIFICATION)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951557,
+    "refs": [
+      "Values:Min(FCA Onedrive.EXISTING BUSINESS ENTERPRISE)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951558,
+    "refs": [
+      "Values:Min(FCA Onedrive.PROPOSED BUSINESS ENTERPRISE)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951561,
+    "refs": [
+      "Values:Min(FCA Onedrive.STATUS OF PROPOSED BUSINESS ENTERPRISE)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951562,
+    "refs": [
+      "Values:Min(FCA Onedrive.COMMODITY)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "slicer",
+    "id": 2238951563,
+    "refs": [
+      "Values:FCA Onedrive.YEAR"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951564,
+    "refs": [
+      "Values:Min(FCA Onedrive.PSS)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951565,
+    "refs": [
+      "Values:Min(FCA Onedrive.ESETS)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951566,
+    "refs": [
+      "Values:Min(FCA Onedrive.MDS)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951567,
+    "refs": [
+      "Values:Min(FCA Onedrive.PAEF)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951568,
+    "refs": [
+      "Values:Min(FCA Onedrive.Financial Assets)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951570,
+    "refs": [
+      "Values:Min(FCA Onedrive.Credit Support)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951571,
+    "refs": [
+      "Values:Min(FCA Onedrive.INS)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "card",
+    "id": 2238951572,
+    "refs": [
+      "Values:Min(FCA Onedrive.With EOM)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "map",
+    "id": 2238951573,
+    "refs": [
+      "Category:FCA Onedrive.MUNICIPALITY",
+      "Y:Avg(FCA Onedrive.OneDrive Coordinates.LATITUDE)",
+      "X:Avg(FCA Onedrive.OneDrive Coordinates.LONGITUDE)",
+      "Series:FCA Onedrive.CLUSTER NAME"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "slicer",
+    "id": 2238951574,
+    "refs": [
+      "Values:FCA Onedrive.PROVINCE"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "slicer",
+    "id": 2238951575,
+    "refs": [
+      "Values:FCA Onedrive.MUNICIPALITY"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "CLUSTER PROFILE",
+    "visualType": "slicer",
+    "id": 2238951576,
+    "refs": [
+      "Values:FCA Onedrive.OneDrive Coordinates.DISTRICT"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "pieChart",
+    "id": 2238951578,
+    "refs": [
+      "Y:Sum(FCA Onedrive.Volume of Raw Products Marketed (MT))",
+      "Y:Sum(FCA Onedrive.Volume of Raw Materials used for Processing(MT))"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "slicer",
+    "id": 2238951579,
+    "refs": [
+      "Values:FCA Onedrive.OneDrive Coordinates.PROVINCE"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "slicer",
+    "id": 2238951580,
+    "refs": [
+      "Values:FCA Onedrive.OneDrive Coordinates.CITY_MUNICIPALITY"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "slicer",
+    "id": 2238951581,
+    "refs": [
+      "Values:FCA Onedrive.YEAR"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951583,
+    "refs": [
+      "Values:Sum(FCA Onedrive.Custom Servicing Land preparation (ha))"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951584,
+    "refs": [
+      "Values:Sum(FCA Onedrive.Income Custom Servicing for land preparation)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951585,
+    "refs": [
+      "Values:Sum(FCA Onedrive.Custom Servicing Crop Est. (ha))"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951586,
+    "refs": [
+      "Values:Sum(FCA Onedrive.Income Custom Servicing Crop Est.)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951587,
+    "refs": [
+      "Values:Sum(FCA Onedrive.Custom Servicing Drying (MT))"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951588,
+    "refs": [
+      "Values:Sum(FCA Onedrive.Income Custom Servicing Drying)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951589,
+    "refs": [
+      "Values:Sum(FCA Onedrive.Custom Servicing Milling (MT))"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951590,
+    "refs": [
+      "Values:Sum(FCA Onedrive.Income Custom Servicing Milling)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951591,
+    "refs": [
+      "Values:Sum(FCA Onedrive.Custom Servicing Combine harvesting (ha))"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951592,
+    "refs": [
+      "Values:Sum(FCA Onedrive.Income Custom Servicing Combine harvesting)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "pieChart",
+    "id": 2238951593,
+    "refs": [
+      "Y:Sum(FCA Onedrive.Sales of Processed Products)",
+      "Y:Sum(FCA Onedrive.Sales of Raw Products Marketed)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951594,
+    "refs": [
+      "Values:FCA Onedrive.Volume of Raw Materials used for Processing(MT) plus Volume of Raw Products Marketed (MT)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951595,
+    "refs": [
+      "Values:FCA Onedrive.Sales of Raw Products Marketed plus Sales of Processed Products"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "clusteredBarChart",
+    "id": 2238951598,
+    "refs": [
+      "Category:FCA Onedrive.Banner Program",
+      "Y:FCA Onedrive.Sales of Raw Products Marketed plus Sales of Processed Products"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "clusteredBarChart",
+    "id": 2238951599,
+    "refs": [
+      "Category:FCA Onedrive.Banner Program",
+      "Y:FCA Onedrive.Volume of Raw Materials used for Processing(MT) plus Volume of Raw Products Marketed (MT)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951603,
+    "refs": [
+      "Values:Sum(FCA Onedrive.No. of Farmers provided with credit assistance)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951605,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951606,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951607,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951608,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951609,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951610,
+    "refs": [
+      "Values:Min(FCA Onedrive.Amount used for Providing Credit Assistance)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951611,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951612,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951613,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "card",
+    "id": 2238951614,
+    "refs": [
+      "Values:Min(FCA Onedrive.CLUSTER NAME)"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "slicer",
+    "id": 2238951617,
+    "refs": [
+      "Values:FCA Onedrive.Banner Program"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "ENTERPRISE OPERATION",
+    "visualType": "slicer",
+    "id": 2238951616,
+    "refs": [
+      "Values:FCA Onedrive.OneDrive Coordinates.DISTRICT"
+    ],
+    "hasQuery": true
+  },
+  {
+    "section": "Support Interventions",
+    "visualType": "tableEx",
+    "id": 2238951622,
+    "refs": [
+      "Values:Sheet1.MUNICIPALITY",
+      "Values:Sheet1.PROPOSED ENTERPRISE",
+      "Values:Sheet1.INTERVENTION",
+      "Values:Sheet1.QUANTITY",
+      "Values:Sheet1.FCA NAME",
+      "Values:Sheet1.RESPONSIBLE AGENCY"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "Support Interventions",
+    "visualType": "slicer",
+    "id": 2238951621,
+    "refs": [
+      "Values:Sheet1.REMARKS"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "Support Interventions",
+    "visualType": "slicer",
+    "id": 2238951620,
+    "refs": [
+      "Values:Sheet1.YEAR"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "Support Interventions",
+    "visualType": "slicer",
+    "id": 2238951619,
+    "refs": [
+      "Values:Sheet1.Commodity"
+    ],
+    "hasQuery": false
+  },
+  {
+    "section": "Support Interventions",
+    "visualType": "slicer",
+    "id": 2238951618,
+    "refs": [
+      "Values:Sheet1.PROVINCE"
+    ],
+    "hasQuery": false
+  }
+]

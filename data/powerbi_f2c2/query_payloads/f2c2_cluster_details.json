@@ -1,0 +1,49 @@
+﻿{
+  "version": "1.0.0",
+  "queries": [
+    {
+      "Query": {
+        "Commands": [
+          {
+            "SemanticQueryDataShapeCommand": {
+              "Query": {
+                "Version": 2,
+                "From": [
+                  { "Name": "f", "Entity": "FCA Onedrive", "Type": 0 }
+                ],
+                "Select": [
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "YEAR" }, "Name": "FCA Onedrive.YEAR", "NativeReferenceName": "year" },
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "CLUSTER NAME" }, "Name": "FCA Onedrive.CLUSTER NAME", "NativeReferenceName": "cluster_name" },
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "REGISTRATION" }, "Name": "FCA Onedrive.REGISTRATION", "NativeReferenceName": "registration" },
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "PROVINCE" }, "Name": "FCA Onedrive.PROVINCE", "NativeReferenceName": "province" },
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "MUNICIPALITY" }, "Name": "FCA Onedrive.MUNICIPALITY", "NativeReferenceName": "municipality" },
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "COMMODITY" }, "Name": "FCA Onedrive.COMMODITY", "NativeReferenceName": "commodity" },
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "Banner Program" }, "Name": "FCA Onedrive.Banner Program", "NativeReferenceName": "banner_program" },
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "EXISTING BUSINESS ENTERPRISE" }, "Name": "FCA Onedrive.EXISTING BUSINESS ENTERPRISE", "NativeReferenceName": "existing_business_enterprise" },
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "PROPOSED BUSINESS ENTERPRISE" }, "Name": "FCA Onedrive.PROPOSED BUSINESS ENTERPRISE", "NativeReferenceName": "proposed_business_enterprise" },
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "STATUS OF PROPOSED BUSINESS ENTERPRISE" }, "Name": "FCA Onedrive.STATUS OF PROPOSED BUSINESS ENTERPRISE", "NativeReferenceName": "enterprise_status" },
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "Financial Assets" }, "Name": "FCA Onedrive.Financial Assets", "NativeReferenceName": "financial_assets" },
+                  { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "With EOM" }, "Name": "FCA Onedrive.With EOM", "NativeReferenceName": "with_eom" },
+                  { "Aggregation": { "Expression": { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "AREA (HA)" } }, "Function": 0 }, "Name": "Sum(FCA Onedrive.AREA (HA))", "NativeReferenceName": "area_ha" },
+                  { "Aggregation": { "Expression": { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "FARMER MEMBERS (NO)" } }, "Function": 0 }, "Name": "Sum(FCA Onedrive.FARMER MEMBERS (NO))", "NativeReferenceName": "farmer_members" },
+                  { "Aggregation": { "Expression": { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "NO. OF HEADS" } }, "Function": 0 }, "Name": "Sum(FCA Onedrive.NO. OF HEADS)", "NativeReferenceName": "heads_count" },
+                  { "Aggregation": { "Expression": { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "No. of Cluster Leaders" } }, "Function": 0 }, "Name": "Sum(FCA Onedrive.No. of Cluster Leaders)", "NativeReferenceName": "cluster_leaders" },
+                  { "Aggregation": { "Expression": { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "OneDrive Coordinates.LATITUDE" } }, "Function": 1 }, "Name": "Avg(FCA Onedrive.OneDrive Coordinates.LATITUDE)", "NativeReferenceName": "latitude" },
+                  { "Aggregation": { "Expression": { "Column": { "Expression": { "SourceRef": { "Source": "f" } }, "Property": "OneDrive Coordinates.LONGITUDE" } }, "Function": 1 }, "Name": "Avg(FCA Onedrive.OneDrive Coordinates.LONGITUDE)", "NativeReferenceName": "longitude" }
+                ]
+              },
+              "Binding": {
+                "Primary": { "Groupings": [ { "Projections": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17] } ] },
+                "DataReduction": { "DataVolume": 4, "Primary": { "Top": { "Count": 30000 } } },
+                "Version": 1
+              },
+              "ExecutionMetricsKind": 1
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "cancelQueries": [],
+  "modelId": 2297678
+}

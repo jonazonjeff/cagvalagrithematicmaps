@@ -12,7 +12,7 @@ const APP_CONFIG = {
   mapCenter: [17.6132, 121.7270],
   mapZoom: 8,
   dataPath: "data/",
-  assetVersion: "20260510-fmr-layer",
+  assetVersion: "20260510-f2c2-layer",
 };
 
 // ============================================================
@@ -639,6 +639,98 @@ const INDICATOR_CONFIG = {
     description: "Latest funding year represented in the FMR inventory for the area."
   },
 
+  // --- F2C2 / FCA Clusters from public Power BI report ---
+  f2c2_cluster_count: {
+    label: "F2C2 Clusters",
+    category: "F2C2 Clusters",
+    type: "numeric",
+    unit: "clusters",
+    aggregation: "sum",
+    colorScheme: "YlGn",
+    description: "FCA/F2C2 cluster count from the DA RFO 02 public F2C2 Power BI report."
+  },
+  f2c2_area_ha: {
+    label: "F2C2 Cluster Area",
+    category: "F2C2 Clusters",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Greens",
+    description: "Total area covered by FCA/F2C2 clusters."
+  },
+  f2c2_farmer_members: {
+    label: "F2C2 Farmer Members",
+    category: "F2C2 Clusters",
+    type: "numeric",
+    unit: "farmers",
+    aggregation: "sum",
+    colorScheme: "Blues",
+    description: "Farmer members reported by FCA/F2C2 clusters."
+  },
+  f2c2_heads_count: {
+    label: "F2C2 Animal Heads",
+    category: "F2C2 Clusters",
+    type: "numeric",
+    unit: "heads",
+    aggregation: "sum",
+    colorScheme: "YlOrBr",
+    description: "Animal heads represented by FCA/F2C2 clusters when applicable."
+  },
+  f2c2_cluster_leaders: {
+    label: "F2C2 Cluster Leaders",
+    category: "F2C2 Clusters",
+    type: "numeric",
+    unit: "leaders",
+    aggregation: "sum",
+    colorScheme: "Purples",
+    description: "Number of cluster leaders reported by FCA/F2C2 clusters."
+  },
+  f2c2_with_eom_count: {
+    label: "F2C2 Clusters with EOM",
+    category: "F2C2 Clusters",
+    type: "numeric",
+    unit: "clusters",
+    aggregation: "sum",
+    colorScheme: "Blues",
+    description: "FCA/F2C2 clusters marked as having enterprise operation monitoring."
+  },
+  f2c2_latest_year: {
+    label: "Latest F2C2 Year",
+    category: "F2C2 Clusters",
+    type: "numeric",
+    unit: "",
+    aggregation: "dominant",
+    colorScheme: "Blues",
+    description: "Latest year represented by FCA/F2C2 cluster records for the area."
+  },
+  f2c2_commodities: {
+    label: "F2C2 Commodities",
+    category: "F2C2 Clusters",
+    type: "categorical",
+    unit: "",
+    aggregation: "dominant",
+    colorScheme: "YlGn",
+    description: "Commodity mix represented by FCA/F2C2 clusters."
+  },
+  f2c2_banner_programs: {
+    label: "F2C2 Banner Programs",
+    category: "F2C2 Clusters",
+    type: "categorical",
+    unit: "",
+    aggregation: "dominant",
+    colorScheme: "Blues",
+    description: "Banner programs represented by FCA/F2C2 clusters."
+  },
+  f2c2_enterprise_statuses: {
+    label: "F2C2 Enterprise Statuses",
+    category: "F2C2 Clusters",
+    type: "categorical",
+    unit: "",
+    aggregation: "dominant",
+    colorScheme: "Purples",
+    description: "Proposed enterprise status values represented by FCA/F2C2 clusters."
+  },
+
   // --- PhilRice PRiSM Rice Season Monitoring ---
   prism_rice_area_2026s1: {
     label: "PRiSM Rice Area 2026 S1",
@@ -1164,6 +1256,7 @@ const CATEGORIES = [
   "Irrigation",
   "Infrastructure",
   "FMR Inventory",
+  "F2C2 Clusters",
   "PRiSM Rice Monitoring",
   "El Nino Rice Risk",
   "Plans & Projects",
@@ -1425,6 +1518,18 @@ const PRIORITY_MODELS = {
       poor_rice_farmers: 0.10,
       poor_corn_farmers: 0.10
     }
+  },
+  f2c2_cluster_support: {
+    label: "F2C2 Cluster and Enterprise Support Priority",
+    weights: {
+      f2c2_cluster_count: 0.20,
+      f2c2_area_ha: 0.18,
+      f2c2_farmer_members: 0.18,
+      f2c2_cluster_leaders: 0.12,
+      f2c2_with_eom_count: 0.10,
+      poor_rice_farmers: 0.11,
+      poor_corn_farmers: 0.11
+    }
   }
 };
 
@@ -1596,6 +1701,16 @@ const PLANNING_INSIGHTS = [
     icon: "FMR", level: "moderate"
   },
   {
+    condition: (d) => parseFloat(d.f2c2_cluster_count) >= 3,
+    insight: "Multiple FCA/F2C2 clusters are present. Use the F2C2 cluster layer to review commodities, enterprise status, farmer membership, and cluster area.",
+    icon: "F2C2", level: "moderate"
+  },
+  {
+    condition: (d) => parseFloat(d.f2c2_farmer_members) >= 300 && (parseFloat(d.poor_rice_farmers) > 300 || parseFloat(d.poor_corn_farmers) > 300),
+    insight: "FCA/F2C2 membership overlaps with many small rice or corn farms. This area is a candidate for cluster-based enterprise support and market linkage validation.",
+    icon: "F2C2", level: "high"
+  },
+  {
     condition: (d) => parseFloat(d.plans_projects_2027_budget) <= 0 && (parseFloat(d.poverty_2023) > 20 || parseFloat(d.elnino_rice_risk_score) > 40),
     insight: "No extracted 2027 plan allocation was found despite notable poverty or climate exposure. Check if projects are missing, unfunded, or encoded under another municipality.",
     icon: "Plans", level: "moderate"
@@ -1642,6 +1757,13 @@ const FACILITY_CATEGORIES = {
     groupColor: "#7a4a18",
     types: {
       FMR: { label: "Farm-to-Market Road (FMR)", icon: "FMR", color: "#7a4a18" }
+    }
+  },
+  f2c2: {
+    label: "F2C2 / FCA Clusters",
+    groupColor: "#256d3c",
+    types: {
+      F2C2: { label: "FCA/F2C2 Cluster", icon: "F2C2", color: "#256d3c" }
     }
   }
   // Add more categories here freely, e.g.:
