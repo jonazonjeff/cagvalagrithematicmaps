@@ -12,7 +12,7 @@ const APP_CONFIG = {
   mapCenter: [17.6132, 121.7270],
   mapZoom: 8,
   dataPath: "data/",
-  assetVersion: "20260510-RSBSA-registry",
+  assetVersion: "20260510-rsbsa-registry",
 };
 
 // ============================================================
@@ -731,8 +731,8 @@ const INDICATOR_CONFIG = {
     description: "Proposed enterprise status values represented by FCA/F2C2 clusters."
   },
 
-  // --- RSBSA / RSBSA municipal farmer registry from public Power BI report ---
-  RSBSA_registry_count: {
+  // --- RSBSA municipal farmer registry from public Power BI report ---
+  rsba_registry_count: {
     label: "RSBSA Registry Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -741,7 +741,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "YlGn",
     description: "Municipal Registry System for Basic Sectors in Agriculture records from the public RSBSA Power BI report."
   },
-  RSBSA_crop_area_ha: {
+  rsba_crop_area_ha: {
     label: "RSBSA Crop Area",
     category: "RSBSA Registry",
     type: "numeric",
@@ -750,7 +750,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "Greens",
     description: "Total crop area represented in RSBSA municipal records."
   },
-  RSBSA_rice_count: {
+  rsba_rice_count: {
     label: "RSBSA Rice/Palay Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -759,7 +759,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "YlGn",
     description: "RSBSA municipal records where crop name is Rice/Palay."
   },
-  RSBSA_rice_area_ha: {
+  rsba_rice_area_ha: {
     label: "RSBSA Rice/Palay Area",
     category: "RSBSA Registry",
     type: "numeric",
@@ -768,7 +768,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "Greens",
     description: "Rice/Palay crop area represented in RSBSA municipal records."
   },
-  RSBSA_corn_count: {
+  rsba_corn_count: {
     label: "RSBSA Corn Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -777,7 +777,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "YlOrBr",
     description: "RSBSA municipal records where crop name is Corn."
   },
-  RSBSA_corn_area_ha: {
+  rsba_corn_area_ha: {
     label: "RSBSA Corn Area",
     category: "RSBSA Registry",
     type: "numeric",
@@ -786,7 +786,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "YlOrBr",
     description: "Corn crop area represented in RSBSA municipal records."
   },
-  RSBSA_top_crop: {
+  rsba_top_crop: {
     label: "RSBSA Top Crop",
     category: "RSBSA Registry",
     type: "categorical",
@@ -795,7 +795,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "YlGn",
     description: "Crop with the highest RSBSA record count in the municipality."
   },
-  RSBSA_female_count: {
+  rsba_female_count: {
     label: "RSBSA Female Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -804,17 +804,17 @@ const INDICATOR_CONFIG = {
     colorScheme: "Purples",
     description: "Female RSBSA records by municipality."
   },
-  RSBSA_female_pct: {
+  rsba_female_pct: {
     label: "RSBSA Female Share",
     category: "RSBSA Registry",
     type: "percentage",
     unit: "%",
     aggregation: "weighted_average",
-    weightField: "RSBSA_registry_count",
+    weightField: "rsba_registry_count",
     colorScheme: "Purples",
     description: "Female share of RSBSA municipal records."
   },
-  RSBSA_youth_count: {
+  rsba_youth_count: {
     label: "RSBSA Youth Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -823,17 +823,17 @@ const INDICATOR_CONFIG = {
     colorScheme: "Blues",
     description: "Generation Z and Generation Alpha RSBSA records by municipality."
   },
-  RSBSA_youth_pct: {
+  rsba_youth_pct: {
     label: "RSBSA Youth Share",
     category: "RSBSA Registry",
     type: "percentage",
     unit: "%",
     aggregation: "weighted_average",
-    weightField: "RSBSA_registry_count",
+    weightField: "rsba_registry_count",
     colorScheme: "Blues",
     description: "Youth share of RSBSA municipal records."
   },
-  RSBSA_farmer_count: {
+  rsba_farmer_count: {
     label: "RSBSA Farmer Sector Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -842,7 +842,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "Greens",
     description: "RSBSA records tagged as farmers."
   },
-  RSBSA_farmworker_count: {
+  rsba_farmworker_count: {
     label: "RSBSA Farmworker Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -851,7 +851,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "Oranges",
     description: "RSBSA records tagged as farmworkers."
   },
-  RSBSA_fisherfolk_count: {
+  rsba_fisherfolk_count: {
     label: "RSBSA Fisherfolk Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -860,7 +860,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "Blues",
     description: "RSBSA records tagged as fisherfolk."
   },
-  RSBSA_ip_count: {
+  rsba_ip_count: {
     label: "RSBSA IP Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -869,7 +869,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "YlOrBr",
     description: "RSBSA records tagged as Indigenous Peoples."
   },
-  RSBSA_pwd_count: {
+  rsba_pwd_count: {
     label: "RSBSA PWD Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -878,7 +878,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "Purples",
     description: "RSBSA records tagged as persons with disability."
   },
-  RSBSA_4ps_count: {
+  rsba_4ps_count: {
     label: "RSBSA 4Ps Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -887,7 +887,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "Reds",
     description: "RSBSA records tagged under 4Ps."
   },
-  RSBSA_fca_count: {
+  rsba_fca_count: {
     label: "RSBSA FCA Members",
     category: "RSBSA Registry",
     type: "numeric",
@@ -896,27 +896,27 @@ const INDICATOR_CONFIG = {
     colorScheme: "Greens",
     description: "RSBSA records tagged as FCA members."
   },
-  RSBSA_fca_pct: {
+  rsba_fca_pct: {
     label: "RSBSA FCA Share",
     category: "RSBSA Registry",
     type: "percentage",
     unit: "%",
     aggregation: "weighted_average",
-    weightField: "RSBSA_registry_count",
+    weightField: "rsba_registry_count",
     colorScheme: "Greens",
     description: "Share of RSBSA records tagged as FCA members."
   },
-  RSBSA_fca_gap_pct: {
+  rsba_fca_gap_pct: {
     label: "RSBSA Non-FCA Share",
     category: "RSBSA Registry",
     type: "percentage",
     unit: "%",
     aggregation: "weighted_average",
-    weightField: "RSBSA_registry_count",
+    weightField: "rsba_registry_count",
     colorScheme: "Reds",
     description: "Share of RSBSA records not tagged as FCA members."
   },
-  RSBSA_agriyouth_count: {
+  rsba_agriyouth_count: {
     label: "RSBSA Agri-Youth Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -925,7 +925,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "Blues",
     description: "RSBSA records tagged as agri-youth."
   },
-  RSBSA_arb_count: {
+  rsba_arb_count: {
     label: "RSBSA ARB Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -934,7 +934,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "YlOrBr",
     description: "RSBSA records tagged as agrarian reform beneficiaries."
   },
-  RSBSA_organic_count: {
+  rsba_organic_count: {
     label: "RSBSA Organic Records",
     category: "RSBSA Registry",
     type: "numeric",
@@ -943,7 +943,7 @@ const INDICATOR_CONFIG = {
     colorScheme: "Greens",
     description: "RSBSA records tagged for organic agriculture."
   },
-  RSBSA_with_imc_count: {
+  rsba_with_imc_count: {
     label: "RSBSA With IMC",
     category: "RSBSA Registry",
     type: "numeric",
@@ -952,13 +952,13 @@ const INDICATOR_CONFIG = {
     colorScheme: "Blues",
     description: "RSBSA records tagged with interventions monitoring card."
   },
-  RSBSA_imc_gap_pct: {
+  rsba_imc_gap_pct: {
     label: "RSBSA Without IMC Share",
     category: "RSBSA Registry",
     type: "percentage",
     unit: "%",
     aggregation: "weighted_average",
-    weightField: "RSBSA_registry_count",
+    weightField: "rsba_registry_count",
     colorScheme: "Reds",
     description: "Share of RSBSA records not tagged with interventions monitoring card."
   },
@@ -1764,51 +1764,51 @@ const PRIORITY_MODELS = {
       poor_corn_farmers: 0.11
     }
   },
-  RSBSA_registry_targeting: {
+  rsba_registry_targeting: {
     label: "RSBSA Farmer Registry Targeting Priority",
     weights: {
-      RSBSA_registry_count: 0.24,
-      RSBSA_crop_area_ha: 0.18,
+      rsba_registry_count: 0.24,
+      rsba_crop_area_ha: 0.18,
       poverty_2023: 0.16,
-      RSBSA_farmer_count: 0.14,
-      RSBSA_farmworker_count: 0.10,
-      RSBSA_fisherfolk_count: 0.08,
-      RSBSA_imc_gap_pct: 0.10
+      rsba_farmer_count: 0.14,
+      rsba_farmworker_count: 0.10,
+      rsba_fisherfolk_count: 0.08,
+      rsba_imc_gap_pct: 0.10
     }
   },
-  RSBSA_rice_corn: {
+  rsba_rice_corn: {
     label: "RSBSA Rice and Corn Producer Priority",
     weights: {
-      RSBSA_rice_count: 0.20,
-      RSBSA_corn_count: 0.20,
-      RSBSA_rice_area_ha: 0.15,
-      RSBSA_corn_area_ha: 0.15,
+      rsba_rice_count: 0.20,
+      rsba_corn_count: 0.20,
+      rsba_rice_area_ha: 0.15,
+      rsba_corn_area_ha: 0.15,
       poor_rice_farmers: 0.10,
       poor_corn_farmers: 0.10,
       poverty_2023: 0.10
     }
   },
-  RSBSA_inclusion: {
+  rsba_inclusion: {
     label: "RSBSA Inclusion and Social Targeting Priority",
     weights: {
-      RSBSA_4ps_count: 0.18,
-      RSBSA_ip_count: 0.16,
-      RSBSA_pwd_count: 0.14,
-      RSBSA_female_count: 0.14,
-      RSBSA_youth_count: 0.14,
+      rsba_4ps_count: 0.18,
+      rsba_ip_count: 0.16,
+      rsba_pwd_count: 0.14,
+      rsba_female_count: 0.14,
+      rsba_youth_count: 0.14,
       poverty_2023: 0.14,
-      RSBSA_registry_count: 0.10
+      rsba_registry_count: 0.10
     }
   },
-  RSBSA_fca_organizing: {
+  rsba_fca_organizing: {
     label: "RSBSA FCA Organizing Gap Priority",
     weights: {
-      RSBSA_fca_gap_pct: 0.28,
-      RSBSA_registry_count: 0.20,
-      RSBSA_rice_count: 0.12,
-      RSBSA_corn_count: 0.12,
+      rsba_fca_gap_pct: 0.28,
+      rsba_registry_count: 0.20,
+      rsba_rice_count: 0.12,
+      rsba_corn_count: 0.12,
       f2c2_cluster_count: 0.10,
-      RSBSA_with_imc_count: 0.08,
+      rsba_with_imc_count: 0.08,
       poverty_2023: 0.10
     }
   }
@@ -1992,17 +1992,17 @@ const PLANNING_INSIGHTS = [
     icon: "F2C2", level: "high"
   },
   {
-    condition: (d) => parseFloat(d.RSBSA_registry_count) >= 5000,
+    condition: (d) => parseFloat(d.rsba_registry_count) >= 5000,
     insight: "A large RSBSA registry base is present. Use RSBSA indicators to target interventions, validate commodity mix, and check IMC coverage before allocating support.",
     icon: "RSBSA", level: "moderate"
   },
   {
-    condition: (d) => parseFloat(d.RSBSA_fca_gap_pct) >= 80 && parseFloat(d.RSBSA_registry_count) >= 1000,
+    condition: (d) => parseFloat(d.rsba_fca_gap_pct) >= 80 && parseFloat(d.rsba_registry_count) >= 1000,
     insight: "Most RSBSA records are not tagged as FCA members. This area may need organizing, clustering, or F2C2 validation before enterprise-scale support.",
     icon: "RSBSA", level: "moderate"
   },
   {
-    condition: (d) => parseFloat(d.RSBSA_4ps_count) + parseFloat(d.RSBSA_ip_count) + parseFloat(d.RSBSA_pwd_count) >= 500,
+    condition: (d) => parseFloat(d.rsba_4ps_count) + parseFloat(d.rsba_ip_count) + parseFloat(d.rsba_pwd_count) >= 500,
     insight: "RSBSA social-targeting records are substantial. Consider inclusion-sensitive delivery, registration validation, and beneficiary safeguards.",
     icon: "RSBSA", level: "high"
   },

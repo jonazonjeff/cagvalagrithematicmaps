@@ -558,7 +558,7 @@ const Visualizations = (() => {
       { label: "Plans & Projects", fields: ["plans_projects_2027_count", "plans_projects_2027_budget", "plans_2027_budget_per_small_farm", "plans_2027_need_gap_score", "plans_fmr_2027_count", "plans_irrigation_2027_count"] },
       { label: "FMR Inventory", fields: ["fmr_inventory_count", "fmr_completed_count", "fmr_ongoing_count", "fmr_inventory_length_km", "fmr_influence_area_ha", "fmr_farmer_beneficiaries", "fmr_latest_year"] },
       { label: "F2C2 Clusters", fields: ["f2c2_cluster_count", "f2c2_area_ha", "f2c2_farmer_members", "f2c2_cluster_leaders", "f2c2_with_eom_count", "f2c2_latest_year", "f2c2_commodities", "f2c2_banner_programs", "f2c2_enterprise_statuses"] },
-      { label: "RSBSA Registry", fields: ["RSBSA_registry_count", "RSBSA_crop_area_ha", "RSBSA_rice_count", "RSBSA_corn_count", "RSBSA_top_crop", "RSBSA_farmer_count", "RSBSA_farmworker_count", "RSBSA_fisherfolk_count", "RSBSA_female_pct", "RSBSA_youth_pct", "RSBSA_fca_pct", "RSBSA_imc_gap_pct"] },
+      { label: "RSBSA Registry", fields: ["rsba_registry_count", "rsba_crop_area_ha", "rsba_rice_count", "rsba_corn_count", "rsba_top_crop", "rsba_farmer_count", "rsba_farmworker_count", "rsba_fisherfolk_count", "rsba_female_pct", "rsba_youth_pct", "rsba_fca_pct", "rsba_imc_gap_pct"] },
       { label: "Corn", fields: ["corn_production_2023", "corn_area_2023", "corn_yield_2023", "poor_corn_farmers", "corn_mechanization_level"] },
       { label: "Risk & Resources", fields: ["pest_disease_occurrence", "asf_status", "soil_fertility", "irrigated_area", "rpc_site"] }
     ];

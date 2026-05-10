@@ -17,7 +17,7 @@ const DataLoader = (() => {
   let fmrSummaryData = [];
   let f2c2ClustersData = [];
   let f2c2SummaryData = [];
-  let RSBSASummaryData = [];
+  let rsbaSummaryData = [];
   let facilitiesData = [];
   let joinMismatches = [];
 
@@ -189,13 +189,13 @@ const DataLoader = (() => {
     }
 
     try {
-      RSBSASummaryData = await fetchCSV(dataPath + "RSBSA_municipal_summary.csv");
-      mergeRSBSASummaryData(RSBSASummaryData);
-      console.info(`Loaded RSBSA_municipal_summary.csv: ${RSBSASummaryData.length} records`);
+      rsbaSummaryData = await fetchCSV(dataPath + "rsba_municipal_summary.csv");
+      mergeRsbaSummaryData(rsbaSummaryData);
+      console.info(`Loaded rsba_municipal_summary.csv: ${rsbaSummaryData.length} records`);
     } catch (e) {
-      console.warn("RSBSA_municipal_summary.csv not found. RSBSA registry indicators will be unavailable.", e);
-      RSBSASummaryData = [];
-      addRSBSADefaults();
+      console.warn("rsba_municipal_summary.csv not found. RSBSA registry indicators will be unavailable.", e);
+      rsbaSummaryData = [];
+      addRsbaDefaults();
     }
 
     try {
@@ -242,7 +242,7 @@ const DataLoader = (() => {
       fmrSummaryData,
       f2c2ClustersData,
       f2c2SummaryData,
-      RSBSASummaryData,
+      rsbaSummaryData,
       facilitiesData,
       joinMismatches
     };
@@ -529,22 +529,22 @@ const DataLoader = (() => {
     addF2c2Defaults();
   }
 
-  function mergeRSBSASummaryData(rows) {
-    rows.forEach(RSBSARow => {
-      const row = findMunicipalDataRow(RSBSARow.province, RSBSARow.municipality);
+  function mergeRsbaSummaryData(rows) {
+    rows.forEach(rsbaRow => {
+      const row = findMunicipalDataRow(rsbaRow.province, rsbaRow.municipality);
       if (!row) {
         joinMismatches.push({
-          type: "RSBSA_no_csv",
-          name: `${RSBSARow.municipality}, ${RSBSARow.province}`,
+          type: "rsba_no_csv",
+          name: `${rsbaRow.municipality}, ${rsbaRow.province}`,
           message: "RSBSA summary row has no matching municipal_data.csv row"
         });
         return;
       }
 
-      Object.assign(row, RSBSARow);
+      Object.assign(row, rsbaRow);
     });
 
-    addRSBSADefaults();
+    addRsbaDefaults();
   }
 
   function addPlansProjectDefaults() {
@@ -631,51 +631,51 @@ const DataLoader = (() => {
     });
   }
 
-  function addRSBSADefaults() {
+  function addRsbaDefaults() {
     const numericFields = [
-      "RSBSA_registry_count",
-      "RSBSA_crop_area_ha",
-      "RSBSA_avg_age",
-      "RSBSA_latitude",
-      "RSBSA_longitude",
-      "RSBSA_rice_count",
-      "RSBSA_rice_area_ha",
-      "RSBSA_corn_count",
-      "RSBSA_corn_area_ha",
-      "RSBSA_hvc_count",
-      "RSBSA_hvc_area_ha",
-      "RSBSA_top_crop_count",
-      "RSBSA_male_count",
-      "RSBSA_female_count",
-      "RSBSA_female_pct",
-      "RSBSA_youth_count",
-      "RSBSA_youth_pct",
-      "RSBSA_millennial_count",
-      "RSBSA_senior_count",
-      "RSBSA_farmer_count",
-      "RSBSA_farmworker_count",
-      "RSBSA_fisherfolk_count",
-      "RSBSA_ip_count",
-      "RSBSA_pwd_count",
-      "RSBSA_4ps_count",
-      "RSBSA_fca_count",
-      "RSBSA_fca_pct",
-      "RSBSA_fca_gap_pct",
-      "RSBSA_agriyouth_count",
-      "RSBSA_arb_count",
-      "RSBSA_organic_count",
-      "RSBSA_with_imc_count",
-      "RSBSA_imc_pct",
-      "RSBSA_imc_gap_pct",
-      "RSBSA_rice_share_pct",
-      "RSBSA_corn_share_pct"
+      "rsba_registry_count",
+      "rsba_crop_area_ha",
+      "rsba_avg_age",
+      "rsba_latitude",
+      "rsba_longitude",
+      "rsba_rice_count",
+      "rsba_rice_area_ha",
+      "rsba_corn_count",
+      "rsba_corn_area_ha",
+      "rsba_hvc_count",
+      "rsba_hvc_area_ha",
+      "rsba_top_crop_count",
+      "rsba_male_count",
+      "rsba_female_count",
+      "rsba_female_pct",
+      "rsba_youth_count",
+      "rsba_youth_pct",
+      "rsba_millennial_count",
+      "rsba_senior_count",
+      "rsba_farmer_count",
+      "rsba_farmworker_count",
+      "rsba_fisherfolk_count",
+      "rsba_ip_count",
+      "rsba_pwd_count",
+      "rsba_4ps_count",
+      "rsba_fca_count",
+      "rsba_fca_pct",
+      "rsba_fca_gap_pct",
+      "rsba_agriyouth_count",
+      "rsba_arb_count",
+      "rsba_organic_count",
+      "rsba_with_imc_count",
+      "rsba_imc_pct",
+      "rsba_imc_gap_pct",
+      "rsba_rice_share_pct",
+      "rsba_corn_share_pct"
     ];
 
     Object.values(municipalData).forEach(row => {
       numericFields.forEach(field => {
         if (row[field] === undefined || row[field] === null || row[field] === "") row[field] = "0";
       });
-      if (row.RSBSA_top_crop === undefined || row.RSBSA_top_crop === null) row.RSBSA_top_crop = "";
+      if (row.rsba_top_crop === undefined || row.rsba_top_crop === null) row.rsba_top_crop = "";
     });
   }
 
@@ -908,7 +908,7 @@ const DataLoader = (() => {
     get fmrSummaryData() { return fmrSummaryData; },
     get f2c2ClustersData() { return f2c2ClustersData; },
     get f2c2SummaryData() { return f2c2SummaryData; },
-    get RSBSASummaryData() { return RSBSASummaryData; },
+    get rsbaSummaryData() { return rsbaSummaryData; },
     get facilitiesData() { return facilitiesData; }
   };
 })();
