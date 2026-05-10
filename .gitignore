@@ -22,3 +22,4 @@ data/plans_raw/
 # Local one-click updater UI
 AgriPlan Updater.vbs
 scripts/AgriPlanUpdater.ps1
+scripts/RSBSAUpdater.vbs
