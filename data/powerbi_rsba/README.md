@@ -1,4 +1,4 @@
-# Power BI RSBA Extraction
+# Power BI RSBSA Extraction
 
 Source resource key: 46dfd1c1-a6c4-41ec-a0a8-19921cfe1a07
 Report/model: RSBSA Cagayan Valley

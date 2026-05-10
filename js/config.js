@@ -12,7 +12,7 @@ const APP_CONFIG = {
   mapCenter: [17.6132, 121.7270],
   mapZoom: 8,
   dataPath: "data/",
-  assetVersion: "20260510-rsba-registry",
+  assetVersion: "20260510-RSBSA-registry",
 };
 
 // ============================================================
@@ -731,236 +731,236 @@ const INDICATOR_CONFIG = {
     description: "Proposed enterprise status values represented by FCA/F2C2 clusters."
   },
 
-  // --- RSBA / RSBSA municipal farmer registry from public Power BI report ---
-  rsba_registry_count: {
-    label: "RSBA Registry Records",
-    category: "RSBA Registry",
+  // --- RSBSA / RSBSA municipal farmer registry from public Power BI report ---
+  RSBSA_registry_count: {
+    label: "RSBSA Registry Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "YlGn",
-    description: "Municipal Registry System for Basic Sectors in Agriculture records from the public RSBA Power BI report."
+    description: "Municipal Registry System for Basic Sectors in Agriculture records from the public RSBSA Power BI report."
   },
-  rsba_crop_area_ha: {
-    label: "RSBA Crop Area",
-    category: "RSBA Registry",
+  RSBSA_crop_area_ha: {
+    label: "RSBSA Crop Area",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "ha",
     aggregation: "sum",
     colorScheme: "Greens",
-    description: "Total crop area represented in RSBA municipal records."
+    description: "Total crop area represented in RSBSA municipal records."
   },
-  rsba_rice_count: {
-    label: "RSBA Rice/Palay Records",
-    category: "RSBA Registry",
+  RSBSA_rice_count: {
+    label: "RSBSA Rice/Palay Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "YlGn",
-    description: "RSBA municipal records where crop name is Rice/Palay."
+    description: "RSBSA municipal records where crop name is Rice/Palay."
   },
-  rsba_rice_area_ha: {
-    label: "RSBA Rice/Palay Area",
-    category: "RSBA Registry",
+  RSBSA_rice_area_ha: {
+    label: "RSBSA Rice/Palay Area",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "ha",
     aggregation: "sum",
     colorScheme: "Greens",
-    description: "Rice/Palay crop area represented in RSBA municipal records."
+    description: "Rice/Palay crop area represented in RSBSA municipal records."
   },
-  rsba_corn_count: {
-    label: "RSBA Corn Records",
-    category: "RSBA Registry",
+  RSBSA_corn_count: {
+    label: "RSBSA Corn Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "YlOrBr",
-    description: "RSBA municipal records where crop name is Corn."
+    description: "RSBSA municipal records where crop name is Corn."
   },
-  rsba_corn_area_ha: {
-    label: "RSBA Corn Area",
-    category: "RSBA Registry",
+  RSBSA_corn_area_ha: {
+    label: "RSBSA Corn Area",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "ha",
     aggregation: "sum",
     colorScheme: "YlOrBr",
-    description: "Corn crop area represented in RSBA municipal records."
+    description: "Corn crop area represented in RSBSA municipal records."
   },
-  rsba_top_crop: {
-    label: "RSBA Top Crop",
-    category: "RSBA Registry",
+  RSBSA_top_crop: {
+    label: "RSBSA Top Crop",
+    category: "RSBSA Registry",
     type: "categorical",
     unit: "",
     aggregation: "dominant",
     colorScheme: "YlGn",
-    description: "Crop with the highest RSBA record count in the municipality."
+    description: "Crop with the highest RSBSA record count in the municipality."
   },
-  rsba_female_count: {
-    label: "RSBA Female Records",
-    category: "RSBA Registry",
+  RSBSA_female_count: {
+    label: "RSBSA Female Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "Purples",
-    description: "Female RSBA records by municipality."
+    description: "Female RSBSA records by municipality."
   },
-  rsba_female_pct: {
-    label: "RSBA Female Share",
-    category: "RSBA Registry",
+  RSBSA_female_pct: {
+    label: "RSBSA Female Share",
+    category: "RSBSA Registry",
     type: "percentage",
     unit: "%",
     aggregation: "weighted_average",
-    weightField: "rsba_registry_count",
+    weightField: "RSBSA_registry_count",
     colorScheme: "Purples",
-    description: "Female share of RSBA municipal records."
+    description: "Female share of RSBSA municipal records."
   },
-  rsba_youth_count: {
-    label: "RSBA Youth Records",
-    category: "RSBA Registry",
+  RSBSA_youth_count: {
+    label: "RSBSA Youth Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "Blues",
-    description: "Generation Z and Generation Alpha RSBA records by municipality."
+    description: "Generation Z and Generation Alpha RSBSA records by municipality."
   },
-  rsba_youth_pct: {
-    label: "RSBA Youth Share",
-    category: "RSBA Registry",
+  RSBSA_youth_pct: {
+    label: "RSBSA Youth Share",
+    category: "RSBSA Registry",
     type: "percentage",
     unit: "%",
     aggregation: "weighted_average",
-    weightField: "rsba_registry_count",
+    weightField: "RSBSA_registry_count",
     colorScheme: "Blues",
-    description: "Youth share of RSBA municipal records."
+    description: "Youth share of RSBSA municipal records."
   },
-  rsba_farmer_count: {
-    label: "RSBA Farmer Sector Records",
-    category: "RSBA Registry",
+  RSBSA_farmer_count: {
+    label: "RSBSA Farmer Sector Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "Greens",
-    description: "RSBA records tagged as farmers."
+    description: "RSBSA records tagged as farmers."
   },
-  rsba_farmworker_count: {
-    label: "RSBA Farmworker Records",
-    category: "RSBA Registry",
+  RSBSA_farmworker_count: {
+    label: "RSBSA Farmworker Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "Oranges",
-    description: "RSBA records tagged as farmworkers."
+    description: "RSBSA records tagged as farmworkers."
   },
-  rsba_fisherfolk_count: {
-    label: "RSBA Fisherfolk Records",
-    category: "RSBA Registry",
+  RSBSA_fisherfolk_count: {
+    label: "RSBSA Fisherfolk Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "Blues",
-    description: "RSBA records tagged as fisherfolk."
+    description: "RSBSA records tagged as fisherfolk."
   },
-  rsba_ip_count: {
-    label: "RSBA IP Records",
-    category: "RSBA Registry",
+  RSBSA_ip_count: {
+    label: "RSBSA IP Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "YlOrBr",
-    description: "RSBA records tagged as Indigenous Peoples."
+    description: "RSBSA records tagged as Indigenous Peoples."
   },
-  rsba_pwd_count: {
-    label: "RSBA PWD Records",
-    category: "RSBA Registry",
+  RSBSA_pwd_count: {
+    label: "RSBSA PWD Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "Purples",
-    description: "RSBA records tagged as persons with disability."
+    description: "RSBSA records tagged as persons with disability."
   },
-  rsba_4ps_count: {
-    label: "RSBA 4Ps Records",
-    category: "RSBA Registry",
+  RSBSA_4ps_count: {
+    label: "RSBSA 4Ps Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "Reds",
-    description: "RSBA records tagged under 4Ps."
+    description: "RSBSA records tagged under 4Ps."
   },
-  rsba_fca_count: {
-    label: "RSBA FCA Members",
-    category: "RSBA Registry",
+  RSBSA_fca_count: {
+    label: "RSBSA FCA Members",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "Greens",
-    description: "RSBA records tagged as FCA members."
+    description: "RSBSA records tagged as FCA members."
   },
-  rsba_fca_pct: {
-    label: "RSBA FCA Share",
-    category: "RSBA Registry",
+  RSBSA_fca_pct: {
+    label: "RSBSA FCA Share",
+    category: "RSBSA Registry",
     type: "percentage",
     unit: "%",
     aggregation: "weighted_average",
-    weightField: "rsba_registry_count",
+    weightField: "RSBSA_registry_count",
     colorScheme: "Greens",
-    description: "Share of RSBA records tagged as FCA members."
+    description: "Share of RSBSA records tagged as FCA members."
   },
-  rsba_fca_gap_pct: {
-    label: "RSBA Non-FCA Share",
-    category: "RSBA Registry",
+  RSBSA_fca_gap_pct: {
+    label: "RSBSA Non-FCA Share",
+    category: "RSBSA Registry",
     type: "percentage",
     unit: "%",
     aggregation: "weighted_average",
-    weightField: "rsba_registry_count",
+    weightField: "RSBSA_registry_count",
     colorScheme: "Reds",
-    description: "Share of RSBA records not tagged as FCA members."
+    description: "Share of RSBSA records not tagged as FCA members."
   },
-  rsba_agriyouth_count: {
-    label: "RSBA Agri-Youth Records",
-    category: "RSBA Registry",
+  RSBSA_agriyouth_count: {
+    label: "RSBSA Agri-Youth Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "Blues",
-    description: "RSBA records tagged as agri-youth."
+    description: "RSBSA records tagged as agri-youth."
   },
-  rsba_arb_count: {
-    label: "RSBA ARB Records",
-    category: "RSBA Registry",
+  RSBSA_arb_count: {
+    label: "RSBSA ARB Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "YlOrBr",
-    description: "RSBA records tagged as agrarian reform beneficiaries."
+    description: "RSBSA records tagged as agrarian reform beneficiaries."
   },
-  rsba_organic_count: {
-    label: "RSBA Organic Records",
-    category: "RSBA Registry",
+  RSBSA_organic_count: {
+    label: "RSBSA Organic Records",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "Greens",
-    description: "RSBA records tagged for organic agriculture."
+    description: "RSBSA records tagged for organic agriculture."
   },
-  rsba_with_imc_count: {
-    label: "RSBA With IMC",
-    category: "RSBA Registry",
+  RSBSA_with_imc_count: {
+    label: "RSBSA With IMC",
+    category: "RSBSA Registry",
     type: "numeric",
     unit: "records",
     aggregation: "sum",
     colorScheme: "Blues",
-    description: "RSBA records tagged with interventions monitoring card."
+    description: "RSBSA records tagged with interventions monitoring card."
   },
-  rsba_imc_gap_pct: {
-    label: "RSBA Without IMC Share",
-    category: "RSBA Registry",
+  RSBSA_imc_gap_pct: {
+    label: "RSBSA Without IMC Share",
+    category: "RSBSA Registry",
     type: "percentage",
     unit: "%",
     aggregation: "weighted_average",
-    weightField: "rsba_registry_count",
+    weightField: "RSBSA_registry_count",
     colorScheme: "Reds",
-    description: "Share of RSBA records not tagged with interventions monitoring card."
+    description: "Share of RSBSA records not tagged with interventions monitoring card."
   },
 
   // --- PhilRice PRiSM Rice Season Monitoring ---
@@ -1489,7 +1489,7 @@ const CATEGORIES = [
   "Infrastructure",
   "FMR Inventory",
   "F2C2 Clusters",
-  "RSBA Registry",
+  "RSBSA Registry",
   "PRiSM Rice Monitoring",
   "El Nino Rice Risk",
   "Plans & Projects",
@@ -1764,51 +1764,51 @@ const PRIORITY_MODELS = {
       poor_corn_farmers: 0.11
     }
   },
-  rsba_registry_targeting: {
-    label: "RSBA Farmer Registry Targeting Priority",
+  RSBSA_registry_targeting: {
+    label: "RSBSA Farmer Registry Targeting Priority",
     weights: {
-      rsba_registry_count: 0.24,
-      rsba_crop_area_ha: 0.18,
+      RSBSA_registry_count: 0.24,
+      RSBSA_crop_area_ha: 0.18,
       poverty_2023: 0.16,
-      rsba_farmer_count: 0.14,
-      rsba_farmworker_count: 0.10,
-      rsba_fisherfolk_count: 0.08,
-      rsba_imc_gap_pct: 0.10
+      RSBSA_farmer_count: 0.14,
+      RSBSA_farmworker_count: 0.10,
+      RSBSA_fisherfolk_count: 0.08,
+      RSBSA_imc_gap_pct: 0.10
     }
   },
-  rsba_rice_corn: {
-    label: "RSBA Rice and Corn Producer Priority",
+  RSBSA_rice_corn: {
+    label: "RSBSA Rice and Corn Producer Priority",
     weights: {
-      rsba_rice_count: 0.20,
-      rsba_corn_count: 0.20,
-      rsba_rice_area_ha: 0.15,
-      rsba_corn_area_ha: 0.15,
+      RSBSA_rice_count: 0.20,
+      RSBSA_corn_count: 0.20,
+      RSBSA_rice_area_ha: 0.15,
+      RSBSA_corn_area_ha: 0.15,
       poor_rice_farmers: 0.10,
       poor_corn_farmers: 0.10,
       poverty_2023: 0.10
     }
   },
-  rsba_inclusion: {
-    label: "RSBA Inclusion and Social Targeting Priority",
+  RSBSA_inclusion: {
+    label: "RSBSA Inclusion and Social Targeting Priority",
     weights: {
-      rsba_4ps_count: 0.18,
-      rsba_ip_count: 0.16,
-      rsba_pwd_count: 0.14,
-      rsba_female_count: 0.14,
-      rsba_youth_count: 0.14,
+      RSBSA_4ps_count: 0.18,
+      RSBSA_ip_count: 0.16,
+      RSBSA_pwd_count: 0.14,
+      RSBSA_female_count: 0.14,
+      RSBSA_youth_count: 0.14,
       poverty_2023: 0.14,
-      rsba_registry_count: 0.10
+      RSBSA_registry_count: 0.10
     }
   },
-  rsba_fca_organizing: {
-    label: "RSBA FCA Organizing Gap Priority",
+  RSBSA_fca_organizing: {
+    label: "RSBSA FCA Organizing Gap Priority",
     weights: {
-      rsba_fca_gap_pct: 0.28,
-      rsba_registry_count: 0.20,
-      rsba_rice_count: 0.12,
-      rsba_corn_count: 0.12,
+      RSBSA_fca_gap_pct: 0.28,
+      RSBSA_registry_count: 0.20,
+      RSBSA_rice_count: 0.12,
+      RSBSA_corn_count: 0.12,
       f2c2_cluster_count: 0.10,
-      rsba_with_imc_count: 0.08,
+      RSBSA_with_imc_count: 0.08,
       poverty_2023: 0.10
     }
   }
@@ -1992,19 +1992,19 @@ const PLANNING_INSIGHTS = [
     icon: "F2C2", level: "high"
   },
   {
-    condition: (d) => parseFloat(d.rsba_registry_count) >= 5000,
-    insight: "A large RSBA registry base is present. Use RSBA indicators to target interventions, validate commodity mix, and check IMC coverage before allocating support.",
-    icon: "RSBA", level: "moderate"
+    condition: (d) => parseFloat(d.RSBSA_registry_count) >= 5000,
+    insight: "A large RSBSA registry base is present. Use RSBSA indicators to target interventions, validate commodity mix, and check IMC coverage before allocating support.",
+    icon: "RSBSA", level: "moderate"
   },
   {
-    condition: (d) => parseFloat(d.rsba_fca_gap_pct) >= 80 && parseFloat(d.rsba_registry_count) >= 1000,
-    insight: "Most RSBA records are not tagged as FCA members. This area may need organizing, clustering, or F2C2 validation before enterprise-scale support.",
-    icon: "RSBA", level: "moderate"
+    condition: (d) => parseFloat(d.RSBSA_fca_gap_pct) >= 80 && parseFloat(d.RSBSA_registry_count) >= 1000,
+    insight: "Most RSBSA records are not tagged as FCA members. This area may need organizing, clustering, or F2C2 validation before enterprise-scale support.",
+    icon: "RSBSA", level: "moderate"
   },
   {
-    condition: (d) => parseFloat(d.rsba_4ps_count) + parseFloat(d.rsba_ip_count) + parseFloat(d.rsba_pwd_count) >= 500,
-    insight: "RSBA social-targeting records are substantial. Consider inclusion-sensitive delivery, registration validation, and beneficiary safeguards.",
-    icon: "RSBA", level: "high"
+    condition: (d) => parseFloat(d.RSBSA_4ps_count) + parseFloat(d.RSBSA_ip_count) + parseFloat(d.RSBSA_pwd_count) >= 500,
+    insight: "RSBSA social-targeting records are substantial. Consider inclusion-sensitive delivery, registration validation, and beneficiary safeguards.",
+    icon: "RSBSA", level: "high"
   },
   {
     condition: (d) => parseFloat(d.plans_projects_2027_budget) <= 0 && (parseFloat(d.poverty_2023) > 20 || parseFloat(d.elnino_rice_risk_score) > 40),
