@@ -771,6 +771,7 @@ const DataLoader = (() => {
           project_amount: row.project_amount || row.amount || "",
           year_granted: row.year_granted || "",
           year_finished: row.year_finished || "",
+          source_year: row.source_year || "",
           year_constructed: row.year_constructed || row.year || "",
           remarks: sourceParts.join(" | ")
         };

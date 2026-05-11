@@ -137,6 +137,7 @@ const MapLayers = (() => {
         f.project_amount ? `<div class="popup-row"><b>Project Amount:</b> ${f.project_amount}</div>` : "",
         f.year_granted   ? `<div class="popup-row"><b>Year Granted:</b> ${f.year_granted}</div>` : "",
         f.year_finished  ? `<div class="popup-row"><b>Year Finished:</b> ${f.year_finished}</div>` : "",
+        f.source_year    ? `<div class="popup-row"><b>Source Year:</b> ${f.source_year}</div>` : "",
         f.barangay       ? `<div class="popup-row"><b>Barangay:</b> ${f.barangay}</div>` : "",
         f.district       ? `<div class="popup-row"><b>District:</b> ${f.district}</div>` : "",
         f.commodity      ? `<div class="popup-row"><b>Commodity:</b> ${f.commodity}</div>` : "",

@@ -17,6 +17,7 @@ import csv
 import json
 import math
 import re
+import zipfile
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -44,6 +45,7 @@ FACILITY_HEADERS = [
     "project_amount",
     "year_granted",
     "year_finished",
+    "source_year",
     "year_constructed",
     "source_layer",
     "source_folder",
@@ -178,6 +180,17 @@ def infer_project_name(path: Path, attrs: dict, type_key: str) -> str:
     if parent and parent.lower() not in {"raed_irrigation_raw", "data"}:
         return parent
     return f"{type_key or 'Irrigation'} Facility"
+
+
+def infer_source_year(path: Path) -> str:
+    for part in path.parts:
+        match = re.fullmatch(r"(20\d{2})", clean(part))
+        if match:
+            return match.group(1)
+        match = re.search(r"\b(20\d{2})\b", clean(part))
+        if match:
+            return match.group(1)
+    return ""
 
 
 def infer_transformer(shp_path: Path):
@@ -327,6 +340,202 @@ def read_csv_export(path: Path):
     return rows
 
 
+def read_xlsx_summary(path: Path):
+    rows = []
+    for sheet_name, sheet_rows in read_xlsx_rows(path):
+        blocks = project_blocks(sheet_rows)
+        for index, block in enumerate(blocks, start=1):
+            row = build_row_from_project_block(path, sheet_name, index, block)
+            if row:
+                rows.append(row)
+    return rows
+
+
+def read_xlsx_rows(path: Path):
+    try:
+        with zipfile.ZipFile(path) as workbook:
+            shared_strings = read_shared_strings(workbook)
+            sheet_names = read_workbook_sheet_names(workbook)
+            sheet_paths = sorted(name for name in workbook.namelist() if re.match(r"xl/worksheets/sheet\d+\.xml$", name))
+            for index, sheet_path in enumerate(sheet_paths):
+                sheet_name = sheet_names[index] if index < len(sheet_names) else Path(sheet_path).stem
+                yield sheet_name, parse_sheet_rows(workbook, sheet_path, shared_strings)
+    except zipfile.BadZipFile:
+        return
+
+
+def read_shared_strings(workbook: zipfile.ZipFile):
+    if "xl/sharedStrings.xml" not in workbook.namelist():
+        return []
+    root = ET.fromstring(workbook.read("xl/sharedStrings.xml"))
+    strings = []
+    for item in root.findall(".//{*}si"):
+        parts = [node.text or "" for node in item.findall(".//{*}t")]
+        strings.append("".join(parts))
+    return strings
+
+
+def read_workbook_sheet_names(workbook: zipfile.ZipFile):
+    if "xl/workbook.xml" not in workbook.namelist():
+        return []
+    root = ET.fromstring(workbook.read("xl/workbook.xml"))
+    return [clean(sheet.attrib.get("name")) for sheet in root.findall(".//{*}sheet")]
+
+
+def parse_sheet_rows(workbook: zipfile.ZipFile, sheet_path: str, shared_strings: list[str]):
+    root = ET.fromstring(workbook.read(sheet_path))
+    rows = []
+    for row_node in root.findall(".//{*}sheetData/{*}row"):
+        values = []
+        for cell in row_node.findall("{*}c"):
+            value = parse_xlsx_cell(cell, shared_strings)
+            if value:
+                values.append(value)
+        if values:
+            rows.append(values)
+    return rows
+
+
+def parse_xlsx_cell(cell, shared_strings: list[str]):
+    cell_type = cell.attrib.get("t")
+    if cell_type == "inlineStr":
+        return clean("".join(node.text or "" for node in cell.findall(".//{*}t")))
+
+    value_node = cell.find("{*}v")
+    if value_node is None:
+        return ""
+    raw_value = clean(value_node.text)
+    if cell_type == "s":
+        try:
+            return clean(shared_strings[int(raw_value)])
+        except (ValueError, IndexError):
+            return ""
+    return raw_value
+
+
+def project_blocks(rows: list[list[str]]):
+    blocks = []
+    current = []
+    for row in rows:
+        row_text = " ".join(row)
+        if re.search(r"Project\s+Title\s*:", row_text, re.I):
+            if current:
+                blocks.append(current)
+            current = [row]
+        elif current:
+            current.append(row)
+    if current:
+        blocks.append(current)
+    return blocks
+
+
+def build_row_from_project_block(path: Path, sheet_name: str, index: int, block: list[list[str]]):
+    text = "\n".join(" ".join(row) for row in block)
+    title = extract_labeled_value(text, r"Project\s+Title")
+    type_key = infer_type(title)
+    if not type_key:
+        return None
+
+    location = extract_labeled_value(text, r"Project\s+Location")
+    lat, lon = parse_geo_location(extract_labeled_value(text, r"Geo\s+Location"))
+    if not lat or not lon:
+        return None
+
+    service_area = extract_total_service_area(block) or extract_potential_service_area(text)
+    province, municipality, barangay = parse_location(location)
+    parsed = {
+        "facility_id": f"IRR-XLSX-{index:04d}",
+        "name": title,
+        "province": province,
+        "municipality": municipality,
+        "barangay": barangay,
+        "status": normalize_status(extract_status(text)),
+        "project_amount": extract_amount(text),
+        "year_granted": extract_year(text, r"YEAR\s+GRANTED|YEAR\s+FUNDED|YEAR\s+APPROVED"),
+        "year_finished": extract_year(text, r"YEAR\s+FINISHED|YEAR\s+COMPLETED|COMPLETION\s+YEAR|COMPLETED"),
+    }
+    attrs = normalized_attrs(parsed)
+    row = build_facility_row(path, attrs, type_key, lat, lon, sheet_name, service_area)
+    if not row["facility_id"]:
+        row["facility_id"] = f"IRR-XLSX-{index:04d}"
+    return row
+
+
+def extract_labeled_value(text: str, label_pattern: str) -> str:
+    match = re.search(label_pattern + r"\s*:\s*([^\n\r]+)", text, re.I)
+    return compact_text(match.group(1), 180) if match else ""
+
+
+def parse_geo_location(value: str):
+    text = clean(value)
+    if not text:
+        return "", ""
+    nums = re.findall(r"-?\d+(?:\.\d+)?", text)
+    if len(nums) < 2:
+        return "", ""
+    first = float(nums[0])
+    second = float(nums[1])
+    if re.search(r"\b[NS]\b|°\s*[NS]", text, re.I):
+        lat, lon = first, second
+    else:
+        lat, lon = (first, second) if abs(first) <= 25 and abs(second) >= 115 else (second, first)
+    return f"{lat:.7f}", f"{lon:.7f}"
+
+
+def extract_total_service_area(block: list[list[str]]) -> str:
+    total = ""
+    for row in block:
+        if not any(re.fullmatch(r"TOTAL", clean(cell), re.I) for cell in row):
+            continue
+        values = [numeric(cell) for cell in row]
+        numbers = [value for value in values if value is not None]
+        if numbers:
+            total = f"{numbers[-1]:.4f}".rstrip("0").rstrip(".")
+    return total
+
+
+def extract_potential_service_area(text: str) -> str:
+    match = re.search(r"Potential\s+Service\s+Area\s*:?\s*([0-9,]+(?:\.\d+)?)", text, re.I)
+    return match.group(1).replace(",", "") if match else ""
+
+
+def extract_amount(text: str) -> str:
+    match = re.search(r"(?:PROJECT\s+COST|AMOUNT|COST|ALLOCATION)\s*(?:PHP|P|₱)?\s*:?\s*([0-9,]+(?:\.\d+)?)", text, re.I)
+    return match.group(1).replace(",", "") if match else ""
+
+
+def extract_status(text: str) -> str:
+    match = re.search(r"(OPERATIONAL|NON[-\s]?OPERATIONAL|NOT\s+OPERATIONAL|UNDER\s+CONSTRUCTION|ONGOING|COMPLETED)", text, re.I)
+    return match.group(1) if match else ""
+
+
+def extract_year(text: str, label_pattern: str) -> str:
+    match = re.search(r"(?:" + label_pattern + r")\s*:?\s*(20\d{2})", text, re.I)
+    return match.group(1) if match else ""
+
+
+def parse_location(location: str):
+    text = re.sub(r"\bProject\s+Location\s*:\s*", "", clean(location), flags=re.I)
+    if not text:
+        return "", "", ""
+    parts = [clean(part) for part in text.split(",") if clean(part)]
+    province = ""
+    municipality = ""
+    barangay = ""
+    if parts:
+        maybe_province = parts[-1]
+        if any(normalize_join(maybe_province) == normalize_join(prov) for prov in PROVINCES):
+            province = title_province(maybe_province)
+            parts = parts[:-1]
+    if parts:
+        municipality = title_place(parts[-1])
+        parts = parts[:-1]
+    if parts:
+        barangay = re.sub(r"^Brgy\.?\s*", "", parts[-1], flags=re.I)
+        barangay = title_place(barangay)
+    return province, municipality, barangay
+
+
 def read_kml(path: Path):
     rows = []
     try:
@@ -355,9 +564,14 @@ def read_kml(path: Path):
         if not lat or not lon:
             continue
         parsed = parse_kml_description(description)
+        display_name = f"{type_key} Facility"
+        location_bits = [parsed.get("barangay", ""), parsed.get("municipality", "")]
+        location_name = ", ".join(bit for bit in location_bits if bit)
+        if location_name:
+            display_name = f"{type_key} - {location_name}"
         attrs = normalized_attrs({
             "facility_id": f"IRR-KML-{index:04d}",
-            "name": name,
+            "name": display_name,
             "province": parsed.get("province", ""),
             "municipality": parsed.get("municipality", ""),
             "barangay": parsed.get("barangay", ""),
@@ -479,9 +693,14 @@ def build_facility_row(path: Path, attrs: dict, type_key: str, lat: str, lon: st
         "project_amount": first_attr(attrs, AMOUNT_FIELDS),
         "year_granted": first_attr(attrs, YEAR_GRANTED_FIELDS),
         "year_finished": first_attr(attrs, YEAR_FINISHED_FIELDS),
+        "source_year": first_attr(attrs, ["source_year"]) or infer_source_year(path),
         "year_constructed": first_attr(attrs, YEAR_FIELDS),
         "source_layer": clean(source_layer),
-        "source_folder": path.parent.name,
+        "source_folder": (
+            str(path.parent.relative_to(DEFAULT_RAW_DIR)).replace("\\", "/")
+            if path.parent.is_relative_to(DEFAULT_RAW_DIR)
+            else path.parent.name
+        ),
         "remarks": first_attr(attrs, ["remarks", "notes", "description"]),
     }
 
@@ -638,6 +857,8 @@ def collect_rows(raw_dir: Path):
         rows.extend(read_kml(kml_path))
     for csv_path in sorted(raw_dir.rglob("*.csv")):
         rows.extend(read_csv_export(csv_path))
+    for xlsx_path in sorted(raw_dir.rglob("*.xlsx")):
+        rows.extend(read_xlsx_summary(xlsx_path))
     enrich_with_municipal_context(rows)
     assign_ids(rows)
     return rows
