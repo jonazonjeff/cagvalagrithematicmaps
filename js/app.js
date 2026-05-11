@@ -443,11 +443,11 @@ const App = (() => {
 
     switch (currentVizStyle) {
       case "choropleth":
-        Visualizations.renderChoropleth(currentGeoJSON, currentIndicator, { style: "choropleth" });
+        Visualizations.renderChoropleth(currentGeoJSON, currentIndicator, { style: "choropleth", viewType: currentView, classCount: 5 });
         break;
 
       case "gradient":
-        Visualizations.renderChoropleth(currentGeoJSON, currentIndicator, { style: "gradient" });
+        Visualizations.renderChoropleth(currentGeoJSON, currentIndicator, { style: "gradient", viewType: currentView, classCount: 5 });
         break;
 
       case "proportional":
@@ -511,7 +511,7 @@ const App = (() => {
         break;
 
       case "ratio":
-        Visualizations.renderRatio(currentGeoJSON, compareFieldA, compareFieldB);
+        Visualizations.renderRatio(currentGeoJSON, compareFieldA, compareFieldB, { viewType: currentView, classCount: 5 });
         updateBivariateControls(true);
         break;
 
@@ -525,7 +525,7 @@ const App = (() => {
         break;
 
       default:
-        Visualizations.renderChoropleth(currentGeoJSON, currentIndicator);
+        Visualizations.renderChoropleth(currentGeoJSON, currentIndicator, { viewType: currentView, classCount: 5 });
     }
   }
 
@@ -1007,11 +1007,10 @@ const App = (() => {
       }, 400));
     }
 
-    // Reset
-    const resetBtn = document.getElementById("reset-btn");
-    if (resetBtn) resetBtn.addEventListener("click", () => {
-      map.setView(APP_CONFIG.mapCenter, APP_CONFIG.mapZoom);
-      renderCurrentView();
+    // Refresh defaults
+    const refreshBtn = document.getElementById("refresh-defaults");
+    if (refreshBtn) refreshBtn.addEventListener("click", () => {
+      resetToDefaults();
     });
 
     // Fit to region
@@ -1155,6 +1154,65 @@ const App = (() => {
     if (btn) btn.textContent = themeMode === "dark" ? "Light" : "Dark";
     if (map && themeMode === "dark") MapLayers.switchBasemap?.("cartoDark");
     if (map && themeMode === "light") MapLayers.switchBasemap?.("cartoLight");
+  }
+
+  function resetToDefaults() {
+    currentIndicator = APP_CONFIG.defaultIndicator;
+    currentCategory = INDICATOR_CONFIG[currentIndicator]?.category || "Demographics";
+    currentVizStyle = APP_CONFIG.defaultStyle;
+    currentScenario = "rice";
+    priorityModel = "rice";
+    compareFieldA = "poverty_2023";
+    compareFieldB = "poor_rice_farmers";
+    rankedN = 10;
+    rankedDir = "top";
+    rsbaFarmSizeFilter = "all";
+    rsbaCropFilter = "all";
+    rsbaAttributeFilter = "all";
+    selectedArea = null;
+
+    setView(APP_CONFIG.defaultView || "municipality");
+    syncDefaultControls();
+    MapLayers.resetFacilityVisibility?.();
+    MapLayers.clearAggregateLabels?.();
+    MapLayers.switchBasemap?.(themeMode === "dark" ? "cartoDark" : "cartoLight");
+    if (map) map.setView(APP_CONFIG.mapCenter, APP_CONFIG.mapZoom);
+    renderCurrentView();
+    Utils.showToast("Map controls refreshed to defaults.", "success");
+  }
+
+  function syncDefaultControls() {
+    buildCategorySelector();
+    buildIndicatorSelector();
+    buildVizStyleSelector();
+    buildScenarioSelector();
+    buildBivariateControls();
+    buildRankedControls();
+    buildPriorityControls();
+
+    const setValue = (id, value) => {
+      const el = document.getElementById(id);
+      if (el) el.value = value;
+    };
+    setValue("category-select", currentCategory);
+    setValue("indicator-select", currentIndicator);
+    setValue("viz-select", currentVizStyle);
+    setValue("scenario-select", currentScenario);
+    setValue("priority-model", priorityModel);
+    setValue("compare-a", compareFieldA);
+    setValue("compare-b", compareFieldB);
+    setValue("ranked-n", String(rankedN));
+    setValue("ranked-dir", rankedDir);
+    setValue("rsba-farm-size-filter", rsbaFarmSizeFilter);
+    setValue("rsba-crop-filter", rsbaCropFilter);
+    setValue("rsba-attribute-filter", rsbaAttributeFilter);
+    const searchInput = document.getElementById("search-input");
+    if (searchInput) searchInput.value = "";
+    updateBivariateControls(false);
+    updateRankedControls(false);
+    updatePriorityControls(false);
+    updateIndicatorMeta();
+    updateRsbaFilterNote();
   }
 
   function applyScenarioMap() {

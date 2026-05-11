@@ -54,7 +54,8 @@ const Visualizations = (() => {
       Utils.showToast("No numeric data available for this indicator.", "warning");
     }
 
-    const breaks = Utils.quantileBreaks(values, scheme.length);
+    const classCount = options.classCount || 5;
+    const breaks = Utils.classBreaks(values, classCount);
     const isGradient = options.style === "gradient";
 
     currentLayer = L.geoJSON(geojson, {
@@ -83,7 +84,7 @@ const Visualizations = (() => {
       }
     }).addTo(map);
 
-    renderChoroplethLegend(field, breaks, scheme, isGradient);
+    renderChoroplethLegend(field, breaks, scheme, isGradient, null, options.viewType);
     return currentLayer;
   }
 
@@ -449,7 +450,7 @@ const Visualizations = (() => {
   // ============================================================
   // RATIO MAP
   // ============================================================
-  function renderRatio(geojson, numeratorField, denominatorField) {
+  function renderRatio(geojson, numeratorField, denominatorField, options = {}) {
     clearLayers();
     const rows = geojson.features.map(f => f.properties);
     const withRatio = Aggregation.computeRatioField(rows, numeratorField, denominatorField);
@@ -460,7 +461,7 @@ const Visualizations = (() => {
     }
 
     const ratioVals = withRatio.map(r => r._ratio).filter(v => v !== null);
-    const breaks = Utils.quantileBreaks(ratioVals, 5);
+    const breaks = Utils.classBreaks(ratioVals, options.classCount || 5);
     const scheme = COLOR_SCHEMES.YlOrRd;
 
     const ratioMap = {};
@@ -490,7 +491,7 @@ const Visualizations = (() => {
     }).addTo(map);
 
     const rLabel = `${INDICATOR_CONFIG[numeratorField]?.label || numeratorField} ÷ ${INDICATOR_CONFIG[denominatorField]?.label || denominatorField}`;
-    renderChoroplethLegend(null, breaks, scheme, false, rLabel);
+    renderChoroplethLegend(null, breaks, scheme, false, rLabel, options.viewType);
     return currentLayer;
   }
 
@@ -631,12 +632,13 @@ const Visualizations = (() => {
   // ============================================================
   // LEGEND RENDERERS
   // ============================================================
-  function renderChoroplethLegend(field, breaks, scheme, isGradient, customTitle = null) {
+  function renderChoroplethLegend(field, breaks, scheme, isGradient, customTitle = null, viewType = "") {
     if (legendControl) map.removeControl(legendControl);
     const cfg = field ? INDICATOR_CONFIG[field] : null;
     const title = customTitle || cfg?.label || field || "";
     const unit  = cfg?.unit || "";
     const year = field ? Utils.getIndicatorYear(field) : "";
+    const viewLabel = viewType ? viewType.charAt(0).toUpperCase() + viewType.slice(1) : "";
     const higherIsBetter = cfg?.higherIsBetter;
 
     // Direction hint for CRVA indicators
@@ -653,6 +655,7 @@ const Visualizations = (() => {
     legendControl.onAdd = () => {
       const div = L.DomUtil.create("div", "legend");
       div.innerHTML = `<div class="legend-title">${title}</div>`;
+      if (viewLabel) div.innerHTML += `<div class="legend-unit">Geographic view: ${viewLabel}</div>`;
       if (year) div.innerHTML += `<div class="legend-unit">Data year: ${year}</div>`;
       if (unit) div.innerHTML += `<div class="legend-unit">${unit}</div>`;
       div.innerHTML += dirHint + lowHighLabel;
@@ -666,6 +669,12 @@ const Visualizations = (() => {
             <span>${Utils.formatValue(breaks[breaks.length - 1], field)}</span>
           </div>`;
       } else {
+        if (breaks.length === 1) {
+          div.innerHTML += `<div class="legend-item">
+            <span class="legend-swatch" style="background:${scheme[scheme.length - 1]}"></span>
+            <span>${Utils.formatValue(breaks[0], field)}</span>
+          </div>`;
+        }
         for (let i = 0; i < scheme.length && i < breaks.length - 1; i++) {
           div.innerHTML += `<div class="legend-item">
             <span class="legend-swatch" style="background:${scheme[i]}"></span>

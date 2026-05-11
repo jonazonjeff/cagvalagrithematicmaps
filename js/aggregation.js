@@ -77,7 +77,7 @@ const Aggregation = (() => {
     const provinceName = province || "Unknown";
     const districtName = district || "";
     const provinceKey = String(provinceName).replace(/\s+/g, "");
-    const match = String(districtName).match(/(\d+)(?:st|nd|rd|th)?\s+District/i);
+    const match = String(districtName).match(/(\d+)(?:st|nd|rd|th)?(?:\s+District)?$/i);
     if (match) return `${provinceKey}${match[1]}`;
     if (/^lone(?:\s+district)?$/i.test(String(districtName).trim()) ||
         Utils.normalizeName(districtName) === Utils.normalizeName(provinceName)) {
@@ -230,11 +230,14 @@ const Aggregation = (() => {
    */
   function joinAggToGeoJSON(geojson, aggData, groupField) {
     if (!geojson) return null;
+    const normalizedAgg = {};
+    Object.entries(aggData || {}).forEach(([key, value]) => {
+      normalizedAgg[Utils.normalizeName(key)] = value;
+      if (value?.[groupField]) normalizedAgg[Utils.normalizeName(value[groupField])] = value;
+    });
     geojson.features.forEach(f => {
       const groupVal = getBoundaryGroupValue(f.properties, groupField);
-      const match = aggData[groupVal] || Object.values(aggData).find(a =>
-        Utils.normalizeName(a[groupField]) === Utils.normalizeName(groupVal)
-      );
+      const match = aggData[groupVal] || normalizedAgg[Utils.normalizeName(groupVal)];
       if (match) {
         Object.assign(f.properties, match);
         f.properties._joined = true;

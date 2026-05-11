@@ -188,6 +188,17 @@ const MapLayers = (() => {
     refreshFacilityVisibility();
   }
 
+  function resetFacilityVisibility() {
+    Object.keys(typeVisibility).forEach(typeKey => {
+      typeVisibility[typeKey] = false;
+    });
+    document.querySelectorAll(".cat-toggle, .type-toggle").forEach(cb => {
+      cb.checked = false;
+      cb.indeterminate = false;
+    });
+    refreshFacilityVisibility();
+  }
+
   function refreshFacilityVisibility() {
     // Remove old active layers
     Object.values(facilityLayers).forEach(entry => {
@@ -336,6 +347,7 @@ const MapLayers = (() => {
     clearAllFacilityLayers,
     setTypeVisibility,
     setCategoryVisibility,
+    resetFacilityVisibility,
     refreshFacilityVisibility,
     getFacilityTypeCfg,
     getFacilityCategoryKey,

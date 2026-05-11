@@ -12,7 +12,7 @@ const APP_CONFIG = {
   mapCenter: [17.6132, 121.7270],
   mapZoom: 8,
   dataPath: "data/",
-  assetVersion: "20260511-rsbsa-filters-theme",
+  assetVersion: "20260511-legend-refresh",
 };
 
 // ============================================================

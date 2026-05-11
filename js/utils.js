@@ -120,6 +120,22 @@ const Utils = (() => {
     return [...new Set(breaks)];
   }
 
+  function classBreaks(values, n = 5) {
+    if (!values || values.length === 0) return [];
+    const sorted = [...values].sort((a, b) => a - b);
+    const unique = [...new Set(sorted)];
+    if (unique.length === 1) return [unique[0]];
+    const min = unique[0];
+    const max = unique[unique.length - 1];
+    const classCount = Math.min(n, unique.length);
+    const step = (max - min) / classCount;
+    const breaks = [];
+    for (let i = 0; i <= classCount; i++) {
+      breaks.push(i === classCount ? max : min + step * i);
+    }
+    return breaks;
+  }
+
   // Natural breaks (Jenks simplified)
   function naturalBreaks(values, n = 5) {
     if (!values || values.length < n) return quantileBreaks(values, n);
@@ -315,6 +331,7 @@ const Utils = (() => {
     parseNumeric,
     getValues,
     quantileBreaks,
+    classBreaks,
     naturalBreaks,
     equalIntervalBreaks,
     classifyValue,

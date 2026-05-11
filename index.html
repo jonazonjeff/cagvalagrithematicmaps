@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
   <!-- App Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20260511-rsbsa-filters-theme" />
+  <link rel="stylesheet" href="css/styles.css?v=20260511-legend-refresh" />
 </head>
 <body>
 
@@ -72,7 +72,7 @@
       <button class="header-btn" id="export-csv" title="Export current data as CSV">⬇ CSV</button>
       <button class="header-btn" id="export-png" title="Export map as PNG">🗺 PNG</button>
       <button class="header-btn" id="fit-btn" title="Fit map to region">⊕ Fit</button>
-      <button class="header-btn" id="reset-btn" title="Reset map">↺ Reset</button>
+      <button class="header-btn" id="refresh-defaults" title="Return controls, filters, styles, and layers to defaults">↺ Refresh</button>
       <button class="header-btn climate-toggle-btn" id="btn-climate-panel" title="Toggle Climate Information Panel">🌦️ Climate Info</button>
     </div>
   </header>
@@ -393,17 +393,17 @@
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
 
 <!-- App Modules (load in dependency order) -->
-<script src="js/config.js?v=20260511-rsbsa-filters-theme"></script>
-<script src="js/utils.js?v=20260511-rsbsa-filters-theme"></script>
-<script src="js/aggregation.js?v=20260511-rsbsa-filters-theme"></script>
-<script src="js/dataLoader.js?v=20260511-rsbsa-filters-theme"></script>
-<script src="js/priorityScoring.js?v=20260511-rsbsa-filters-theme"></script>
-<script src="js/visualizations.js?v=20260511-rsbsa-filters-theme"></script>
-<script src="js/mapLayers.js?v=20260511-rsbsa-filters-theme"></script>
-<script src="js/charts.js?v=20260511-rsbsa-filters-theme"></script>
-<script src="js/weatherOverlay.js?v=20260511-rsbsa-filters-theme"></script>
-<script src="js/climate.js?v=20260511-rsbsa-filters-theme"></script>
-<script src="js/app.js?v=20260511-rsbsa-filters-theme"></script>
+<script src="js/config.js?v=20260511-legend-refresh"></script>
+<script src="js/utils.js?v=20260511-legend-refresh"></script>
+<script src="js/aggregation.js?v=20260511-legend-refresh"></script>
+<script src="js/dataLoader.js?v=20260511-legend-refresh"></script>
+<script src="js/priorityScoring.js?v=20260511-legend-refresh"></script>
+<script src="js/visualizations.js?v=20260511-legend-refresh"></script>
+<script src="js/mapLayers.js?v=20260511-legend-refresh"></script>
+<script src="js/charts.js?v=20260511-legend-refresh"></script>
+<script src="js/weatherOverlay.js?v=20260511-legend-refresh"></script>
+<script src="js/climate.js?v=20260511-legend-refresh"></script>
+<script src="js/app.js?v=20260511-legend-refresh"></script>
 
 </body>
 </html>
