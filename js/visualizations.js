@@ -569,7 +569,8 @@ const Visualizations = (() => {
       html += `<div class="popup-section"><b>${sec.label}</b>`;
       sFields.forEach(f => {
         const cfg = INDICATOR_CONFIG[f];
-        const label = cfg ? cfg.label : f;
+        const year = Utils.getIndicatorYear(f);
+        const label = cfg ? `${cfg.label}${year ? ` (${year})` : ""}` : f;
         const val = Utils.formatValue(p[f], f);
         const highlight = f === highlightField ? " popup-highlight" : "";
         html += `<div class="popup-row${highlight}"><span>${label}:</span><b>${val}</b></div>`;
@@ -635,6 +636,7 @@ const Visualizations = (() => {
     const cfg = field ? INDICATOR_CONFIG[field] : null;
     const title = customTitle || cfg?.label || field || "";
     const unit  = cfg?.unit || "";
+    const year = field ? Utils.getIndicatorYear(field) : "";
     const higherIsBetter = cfg?.higherIsBetter;
 
     // Direction hint for CRVA indicators
@@ -651,6 +653,7 @@ const Visualizations = (() => {
     legendControl.onAdd = () => {
       const div = L.DomUtil.create("div", "legend");
       div.innerHTML = `<div class="legend-title">${title}</div>`;
+      if (year) div.innerHTML += `<div class="legend-unit">Data year: ${year}</div>`;
       if (unit) div.innerHTML += `<div class="legend-unit">${unit}</div>`;
       div.innerHTML += dirHint + lowHighLabel;
 

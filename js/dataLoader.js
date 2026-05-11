@@ -635,13 +635,16 @@ const DataLoader = (() => {
     const numericFields = [
       "rsba_registry_count",
       "rsba_crop_area_ha",
+      "rsba_avg_farm_size_ha",
       "rsba_avg_age",
       "rsba_latitude",
       "rsba_longitude",
       "rsba_rice_count",
       "rsba_rice_area_ha",
+      "rsba_rice_avg_farm_size_ha",
       "rsba_corn_count",
       "rsba_corn_area_ha",
+      "rsba_corn_avg_farm_size_ha",
       "rsba_hvc_count",
       "rsba_hvc_area_ha",
       "rsba_top_crop_count",
@@ -676,7 +679,17 @@ const DataLoader = (() => {
         if (row[field] === undefined || row[field] === null || row[field] === "") row[field] = "0";
       });
       if (row.rsba_top_crop === undefined || row.rsba_top_crop === null) row.rsba_top_crop = "";
+      row.rsba_avg_farm_size_ha = computeRsbaAverageArea(row.rsba_crop_area_ha, row.rsba_registry_count);
+      row.rsba_rice_avg_farm_size_ha = computeRsbaAverageArea(row.rsba_rice_area_ha, row.rsba_rice_count);
+      row.rsba_corn_avg_farm_size_ha = computeRsbaAverageArea(row.rsba_corn_area_ha, row.rsba_corn_count);
     });
+  }
+
+  function computeRsbaAverageArea(area, count) {
+    const n = Utils.parseNumeric(area);
+    const d = Utils.parseNumeric(count);
+    if (n === null || d === null || d <= 0) return "0";
+    return String(n / d);
   }
 
   function toFmrFacilityRows(rows) {

@@ -72,9 +72,26 @@ const Utils = (() => {
     if (cfg.type === "categorical" || cfg.type === "binary") return val;
     if (isNaN(val)) return "N/A";
     if (cfg.type === "percentage") return formatPct(val);
-    const decimals = cfg.unit === "MT/ha" || cfg.unit === "PHP '000/farm" || cfg.unit === "km" ? 2 : 0;
+    const numericVal = parseNumeric(val);
+    const decimals = cfg.unit === "MT/ha" || cfg.unit === "PHP '000/farm" || cfg.unit === "km" || (cfg.unit === "ha" && numericVal !== null && Math.abs(numericVal) < 10) ? 2 : 0;
     const formatted = formatNumber(val, decimals);
     return cfg.unit ? `${formatted} ${cfg.unit}` : formatted;
+  }
+
+  function getIndicatorYear(indicatorKey) {
+    const cfg = INDICATOR_CONFIG[indicatorKey];
+    if (!cfg) return "";
+    if (cfg.year) return String(cfg.year);
+    const text = `${cfg.label || ""} ${cfg.description || ""} ${indicatorKey || ""}`;
+    if (/2025\s*-\s*2027|2025-2027/.test(text)) return "2025-2027";
+    const years = [...text.matchAll(/\b(20\d{2})\b/g)].map(match => match[1]);
+    if (!years.length) {
+      if (indicatorKey && indicatorKey.startsWith("rsba_")) return "2026 refresh";
+      if (indicatorKey && indicatorKey.startsWith("fmr_")) return "latest inventory";
+      if (indicatorKey && indicatorKey.startsWith("f2c2_")) return "latest inventory";
+      return "";
+    }
+    return [...new Set(years)].join(", ");
   }
 
   // Parse a numeric value from CSV (handle blank, N/A, etc.)
@@ -294,6 +311,7 @@ const Utils = (() => {
     formatNumber,
     formatPct,
     formatValue,
+    getIndicatorYear,
     parseNumeric,
     getValues,
     quantileBreaks,

@@ -12,6 +12,10 @@ const App = (() => {
   let currentRows = [];
   let currentCategory = "Demographics";
   let sidebarCollapsed = false;
+  let themeMode = localStorage.getItem("agrisight-theme") || "light";
+  let rsbaFarmSizeFilter = "all";
+  let rsbaCropFilter = "all";
+  let rsbaAttributeFilter = "all";
   let currentScenario = "rice";
   let selectedArea = null;
   let didInitialMapFit = false;
@@ -261,8 +265,10 @@ const App = (() => {
   // INIT
   // ============================================================
   async function init() {
+    applyTheme(themeMode);
     buildUI();
     initMap();
+    applyTheme(themeMode);
 
     showLoadingOverlay(true);
     try {
@@ -315,15 +321,15 @@ const App = (() => {
       currentRows = DataLoader.getBarangayRows();
     } else if (currentView === "municipality") {
       currentGeoJSON = appData.municipalGeoJSON;
-      currentRows = DataLoader.getMunicipalRows();
+      currentRows = getFilteredMunicipalRows();
     } else if (currentView === "district") {
-      const agg = Aggregation.aggregateBy(DataLoader.getMunicipalRows(), "district");
+      const agg = Aggregation.aggregateBy(getFilteredMunicipalRows(), "district");
       currentRows = Object.values(agg);
       currentGeoJSON = appData.districtGeoJSON
         ? Aggregation.joinAggToGeoJSON(Utils.deepClone(appData.districtGeoJSON), agg, "district")
         : Aggregation.aggregateGeoJSONBy(appData.municipalGeoJSON, "district");
     } else if (currentView === "province") {
-      const agg = Aggregation.aggregateBy(DataLoader.getMunicipalRows(), "province");
+      const agg = Aggregation.aggregateBy(getFilteredMunicipalRows(), "province");
       currentRows = Object.values(agg);
       currentGeoJSON = appData.provinceGeoJSON
         ? Aggregation.joinAggToGeoJSON(Utils.deepClone(appData.provinceGeoJSON), agg, "province")
@@ -331,16 +337,22 @@ const App = (() => {
     } else if (false) {
       // Fallback: no separate GeoJSON file — aggregate municipal polygons visually
       const groupField = currentView === "district" ? "district" : "province";
-      const agg = Aggregation.aggregateBy(DataLoader.getMunicipalRows(), groupField);
+      const agg = Aggregation.aggregateBy(getFilteredMunicipalRows(), groupField);
       currentGeoJSON = appData.municipalGeoJSON;
       currentRows = Object.values(agg);
       Utils.showToast(`No ${groupField} boundary file found. Showing municipal shapes with ${groupField} aggregates.`, "info");
     } else {
       currentGeoJSON = appData.municipalGeoJSON;
-      currentRows = DataLoader.getMunicipalRows();
+      currentRows = getFilteredMunicipalRows();
+    }
+
+    if (currentView === "municipality") {
+      currentGeoJSON = filterGeoJSONByRows(currentGeoJSON, currentRows);
     }
 
     applyVizStyle();
+    updateIndicatorMeta();
+    updateRsbaFilterNote();
     updateDashboard();
     Charts.updateAll(currentRows, currentIndicator, { n: rankedN, direction: rankedDir });
     updatePlanningInsights();
@@ -358,6 +370,69 @@ const App = (() => {
       MapLayers.loadFacilities(appData.facilitiesData, appData.municipalGeoJSON);
       facilitiesLoaded = true;
     }
+  }
+
+  function getFilteredMunicipalRows() {
+    const rows = DataLoader.getMunicipalRows();
+    const hasFilter = rsbaFarmSizeFilter !== "all" || rsbaCropFilter !== "all" || rsbaAttributeFilter !== "all";
+    if (!hasFilter) return rows;
+
+    return rows.filter(row => {
+      if (!matchesRsbaCrop(row)) return false;
+      if (!matchesRsbaAttribute(row)) return false;
+      if (!matchesRsbaFarmSize(row)) return false;
+      return true;
+    });
+  }
+
+  function matchesRsbaCrop(row) {
+    if (rsbaCropFilter === "all") return true;
+    const field = {
+      rice: "rsba_rice_count",
+      corn: "rsba_corn_count",
+      hvc: "rsba_hvc_count"
+    }[rsbaCropFilter];
+    return (Utils.parseNumeric(row[field]) || 0) > 0;
+  }
+
+  function matchesRsbaAttribute(row) {
+    if (rsbaAttributeFilter === "all") return true;
+    const field = {
+      farmer: "rsba_farmer_count",
+      farmworker: "rsba_farmworker_count",
+      fisherfolk: "rsba_fisherfolk_count",
+      female: "rsba_female_count",
+      youth: "rsba_youth_count",
+      "4ps": "rsba_4ps_count",
+      ip: "rsba_ip_count",
+      pwd: "rsba_pwd_count",
+      fca: "rsba_fca_count",
+      imc: "rsba_with_imc_count"
+    }[rsbaAttributeFilter];
+    return (Utils.parseNumeric(row[field]) || 0) > 0;
+  }
+
+  function matchesRsbaFarmSize(row) {
+    if (rsbaFarmSizeFilter === "all") return true;
+    const avgSize = Utils.parseNumeric(row.rsba_avg_farm_size_ha);
+    if (avgSize === null) return false;
+    if (rsbaFarmSizeFilter === "lt_0_5") return avgSize < 0.5;
+    if (rsbaFarmSizeFilter === "0_5_1") return avgSize >= 0.5 && avgSize < 1;
+    if (rsbaFarmSizeFilter === "1_2") return avgSize >= 1 && avgSize <= 2;
+    if (rsbaFarmSizeFilter === "gt_2") return avgSize > 2;
+    return true;
+  }
+
+  function filterGeoJSONByRows(geojson, rows) {
+    if (!geojson || !geojson.features) return geojson;
+    const keys = new Set(rows.map(row => Utils.buildJoinKey(row.province, row.municipality)));
+    const clone = Utils.deepClone(geojson);
+    clone.features.forEach(feature => {
+      const props = feature.properties || {};
+      const key = Utils.buildJoinKey(props.province || props.ADM2_EN, props.municipality || props.ADM3_EN || props.NAME);
+      if (!keys.has(key)) feature.properties._joined = false;
+    });
+    return clone;
   }
 
   // ============================================================
@@ -482,7 +557,14 @@ const App = (() => {
     const pestCount = rows.filter(r => r.pest_disease_occurrence === "High" || r.pest_disease_occurrence === "Moderate").length;
     const asfCount = rows.filter(r => r.asf_status === "Affected" || r.asf_status === "At-risk").length;
     const rpcCount = rows.reduce((s, r) => s + (Utils.parseNumeric(r.rpc_site) || 0), 0);
+    const totalRsba = rows.reduce((s, r) => s + (Utils.parseNumeric(r.rsba_registry_count) || 0), 0);
+    const totalRsbaArea = rows.reduce((s, r) => s + (Utils.parseNumeric(r.rsba_crop_area_ha) || 0), 0);
+    const indicatorCfg = INDICATOR_CONFIG[currentIndicator] || {};
 
+    set("stat-indicator", Utils.formatValue(sumOrAverage(rows, currentIndicator, indicatorCfg), currentIndicator));
+    set("stat-year", Utils.getIndicatorYear(currentIndicator) || "Mixed");
+    set("stat-rsba", Utils.formatNumber(totalRsba));
+    set("stat-rsba-area", Utils.formatNumber(totalRsbaArea) + " ha");
     set("stat-pop", Utils.formatNumber(totalPop));
     set("stat-poverty", avgPoverty !== null ? Utils.formatPct(avgPoverty) : "N/A");
     set("stat-poor-rice", Utils.formatNumber(totalPoorRice));
@@ -502,6 +584,27 @@ const App = (() => {
     set("stat-asf", asfCount);
     set("stat-rpc", rpcCount);
     set("stat-mun-count", sourceRows ? Utils.getAreaName(rows[0] || selectedArea || {}) : rows.length);
+  }
+
+  function sumOrAverage(rows, field, cfg) {
+    if (!rows.length) return null;
+    if (cfg?.type === "categorical" || cfg?.type === "binary") {
+      const counts = {};
+      rows.forEach(row => {
+        const value = row[field];
+        if (value !== undefined && value !== null && value !== "") counts[value] = (counts[value] || 0) + 1;
+      });
+      return Object.entries(counts).sort((a, b) => b[1] - a[1])[0]?.[0] || null;
+    }
+    if (cfg?.aggregation === "sum") {
+      return rows.reduce((s, r) => s + (Utils.parseNumeric(r[field]) || 0), 0);
+    }
+    if (cfg?.aggregation === "weighted_average") {
+      return weightedAvg(rows, field, cfg.weightField || "population");
+    }
+    const values = rows.map(r => Utils.parseNumeric(r[field])).filter(v => v !== null);
+    if (!values.length) return null;
+    return values.reduce((s, v) => s + v, 0) / values.length;
   }
 
   function weightedAvg(rows, field, weightField) {
@@ -600,7 +703,8 @@ const App = (() => {
 
   function renderEvidence(row, field) {
     const cfg = INDICATOR_CONFIG[field];
-    const label = escapeHTML(cfg?.label || field);
+    const year = Utils.getIndicatorYear(field);
+    const label = escapeHTML(`${cfg?.label || field}${year ? ` (${year})` : ""}`);
     const raw = row[field];
     const formatted = (cfg?.type === "categorical" || cfg?.type === "binary")
       ? (raw === undefined || raw === null || raw === "" ? "N/A" : String(raw))
@@ -642,6 +746,33 @@ const App = (() => {
     if (filtered.length > 0 && !filtered.find(([k]) => k === currentIndicator)) {
       currentIndicator = filtered[0][0];
     }
+    updateIndicatorMeta();
+  }
+
+  function updateIndicatorMeta() {
+    const el = document.getElementById("indicator-meta");
+    if (!el) return;
+    const cfg = INDICATOR_CONFIG[currentIndicator];
+    if (!cfg) {
+      el.textContent = "";
+      return;
+    }
+    const year = Utils.getIndicatorYear(currentIndicator);
+    const pieces = [];
+    if (year) pieces.push(`Year: ${year}`);
+    if (cfg.aggregation) pieces.push(`District/province: ${cfg.aggregation.replace(/_/g, " ")}`);
+    el.textContent = pieces.join(" | ");
+  }
+
+  function updateRsbaFilterNote() {
+    const el = document.getElementById("rsba-filter-note");
+    if (!el) return;
+    const total = DataLoader.getMunicipalRows().length;
+    const filtered = getFilteredMunicipalRows().length;
+    const active = [rsbaFarmSizeFilter, rsbaCropFilter, rsbaAttributeFilter].some(v => v !== "all");
+    el.textContent = active
+      ? `Showing ${filtered} of ${total} municipalities matching the RSBSA filters. Farm-size uses average crop area per RSBSA crop record from aggregate data.`
+      : "Filters use aggregate RSBSA municipal fields; no person-level registry rows are stored in this app.";
   }
 
   function buildVizStyleSelector() {
@@ -802,6 +933,28 @@ const App = (() => {
     const indSel = document.getElementById("indicator-select");
     if (indSel) indSel.addEventListener("change", () => {
       currentIndicator = indSel.value;
+      updateIndicatorMeta();
+      renderCurrentView();
+    });
+
+    const rsbaFarmSizeSel = document.getElementById("rsba-farm-size-filter");
+    if (rsbaFarmSizeSel) rsbaFarmSizeSel.addEventListener("change", () => {
+      rsbaFarmSizeFilter = rsbaFarmSizeSel.value;
+      selectedArea = null;
+      renderCurrentView();
+    });
+
+    const rsbaCropSel = document.getElementById("rsba-crop-filter");
+    if (rsbaCropSel) rsbaCropSel.addEventListener("change", () => {
+      rsbaCropFilter = rsbaCropSel.value;
+      selectedArea = null;
+      renderCurrentView();
+    });
+
+    const rsbaAttributeSel = document.getElementById("rsba-attribute-filter");
+    if (rsbaAttributeSel) rsbaAttributeSel.addEventListener("change", () => {
+      rsbaAttributeFilter = rsbaAttributeSel.value;
+      selectedArea = null;
       renderCurrentView();
     });
 
@@ -960,14 +1113,48 @@ const App = (() => {
       updatePlanningInsights();
     });
 
+    const sidebarHeaderToggle = document.getElementById("sidebar-header-toggle");
+    if (sidebarHeaderToggle) sidebarHeaderToggle.addEventListener("click", () => {
+      toggleSidebar();
+    });
+
+    const themeToggle = document.getElementById("theme-toggle");
+    if (themeToggle) themeToggle.addEventListener("click", () => {
+      themeMode = themeMode === "dark" ? "light" : "dark";
+      applyTheme(themeMode);
+      renderCurrentView();
+    });
+
     // Sidebar toggle
     const sidebarToggle = document.getElementById("sidebar-toggle");
     if (sidebarToggle) sidebarToggle.addEventListener("click", () => {
       const sidebar = document.getElementById("sidebar");
       sidebarCollapsed = !sidebarCollapsed;
       sidebar?.classList.toggle("collapsed", sidebarCollapsed);
+      document.getElementById("app-shell")?.classList.toggle("sidebar-collapsed", sidebarCollapsed);
+      window.setTimeout(() => map?.invalidateSize(), 220);
       sidebarToggle.textContent = sidebarCollapsed ? "▶" : "◀";
     });
+  }
+
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+    sidebarCollapsed = !sidebarCollapsed;
+    sidebar?.classList.toggle("collapsed", sidebarCollapsed);
+    document.getElementById("app-shell")?.classList.toggle("sidebar-collapsed", sidebarCollapsed);
+    if (sidebarToggle) sidebarToggle.textContent = sidebarCollapsed ? ">" : "<";
+    window.setTimeout(() => map?.invalidateSize(), 220);
+  }
+
+  function applyTheme(mode) {
+    themeMode = mode === "dark" ? "dark" : "light";
+    document.body.dataset.theme = themeMode;
+    localStorage.setItem("agrisight-theme", themeMode);
+    const btn = document.getElementById("theme-toggle");
+    if (btn) btn.textContent = themeMode === "dark" ? "Light" : "Dark";
+    if (map && themeMode === "dark") MapLayers.switchBasemap?.("cartoDark");
+    if (map && themeMode === "light") MapLayers.switchBasemap?.("cartoLight");
   }
 
   function applyScenarioMap() {

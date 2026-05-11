@@ -12,7 +12,7 @@ const APP_CONFIG = {
   mapCenter: [17.6132, 121.7270],
   mapZoom: 8,
   dataPath: "data/",
-  assetVersion: "20260510-rsbsa-registry",
+  assetVersion: "20260511-rsbsa-filters-theme",
 };
 
 // ============================================================
@@ -634,7 +634,7 @@ const INDICATOR_CONFIG = {
     category: "FMR Inventory",
     type: "numeric",
     unit: "",
-    aggregation: "dominant",
+    aggregation: "max",
     colorScheme: "Blues",
     description: "Latest funding year represented in the FMR inventory for the area."
   },
@@ -699,7 +699,7 @@ const INDICATOR_CONFIG = {
     category: "F2C2 Clusters",
     type: "numeric",
     unit: "",
-    aggregation: "dominant",
+    aggregation: "max",
     colorScheme: "Blues",
     description: "Latest year represented by FCA/F2C2 cluster records for the area."
   },
@@ -750,6 +750,16 @@ const INDICATOR_CONFIG = {
     colorScheme: "Greens",
     description: "Total crop area represented in RSBSA municipal records."
   },
+  rsba_avg_farm_size_ha: {
+    label: "RSBSA Avg Farm Size",
+    category: "RSBSA Registry",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "weighted_average",
+    weightField: "rsba_registry_count",
+    colorScheme: "YlGnBu",
+    description: "Average crop area per RSBSA crop record, derived from aggregate municipal crop area divided by registry records."
+  },
   rsba_rice_count: {
     label: "RSBSA Rice/Palay Records",
     category: "RSBSA Registry",
@@ -768,6 +778,16 @@ const INDICATOR_CONFIG = {
     colorScheme: "Greens",
     description: "Rice/Palay crop area represented in RSBSA municipal records."
   },
+  rsba_rice_avg_farm_size_ha: {
+    label: "RSBSA Rice Avg Farm Size",
+    category: "RSBSA Registry",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "weighted_average",
+    weightField: "rsba_rice_count",
+    colorScheme: "YlGnBu",
+    description: "Average rice/palay area per RSBSA rice/palay crop record."
+  },
   rsba_corn_count: {
     label: "RSBSA Corn Records",
     category: "RSBSA Registry",
@@ -785,6 +805,16 @@ const INDICATOR_CONFIG = {
     aggregation: "sum",
     colorScheme: "YlOrBr",
     description: "Corn crop area represented in RSBSA municipal records."
+  },
+  rsba_corn_avg_farm_size_ha: {
+    label: "RSBSA Corn Avg Farm Size",
+    category: "RSBSA Registry",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "weighted_average",
+    weightField: "rsba_corn_count",
+    colorScheme: "YlOrBr",
+    description: "Average corn area per RSBSA corn crop record."
   },
   rsba_top_crop: {
     label: "RSBSA Top Crop",

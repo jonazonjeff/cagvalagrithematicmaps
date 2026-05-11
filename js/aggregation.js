@@ -79,7 +79,8 @@ const Aggregation = (() => {
     const provinceKey = String(provinceName).replace(/\s+/g, "");
     const match = String(districtName).match(/(\d+)(?:st|nd|rd|th)?\s+District/i);
     if (match) return `${provinceKey}${match[1]}`;
-    if (Utils.normalizeName(districtName) === Utils.normalizeName(provinceName)) {
+    if (/^lone(?:\s+district)?$/i.test(String(districtName).trim()) ||
+        Utils.normalizeName(districtName) === Utils.normalizeName(provinceName)) {
       return `${provinceKey}LoneDistrict`;
     }
     return districtName ? `${provinceKey}${String(districtName).replace(/\s+/g, "")}` : "Unknown";
@@ -178,8 +179,20 @@ const Aggregation = (() => {
     }
 
     if (type === "ratio") {
-      // Handled after all aggregation (rice/corn yield)
-      return null;
+      return cfg.numerator && cfg.denominator
+        ? computeRatio(
+            rows.reduce((s, r) => s + (Utils.parseNumeric(r[cfg.numerator]) || 0), 0),
+            rows.reduce((s, r) => s + (Utils.parseNumeric(r[cfg.denominator]) || 0), 0)
+          )
+        : null;
+    }
+
+    if (type === "max") {
+      return values.length > 0 ? Math.max(...values) : null;
+    }
+
+    if (type === "min") {
+      return values.length > 0 ? Math.min(...values) : null;
     }
 
     if (type === "dominant") {

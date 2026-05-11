@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
 
   <!-- App Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20260510-rsbsa-registry" />
+  <link rel="stylesheet" href="css/styles.css?v=20260511-rsbsa-filters-theme" />
 </head>
 <body>
 
@@ -65,6 +65,8 @@
       <div class="header-subtitle">Agriculture, climate risk, and seasonal rice decision map</div>
     </div>
     <div class="header-actions">
+      <button class="header-btn" id="sidebar-header-toggle" title="Show or hide the left panel">Panel</button>
+      <button class="header-btn" id="theme-toggle" title="Switch dark or light mode">Dark</button>
       <button class="header-btn" id="announcement-open" title="View app announcement">Notice</button>
       <a class="header-btn" href="plans.html" title="Open plans and projects dashboard">Plans</a>
       <button class="header-btn" id="export-csv" title="Export current data as CSV">⬇ CSV</button>
@@ -104,6 +106,42 @@
       <select id="category-select"></select>
       <label for="indicator-select">Indicator</label>
       <select id="indicator-select"></select>
+      <div id="indicator-meta" class="indicator-meta"></div>
+    </div>
+
+    <!-- RSBSA Filters -->
+    <div class="sidebar-section">
+      <div class="section-label">RSBSA Filters</div>
+      <label for="rsba-farm-size-filter">Farm Size</label>
+      <select id="rsba-farm-size-filter">
+        <option value="all">All farm sizes</option>
+        <option value="lt_0_5">Below 0.5 ha average</option>
+        <option value="0_5_1">0.5 to 1 ha average</option>
+        <option value="1_2">1 to 2 ha average</option>
+        <option value="gt_2">Above 2 ha average</option>
+      </select>
+      <label for="rsba-crop-filter">Crop Focus</label>
+      <select id="rsba-crop-filter">
+        <option value="all">All crops</option>
+        <option value="rice">Rice/Palay records</option>
+        <option value="corn">Corn records</option>
+        <option value="hvc">High-value crop records</option>
+      </select>
+      <label for="rsba-attribute-filter">Available Field</label>
+      <select id="rsba-attribute-filter">
+        <option value="all">All registry records</option>
+        <option value="farmer">Farmers</option>
+        <option value="farmworker">Farmworkers</option>
+        <option value="fisherfolk">Fisherfolk</option>
+        <option value="female">Female records</option>
+        <option value="youth">Youth records</option>
+        <option value="4ps">4Ps records</option>
+        <option value="ip">IP records</option>
+        <option value="pwd">PWD records</option>
+        <option value="fca">FCA members</option>
+        <option value="imc">With IMC</option>
+      </select>
+      <div id="rsba-filter-note" class="scenario-help"></div>
     </div>
 
     <!-- Decision Scenario -->
@@ -189,6 +227,22 @@
 
     <!-- Stats Bar -->
     <div id="stats-bar">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-indicator">-</div>
+        <div class="stat-label">Selected Indicator</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-year">-</div>
+        <div class="stat-label">Data Year</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-rsba">-</div>
+        <div class="stat-label">RSBSA Records</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-rsba-area">-</div>
+        <div class="stat-label">RSBSA Crop Area</div>
+      </div>
       <div class="stat-card">
         <div class="stat-value" id="stat-mun-count">—</div>
         <div class="stat-label">Area / Selection</div>
@@ -339,17 +393,17 @@
 <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
 
 <!-- App Modules (load in dependency order) -->
-<script src="js/config.js?v=20260510-rsbsa-registry"></script>
-<script src="js/utils.js?v=20260510-rsbsa-registry"></script>
-<script src="js/aggregation.js?v=20260510-rsbsa-registry"></script>
-<script src="js/dataLoader.js?v=20260510-rsbsa-registry"></script>
-<script src="js/priorityScoring.js?v=20260510-rsbsa-registry"></script>
-<script src="js/visualizations.js?v=20260510-rsbsa-registry"></script>
-<script src="js/mapLayers.js?v=20260510-rsbsa-registry"></script>
-<script src="js/charts.js?v=20260510-rsbsa-registry"></script>
-<script src="js/weatherOverlay.js?v=20260510-rsbsa-registry"></script>
-<script src="js/climate.js?v=20260510-rsbsa-registry"></script>
-<script src="js/app.js?v=20260510-rsbsa-registry"></script>
+<script src="js/config.js?v=20260511-rsbsa-filters-theme"></script>
+<script src="js/utils.js?v=20260511-rsbsa-filters-theme"></script>
+<script src="js/aggregation.js?v=20260511-rsbsa-filters-theme"></script>
+<script src="js/dataLoader.js?v=20260511-rsbsa-filters-theme"></script>
+<script src="js/priorityScoring.js?v=20260511-rsbsa-filters-theme"></script>
+<script src="js/visualizations.js?v=20260511-rsbsa-filters-theme"></script>
+<script src="js/mapLayers.js?v=20260511-rsbsa-filters-theme"></script>
+<script src="js/charts.js?v=20260511-rsbsa-filters-theme"></script>
+<script src="js/weatherOverlay.js?v=20260511-rsbsa-filters-theme"></script>
+<script src="js/climate.js?v=20260511-rsbsa-filters-theme"></script>
+<script src="js/app.js?v=20260511-rsbsa-filters-theme"></script>
 
 </body>
 </html>
