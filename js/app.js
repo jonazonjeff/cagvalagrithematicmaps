@@ -19,6 +19,8 @@ const App = (() => {
   let currentScenario = "rice";
   let selectedArea = null;
   let didInitialMapFit = false;
+  let currentDevice = "desktop";
+  let resizeModeTimer = null;
 
   // Compare/bivariate state
   let compareFieldA = "poverty_2023";
@@ -267,6 +269,7 @@ const App = (() => {
   async function init() {
     applyTheme(themeMode);
     buildUI();
+    applyDeviceMode(true);
     initMap();
     applyTheme(themeMode);
 
@@ -908,6 +911,81 @@ const App = (() => {
   }
 
   // ============================================================
+  // DEVICE MODE
+  // ============================================================
+  function detectDeviceMode() {
+    const ua = navigator.userAgent || "";
+    const uaMobile = /Android|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+    const uaTablet = /iPad|Tablet|Nexus 7|Nexus 10|SM-T|Kindle|Silk/i.test(ua);
+    const uaDataMobile = navigator.userAgentData?.mobile === true;
+    const coarsePointer = window.matchMedia?.("(pointer: coarse)")?.matches || false;
+    const phoneWidth = window.matchMedia?.("(max-width: 700px)")?.matches || window.innerWidth <= 700;
+    const tabletWidth = window.matchMedia?.("(min-width: 701px) and (max-width: 1100px)")?.matches || (window.innerWidth > 700 && window.innerWidth <= 1100);
+
+    if (uaMobile || uaDataMobile || (coarsePointer && phoneWidth)) return "mobile";
+    if (uaTablet || (coarsePointer && tabletWidth)) return "tablet";
+    return "desktop";
+  }
+
+  function setSidebarCollapsed(collapsed) {
+    sidebarCollapsed = collapsed;
+    document.getElementById("sidebar")?.classList.toggle("collapsed", sidebarCollapsed);
+    document.getElementById("app-shell")?.classList.toggle("sidebar-collapsed", sidebarCollapsed);
+    syncDeviceControls();
+    window.setTimeout(() => map?.invalidateSize(), 220);
+  }
+
+  function toggleSidebar() {
+    setSidebarCollapsed(!sidebarCollapsed);
+  }
+
+  function syncDeviceControls() {
+    const isMobile = currentDevice === "mobile";
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+    const headerToggle = document.getElementById("sidebar-header-toggle");
+    const backdrop = document.getElementById("mobile-panel-backdrop");
+    const fitBtn = document.getElementById("fit-btn");
+    const refreshBtn = document.getElementById("refresh-defaults");
+    const climateBtn = document.getElementById("btn-climate-panel");
+
+    document.body.dataset.device = currentDevice;
+    document.body.classList.toggle("is-mobile-device", isMobile);
+    document.body.classList.toggle("is-touch-device", isMobile || currentDevice === "tablet");
+
+    if (sidebarToggle) {
+      sidebarToggle.textContent = sidebarCollapsed ? ">" : "<";
+      sidebarToggle.setAttribute("aria-expanded", String(!sidebarCollapsed));
+    }
+    if (headerToggle) {
+      headerToggle.textContent = isMobile ? (sidebarCollapsed ? "Layers" : "Close") : "Panel";
+      headerToggle.setAttribute("aria-expanded", String(!sidebarCollapsed));
+    }
+    if (fitBtn) fitBtn.textContent = isMobile ? "Fit" : "Fit";
+    if (refreshBtn) refreshBtn.textContent = isMobile ? "Reset" : "Refresh";
+    if (climateBtn) climateBtn.textContent = isMobile ? "Climate" : "Climate Info";
+
+    if (backdrop) {
+      backdrop.hidden = !(isMobile && !sidebarCollapsed);
+      backdrop.classList.toggle("open", isMobile && !sidebarCollapsed);
+    }
+  }
+
+  function applyDeviceMode(force = false) {
+    const nextDevice = detectDeviceMode();
+    const changed = nextDevice !== currentDevice;
+    currentDevice = nextDevice;
+
+    if (currentDevice === "mobile" && (force || changed)) {
+      setSidebarCollapsed(true);
+    } else if (changed && currentDevice !== "mobile") {
+      setSidebarCollapsed(false);
+    } else {
+      syncDeviceControls();
+      window.setTimeout(() => map?.invalidateSize(), 220);
+    }
+  }
+
+  // ============================================================
   // EVENT BINDING
   // ============================================================
   function bindEvents() {
@@ -1117,6 +1195,11 @@ const App = (() => {
       toggleSidebar();
     });
 
+    const mobileBackdrop = document.getElementById("mobile-panel-backdrop");
+    if (mobileBackdrop) mobileBackdrop.addEventListener("click", () => {
+      if (currentDevice === "mobile") setSidebarCollapsed(true);
+    });
+
     const themeToggle = document.getElementById("theme-toggle");
     if (themeToggle) themeToggle.addEventListener("click", () => {
       themeMode = themeMode === "dark" ? "light" : "dark";
@@ -1127,23 +1210,17 @@ const App = (() => {
     // Sidebar toggle
     const sidebarToggle = document.getElementById("sidebar-toggle");
     if (sidebarToggle) sidebarToggle.addEventListener("click", () => {
-      const sidebar = document.getElementById("sidebar");
-      sidebarCollapsed = !sidebarCollapsed;
-      sidebar?.classList.toggle("collapsed", sidebarCollapsed);
-      document.getElementById("app-shell")?.classList.toggle("sidebar-collapsed", sidebarCollapsed);
-      window.setTimeout(() => map?.invalidateSize(), 220);
-      sidebarToggle.textContent = sidebarCollapsed ? "▶" : "◀";
+      toggleSidebar();
     });
-  }
 
-  function toggleSidebar() {
-    const sidebar = document.getElementById("sidebar");
-    const sidebarToggle = document.getElementById("sidebar-toggle");
-    sidebarCollapsed = !sidebarCollapsed;
-    sidebar?.classList.toggle("collapsed", sidebarCollapsed);
-    document.getElementById("app-shell")?.classList.toggle("sidebar-collapsed", sidebarCollapsed);
-    if (sidebarToggle) sidebarToggle.textContent = sidebarCollapsed ? ">" : "<";
-    window.setTimeout(() => map?.invalidateSize(), 220);
+    window.addEventListener("resize", () => {
+      window.clearTimeout(resizeModeTimer);
+      resizeModeTimer = window.setTimeout(() => applyDeviceMode(), 150);
+    });
+
+    window.addEventListener("orientationchange", () => {
+      window.setTimeout(() => applyDeviceMode(true), 250);
+    });
   }
 
   function applyTheme(mode) {
