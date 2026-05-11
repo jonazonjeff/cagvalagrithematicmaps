@@ -562,7 +562,6 @@ const INDICATOR_CONFIG = {
     colorScheme: "Blues",
     description: "Total irrigated area in hectares"
   },
-
   // --- Infrastructure ---
   rpc_site: {
     label: "RPC Site Present",
@@ -1515,7 +1514,6 @@ const CATEGORIES = [
   "Pest and Disease",
   "ASF",
   "Soil Fertility",
-  "Irrigation",
   "Infrastructure",
   "FMR Inventory",
   "F2C2 Clusters",
@@ -2064,6 +2062,7 @@ const FACILITY_CATEGORIES = {
       DD:   { label: "Diversion Dam (DD)",                   icon: "🌊", color: "#0369a1" },
       SWIP: { label: "Small Water Impounding Project (SWIP)", icon: "💧", color: "#0284c7" },
       SPIS: { label: "Solar Powered Irrigation System (SPIS)",icon: "☀️", color: "#0ea5e9" },
+      PISOS:{ label: "Pump Irrigation System from Open Source (PISOS)", icon: "PISOS", color: "#0891b2" },
       STW:  { label: "Shallow Tubewell (STW)",               icon: "⛏️", color: "#38bdf8" }
     }
   },

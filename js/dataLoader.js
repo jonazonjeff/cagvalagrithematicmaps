@@ -18,6 +18,7 @@ const DataLoader = (() => {
   let f2c2ClustersData = [];
   let f2c2SummaryData = [];
   let rsbaSummaryData = [];
+  let irrigationFacilitiesData = [];
   let facilitiesData = [];
   let joinMismatches = [];
 
@@ -200,10 +201,20 @@ const DataLoader = (() => {
 
     try {
       facilitiesData = await fetchCSV(dataPath + "facilities.csv");
+      facilitiesData = facilitiesData.filter(row => !isIrrigationFacilityType(row.facility_type));
       console.info(`Loaded facilities.csv: ${facilitiesData.length} records`);
     } catch (e) {
       console.warn("facilities.csv not found.", e);
       facilitiesData = [];
+    }
+
+    try {
+      irrigationFacilitiesData = await fetchCSV(dataPath + "irrigation_facilities.csv");
+      facilitiesData = facilitiesData.concat(toIrrigationFacilityRows(irrigationFacilitiesData));
+      console.info(`Loaded irrigation_facilities.csv: ${irrigationFacilitiesData.length} records`);
+    } catch (e) {
+      console.warn("irrigation_facilities.csv not found. RAED irrigation point layer will be unavailable.", e);
+      irrigationFacilitiesData = [];
     }
 
     try {
@@ -243,6 +254,7 @@ const DataLoader = (() => {
       f2c2ClustersData,
       f2c2SummaryData,
       rsbaSummaryData,
+      irrigationFacilitiesData,
       facilitiesData,
       joinMismatches
     };
@@ -732,6 +744,44 @@ const DataLoader = (() => {
     }));
   }
 
+  function toIrrigationFacilityRows(rows) {
+    const allowedTypes = new Set(["DD", "SWIP", "SPIS", "PISOS", "STW"]);
+    return rows
+      .map((row, index) => {
+        const type = String(row.facility_type || row.type || "").trim().toUpperCase();
+        if (!allowedTypes.has(type)) return null;
+        const sourceParts = [
+          row.source_layer ? `Layer: ${row.source_layer}` : "",
+          row.source_folder ? `Source: ${row.source_folder}` : "",
+          row.remarks || ""
+        ].filter(Boolean);
+        return {
+          facility_id: row.facility_id || `IRR${String(index + 1).padStart(4, "0")}`,
+          facility_name: row.facility_name || row.project_name || `${type} Facility`,
+          facility_type: type,
+          province: row.province,
+          district: row.district,
+          municipality: row.municipality,
+          barangay: row.barangay,
+          latitude: row.latitude,
+          longitude: row.longitude,
+          status: row.status || "",
+          capacity: row.capacity || "",
+          service_area_ha: row.service_area_ha || row.area_ha || "",
+          project_amount: row.project_amount || row.amount || "",
+          year_granted: row.year_granted || "",
+          year_finished: row.year_finished || "",
+          year_constructed: row.year_constructed || row.year || "",
+          remarks: sourceParts.join(" | ")
+        };
+      })
+      .filter(Boolean);
+  }
+
+  function isIrrigationFacilityType(type) {
+    return ["DD", "SWIP", "SPIS", "PISOS", "STW"].includes(String(type || "").trim().toUpperCase());
+  }
+
   function addPlansDerivedFields(row) {
     const numericFields = [
       "plans_projects_2025_count",
@@ -922,6 +972,7 @@ const DataLoader = (() => {
     get f2c2ClustersData() { return f2c2ClustersData; },
     get f2c2SummaryData() { return f2c2SummaryData; },
     get rsbaSummaryData() { return rsbaSummaryData; },
+    get irrigationFacilitiesData() { return irrigationFacilitiesData; },
     get facilitiesData() { return facilitiesData; }
   };
 })();
