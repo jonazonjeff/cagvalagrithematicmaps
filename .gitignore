@@ -23,3 +23,10 @@ data/plans_raw/
 AgriPlan Updater.vbs
 scripts/AgriPlanUpdater.ps1
 scripts/RSBSAUpdater.vbs
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
