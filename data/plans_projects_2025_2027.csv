@@ -14,7 +14,7 @@ Cagayan,Baggao,1,15000.00,5,75000.00,10,64471.11,16,154471.11,20402.00,0.00,1527
 Cagayan,Ballesteros,2,30000.00,0,0.00,2,12043.41,4,42043.41,6854.37,12042.08,0.00,0.00,0,0.00,0.00,0,0.00,LIVESTOCK | Rice Program,cagayan_2.xlsx
 Cagayan,Buguey,0,0.00,2,30000.00,7,29981.11,9,59981.11,375512.00,0.00,14981.11,0.00,1,15000.00,1.00,0,0.00,Corn Program | Farm-to-Market Roads | Rice Program,cagayan_1.xlsx
 Cagayan,Calayan,0,0.00,0,0.00,12,35467.08,12,35467.08,18033.88,12042.08,2425.00,0.00,1,21000.00,1.40,0,0.00,Corn Program | Farm-to-Market Roads | Rice Program | SAAD,cagayan_1.xlsx | cagayan_2.xlsx
-Cagayan,Camalaniugan,1,144260.00,4,189260.00,8,87521.11,13,421041.11,15262.00,0.00,11021.11,0.00,5,75000.00,5.00,0,0.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | Rice Program,cagayan_1.xlsx
+Cagayan,Camalaniugan,1,144260.00,4,189260.00,8,102521.11,13,436041.11,15262.00,0.00,11021.11,0.00,5,90000.00,6.00,0,0.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | Rice Program,cagayan_1.xlsx
 Cagayan,Claveria,0,0.00,0,0.00,4,55543.41,4,55543.41,6854.37,12042.08,0.00,0.00,1,43500.00,2.90,0,0.00,Farm-to-Market Roads | LIVESTOCK | Rice Program,cagayan_2.xlsx
 Cagayan,Enrile,0,0.00,1,13200.00,9,72890.61,10,86090.61,17564.31,13060.61,9830.00,0.00,3,50000.00,3.50,2,10.50,Corn Program | Farm-to-Market Roads | LIVESTOCK | Rice Program,cagayan_3.xlsx
 Cagayan,Gattaran,1,15000.00,13,190000.00,12,263870.14,26,468870.14,19605.92,0.00,262896.11,0.00,0,0.00,0.00,1,1875.00,4Ks | Corn Program | Rice Program,cagayan_1.xlsx
@@ -31,7 +31,7 @@ Cagayan,Santa Praxedes,0,0.00,0,0.00,5,12042.08,5,12042.08,6029.38,12042.08,0.00
 Cagayan,Santa Teresita,1,10888.00,1,15000.00,4,39821.11,6,65709.11,15261.00,0.00,11021.11,0.00,1,26100.00,1.74,0,0.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | Rice Program,cagayan_1.xlsx
 Cagayan,Solana,1,15000.00,3,45000.00,12,134665.94,16,194665.94,31164.31,13060.61,10379.33,0.00,5,111225.00,7.41,1,10.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | Rice Program,cagayan_3.xlsx
 Cagayan,Tuao,1,15000.00,1,15000.00,4,37879.61,6,67879.61,15464.31,13060.61,9819.00,0.00,1,15000.00,1.00,0,0.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | Rice Program,cagayan_3.xlsx
-Cagayan,Tuguegarao City (Capital),0,0.00,0,0.00,8,19607881.94,8,19607881.94,22468.31,19598060.61,9820.33,0.00,0,0.00,0.00,1,0.50,Corn Program | LIVESTOCK | Rice Program,cagayan_3.xlsx
+Cagayan,Tuguegarao City (Capital),0,0.00,0,0.00,8,42466.94,8,42466.94,22468.31,13060.61,9820.33,0.00,0,0.00,0.00,1,0.50,AFLO | Corn Program | LIVESTOCK | Rice Program,cagayan_3.xlsx
 Isabela,Alicia,8,103900.00,4,60000.00,6,285018.80,18,448918.80,11594.27,23186.67,0.00,0.00,4,260332.13,15.78,0,0.00,Farm-to-Market Roads | LIVESTOCK | PRDP | Rice Program,isabela_3.xlsx
 Isabela,Angadanan,2,30000.00,2,30000.00,5,66302.34,9,126302.34,282587.27,23186.67,7115.67,0.00,1,36000.00,2.40,0,0.00,Corn Program | Farm-to-Market Roads | Rice Program,isabela_3.xlsx
 Isabela,Aurora,0,0.00,2,42500.00,9,53005.75,11,95505.75,337951.48,16235.37,19070.38,0.00,1,15000.00,1.00,0,0.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | Rice Program,isabela_5.xlsx
@@ -40,7 +40,7 @@ Isabela,Burgos,1,10000.00,0,0.00,14,244493.83,15,254493.83,19173.48,16235.37,385
 Isabela,Cabagan,8,135000.00,46,745150.00,9,66703.19,63,946853.19,49334.44,8819.25,25196.80,0.00,1,30000.00,2.00,0,0.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | MCRA | Rice Program,isabela_1.xlsx
 Isabela,Cabatuan,1,15000.00,0,0.00,6,77182.34,7,92182.34,20588.27,23186.67,6495.67,0.00,3,45000.00,3.00,0,0.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | Rice Program,isabela_3.xlsx
 Isabela,City of Cauayan,11,120000.00,18,351400.00,23,369532.80,52,840932.80,826073.82,15312.80,185930.00,0.00,7,165500.00,10.10,0,0.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | MCRA | PRDP | Rice Program,isabela_1.xlsx | isabela_6.xlsx
-Isabela,City of Santiago,3,56000.00,7,128000.00,8,296609.99,18,480609.99,14546.03,9657.08,7017.40,0.00,5,277235.51,17.89,0,0.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | PRDP | Rice Program,isabela_4.xlsx
+Isabela,City of Santiago,3,56000.00,7,128000.00,7,213445.75,17,397445.75,14546.03,9657.08,7017.40,0.00,4,194071.27,10.18,0,0.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | PRDP | Rice Program,isabela_4.xlsx
 Isabela,Cordon,2,30000.00,7,107200.00,10,251274.48,19,388474.48,14546.03,9657.08,7217.40,0.00,7,234400.00,12.96,0,0.00,Corn Program | Farm-to-Market Roads | PRDP | Rice Program,isabela_4.xlsx
 Isabela,Delfin Albano (Magsaysay),0,0.00,0,0.00,1,8819.25,1,8819.25,4076.24,8819.25,0.00,0.00,0,0.00,0.00,0,0.00,Rice Program,isabela_1.xlsx
 Isabela,Dinapigue,0,0.00,0,0.00,10,69829.05,10,69829.05,17597.98,9657.08,7017.40,0.00,1,52665.00,1181.00,0,0.00,4Ks | Corn Program | PRDP | Rice Program,isabela_4.xlsx
@@ -55,7 +55,7 @@ Isabela,Mallig,2,30000.00,4,85000.00,8,163683.75,14,278683.75,13075.98,16235.37,
 Isabela,Naguilian,13,321350.00,5,90000.00,8,148774.98,26,560124.98,21341.54,6826.98,12948.00,0.00,6,129000.00,8.60,0,0.00,Corn Program | Farm-to-Market Roads | Rice Program,isabela_2.xlsx
 Isabela,Palanan,1,97500.00,1,35000.00,2,39826.98,4,172326.98,3413.54,6826.98,0.00,0.00,1,33000.00,1.60,0,0.00,Farm-to-Market Roads | Rice Program,isabela_2.xlsx
 Isabela,Quezon,0,0.00,2,33000.00,4,39295.75,6,72295.75,13048.48,16235.37,3560.38,0.00,1,18000.00,1.20,0,0.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | Rice Program,isabela_5.xlsx
-Isabela,Quirino,0,0.00,1,40000.00,5,301126.94,6,341126.94,13047.48,16235.37,3560.38,0.00,3,281331.19,20.03,0,0.00,Corn Program | Farm-to-Market Roads | PRDP | Rice Program,isabela_5.xlsx
+Isabela,Quirino,0,0.00,1,40000.00,4,117295.75,5,157295.75,13047.48,16235.37,3560.38,0.00,2,97500.00,6.50,0,0.00,Corn Program | Farm-to-Market Roads | Rice Program,isabela_5.xlsx
 Isabela,Ramon,7,95000.00,4,80000.00,11,471217.32,22,646217.32,11596.27,23186.67,0.00,0.00,8,441130.65,32.65,0,0.00,Farm-to-Market Roads | LIVESTOCK | PRDP | Rice Program,isabela_3.xlsx
 Isabela,Reina Mercedes,0,0.00,4,40000.00,14,68279.26,18,108279.26,346394.54,6826.98,34208.00,0.00,2,27000.00,1.80,1,1250.00,Corn Program | Farm-to-Market Roads | MCRA | Rice Program,isabela_2.xlsx
 Isabela,Roxas,1,10000.00,0,0.00,8,63545.75,9,73545.75,13125.48,16235.37,7310.38,0.00,1,35000.00,2.50,3,5950.00,Corn Program | Farm-to-Market Roads | LIVESTOCK | MCRA | NUPAP | Rice Program,isabela_5.xlsx
