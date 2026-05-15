@@ -158,11 +158,23 @@ const App = (() => {
       question: "Where do current-season rice areas still need field monitoring or harvest logistics?",
       category: "PRiSM Rice Monitoring",
       indicator: "prism_standing_crop_area",
-      evidence: ["prism_rice_area_2026s1", "prism_standing_crop_area", "prism_growth_reproductive_ha", "prism_growth_ripening_ha", "prism_harvest_progress_pct", "prism_upcoming_harvest_area", "prism_area_gap_vs_app_ha"],
+      evidence: ["prism_rice_area_2026s1", "prism_production_mt", "prism_yield_mt_ha", "prism_standing_crop_area", "prism_growth_reproductive_ha", "prism_growth_ripening_ha", "prism_harvest_progress_pct", "prism_upcoming_harvest_area", "prism_area_gap_vs_app_ha"],
       actions: [
         "Validate standing crop and ripening areas with local field reports before response planning.",
         "Coordinate pest surveillance, irrigation monitoring, and climate advisories where standing crop area is high.",
         "Use May-June harvest area with facility layers to prepare drying, hauling, storage, and buying support."
+      ]
+    },
+    prism_flood: {
+      label: "Prioritize PRiSM flood damage",
+      question: "Where did recent flood events affect standing rice, reproductive/ripening rice, and expected production?",
+      category: "PRiSM Flood Damage",
+      indicator: "prism_flood_damage_priority_score",
+      evidence: ["prism_flood_damage_priority_score", "prism_flooded_rice_total_ha", "prism_flooded_standing_crop_ha", "prism_flooded_reproductive_ripening_ha", "prism_flooded_standing_share_pct", "prism_expected_production_at_risk_mt", "prism_yield_mt_ha", "poor_rice_farmers"],
+      actions: [
+        "Validate flooded standing rice areas with LGU and field damage reports before final compensation or recovery programming.",
+        "Prioritize reproductive and ripening-stage flooded rice because these areas carry higher near-term production loss risk.",
+        "Use expected production at risk with small rice farm counts to target crop insurance, seed reserve, drying, and rehabilitation support."
       ]
     },
     elnino: {

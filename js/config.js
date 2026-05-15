@@ -12,7 +12,7 @@ const APP_CONFIG = {
   mapCenter: [17.6132, 121.7270],
   mapZoom: 8,
   dataPath: "data/",
-  assetVersion: "20260511-legend-refresh",
+  assetVersion: "20260515-prism-refresh",
 };
 
 // ============================================================
@@ -1067,6 +1067,25 @@ const INDICATOR_CONFIG = {
     colorScheme: "YlOrBr",
     description: "Estimated rice area scheduled for harvest in May and June 2026."
   },
+  prism_production_mt: {
+    label: "PRiSM Rice Production 2026 S1",
+    category: "PRiSM Rice Monitoring",
+    type: "numeric",
+    unit: "MT",
+    aggregation: "sum",
+    colorScheme: "Greens",
+    description: "PhilRice PRiSM end-season municipal rice production estimate for 2026 Semester 1."
+  },
+  prism_yield_mt_ha: {
+    label: "PRiSM Rice Yield 2026 S1",
+    category: "PRiSM Rice Monitoring",
+    type: "numeric",
+    unit: "MT/ha",
+    aggregation: "weighted_average",
+    weightField: "prism_rice_area_2026s1",
+    colorScheme: "YlGn",
+    description: "PhilRice PRiSM end-season municipal rice yield estimate for 2026 Semester 1."
+  },
   prism_area_gap_vs_app_ha: {
     label: "PRiSM Area Gap vs App Rice Area",
     category: "PRiSM Rice Monitoring",
@@ -1085,6 +1104,129 @@ const INDICATOR_CONFIG = {
     weightField: "rice_area_2025",
     colorScheme: "RdBu_r",
     description: "Percent difference between PRiSM detected 2026 S1 rice area and the app's current rice area reference."
+  },
+
+  // --- PRiSM Flood Damage Assessment ---
+  prism_flooded_nonrice_ha: {
+    label: "PRiSM Flooded Non-Rice Area",
+    category: "PRiSM Flood Damage",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Blues",
+    description: "Flooded non-rice area detected from Sentinel-1A/1C flood event mapping."
+  },
+  prism_flooded_vegetative_ha: {
+    label: "PRiSM Flooded Vegetative Rice",
+    category: "PRiSM Flood Damage",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "PuBu",
+    description: "Flooded rice area in vegetative stage."
+  },
+  prism_flooded_reproductive_ha: {
+    label: "PRiSM Flooded Reproductive Rice",
+    category: "PRiSM Flood Damage",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Oranges",
+    description: "Flooded rice area in reproductive stage."
+  },
+  prism_flooded_ripening_ha: {
+    label: "PRiSM Flooded Ripening Rice",
+    category: "PRiSM Flood Damage",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "YlOrBr",
+    description: "Flooded rice area in ripening stage."
+  },
+  prism_flooded_reproductive_ripening_ha: {
+    label: "PRiSM Flooded Reproductive + Ripening Rice",
+    category: "PRiSM Flood Damage",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "YlOrRd",
+    description: "Flooded rice area in reproductive or ripening stage, useful for estimating near-term production risk."
+  },
+  prism_flooded_harvested_ha: {
+    label: "PRiSM Flooded Harvested Rice",
+    category: "PRiSM Flood Damage",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Greens",
+    description: "Flooded rice area already tagged as harvested."
+  },
+  prism_flooded_standing_crop_ha: {
+    label: "PRiSM Flooded Standing Crop",
+    category: "PRiSM Flood Damage",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Reds",
+    description: "Flooded vegetative, reproductive, and ripening rice area still standing in the field."
+  },
+  prism_flooded_rice_total_ha: {
+    label: "PRiSM Total Flooded Rice Area",
+    category: "PRiSM Flood Damage",
+    type: "numeric",
+    unit: "ha",
+    aggregation: "sum",
+    colorScheme: "Reds",
+    description: "Total flooded rice area across vegetative, reproductive, ripening, and harvested stages."
+  },
+  prism_flooded_standing_share_pct: {
+    label: "PRiSM Flooded Standing Crop Share",
+    category: "PRiSM Flood Damage",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "prism_standing_crop_area",
+    colorScheme: "Reds",
+    description: "Percent of PRiSM standing crop area affected by flood."
+  },
+  prism_flooded_rice_share_pct: {
+    label: "PRiSM Flooded Rice Share",
+    category: "PRiSM Flood Damage",
+    type: "percentage",
+    unit: "%",
+    aggregation: "weighted_average",
+    weightField: "prism_rice_area_2026s1",
+    colorScheme: "Reds",
+    description: "Percent of PRiSM detected rice area affected by flood."
+  },
+  prism_expected_production_at_risk_mt: {
+    label: "PRiSM Expected Production at Risk",
+    category: "PRiSM Flood Damage",
+    type: "numeric",
+    unit: "MT",
+    aggregation: "sum",
+    colorScheme: "OrRd",
+    description: "Estimated production represented by flooded rice area, using municipal PRiSM yield."
+  },
+  prism_flood_damage_priority_score: {
+    label: "PRiSM Flood Damage Priority Score",
+    category: "PRiSM Flood Damage",
+    type: "numeric",
+    unit: "/100",
+    aggregation: "weighted_average",
+    weightField: "prism_flooded_rice_total_ha",
+    colorScheme: "Reds",
+    description: "Composite priority score using flooded standing crop, flooded rice share, production at risk, and small rice farm exposure."
+  },
+  prism_flood_damage_priority_class: {
+    label: "PRiSM Flood Damage Priority Class",
+    category: "PRiSM Flood Damage",
+    type: "categorical",
+    unit: "",
+    aggregation: "dominant",
+    colorScheme: "Reds",
+    categories: { "Very High": 4, "High": 3, "Moderate": 2, "Low": 1, "No Flooded Rice Detected": 0 },
+    description: "Classified flood-damage priority based on the composite PRiSM flood damage score."
   },
 
   // --- El Nino / Drought Rice Exposure ---
@@ -1519,6 +1661,7 @@ const CATEGORIES = [
   "F2C2 Clusters",
   "RSBSA Registry",
   "PRiSM Rice Monitoring",
+  "PRiSM Flood Damage",
   "El Nino Rice Risk",
   "Plans & Projects",
   "Climate Risk Vulnerability",
@@ -1534,8 +1677,10 @@ const COLOR_SCHEMES = {
   Greens:   ["#edf8e9","#c7e9c0","#a1d99b","#74c476","#41ab5d","#238b45","#005a32"],
   Oranges:  ["#feedde","#fdd0a2","#fdae6b","#fd8d3c","#f16913","#d94801","#7f2704"],
   Purples:  ["#f2f0f7","#dadaeb","#bcbddc","#9e9ac8","#807dba","#6a51a3","#4a1486"],
+  PuBu:     ["#fff7fb","#ece7f2","#d0d1e6","#a6bddb","#74a9cf","#3690c0","#0570b0"],
   YlGn:     ["#ffffcc","#d9f0a3","#addd8e","#78c679","#41ab5d","#238443","#005a32"],
   YlOrBr:   ["#ffffe5","#fff7bc","#fee391","#fec44f","#fe9929","#ec7014","#8c2d04"],
+  OrRd:     ["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#e34a33","#b30000"],
   YlOrRd:   ["#ffffb2","#fed976","#feb24c","#fd8d3c","#fc4e2a","#e31a1c","#b10026"],
   // Diverging: blue=gain in suitability (good), red=loss in suitability (bad)
   RdBu_r:   ["#4393c3","#74add1","#abd9e9","#e0f3f8","#fee08b","#fc8d59","#d73027"],
@@ -1743,6 +1888,17 @@ const PRIORITY_MODELS = {
       poverty_2023: 0.10,
       poor_rice_farmers: 0.10,
       pest_disease_score: 0.10
+    }
+  },
+  prism_flood: {
+    label: "PRiSM Flood Damage Priority",
+    weights: {
+      prism_flood_damage_priority_score: 0.35,
+      prism_flooded_standing_crop_ha: 0.20,
+      prism_flooded_reproductive_ripening_ha: 0.15,
+      prism_expected_production_at_risk_mt: 0.10,
+      prism_flooded_standing_share_pct: 0.10,
+      poor_rice_farmers: 0.10
     }
   },
   elnino: {
@@ -1983,6 +2139,16 @@ const PLANNING_INSIGHTS = [
     condition: (d) => Math.abs(parseFloat(d.prism_area_gap_vs_app_pct)) > 20,
     insight: "PRiSM detected rice area differs substantially from the app reference area. Validate municipal rice area records before final targeting.",
     icon: "PRiSM", level: "moderate"
+  },
+  {
+    condition: (d) => parseFloat(d.prism_flood_damage_priority_score) >= 50,
+    insight: "High PRiSM flood-damage priority. Validate field damage reports and prepare recovery support for flooded standing rice areas.",
+    icon: "PRiSM Flood", level: "high"
+  },
+  {
+    condition: (d) => parseFloat(d.prism_flooded_reproductive_ripening_ha) > 20,
+    insight: "Flooding affected reproductive or ripening rice. This deserves near-term production-loss validation and crop insurance coordination.",
+    icon: "PRiSM Flood", level: "moderate"
   },
   {
     condition: (d) => parseFloat(d.elnino_rice_risk_score) >= 50,

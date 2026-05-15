@@ -443,6 +443,15 @@ const DataLoader = (() => {
     const prismArea = Utils.parseNumeric(row.prism_rice_area_2026s1);
     const appArea = Utils.parseNumeric(row.rice_area_2025) || Utils.parseNumeric(row.rice_area_2023);
     const standing = Utils.parseNumeric(row.prism_standing_crop_area);
+    const yieldMtHa = Utils.parseNumeric(row.prism_yield_mt_ha) || 0;
+    const floodedVegetative = Utils.parseNumeric(row.prism_flooded_vegetative_ha) || 0;
+    const floodedReproductive = Utils.parseNumeric(row.prism_flooded_reproductive_ha) || 0;
+    const floodedRipening = Utils.parseNumeric(row.prism_flooded_ripening_ha) || 0;
+    const floodedHarvested = Utils.parseNumeric(row.prism_flooded_harvested_ha) || 0;
+    const floodedStanding = Utils.parseNumeric(row.prism_flooded_standing_crop_ha) || 0;
+    const floodedRiceTotal = Utils.parseNumeric(row.prism_flooded_rice_total_ha) ||
+      floodedVegetative + floodedReproductive + floodedRipening + floodedHarvested;
+    const poorRice = Utils.parseNumeric(row.poor_rice_farmers) || 0;
 
     if (prismArea !== null && appArea !== null) {
       const gap = prismArea - appArea;
@@ -453,6 +462,35 @@ const DataLoader = (() => {
     row.prism_standing_crop_pct = prismArea > 0 && standing !== null
       ? ((standing / prismArea) * 100).toFixed(1)
       : "";
+
+    row.prism_flooded_reproductive_ripening_ha = (floodedReproductive + floodedRipening).toFixed(2);
+    row.prism_expected_production_at_risk_mt = (floodedRiceTotal * yieldMtHa).toFixed(2);
+    row.prism_flooded_standing_share_pct = standing > 0
+      ? ((floodedStanding / standing) * 100).toFixed(2)
+      : row.prism_flooded_standing_share_pct || "";
+    row.prism_flooded_rice_share_pct = prismArea > 0
+      ? ((floodedRiceTotal / prismArea) * 100).toFixed(2)
+      : row.prism_flooded_rice_share_pct || "";
+
+    const standingShare = Utils.parseNumeric(row.prism_flooded_standing_share_pct) || 0;
+    const productionRisk = Utils.parseNumeric(row.prism_expected_production_at_risk_mt) || 0;
+    const damageScore = Math.min(100,
+      Math.min(1, floodedStanding / 300) * 35 +
+      Math.min(1, floodedRiceTotal / 600) * 25 +
+      Math.min(1, standingShare / 10) * 20 +
+      Math.min(1, productionRisk / 2500) * 10 +
+      Math.min(1, poorRice / 2000) * 10
+    );
+    row.prism_flood_damage_priority_score = damageScore.toFixed(1);
+    row.prism_flood_damage_priority_class = classifyPrismFloodDamage(damageScore, floodedRiceTotal);
+  }
+
+  function classifyPrismFloodDamage(score, floodedRiceTotal) {
+    if (floodedRiceTotal <= 0) return "No Flooded Rice Detected";
+    if (score >= 70) return "Very High";
+    if (score >= 50) return "High";
+    if (score >= 30) return "Moderate";
+    return "Low";
   }
 
   function mergeDroughtOutlookData(rows) {

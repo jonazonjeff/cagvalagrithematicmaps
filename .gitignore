@@ -19,6 +19,9 @@ build/
 # Downloaded planning workbooks; derived CSV outputs are committed/served instead
 data/plans_raw/
 
+# Downloaded PRiSM workbooks; derived CSV outputs are committed/served instead
+data/prism_raw/
+
 # Local one-click updater UI
 AgriPlan Updater.vbs
 scripts/AgriPlanUpdater.ps1
